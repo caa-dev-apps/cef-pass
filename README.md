@@ -1,28 +1,27 @@
-Getting Started
-===============
-
-    - Hello, World!
-
-
-cef-pass
-========
+## cef-pass
 
 a cef file validator
 
 
-To Build and Run
-================
+### Getting Started
 
-    - gradle build & java -jar ./build/libs/cefpass-0.1.0.jar
-    or 
+Hello, World!
 
-    - cd src/main/groovy
-        groovy ./cefpass/App.groovy
+
+### To Build and Run
+
+```console
+Either
+$ gradle build & java -jar ./build/libs/cefpass-0.1.0.jar
+or 
+$ cd src/main/groovy
+$ groovy ./cefpass/App.groovy
+```    
+
     
-TODO 
-====
-    - Finish the CefReader updates
-    - each node requires   
-        1, context-> prefix + filename
-        2, line number
+### TODO 
+- Finish the CefReader updates
+- each node requires   
+    1, context-> prefix + filename
+    2, line number
         
