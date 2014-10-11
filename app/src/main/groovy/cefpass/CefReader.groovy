@@ -7,42 +7,62 @@ import java.util.zip.GZIPInputStream
 //-----------------------------------------------------------------------------
 //
 
-
 public class CefReader
 {
     def included = []
 
-    def m_searchFolders
-    def m_filename
-    def m_cehRoot
-
+//-x    def m_searchFolders
+//-x    def m_filename
+//-     def m_cehRoot
+    def m_cmdLnArgs
+    def m_headerData
     def m_cefContexts = []
     
     class MalFormedCef extends Exception{} 
     
-    public CefReader(i_searchFolders,
-                     i_filename)
+//-x    public CefReader(i_searchFolders,
+//-x                     i_filename)
+//-x    {
+//-x        m_searchFolders = i_searchFolders
+//-x        m_filename = i_filename
+//-x
+//-x        Show.showCefFilename(m_filename)
+//-x        Show.showSearchFolders(m_searchFolders)
+//-x
+//-x//-         m_cehRoot = do_process(m_filename, 0, [0])
+//-x//-         m_cehRoot, 
+//-x        m_headerData = do_process(m_filename, 0, [0])
+//-x    }
+    
+    public CefReader(i_cmdLnArgs)
     {
-        m_searchFolders = i_searchFolders
-        m_filename = i_filename
+//-x        m_searchFolders = i_searchFolders
+//-x        m_filename = i_filename
+        m_cmdLnArgs = i_cmdLnArgs
+//x         m_cmdLnArgs.show()
+//x         Show.showCefFilename(m_filename)
+//x         Show.showSearchFolders(m_searchFolders)
 
-        Show.showCefFilename(m_filename)
-        Show.showSearchFolders(m_searchFolders)
-
-        m_cehRoot = do_process(m_filename, 0, [0])
+//-         m_cehRoot = do_process(m_filename, 0, [0])
+//-         m_cehRoot, 
+        m_headerData = do_process(m_cmdLnArgs.getFilename(), 0, [0])
     }
-
+    
+    public def getHeaderData() { return m_headerData }
+    public def getCefContects() { return m_cefContexts }
+    
     def process_data_line(l) {
          Show.showDataLine(l)
     }
 
     
-    public def printHeaderNodes() {
+    public def showContexts() {
         Show.showContexts(m_cefContexts)
     
-        Show.showNodes(m_cehRoot)
-        
-        Show.showXmlNodes(m_cehRoot) 
+//-         Show.showNodes(m_cehRoot)
+//-         Show.showXmlNodes(m_cehRoot) 
+
+//x         m_headerData.show()
     }
     
 
@@ -69,7 +89,7 @@ public class CefReader
             
             (i_filename, l_dummy) = l_headerData.removeQuotes(i_filename)
             
-            for(d in m_searchFolders) {
+            for(d in m_cmdLnArgs.getSearchFolders()) {
                 def p = d + '/' + i_filename
           
                 if(included.find{ it == p } != null)  { l_headerData.error('include file: already added'); break }
@@ -78,7 +98,9 @@ public class CefReader
          
             if(l_filepath == null) l_headerData.error('include file: Not found')
             else if(i_level > 8) l_headerData.error('include file: level > 8')
-            else do_process(l_filepath, i_level+1, (i_prefix + l_levelIncludeCount++)).each{ l_headerData.append(it) }
+//-             else do_process(l_filepath, i_level+1, (i_prefix + l_levelIncludeCount++)).each{ l_headerData.append(it.root) }
+            else do_process(l_filepath, i_level+1, (i_prefix + l_levelIncludeCount++)).each{ l_headerData.appendDocument(it) }
+            
         }
 
         
@@ -114,7 +136,8 @@ public class CefReader
             }
         }
         
-        l_headerData.root
+//-         [l_headerData.root, l_headerData]
+        l_headerData
     }
     
 }
