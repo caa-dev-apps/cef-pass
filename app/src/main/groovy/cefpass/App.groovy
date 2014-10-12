@@ -1,15 +1,15 @@
 package cefpass
 
 public class App {
-    boolean m1() {
-        println "Hello, World!"
-        true
-//x         false
-    }
-
-    public void test_batch() {
-        new CmdLineSamples().test_batch();
-    }
+//x     boolean m1() {
+//x         println "Hello, World!"
+//x         true
+//x //x         false
+//x     }
+//x 
+//x     public void test_batch() {
+//x         new CmdLineSamples().test_batch();
+//x     }
     
     
     public void stages(String[] i_args) {
