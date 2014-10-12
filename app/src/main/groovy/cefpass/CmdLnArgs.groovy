@@ -4,20 +4,52 @@ import java.io.FileInputStream
 import java.io.File
 import java.util.zip.GZIPInputStream
 
+import groovy.util.CliBuilder
+import org.apache.commons.cli.Option
+
 //-----------------------------------------------------------------------------
-//
 
 public class CmdLnArgs
 {
     def m_searchFolders
     def m_filename
-
+    def m_xmlSchemas
+    def m_isOk = false;
+    
     def CmdLnArgs(String[] i_args) {
+
+        def cli = new CliBuilder(usage:'java -jar cefpass-0.1.0.jar -f <path-to-cef> -i<search include dirs> -x <xml-schema files>')
+        cli.h(                     longOpt: 'help',                                                                        'usage information')
+        cli.f(argName: 'cef',      longOpt: 'cef',         args: 1,                            required: true,                             '(Required) path to cef file')
+        cli.i(argName: 'include',  longOpt: 'include',     args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) list of include folders to search for ceh files')
+        cli.x(argName: 'xsd',      longOpt: 'xsd',         args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) list of xml schema files to validate header data against')
+ 
+        def options = cli.parse(i_args)
+ 
+        if(!options) { println "Error";  cli.usage }
+        else if (options.h) cli.usage
+        else {
+            m_filename = options.f
+            m_searchFolders = options.is
+            m_xmlSchemas = options.xs
+            
+            m_isOk = true
+        }
+        
+        show()
+    }
+    
+    
+    
+    // FOR TESTING....................
+    def CmdLnArgs() {
         m_filename = TEST_FILES[0]
         m_searchFolders = TEST_SEARCH_FOLDERS
         
         show()
     }
+    
+    def isOk() { return m_isOk; }
     
     def TEST_SEARCH_FOLDERS = [
         "C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES",

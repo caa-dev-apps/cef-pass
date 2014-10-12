@@ -51,6 +51,8 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.2.2'
 //x     compile("org.springframework.boot:spring-boot-starter-actuator")    
     
+    compile 'commons-cli:commons-cli:1.2'
+    
     
     // We use the awesome Spock testing and specification framework
     testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'

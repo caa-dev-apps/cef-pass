@@ -1,16 +1,22 @@
 package cefpass
 
+//x import groovy.util.CliBuilder
+//x import org.apache.commons.cli.Option
+
 public class App {
-//x     boolean m1() {
-//x         println "Hello, World!"
-//x         true
-//x //x         false
-//x     }
+    boolean m1() {
+        println "Hello, World!"
+        true
+//x         false
+    }
 //x 
 //x     public void test_batch() {
 //x         new CmdLineSamples().test_batch();
 //x     }
-    
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
     
     public void stages(String[] i_args) {
         //  1. command line inputs
@@ -48,6 +54,9 @@ public class App {
             // stage #1
             CmdLnArgs l_args = new CmdLnArgs(i_args)
 
+            if(l_args.isOk() == false) return
+            
+            
             // stage #2
             CefReader l_reader = new CefReader(l_args)
             l_reader.showContexts()
@@ -72,12 +81,29 @@ public class App {
         }
     }
     
-    
-    
     public static void main(String[] i_args) {
         println "Hello, World!"
     
         App a = new App();
+        
+        i_args.each {
+            println "--> " + it
+        }
+        
         a.stages(i_args);
     }
 }
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
