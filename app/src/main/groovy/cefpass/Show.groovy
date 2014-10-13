@@ -8,11 +8,8 @@ public class Show {
     public static boolean s_show_cef_filename = true;               // main cef file
     public static boolean s_show_search_folders = true;             // list of folders to search for ceh includes
 
-//x public static boolean s_show_file_read_line_details = true      // file line as read + line number etc
     public static boolean s_show_file_read_line_details = false     // file line as read + line number etc
-//x public static boolean s_show_header_kv = true                   // header key and value
     public static boolean s_show_header_kv = false                  // header key and value
-//x public static boolean s_show_header_comment = true              // header comment
     public static boolean s_show_header_comment = false             // header comment
     
     public static boolean s_show_cx_files = true;                   // list the main cef and ceh filenames

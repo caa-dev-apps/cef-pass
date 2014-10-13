@@ -1,24 +1,21 @@
 package cefpass
 
-//x import groovy.util.CliBuilder
-//x import org.apache.commons.cli.Option
 
 public class App {
     boolean m1() {
         println "Hello, World!"
         true
-//x         false
     }
-//x 
-//x     public void test_batch() {
-//x         new CmdLineSamples().test_batch();
-//x     }
-
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+
+    boolean args(String[] i_args) {
+        true
+    }
+
     
-    public void stages(String[] i_args) {
+    public def boolean  stages(String[] i_args) {
         //  1. command line inputs
         //
         //      PASS/FAIL
@@ -50,6 +47,8 @@ public class App {
         //      - Data format/type
         //      - # Data cells
 
+        def result = false
+        
         try{
             // stage #1
             CmdLnArgs l_args = new CmdLnArgs(i_args)
@@ -74,21 +73,24 @@ public class App {
 
             // stage #3 validate XML
             // todo get xml
-
+            result = true
         }
         catch(Exception e) {
             e.printStackTrace()        
         }
+        
+        result
     }
     
     public static void main(String[] i_args) {
         println "Hello, World!"
     
-        App a = new App();
-        
-        i_args.each {
-            println "--> " + it
+        i_args.each { 
+            println " ++ " +  it
         }
+    
+    
+        App a = new App();
         
         a.stages(i_args);
     }
