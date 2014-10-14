@@ -45,6 +45,7 @@ There are 5 main stages in the cef file validation process which are handled by 
 
 5. Data Validation
     Each row of data is checked for
+    - increasing timestamps 
     - correct number of values
     - value types match header variable definitions
     - end of line marker
