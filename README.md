@@ -18,11 +18,13 @@ There are 5 main stages in the cef file validation process which are handled by 
          -h,--help                usage information
          -i,--include <include>   (Optional) list of include folders to search for
                                   ceh files
+         -o,--xo                  output header meta data in xml format
+         -q,--qv                  quick validation (only checks 1st data row)
          -x,--xsd <xsd>           (Optional) list of xml schema files to validate
                                   header data against
     $                              
-    ``` 
 
+    ``` 
     e.g.      
     ```console                        
     $ java -jar ./cefpass-0.1.0.jar -f $CEF_PASS_HOME/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz -i $CEF_PASS_HOME/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES,$CEF_PASS_HOME/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS,$CEF_PASS_HOME/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI,$CEF_PASS_HOME/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW,$CEF_PASS_HOME/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE

@@ -23,6 +23,8 @@ public class CmdLnArgs
         cli.f(argName: 'cef',      longOpt: 'cef',         args: 1,                            required: true,                             '(Required) path to cef file')
         cli.i(argName: 'include',  longOpt: 'include',     args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) list of include folders to search for ceh files')
         cli.x(argName: 'xsd',      longOpt: 'xsd',         args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) list of xml schema files to validate header data against')
+        cli.q(                     longOpt: 'qv',                                                                                          'quick validation (only checks 1st data row) ')
+        cli.o(                     longOpt: 'xo',                                                                                          'output header meta data in xml format')
  
         def options = cli.parse(i_args)
  
