@@ -15,13 +15,15 @@ public class CmdLnArgs
     def m_filename
     def m_xmlSchemas
     def m_isOk = false;
+    def m_logsFolder
     
     def CmdLnArgs(String[] i_args) {
 
         def cli = new CliBuilder(usage:'java -jar cefpass-0.1.0.jar -f <path-to-cef> -i<search include dirs> -x <xml-schema files>')
-        cli.h(                     longOpt: 'help',                                                                        'usage information')
+        cli.h(                     longOpt: 'help',                                                                                        'usage information')
         cli.f(argName: 'cef',      longOpt: 'cef',         args: 1,                            required: true,                             '(Required) path to cef file')
         cli.i(argName: 'include',  longOpt: 'include',     args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) list of include folders to search for ceh files')
+        cli.l(argName: 'logs',     longOpt: 'logs',        args: 1,                            required: false,                            '(Optional) path to logs folder')
         cli.x(argName: 'xsd',      longOpt: 'xsd',         args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) list of xml schema files to validate header data against')
         cli.q(                     longOpt: 'qv',                                                                                          'quick validation (only checks 1st data row) ')
         cli.o(                     longOpt: 'xo',                                                                                          'output header meta data in xml format')
@@ -34,14 +36,12 @@ public class CmdLnArgs
             m_filename = options.f
             m_searchFolders = options.is
             m_xmlSchemas = options.xs
-            
+            m_logsFolder = options.l    
             m_isOk = true
         }
         
         show()
     }
-    
-    
     
     // FOR TESTING....................
     def CmdLnArgs() {
@@ -50,9 +50,23 @@ public class CmdLnArgs
         
         show()
     }
+
+    //-----------------------------------------------------------------------------
+    //
     
-    def isOk() { return m_isOk; }
+    public def getSearchFolders()   { return  m_searchFolders }
+    public def getFilename()        { return m_filename }
+    public def getLogsFolder()      { return m_logsFolder }
+    public def isOk()               { return m_isOk; }
     
+    public def show() {
+        Show.showCefFilename(m_filename)
+        Show.showSearchFolders(m_searchFolders)
+    }
+
+    //-----------------------------------------------------------------------------
+    //
+
     def TEST_SEARCH_FOLDERS = [
         "C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES",
     
@@ -62,8 +76,8 @@ public class CmdLnArgs
         "C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE"
     ]
 
-//-----------------------------------------------------------------------------
-//
+    //-----------------------------------------------------------------------------
+    //
 
     def TEST_FILES = [
 //x         "C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES/T0001_INCLUDE_TESTS.cef",
@@ -82,16 +96,6 @@ public class CmdLnArgs
 //x         "C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_QZC__20111022_V01.cef.gz"
     ]
 
-//-----------------------------------------------------------------------------
-//
-    public def show() {
-        Show.showCefFilename(m_filename)
-        Show.showSearchFolders(m_searchFolders)
-    }
-
-    public def getSearchFolders()  { return  m_searchFolders }
-    public def getFilename()  { return m_filename }
-    
     public def test_batch() {
     
         for(f in TEST_FILES)
@@ -110,8 +114,4 @@ public class CmdLnArgs
         }
     } 
 }
-
-
-
-
 

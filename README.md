@@ -18,6 +18,7 @@ There are 5 main stages in the cef file validation process which are handled by 
          -h,--help                usage information
          -i,--include <include>   (Optional) list of include folders to search for
                                   ceh files
+         -l,--logs <logs>         path to logs folder
          -o,--xo                  output header meta data in xml format
          -q,--qv                  quick validation (only checks 1st data row)
          -x,--xsd <xsd>           (Optional) list of xml schema files to validate
