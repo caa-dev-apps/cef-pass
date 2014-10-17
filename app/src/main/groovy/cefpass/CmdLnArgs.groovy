@@ -36,7 +36,10 @@ public class CmdLnArgs
             m_filename = options.f
             m_searchFolders = options.is
             m_xmlSchemas = options.xs
-            m_logsFolder = options.l    
+            m_logsFolder = options.l  
+
+            Logs.init(m_logsFolder)
+            
             m_isOk = true
         }
         

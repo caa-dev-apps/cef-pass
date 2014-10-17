@@ -53,7 +53,9 @@ class AppTest extends Specification{
             "-f",
             TEST_FILES[0],
             "-i",
-            TEST_SEARCH_FOLDERS.join(",")
+            TEST_SEARCH_FOLDERS.join(","),
+            "-l",
+            "C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/logs"
         ]
         
         when:

@@ -13,24 +13,35 @@ public class Logs
 {
     static String s_logsFolder = null;
     Logs s_logs = new Logs()
-    
-    private def Logs()
-    {
-    }
 
+    def static init(i_logsFolder) {
+        s_logsFolder = i_logsFolder
+        
+        if(s_logsFolder == null) {
+            s_logsFolder = System.getProperty("user.dir") + "../logs"
+        }
+        
+        s_logsFolder += "/" 
+        s_logsFolder += System.currentTimeMillis()
+    }
+    
     def static writeTextFile(i_filename, 
                              i_contents) 
     {
-        if(s_logFolder != null {
-            ant.project.buildListeners[0].messageOutputLevel = 0
-//x             ant.mkdir(dir: s_logsFolder + '/' + i_filename)        
-            ant.mkdir(dir: s_logsFolder)        
-            
-            File file = new File(s_logsFolder + "/" + i_filename)
-
+        println "writeTextFile: " + i_filename
+    
+        if(s_logsFolder != null)
+        {
+            new File(s_logsFolder).mkdirs();
+            File file = new File(s_logsFolder + "\\" + i_filename)
             file << i_contents
-            
         }
     }
+    
+    def static dump() {
+        println s_logsFolder
+    }
+    
 }
+
 

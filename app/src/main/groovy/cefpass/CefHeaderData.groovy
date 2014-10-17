@@ -4,11 +4,11 @@ import java.io.FileInputStream
 import java.io.File
 import java.util.zip.GZIPInputStream
 
+import groovy.xml.XmlUtil
 import groovy.json.JsonBuilder
 
 ///////////////////////////////////////////////////////////////////////////////
 //
-
 
 class CefHeaderJSON {
  
@@ -36,6 +36,12 @@ class CefHeaderJSON {
     
     def showJSONodes() { Show.showJSONodes(root) }
     def show() { showJSONodes() }
+    
+    def getJSONodesAsString() {
+//x     println "\nJSON Nodes:"
+        def builder = new JsonBuilder(root)
+        builder.toPrettyString() 
+    }
 }
  
 class CefHeaderNodes {
@@ -65,10 +71,22 @@ class CefHeaderNodes {
     def showXmlNodes() { Show.showXmlNodes(root)  }
     def show() { showNodes(); showXmlNodes() }
     
+    def getNodesAsString()    { 
+        //x println "\nNodes:"
+        def writer = new StringWriter()
+        root.print(new PrintWriter(writer))
+        writer.toString()    
+    }
+    
+    def getXmlNodesAsString() { 
+        //x println "\nXML Nodes:"
+        new XmlUtil().serialize(root)    
+    }
+    
     def dump() {
-        def writer2 = new StringWriter()
-        root.print(new PrintWriter(writer2))
-        println writer2.toString()
+        //x def writer2 = new StringWriter()
+        //x root.print(new PrintWriter(writer2))
+        println getNodesAsString()
     }
 }
 
@@ -101,6 +119,10 @@ class CefHeaderData {
     def showXmlNodes() { headerNodes.showXmlNodes() }
     def showJSONNodes() { headerJSON.show() 
     }
+    
+    def getNodesAsString()    { headerNodes.getNodesAsString() }
+    def getXmlNodesAsString() { headerNodes.getXmlNodesAsString() }
+    def getJSONodesAsString() { headerJSON.getJSONodesAsString() }
     
     
     def removeQuotes(v) {

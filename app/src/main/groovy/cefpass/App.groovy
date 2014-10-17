@@ -1,5 +1,6 @@
 package cefpass
 
+import java.util.logging.Logger
 
 public class App {
     boolean m1() {
@@ -14,6 +15,7 @@ public class App {
         true
     }
 
+    
     
     public def boolean  stages(String[] i_args) {
         //  1. command line inputs
@@ -67,10 +69,14 @@ public class App {
             l_headerData.showXmlNodes() 
             l_headerData.showJSONNodes() 
             
-            // todo show_nodes
-            // todo show_xml
-            // todo show_json
+            Logs.writeTextFile("nodes.txt", l_headerData.getNodesAsString())
+            Logs.writeTextFile("nodes.xml", l_headerData.getXmlNodesAsString())
+            Logs.writeTextFile("nodes.json", l_headerData.getJSONodesAsString())
 
+//x             Logs.writeTextFile("nodes.txt",  "Hello, World!")
+//x             Logs.writeTextFile("nodes.xml",  "Hello, World!")
+//x             Logs.writeTextFile("nodes.json", "Hello, World!")
+            
             // stage #3 validate XML
             // todo get xml
             result = true
@@ -84,12 +90,16 @@ public class App {
     
     public static void main(String[] i_args) {
         println "Hello, World!"
+        println "workingDir: "  + System.getProperty("user.dir")
+        Logger logger = Logger.getLogger("")
+        logger.info ("Hello, World!")
     
         i_args.each { 
             println " ++ " +  it
         }
-    
-    
+
+
+
         App a = new App();
         
         a.stages(i_args);
