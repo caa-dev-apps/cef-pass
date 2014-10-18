@@ -17,8 +17,8 @@ class CefHeaderJSON {
    
     def error(i_message) { println i_message; System.exit(-1) }
  
-    def append(nodes) { cur = root; root.elems << nodes }
-    def appendDocument(i_document) { append(i_document.root); }   
+    def append(nodes) { cur = root; root.elems = root.elems + nodes }
+    def appendDocument(i_document) { append(i_document.root.elems); }   
  
     def addAttr(k,v,q) { cur.elems << [type:'a', k:k, v:v, q:q] }  // quotes
     def addComment(c) { cur.elems << [type:'c', k:'c', v:c]  }
@@ -58,7 +58,12 @@ class CefHeaderNodes {
         i_document.root.children().each { append(it); }
     }    
     
-    def addAttr(k,v,q) { cur.append(builder.a((k): v, q: q)) }  // quotes
+//x     def addAttr(k,v,q) { cur.append(builder.a((k): v, q: q)) }  // quotes
+//x     def addAttr(k,v,q) { cur.append(builder.a((k): v, q: q)) }  // quotes
+//x     def addAttr(k,v,q) { cur.append(builder.createNode(k, '\"' + v +'\"')) }  // quotes
+    def addAttr(k,v,q) { cur.append(builder.createNode(k, v )) }  // quotes
+    
+    
     def addComment(c) { Show.showHeaderComment(c); cur.append(builder.c(c)) }
     
     def stxMeta(n) {  cur = builder.meta(name: n); root.append(cur) }
@@ -132,10 +137,18 @@ class CefHeaderData {
         
         [v, q]
     }
+
     
     def add_kv(k, i_v){
         def (v, q) = removeQuotes(i_v)
-    
+
+        if(q == true) {
+            v = '\"' + v +'\"'
+        }
+        
+//x         def v = i_v
+//x         def q = ""
+        
         Show.showHeaderKV(k,v)
         
     	if("START_META".compareToIgnoreCase(k) == 0)			stxMeta(v) 
@@ -144,4 +157,5 @@ class CefHeaderData {
     	else if ("END_VARIABLE".compareToIgnoreCase(k) == 0)	etxVar(v) 
     	else 													addAttr(k,v,q) 
     }
+    
 }

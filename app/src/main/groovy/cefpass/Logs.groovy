@@ -22,7 +22,9 @@ public class Logs
         }
         
         s_logsFolder += "/" 
-        s_logsFolder += System.currentTimeMillis()
+        s_logsFolder += new Date().format('yyyy-MM-dd') 
+        s_logsFolder += "." 
+        s_logsFolder += sprintf("%06d", System.currentTimeMillis() % 1000000)
     }
     
     def static writeTextFile(i_filename, 

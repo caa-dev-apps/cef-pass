@@ -57,26 +57,19 @@ public class App {
 
             if(l_args.isOk() == false) return
             
-            
             // stage #2
             CefReader l_reader = new CefReader(l_args)
-            l_reader.showContexts()
+            //i l_reader.showContexts()
             
             CefHeaderData l_headerData = l_reader.getHeaderData()
-//x         l_headerData.show()
-            
-            l_headerData.showNodes() 
-            l_headerData.showXmlNodes() 
-            l_headerData.showJSONNodes() 
+            //i l_headerData.showNodes() 
+            //i l_headerData.showXmlNodes() 
+            //i l_headerData.showJSONNodes() 
             
             Logs.writeTextFile("nodes.txt", l_headerData.getNodesAsString())
             Logs.writeTextFile("nodes.xml", l_headerData.getXmlNodesAsString())
             Logs.writeTextFile("nodes.json", l_headerData.getJSONodesAsString())
 
-//x             Logs.writeTextFile("nodes.txt",  "Hello, World!")
-//x             Logs.writeTextFile("nodes.xml",  "Hello, World!")
-//x             Logs.writeTextFile("nodes.json", "Hello, World!")
-            
             // stage #3 validate XML
             // todo get xml
             result = true

@@ -14,12 +14,15 @@ public class CefReader
     def m_cmdLnArgs
     def m_headerData
     def m_cefContexts = []
+    def m_isCommentsOn = false
     
     class MalFormedCef extends Exception{} 
     
     public CefReader(i_cmdLnArgs)
     {
         m_cmdLnArgs = i_cmdLnArgs
+        m_isCommentsOn = m_cmdLnArgs.isCommentsOn()
+        
         m_headerData = do_process(m_cmdLnArgs.getFilename(), 0, [0])
     }
     
@@ -93,7 +96,7 @@ public class CefReader
                     else if("include".compareToIgnoreCase(key) == 0) include_ceh(val)
                 }
                 else if ((it =~ regexCommentStr).matches()) {
-                    l_headerData.addComment(it)
+                    if(m_isCommentsOn) l_headerData.addComment(it)
                 }
                 else if(it.size() == 0) {
                     // ignore
