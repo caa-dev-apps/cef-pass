@@ -1,0 +1,50 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element type="xs:string" name="FILE_NAME"/>
+        <xs:element type="xs:string" name="FILE_FORMAT_VERSION"/>
+        <xs:element name="meta" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="VALUE_TYPE" minOccurs="0"/>
+              <xs:element type="xs:string" name="ENTRY"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="include" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:element type="xs:string" name="ENTRY" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="var" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+              <xs:element type="xs:string" name="PARAMETER_TYPE"/>
+              <xs:element type="xs:string" name="CATDESC"/>
+              <xs:element type="xs:string" name="UNITS"/>
+              <xs:element type="xs:string" name="SI_CONVERSION"/>
+              <xs:element type="xs:string" name="FIELDNAM"/>
+              <xs:element type="xs:string" name="FILLVAL"/>
+              <xs:element type="xs:byte" name="SIGNIFICANT_DIGITS"/>
+              <xs:element type="xs:string" name="LABLAXIS"/>
+              <xs:element type="xs:string" name="VALUE_TYPE"/>
+              <xs:element type="xs:float" name="DELTA_PLUS"/>
+              <xs:element type="xs:float" name="DELTA_MINUS"/>
+              <xs:element type="xs:string" name="ENTITY"/>
+              <xs:element type="xs:string" name="PROPERTY"/>
+              <xs:element type="xs:string" name="QUALITY"/>
+              <xs:element type="xs:string" name="DEPEND_0"/>
+            </xs:choice>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="DATA_UNTIL"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

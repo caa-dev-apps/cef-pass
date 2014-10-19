@@ -11,19 +11,25 @@ public class CefReader
 {
     def included = []
 
-    def m_cmdLnArgs
+//x     def m_cmdLnArgs
     def m_headerData
     def m_cefContexts = []
     def m_isCommentsOn = false
     
     class MalFormedCef extends Exception{} 
     
-    public CefReader(i_cmdLnArgs)
+//x     public CefReader(i_cmdLnArgs)
+//x     {
+//x         m_cmdLnArgs = i_cmdLnArgs
+//x         m_isCommentsOn = m_cmdLnArgs.isCommentsOn()
+//x         
+//x         m_headerData = do_process(m_cmdLnArgs.getFilename(), 0, [0])
+//x     }
+    
+    public CefReader()
     {
-        m_cmdLnArgs = i_cmdLnArgs
-        m_isCommentsOn = m_cmdLnArgs.isCommentsOn()
-        
-        m_headerData = do_process(m_cmdLnArgs.getFilename(), 0, [0])
+        m_isCommentsOn = CmdLnArgs.isCommentsOn()
+        m_headerData = do_process(CmdLnArgs.getFilename(), 0, [0])
     }
     
     public def getHeaderData() { return m_headerData }
@@ -61,7 +67,7 @@ public class CefReader
             
             (i_filename, l_dummy) = l_headerData.removeQuotes(i_filename)
             
-            for(d in m_cmdLnArgs.getSearchFolders()) {
+            for(d in CmdLnArgs.getSearchFolders()) {
                 def p = d + '/' + i_filename
           
                 if(included.find{ it == p } != null)  { l_headerData.error('include file: already added'); break }
@@ -71,13 +77,13 @@ public class CefReader
             if(l_filepath == null) l_headerData.error('include file: Not found')
             else if(i_level > 8) l_headerData.error('include file: level > 8')
             else do_process(l_filepath, i_level+1, (i_prefix + l_levelIncludeCount++)).each{ l_headerData.appendDocument(it) }
-            
         }
-
         
         l_fileStream.eachLine { it 
             l_cx.incLineCount()
             l_cx.diag(it)
+        
+            Logs.diag(it)
         
             if(l_data_until == true) {
                 process_data_line(it)

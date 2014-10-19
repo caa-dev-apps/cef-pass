@@ -12,10 +12,11 @@ import org.apache.commons.cli.Option
 public class Logs
 {
     static String s_logsFolder = null;
+    static File s_appLogsFile = null;
     Logs s_logs = new Logs()
 
-    def static init(i_logsFolder) {
-        s_logsFolder = i_logsFolder
+    def static init() {
+        s_logsFolder = CmdLnArgs.getLogsFolder()
         
         if(s_logsFolder == null) {
             s_logsFolder = System.getProperty("user.dir") + "../logs"
@@ -25,6 +26,16 @@ public class Logs
         s_logsFolder += new Date().format('yyyy-MM-dd') 
         s_logsFolder += "." 
         s_logsFolder += sprintf("%06d", System.currentTimeMillis() % 1000000)
+        
+        new File(s_logsFolder).mkdirs();
+        
+        s_appLogsFile = new File(s_logsFolder + "\\" + "app-logs.txt")
+        //x s_appLogsFile << "Hello, World!"
+        
+    }
+    
+    def static close() {
+        //x s_appLogsFile.close()
     }
     
     def static writeTextFile(i_filename, 
@@ -34,10 +45,23 @@ public class Logs
     
         if(s_logsFolder != null)
         {
-            new File(s_logsFolder).mkdirs();
+//x         new File(s_logsFolder).mkdirs();
             File file = new File(s_logsFolder + "\\" + i_filename)
             file << i_contents
         }
+    }
+    
+    def static getFilePath(i_filename) 
+    {
+        return s_logsFolder + "\\" + i_filename
+    }
+    
+    
+    
+    
+    def static diag(i_text) {
+        s_appLogsFile << i_text
+        s_appLogsFile << "\n"
     }
     
     def static dump() {

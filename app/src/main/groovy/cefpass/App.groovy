@@ -53,12 +53,12 @@ public class App {
         
         try{
             // stage #1
-            CmdLnArgs l_args = new CmdLnArgs(i_args)
-
-            if(l_args.isOk() == false) return
+            CmdLnArgs.init(i_args)
+            if(CmdLnArgs.isOk() == false) return
+            Logs.init()
             
             // stage #2
-            CefReader l_reader = new CefReader(l_args)
+            CefReader l_reader = new CefReader()
             //i l_reader.showContexts()
             
             CefHeaderData l_headerData = l_reader.getHeaderData()
@@ -71,7 +71,19 @@ public class App {
             Logs.writeTextFile("nodes.json", l_headerData.getJSONodesAsString())
 
             // stage #3 validate XML
-            // todo get xml
+            // ----------------------------------------------------------------------------------
+            // Under development
+            // ----------------------------------------------------------------------------------
+//x             String l_xmlPath = Logs.getFilePath("nodes.xml")
+//x             String l_xsdPath = "C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/xsd/a1.xsd"
+//x             
+//x             if(XSDValidataion.validateXMLSchema(l_xsdPath, l_xmlPath) == false) return
+     
+            // ----------------------------------------------------------------------------------
+            // 
+            // ----------------------------------------------------------------------------------
+
+            
             result = true
         }
         catch(Exception e) {
@@ -84,18 +96,17 @@ public class App {
     public static void main(String[] i_args) {
         println "Hello, World!"
         println "workingDir: "  + System.getProperty("user.dir")
-        Logger logger = Logger.getLogger("")
-        logger.info ("Hello, World!")
-    
-        i_args.each { 
-            println " ++ " +  it
-        }
-
-
-
+//x         Logger logger = Logger.getLogger("")
+//x         logger.info ("Hello, World!")
+//x     
+//x         i_args.each { 
+//x             println " ++ " +  it
+//x         }
         App a = new App();
         
-        a.stages(i_args);
+        a.stages(i_args)
+        
+        Logs.close()
     }
 }
 
