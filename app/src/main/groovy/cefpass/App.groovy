@@ -2,6 +2,10 @@ package cefpass
 
 import java.util.logging.Logger
 
+import rules2015.RulesSet01;
+import rules2015.RulesSet02;
+
+
 public class App {
     boolean m1() {
         println "Hello, World!"
@@ -83,6 +87,11 @@ public class App {
             // 
             // ----------------------------------------------------------------------------------
 
+            RulesSet01 l_set01 = new RulesSet01();
+            l_set01.run();
+
+            
+            
             
             result = true
         }

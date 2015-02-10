@@ -1,0 +1,1392 @@
+{
+    "type": "root",
+    "name": "root",
+    "elems": [
+        {
+            "type": "a",
+            "k": "FILE_NAME",
+            "v": "\"C3_CP_EDI_EGD__20111009_V01.cef\"",
+            "q": true
+        },
+        {
+            "type": "a",
+            "k": "FILE_FORMAT_VERSION",
+            "v": "\"CEF-2.0\"",
+            "q": true
+        },
+        {
+            "type": "meta",
+            "name": "LOGICAL_FILE_ID",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"C3_CP_EDI_EGD__20111009_V01\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "VERSION_NUMBER",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"01\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "FILE_TIME_SPAN",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "VALUE_TYPE",
+                    "v": "ISO_TIME_RANGE",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "2011-10-09T00:00:00Z/2011-10-10T00:00:00Z",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "GENERATION_DATE",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "VALUE_TYPE",
+                    "v": "ISO_TIME",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "2012-04-11T15:57:15Z",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "FILE_CAVEATS",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"CAA_EDITOF_V1_04  2011-04-04T10:30:00Z\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "a",
+            "k": "include",
+            "v": "\"C3_CH_EDI_EGD_DATASET.ceh\"",
+            "q": true
+        },
+        {
+            "type": "a",
+            "k": "include",
+            "v": "\"C3_CH_EDI3_INST.ceh\"",
+            "q": true
+        },
+        {
+            "type": "a",
+            "k": "include",
+            "v": "\"CL_CH_EDI_EXP.ceh\"",
+            "q": true
+        },
+        {
+            "type": "a",
+            "k": "include",
+            "v": "\"CL_CH_MISSION.ceh\"",
+            "q": true
+        },
+        {
+            "type": "meta",
+            "name": "MISSION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Cluster\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "MISSION_TIME_SPAN",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "VALUE_TYPE",
+                    "v": "ISO_TIME_RANGE",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "2000-08-16T12:39:00Z/2009-12-31T23:59:59Z",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "MISSION_AGENCY",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"ESA\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "MISSION_DESCRIPTION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"The aim of the Cluster mission is to study small-scale structures of the magnetosphere \"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"and its environment in three dimensions. To achieve this, Cluster is constituted of four \"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"identical spacecraft that will flight in a tetrahedral configuration. The separation distances \"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"between the spacecraft will be varied between ~40 km and 10 000 km, according to the \"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"key scientific regions.\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "MISSION_KEY_PERSONNEL",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Philippe Escoubet>Philippe.Escoubet@esa.int >Cluster Project Scientist\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "MISSION_REFERENCES",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"The Cluster and Phoenix Missions>Cluster project and instrument teams>Space Sci. Rev. 79, Nos. 1-2, 1997\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "MISSION_REGION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Solar_Wind\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Bow_Shock\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Magnetosheath\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Magnetopause\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Magnetosphere\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Magnetotail\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Polar_Cap\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Auroral_Region\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Cusp\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Radiation_Belt\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Plasmasphere\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "MISSION_CAVEATS",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"*CL\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "EXPERIMENT",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"EDI\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "EXPERIMENT_DESCRIPTION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Electron Drift Instrument\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Electric field measured by the drift velocity \"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"of monoenergetic artificial electron beams \"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"injected perpendicularly to the ambient magnetic field\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "INVESTIGATOR_COORDINATES",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Goetz Paschmann>PI>goetz.paschmann@mpe.mpg.de\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Roy Torbert>PI>roy.torbert@unh.edu\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Jack Quinn>CoPI>jmquinn@bu.edu\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "EXPERIMENT_REFERENCES",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"*CL_CD_EDI_CAAICD\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"*CL_CD_EDI_USERMAN\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"AnnGeo_FirstResults.pdf\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"AnnGeo_JQuinn1669.pdf\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"http://www.mpe.mpg.de/CLUSTER/EDI-Pages/edi_page.html\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "EXPERIMENT_KEY_PERSONNEL",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Edita Georgescu>Archive Scientist>eg@mps.mpg.de\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Hans Vaith>Experiment Engineer>hans.vaith@unh.edu\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Mark Chutter>Software Engineer>mark.chutter@unh.edu\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Pamela Puhl-Quinn>Software Engineer>pamela.puhlquinn@aer.com\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "EXPERIMENT_CAVEATS",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"EDI experiment is operated in 2 modes 'Electric Field'\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"and 'Ambient Electron' mode, see CaveatList files for\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"specific time intervals\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"\"",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Large data gaps may occur due to: \"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"- highly variable magnetic and/or electric fields\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"- high ambient electron fluxes\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"- radiation induced hardware failures\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"\"",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Smaller data gaps occur in MCP calibration mode or \"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"at regularly scheduled BM3 dumps\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"\"",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Data availability in 'Electric field' mode is documented\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"in the QSTAT files with 10 min resolution\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"\"",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "a",
+            "k": "include",
+            "v": "\"C3_CH_OBS.ceh\"",
+            "q": true
+        },
+        {
+            "type": "meta",
+            "name": "OBSERVATORY",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Cluster-3\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "OBSERVATORY_CAVEATS",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"*C3_CQ\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "OBSERVATORY_DESCRIPTION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Cluster-3 (Samba)\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Launched: 16 Jul 2000\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"ESA Number: 3\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"COSPAR ID: 2000-041A\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"USSPACECOM catalogue number: 26410\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"CSDS Code: C3\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"ESOC FD code: S3\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"ESA Flight Model Number: FM7\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "OBSERVATORY_TIME_SPAN",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "VALUE_TYPE",
+                    "v": "ISO_TIME_RANGE",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "2000-07-16T12:39:00Z/2009-12-31T23:59:59Z",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "OBSERVATORY_REGION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Solar_Wind\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Bow_Shock\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Magnetosheath\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Magnetopause\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Magnetosphere\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Magnetotail\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Polar_Cap\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Auroral_Region\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Cusp\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Radiation_Belt\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Plasmasphere\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "INSTRUMENT_NAME",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"EDI3\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "INSTRUMENT_DESCRIPTION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"EDI Experiment on Cluster C3\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "INSTRUMENT_TYPE",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Electron_Drift\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "MEASUREMENT_TYPE",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Electric_Field\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "INSTRUMENT_CAVEATS",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\" \"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "DATASET_ID",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"C3_CP_EDI_EGD\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "DATA_TYPE",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"CP>CAA Parameter\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "DATASET_TITLE",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Electron Gyrotime Data\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "DATASET_DESCRIPTION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"This dataset contains measurements of the gyro-time of emitted \"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"electrons from the EDI experiment on the Cluster C3 spacecraft\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"The kinetic energy of the emitted electrons is: 1. or 0.5 keV (kine_flag=0,1) \"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "CONTACT_COORDINATES",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"EditaGeorgescu>Archive Scientist>eg@mps.mpg.de\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "PROCESSING_LEVEL",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Auxiliary\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "TIME_RESOLUTION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "0.015625",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "MAX_TIME_RESOLUTION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "0.015625",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "MIN_TIME_RESOLUTION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "1.e31",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "DATASET_CAVEATS",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"No regularly spaced time series!\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"MAX_TIME_RESOLUTION is given for burst mode\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"MIN_TIME_RESOLUTION is set to fill_value\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Time_tags are the registered UT at electron detection\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"To convert gyrotime microseconds to B in nT use for\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"kine_flag=0: 35793.785\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"kine_flag=1: 35758.831\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"\"",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "ACKNOWLEDGEMENT",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"Please acknowledge the EDI team and ESA Cluster Active Archive\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\" when using this data\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "METADATA_TYPE",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"CAA\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "METADATA_VERSION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"2.0\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "FILE_TYPE",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"cef\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "meta",
+            "name": "DATASET_VERSION",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "ENTRY",
+                    "v": "\"2.0\"",
+                    "q": true
+                }
+            ]
+        },
+        {
+            "type": "var",
+            "name": "time_tags__C3_CP_EDI_EGD",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "PARAMETER_TYPE",
+                    "v": "\"Support_Data\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "CATDESC",
+                    "v": "\"Time Tag\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "UNITS",
+                    "v": "\"s\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "SI_CONVERSION",
+                    "v": "\"1.0>s\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "FIELDNAM",
+                    "v": "\"Universal Time\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "FILLVAL",
+                    "v": "9999-12-31T23:59:59.999999Z",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "SIGNIFICANT_DIGITS",
+                    "v": "27",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "LABLAXIS",
+                    "v": "\"UT\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "VALUE_TYPE",
+                    "v": "ISO_TIME",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "DELTA_PLUS",
+                    "v": "0.244e-6",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "DELTA_MINUS",
+                    "v": "0.244e-6",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "var",
+            "name": "tof__C3_CP_EDI_EGD",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "PARAMETER_TYPE",
+                    "v": "\"Data\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTITY",
+                    "v": "\"Electron\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "PROPERTY",
+                    "v": "\"Time-of-Flight\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "CATDESC",
+                    "v": "\"electron gyration time\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "VALUE_TYPE",
+                    "v": "FLOAT",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "FIELDNAM",
+                    "v": "\"Time-of-Flight\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "FILLVAL",
+                    "v": "0.000",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "SIGNIFICANT_DIGITS",
+                    "v": "10",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "QUALITY",
+                    "v": "\"2\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "LABLAXIS",
+                    "v": "\"tof\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "SI_CONVERSION",
+                    "v": "\"1.0e-6>s\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "UNITS",
+                    "v": "\"microseconds\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "DEPEND_0",
+                    "v": "time_tags__C3_CP_EDI_EGD",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "var",
+            "name": "sigma_tof__C3_CP_EDI_EGD",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "PARAMETER_TYPE",
+                    "v": "\"Data\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTITY",
+                    "v": "\"Electron\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "PROPERTY",
+                    "v": "\"Time-of-Flight\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "CATDESC",
+                    "v": "\"electron gyration time standard deviation\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "VALUE_TYPE",
+                    "v": "FLOAT",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "FIELDNAM",
+                    "v": "\"Time-of-Flight standard deviation\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "FILLVAL",
+                    "v": "0.000",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "SIGNIFICANT_DIGITS",
+                    "v": "10",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "QUALITY",
+                    "v": "\"2\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "LABLAXIS",
+                    "v": "\"sigma_tof\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "SI_CONVERSION",
+                    "v": "\"1.0e-6>s\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "UNITS",
+                    "v": "\"microseconds\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "DEPEND_0",
+                    "v": "time_tags__C3_CP_EDI_EGD",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "var",
+            "name": "gdu_flag__C3_CP_EDI_EGD",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "PARAMETER_TYPE",
+                    "v": "\"Support_Data\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTITY",
+                    "v": "\"Electron\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "PROPERTY",
+                    "v": "\"Time-of-Flight\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "CATDESC",
+                    "v": "\"Detector Unit\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "VALUE_TYPE",
+                    "v": "INT",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "FIELDNAM",
+                    "v": "\"Detector Unit\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "FILLVAL",
+                    "v": "0",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "SIGNIFICANT_DIGITS",
+                    "v": "1",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "LABLAXIS",
+                    "v": "\"DU\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "UNITS",
+                    "v": "\"Unitless\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "DEPEND_0",
+                    "v": "time_tags__C3_CP_EDI_EGD",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "var",
+            "name": "kine_flag__C3_CP_EDI_EGD",
+            "elems": [
+                {
+                    "type": "a",
+                    "k": "PARAMETER_TYPE",
+                    "v": "\"Support_Data\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "ENTITY",
+                    "v": "\"Electron\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "PROPERTY",
+                    "v": "\"Time-of-Flight\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "CATDESC",
+                    "v": "\"electron gyration time\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "VALUE_TYPE",
+                    "v": "INT",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "FIELDNAM",
+                    "v": "\"Kinetic Energy Flag\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "FILLVAL",
+                    "v": "9",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "SIGNIFICANT_DIGITS",
+                    "v": "1",
+                    "q": false
+                },
+                {
+                    "type": "a",
+                    "k": "LABLAXIS",
+                    "v": "\"KinEnFlag\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "UNITS",
+                    "v": "\"Unitless\"",
+                    "q": true
+                },
+                {
+                    "type": "a",
+                    "k": "DEPEND_0",
+                    "v": "time_tags__C3_CP_EDI_EGD",
+                    "q": false
+                }
+            ]
+        },
+        {
+            "type": "a",
+            "k": "DATA_UNTIL",
+            "v": "EOF",
+            "q": false
+        }
+    ]
+}

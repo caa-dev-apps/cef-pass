@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en"><head><title>Manifest</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content=""><meta name="groc-document-path" content="Manifest"><meta name="groc-project-path" content="Manifest.groovy"><link rel="stylesheet" type="text/css" media="all" href="assets/style.css"><script type="text/javascript" src="assets/behavior.js"></script><body><div id="meta"><div class="file-path">Manifest.groovy</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-keyword">package</span> rules
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Manifest</span> {</span>
+
+    def about() {
+        <span class="hljs-string">""</span><span class="hljs-string">"
+            This is the main groovy manifest file
+        "</span><span class="hljs-string">""</span>
+    }
+
+    def rules = [
+        header: [
+            HeaderTest001,
+            HeaderTest002,
+            HeaderTest003
+        ],
+        data: [
+            DataTest001,
+            DataTest002,
+            DataTest003
+        ]
+    ]
+        
+        
+    def run() {
+    
+        println <span class="hljs-string">"header rules:"</span>
+    
+        rules.header.each {
+            it.newInstance().test()
+        }
+        
+        println <span class="hljs-string">"data rules:"</span>
+        
+        rules.data.each {
+            it.newInstance().test()
+        }
+    }
+        
+        
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(String[] i_args) {
+        println <span class="hljs-string">"Hello, World!"</span>
+    
+        Manifest m = <span class="hljs-keyword">new</span> Manifest();
+        println m.run()
+        
+        
+        
+        
+    }        
+}</div></div></div></div></body></html>
