@@ -1,7 +1,5 @@
 package rules2015
 
-
-
 public class RulesSet01
 {
 
@@ -84,11 +82,17 @@ public class RulesSet01
     }
 
 
-    public def rules()
+    public def run()
     {
-        println("Hello, World!")
-        println("def rules_01()")
+        println("XX RulesSet01::run() XX")
     }
+    
+    
+    static public def test()
+    {
+        println("Zz RulesSet01::test() zZ")
+    }
+    
 }
 
 

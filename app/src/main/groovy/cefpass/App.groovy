@@ -87,9 +87,15 @@ public class App {
             // 
             // ----------------------------------------------------------------------------------
 
-            RulesSet01 l_set01 = new RulesSet01();
-            l_set01.run();
+            // stage #4
+            RulesSet01 l_set01 = new RulesSet01()
+            l_set01.run()
 
+            RulesSet01.test()
+            
+            RulesSet02 l_set02 = new RulesSet02()
+            l_set02.run()
+            
             
             
             
