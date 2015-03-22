@@ -2,9 +2,10 @@ package cefpass
 
 import java.util.logging.Logger
 
-import rules2015.RulesSet01;
-import rules2015.RulesSet02;
+//x import rules2015.RulesSet01;
+//x import rules2015.RulesSet02;
 
+import rules2015.RuleSets
 
 public class App {
     boolean m1() {
@@ -35,7 +36,6 @@ public class App {
         //      output (header data)
         //          - groovy nodes
         //          - xml 
-        //          - json
         //
         //      PASS/FAIL
         //
@@ -68,13 +68,12 @@ public class App {
             CefHeaderData l_headerData = l_reader.getHeaderData()
             //i l_headerData.showNodes() 
             //i l_headerData.showXmlNodes() 
-            //i l_headerData.showJSONNodes() 
             
             Logs.writeTextFile("nodes.txt", l_headerData.getNodesAsString())
             Logs.writeTextFile("nodes.xml", l_headerData.getXmlNodesAsString())
-            Logs.writeTextFile("nodes.json", l_headerData.getJSONodesAsString())
 
             // stage #3 validate XML
+            
             // ----------------------------------------------------------------------------------
             // Under development
             // ----------------------------------------------------------------------------------
@@ -88,16 +87,22 @@ public class App {
             // ----------------------------------------------------------------------------------
 
             // stage #4
-            RulesSet01 l_set01 = new RulesSet01()
-            l_set01.run()
-
-            RulesSet01.test()
-            
-            RulesSet02 l_set02 = new RulesSet02()
-            l_set02.run()
+            // ----------------------------------------------------------------------------------
+            // Under development
+            // ----------------------------------------------------------------------------------
             
             
+//x             RulesSet01 l_set01 = new RulesSet01()
+//x             l_set01.run()
+//x 
+//x             RulesSet01.test()
+//x             
+//x             RulesSet02 l_set02 = new RulesSet02()
+//x             l_set02.run()
             
+            
+            RuleSets l_rule_sets = new RuleSets(l_headerData)
+            l_rule_sets.run()
             
             result = true
         }

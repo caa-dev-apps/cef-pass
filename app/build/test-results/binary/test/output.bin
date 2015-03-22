@@ -9,10 +9,11 @@ Search Folders:
 3	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI
 3	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW
 5	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE
+R############ cefpass.LogsC:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/logs
 	Data: !
-writeTextFile: nodes.txt
-writeTextFile: nodes.xml
-writeTextFile: nodes.json
-XX RulesSet01::run() XX
-Zz RulesSet01::test() zZ
-XX RulesSet02::run() XX
+&** ** ** ** writeTextFile: nodes.txt
+t** ++ == ** writeTextFilePath: C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/logs/2015-03-22.950485\nodes.txt
+&** ** ** ** writeTextFile: nodes.xml
+t** ++ == ** writeTextFilePath: C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/logs/2015-03-22.950485\nodes.xml
+RuleSets::run()
+ERROR!! :: RuleSets::run()

@@ -18,6 +18,9 @@ public class Logs
     def static init() {
         s_logsFolder = CmdLnArgs.getLogsFolder()
         
+        println("############ cefpass.Logs" + s_logsFolder);
+        
+        
         if(s_logsFolder == null) {
             s_logsFolder = System.getProperty("user.dir") + "../logs"
         }
@@ -41,12 +44,17 @@ public class Logs
     def static writeTextFile(i_filename, 
                              i_contents) 
     {
-        println "writeTextFile: " + i_filename
+        println "** ** ** ** writeTextFile: " + i_filename
     
         if(s_logsFolder != null)
         {
+            def l_path = s_logsFolder + "\\" + i_filename
+            
+            println "** ++ == ** writeTextFilePath: " +  l_path
+            
 //x         new File(s_logsFolder).mkdirs();
-            File file = new File(s_logsFolder + "\\" + i_filename)
+//x         File file = new File(s_logsFolder + "\\" + i_filename)
+            File file = new File(l_path)
             file << i_contents
         }
     }

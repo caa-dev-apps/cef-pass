@@ -5,44 +5,14 @@ import java.io.File
 import java.util.zip.GZIPInputStream
 
 import groovy.xml.XmlUtil
-import groovy.json.JsonBuilder
+
+import groovy.xml.MarkupBuilder
+import groovy.xml.DOMBuilder
+import javax.xml.parsers.DocumentBuilderFactory
+import javax.xml.xpath.*
 
 ///////////////////////////////////////////////////////////////////////////////
 //
-
-class CefHeaderJSON {
- 
-    def root = [ type:'root', name:'root', elems:[] ];
-    def cur = root;
-   
-    def error(i_message) { println i_message; System.exit(-1) }
- 
-    def append(nodes) { cur = root; root.elems = root.elems + nodes }
-    def appendDocument(i_document) { append(i_document.root.elems); }   
- 
-    def addAttr(k,v,q) { cur.elems << [type:'a', k:k, v:v, q:q] }  // quotes
-    def addComment(c) { cur.elems << [type:'c', k:'c', v:c]  }
-   
-    def stxMeta(n) {  cur = [type:'meta', name:n, elems:[]]; root.elems << cur }
-    def etxMeta(n) {  cur = root }
- 
-    def stxVar(n) {  cur = [type:'var', name:n, elems:[]]; root.elems << cur }
-    def etxVar(n) {  cur = root }
- 
-    def dump() {
-        def builder = new JsonBuilder(root)
-        println builder.toPrettyString()       
-    }
-    
-    def showJSONodes() { Show.showJSONodes(root) }
-    def show() { showJSONodes() }
-    
-    def getJSONodesAsString() {
-//x     println "\nJSON Nodes:"
-        def builder = new JsonBuilder(root)
-        builder.toPrettyString() 
-    }
-}
  
 class CefHeaderNodes {
 
@@ -72,10 +42,6 @@ class CefHeaderNodes {
     def stxVar(n) { cur = builder.var(name: n); root.append(cur) }
     def etxVar(n) { cur = root}
 
-    def showNodes() {   Show.showNodes(root) }
-    def showXmlNodes() { Show.showXmlNodes(root)  }
-    def show() { showNodes(); showXmlNodes() }
-    
     def getNodesAsString()    { 
         //x println "\nNodes:"
         def writer = new StringWriter()
@@ -95,39 +61,99 @@ class CefHeaderNodes {
     }
 }
 
+//x     def builder = MarkupBuilder.newInstance()
+//x     def builder = DOMBuilder.newInstance()
+//x     def builder = JsonBuilder.newInstance()
+//x     def builder = NodeBuilder.newInstance()
+//x     def root = builder.root() { 
 
+    
+//x-x class CefHeaderNodes {
+//x-x 
+//x-x //x     def builder = new NodeBuilder()
+//x-x //x     def root = builder.root()
+//x-x //x     def cur = root
+//x-x 
+//x-x     def builder = null;
+//x-x     def root = null;
+//x-x     def cur = null;
+//x-x     
+//x-x     public CefHeaderNodes(i_builder)
+//x-x     {
+//x-x         builder = i_builder
+//x-x         root = builder.root()
+//x-x         cur = root
+//x-x     }
+//x-x     
+//x-x     
+//x-x     def error(i_message) { println i_message; System.exit(-1) }
+//x-x 
+//x-x     def append(nodes) { cur = root; root.append(nodes) }
+//x-x 
+//x-x     def appendDocument(i_document) { 
+//x-x         i_document.root.children().each { append(it); }
+//x-x     }    
+//x-x     
+//x-x //x     def addAttr(k,v,q) { cur.append(builder.a((k): v, q: q)) }  // quotes
+//x-x //x     def addAttr(k,v,q) { cur.append(builder.a((k): v, q: q)) }  // quotes
+//x-x //x     def addAttr(k,v,q) { cur.append(builder.createNode(k, '\"' + v +'\"')) }  // quotes
+//x-x     def addAttr(k,v,q) { cur.append(builder.createNode(k, v )) }  // quotes
+//x-x     
+//x-x     
+//x-x     def addComment(c) { Show.showHeaderComment(c); cur.append(builder.c(c)) }
+//x-x     
+//x-x     def stxMeta(n) {  cur = builder.meta(name: n); root.append(cur) }
+//x-x     def etxMeta(n) {  cur = root }
+//x-x     
+//x-x     def stxVar(n) { cur = builder.var(name: n); root.append(cur) }
+//x-x     def etxVar(n) { cur = root}
+//x-x 
+//x-x     def getNodesAsString()    { 
+//x-x         //x println "\nNodes:"
+//x-x         def writer = new StringWriter()
+//x-x         root.print(new PrintWriter(writer))
+//x-x         writer.toString()    
+//x-x     }
+//x-x     
+//x-x     def getXmlNodesAsString() { 
+//x-x         //x println "\nXML Nodes:"
+//x-x         new XmlUtil().serialize(root)    
+//x-x     }
+//x-x     
+//x-x     def dump() {
+//x-x         //x def writer2 = new StringWriter()
+//x-x         //x root.print(new PrintWriter(writer2))
+//x-x         println getNodesAsString()
+//x-x     }
+//x-x }    
+    
+    
+    
+    
+    
+    
 class CefHeaderData {
 
     def headerNodes = new CefHeaderNodes()
-    def headerJSON = new CefHeaderJSON()
 
     def error(i_message) { println i_message; System.exit(-1) }
     
-    def append(nodes) { headerNodes.append(nodes);                                              headerJSON.append(nodes); }
-    def appendDocument(i_headerData) { headerNodes.appendDocument(i_headerData.headerNodes);    headerJSON.appendDocument(i_headerData.headerJSON);}
+    def append(nodes) { headerNodes.append(nodes);                                              }
+    def appendDocument(i_headerData) { headerNodes.appendDocument(i_headerData.headerNodes);    }
     
-    def addAttr(k,v,q) { headerNodes.addAttr(k,v,q);                                            headerJSON.addAttr(k,v,q);}  // quotes
-    def addComment(c) { headerNodes.addComment(c);                                              headerJSON.addComment(c);}
+    def addAttr(k,v,q) { headerNodes.addAttr(k,v,q);                                            }
+    def addComment(c) { headerNodes.addComment(c);                                              }
     
-    def stxMeta(n) {  headerNodes.stxMeta(n);                                                   headerJSON.stxMeta(n);}
-    def etxMeta(n) {  headerNodes.etxMeta(n);                                                   headerJSON.etxMeta(n);}
+    def stxMeta(n) {  headerNodes.stxMeta(n);                                                   }
+    def etxMeta(n) {  headerNodes.etxMeta(n);                                                   }
     
-    def stxVar(n) { headerNodes.stxVar(n);                                                      headerJSON.stxVar(n); }
-    def etxVar(n) { headerNodes.etxVar(n);                                                      headerJSON.etxVar(n); }
+    def stxVar(n) { headerNodes.stxVar(n);                                                      }
+    def etxVar(n) { headerNodes.etxVar(n);                                                      }
 
-    def dump() { headerNodes.dump();                                                            
-                 headerJSON.dump();}
+    def dump() { headerNodes.dump();                                                            }      
     
-    def show() { headerNodes.show();                                                            headerJSON.show() }
-    
-    def showNodes() { headerNodes.showNodes() }
-    def showXmlNodes() { headerNodes.showXmlNodes() }
-    def showJSONNodes() { headerJSON.show() 
-    }
-    
-    def getNodesAsString()    { headerNodes.getNodesAsString() }
-    def getXmlNodesAsString() { headerNodes.getXmlNodesAsString() }
-    def getJSONodesAsString() { headerJSON.getJSONodesAsString() }
+    def getNodesAsString()    { headerNodes.getNodesAsString()                                  }
+    def getXmlNodesAsString() { headerNodes.getXmlNodesAsString()                               }
     
     
     def removeQuotes(v) {
@@ -146,9 +172,6 @@ class CefHeaderData {
             v = '\"' + v +'\"'
         }
         
-//x         def v = i_v
-//x         def q = ""
-        
         Show.showHeaderKV(k,v)
         
     	if("START_META".compareToIgnoreCase(k) == 0)			stxMeta(v) 
@@ -159,3 +182,12 @@ class CefHeaderData {
     }
     
 }
+
+    
+//x     def builder = MarkupBuilder.newInstance()
+//x     def builder = DOMBuilder.newInstance()
+//x     def builder = JsonBuilder.newInstance()
+//x     def builder = NodeBuilder.newInstance()
+//x     def root = builder.root() { 
+
+    

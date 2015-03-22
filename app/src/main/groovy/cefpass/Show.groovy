@@ -1,7 +1,6 @@
 package cefpass
 
 import groovy.xml.XmlUtil
-import groovy.json.JsonBuilder 
 
 public class Show {
 
@@ -15,7 +14,6 @@ public class Show {
     public static boolean s_show_cx_files = true;                   // list the main cef and ceh filenames
     public static boolean s_show_nodes = true;                      // show nodebuilder -> nodes dump
     public static boolean s_show_xml_nodes = true;                  // show nodebuilder -> xml dump
-    public static boolean s_show_json_nodes = true;                 // (from map/list input) show jsonbuilder -> xml dump
     public static boolean s_show_data_line = true;                  // show data as read
     
 
@@ -61,17 +59,6 @@ public class Show {
             println "\nXML Nodes:"
         
             println new XmlUtil().serialize(i_root)    
-        }
-    }
-    
-    
-    public static void showJSONodes(i_root) 
-    {
-        if(s_show_json_nodes == true) {
-            println "\nJSON Nodes:"
-
-            def builder = new JsonBuilder(i_root)
-            println builder.toPrettyString() 
         }
     }
     

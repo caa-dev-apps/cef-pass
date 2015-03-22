@@ -1,0 +1,185 @@
+Rule:              1.00
+Scope:             GLOBAL
+Keyword:           FILE_NAME
+Data.type:         METADATA
+Cardinality:       1
+Description:       Name of file on disk equals FILE_NAME
+Error.Type:        Fatal Error
+Error.Message:     Filename and metadata filename do not match
+Caveats:           Within Double Quotes
+
+
+Rule:              1.01
+Scope:             GLOBAL
+Keyword:           FILE_NAME
+Data.type:         METADATA
+Cardinality:       1
+Description:       Must exist
+Error.Type:        Fatal Error
+Error.Message:     Missing FILE_NAME
+Caveats:           Within Double Quotes
+
+
+Rule:              1.02
+Scope:             GLOBAL
+Keyword:           FILE_FORMAT_VERSION
+Data.type:         METADATA
+Cardinality:       1
+Description:       Must exist
+Error.Type:        Fatal Error
+Error.Message:     Missing FILE_FORMAT_VERSION
+Caveats:           Within Double Quotes
+
+
+Rule:              1.03
+Scope:             GLOBAL
+Keyword:           END_OF_RECORD_MARKER
+Data.type:         METADATA
+Cardinality:       1
+Description:       Must exist BUT may be blank
+Error.Type:        Fatal Error
+Error.Message:     Missing END_OF_RECORD_MARKER
+Caveats:           Within Double Quotes
+
+
+Rule:              1.04
+Scope:             GLOBAL
+Keyword:           INCLUDE
+Data.type:         METADATA
+Cardinality:       0..n
+Description:       All include files must exist
+Error.Type:        Warning
+Error.Message:     Include file may not exist, but all required metadata may exist in other files?
+Caveats:           Within Double Quotes
+
+
+Rule:              2.00
+Scope:             GENERAL
+Keyword:           START_META/END_META
+Data.type:         METADATA
+Cardinality:       NA
+Description:       All START_META must have END_META
+Error.Type:        Fatal Error
+Error.Message:     Syntax error – START_META/ END_META mismatch
+Caveats:           NA
+
+
+Rule:              2.01
+Scope:             GENERAL
+Keyword:           START_META/END_META
+Data.type:         METADATA
+Cardinality:       NA
+Description:       Must have ENTRY= field
+Error.Type:        Fatal Error
+Error.Message:     VARIABLE <x> EMPTY
+Caveats:           NA
+
+
+Rule:              2.02
+Scope:             GENERAL
+Keyword:           START_META/END_META
+Data.type:         METADATA
+Cardinality:       NA
+Description:       If VALUE_TYPE provided, value must be of type indicated
+Error.Type:        Fatal Error
+Error.Message:     VARIABLE <x> VALUE DOES NOT MATCH TYPE
+Caveats:           NA
+
+
+Rule:              2.03
+Scope:             GENERAL
+Keyword:           START_META/END_META
+Data.type:         METADATA
+Cardinality:       1
+Description:       REQUIRED VARIABLES (below)
+Error.Type:        Fatal Error
+Error.Message:     MISSING <x> VARIABLE
+Caveats:           NA
+
+
+Rule:              2.04
+Scope:             GENERAL
+Keyword:           FILE_TYPE
+Data.type:         METADATA
+Cardinality:       1
+Description:       must be cef
+Error.Type:        Fatal Error
+Error.Message:     FILE_TYPE is not CEF, unable to validate non CEF files
+Caveats:           NA
+
+
+Rule:              2.05
+Scope:             GENERAL
+Keyword:           DATASET_VERSION
+Data.type:         METADATA
+Cardinality:       1
+Description:       must be valid integer
+Error.Type:        Fatal Error
+Error.Message:     Invalid value
+Caveats:           NA
+
+
+Rule:              2.06
+Scope:             GENERAL
+Keyword:           LOGICAL_FILE_ID
+Data.type:         METADATA
+Cardinality:       1
+Description:       Same as Filename without extension
+Error.Type:        Fatal Error?
+Error.Message:     Logical File ID does not match filename
+Caveats:           NA
+
+
+Rule:              2.07
+Scope:             GENERAL
+Keyword:           VERSION_NUMBER
+Data.type:         METADATA
+Cardinality:       1
+Description:       VERSION_NUMBER must match version number in filename
+Error.Type:        Fatal Error
+Error.Message:     VERSION_NUMBER does not match version in filename
+Caveats:           NA
+
+
+Rule:              2.08
+Scope:             GENERAL
+Keyword:           VERSION_NUMBER
+Data.type:         METADATA
+Cardinality:       1
+Description:       must be valid integer
+Error.Type:        Fatal Error
+Error.Message:     Invalid value
+Caveats:           NA
+
+
+Rule:              2.09
+Scope:             GENERAL
+Keyword:           FILE_TIME_SPAN
+Data.type:         METADATA
+Cardinality:       1
+Description:       must be ISO_TIME_RANGE
+Error.Type:        Fatal Error
+Error.Message:     VARIABLE <x> Invalid Format
+Caveats:           NA
+
+
+Rule:              2.10
+Scope:             GENERAL
+Keyword:           FILE_TIME_SPAN
+Data.type:         METADATA
+Cardinality:       1
+Description:       START_TIME must be before STOP TIME
+Error.Type:        Fatal Error
+Error.Message:     VARIABLE <x> Start Time must be before Stop time
+Caveats:           NA
+
+
+Rule:              2.11
+Scope:             GENERAL
+Keyword:           FILE_TIME_SPAN
+Data.type:         METADATA / DATA
+Cardinality:       1
+Description:       Timespan of data RECORDS must be between FILE_TIME_SPAN
+Error.Type:        Fatal Error
+Error.Message:     Data outside FILE_TIME_SPAN
+Caveats:           NA

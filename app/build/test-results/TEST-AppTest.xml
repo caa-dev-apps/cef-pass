@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-02-11T23:01:14" hostname="scala" time="0.781">
+<testsuite name="AppTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-03-22T22:39:10" hostname="scala" time="0.617">
   <properties/>
   <testcase name="First Test: App.m1" classname="AppTest" time="0.094"/>
-  <testcase name="Second Test (args): App.stages" classname="AppTest" time="0.687"/>
+  <testcase name="Second Test (args): App.stages" classname="AppTest" time="0.523"/>
   <system-out><![CDATA[Hello, World!
 
 CEF Filename:
@@ -14,13 +14,14 @@ Search Folders:
 	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI
 	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW
 	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE
+############ cefpass.LogsC:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/logs
 Data: !
-writeTextFile: nodes.txt
-writeTextFile: nodes.xml
-writeTextFile: nodes.json
-XX RulesSet01::run() XX
-Zz RulesSet01::test() zZ
-XX RulesSet02::run() XX
+** ** ** ** writeTextFile: nodes.txt
+** ++ == ** writeTextFilePath: C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/logs/2015-03-22.950485\nodes.txt
+** ** ** ** writeTextFile: nodes.xml
+** ++ == ** writeTextFilePath: C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/logs/2015-03-22.950485\nodes.xml
+RuleSets::run()
+ERROR!! :: RuleSets::run()
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
