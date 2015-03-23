@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AppTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-03-23T23:11:57" hostname="scala" time="0.234">
+  <properties/>
+  <testcase name="Second Test (args): App.stages" classname="AppTest2" time="0.234"/>
+  <system-out><![CDATA[Stage 1: 
+
+CEF Filename:
+	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz
+
+Search Folders:
+	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES
+	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS
+	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI
+	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW
+	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE
+############ cefpass.LogsC:/work.dev/2015.03.22 github cef pass v2/v0/_logs
+Stage 2: 
+Data: !
+** ** ** ** writeTextFile: nodes.txt
+** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-03-23.317750\nodes.txt
+** ** ** ** writeTextFile: nodes.xml
+** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-03-23.317750\nodes.xml
+** ** ** ** writeTextFile: dombuilder-document.xml
+** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-03-23.317750\dombuilder-document.xml
+Stage 3: 
+Stage 4: 
+RuleSets::run()
+XX RuleSet02::run() XX
+XX RuleSet01::run() XX
+XX RuleSet01::run() XX
+RuleSet99::run()
+Stage 5: 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

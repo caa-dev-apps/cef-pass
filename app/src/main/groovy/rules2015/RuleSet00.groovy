@@ -5,6 +5,12 @@ package rules2015
 
 public class RuleSet00
 {
+    
+    public RuleSet00(i_data)
+    {
+    }
+    
+    
     //x moved from 2.00
     // ##  Rule:              0.00
     // ##  Scope:             GENERAL

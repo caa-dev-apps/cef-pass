@@ -34,15 +34,15 @@ class AppTest extends Specification{
     ]
 
 
-    def "First Test: App.m1"() {
-    
-        setup:
-        App app = new App()
-        when:
-        def result = app.m1()
-        then:
-        result == true
-    }
+//x     def "First Test: App.m1"() {
+//x     
+//x         setup:
+//x         App app = new App()
+//x         when:
+//x         def result = app.m1()
+//x         then:
+//x         result == true
+//x     }
     
     
     def "Second Test (args): App.stages"() {
@@ -55,8 +55,7 @@ class AppTest extends Specification{
             "-i",
             TEST_SEARCH_FOLDERS.join(","),
             "-l",
-            "C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/logs"
- //x        "C:/Dump/logs"
+            "C:/work.dev/2015.03.22 github cef pass v2/v0/_logs"
         ]
         
         when:

@@ -57,11 +57,13 @@ public class App {
         
         try{
             // stage #1
+            println "Stage 1: "
             CmdLnArgs.init(i_args)
             if(CmdLnArgs.isOk() == false) return
             Logs.init()
             
             // stage #2
+            println "Stage 2: "
             CefReader l_reader = new CefReader()
             //i l_reader.showContexts()
             
@@ -72,8 +74,10 @@ public class App {
             Logs.writeTextFile("nodes.txt", l_headerData.getNodesAsString())
             Logs.writeTextFile("nodes.xml", l_headerData.getXmlNodesAsString())
 
+            Logs.writeTextFile("dombuilder-document.xml", l_headerData.getDocument().documentElement)
+
             // stage #3 validate XML
-            
+            println "Stage 3: "
             // ----------------------------------------------------------------------------------
             // Under development
             // ----------------------------------------------------------------------------------
@@ -87,24 +91,22 @@ public class App {
             // ----------------------------------------------------------------------------------
 
             // stage #4
+            println "Stage 4: "
             // ----------------------------------------------------------------------------------
             // Under development
             // ----------------------------------------------------------------------------------
-            
-            
-//x             RulesSet01 l_set01 = new RulesSet01()
-//x             l_set01.run()
-//x 
-//x             RulesSet01.test()
-//x             
-//x             RulesSet02 l_set02 = new RulesSet02()
-//x             l_set02.run()
-            
             
             RuleSets l_rule_sets = new RuleSets(l_headerData)
             l_rule_sets.run()
             
             result = true
+            
+            // stage #5
+            println "Stage 5: "
+            // ----------------------------------------------------------------------------------
+            // Under development
+            // ----------------------------------------------------------------------------------
+            
         }
         catch(Exception e) {
             e.printStackTrace()        

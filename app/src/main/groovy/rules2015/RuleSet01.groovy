@@ -2,6 +2,9 @@ package rules2015
 
 public class RuleSet01
 {
+    public RuleSet01(i_data)
+    {
+    }
 
     // ##  Rule:              1.00
     // ##  Scope:             GLOBAL

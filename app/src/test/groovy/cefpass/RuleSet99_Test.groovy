@@ -10,6 +10,13 @@ import spock.lang.Specification
 import cefpass.App
 import rules2015.RuleSet99
 
+
+import groovy.xml.MarkupBuilder
+import groovy.xml.DOMBuilder
+import javax.xml.parsers.DocumentBuilderFactory
+import javax.xml.xpath.*
+
+
 class RuleSet99_Test extends Specification{
 
     def SOME_TEST_DATA = "Hello, World!"
@@ -17,7 +24,29 @@ class RuleSet99_Test extends Specification{
     def "RuleSet99_Test: 01"() {
     
         setup:
-            RuleSet99 rs99 = new RuleSet99()
+            def TEST_SAMPLE_XML = 
+            '''<?xml version="1.0" encoding="UTF-8"?><root>
+                  <FILE_NAME>"C3_CP_EDI_EGD__20111009_V01.cef"</FILE_NAME>
+                  <FILE_FORMAT_VERSION>"CEF-2.0"</FILE_FORMAT_VERSION>
+                  <meta name="LOGICAL_FILE_ID">
+                    <ENTRY>"C3_CP_EDI_EGD__20111009_V01"</ENTRY>
+                  </meta>
+                  <meta name="VERSION_NUMBER">
+                    <ENTRY>"01"</ENTRY>
+                  </meta>
+                </root>            
+            '''
+                            
+            def l_test_data = [
+                document: DOMBuilder.parse(new StringReader(TEST_SAMPLE_XML)),
+                info: [ 
+                    filename:"C3_CP_EDI_EGD__20111009_V01.cef", 
+                    b:2, 
+                    c:3
+                ]
+            ]
+        
+            RuleSet99 rs99 = new RuleSet99(l_test_data)
         when:
             def result = rs99.Rule_99_01()
         then:
@@ -27,7 +56,7 @@ class RuleSet99_Test extends Specification{
     def "RuleSet99_Test: 02"() {
     
         setup:
-            RuleSet99 rs99 = new RuleSet99()
+            RuleSet99 rs99 = new RuleSet99(null)
         when:
             def result = rs99.Rule_99_02()
         then:

@@ -4,9 +4,11 @@ package rules2015
 
 public class RuleSet99
 {
+    def m_data = null
     
-    public RuleSet99()
+    public RuleSet99(i_data)
     {
+        m_data = i_data
     }
 
     // ##  Rule:              0.00
@@ -21,7 +23,8 @@ public class RuleSet99
 
     def Rule_99_01()
     {
-        return true
+//x         return m_data.info == 'TODO'
+        return m_data.info != null
     }
 
     

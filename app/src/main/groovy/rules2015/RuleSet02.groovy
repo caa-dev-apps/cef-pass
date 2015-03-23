@@ -2,6 +2,9 @@ package rules2015
 
 public class RuleSet02
 {
+    public RuleSet02(i_data)
+    {
+    }
 
 //x     Moved to RuleSet00 
 //x 

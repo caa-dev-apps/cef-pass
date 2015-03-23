@@ -14,6 +14,11 @@ import javax.xml.xpath.*
 ///////////////////////////////////////////////////////////////////////////////
 //
  
+//x     def builder = MarkupBuilder.newInstance()
+//x     def builder = DOMBuilder.newInstance()
+//x     def builder = JsonBuilder.newInstance()
+//x     def builder = NodeBuilder.newInstance()
+ 
 class CefHeaderNodes {
 
     def builder = new NodeBuilder()
@@ -28,11 +33,7 @@ class CefHeaderNodes {
         i_document.root.children().each { append(it); }
     }    
     
-//x     def addAttr(k,v,q) { cur.append(builder.a((k): v, q: q)) }  // quotes
-//x     def addAttr(k,v,q) { cur.append(builder.a((k): v, q: q)) }  // quotes
-//x     def addAttr(k,v,q) { cur.append(builder.createNode(k, '\"' + v +'\"')) }  // quotes
     def addAttr(k,v,q) { cur.append(builder.createNode(k, v )) }  // quotes
-    
     
     def addComment(c) { Show.showHeaderComment(c); cur.append(builder.c(c)) }
     
@@ -61,77 +62,6 @@ class CefHeaderNodes {
     }
 }
 
-//x     def builder = MarkupBuilder.newInstance()
-//x     def builder = DOMBuilder.newInstance()
-//x     def builder = JsonBuilder.newInstance()
-//x     def builder = NodeBuilder.newInstance()
-//x     def root = builder.root() { 
-
-    
-//x-x class CefHeaderNodes {
-//x-x 
-//x-x //x     def builder = new NodeBuilder()
-//x-x //x     def root = builder.root()
-//x-x //x     def cur = root
-//x-x 
-//x-x     def builder = null;
-//x-x     def root = null;
-//x-x     def cur = null;
-//x-x     
-//x-x     public CefHeaderNodes(i_builder)
-//x-x     {
-//x-x         builder = i_builder
-//x-x         root = builder.root()
-//x-x         cur = root
-//x-x     }
-//x-x     
-//x-x     
-//x-x     def error(i_message) { println i_message; System.exit(-1) }
-//x-x 
-//x-x     def append(nodes) { cur = root; root.append(nodes) }
-//x-x 
-//x-x     def appendDocument(i_document) { 
-//x-x         i_document.root.children().each { append(it); }
-//x-x     }    
-//x-x     
-//x-x //x     def addAttr(k,v,q) { cur.append(builder.a((k): v, q: q)) }  // quotes
-//x-x //x     def addAttr(k,v,q) { cur.append(builder.a((k): v, q: q)) }  // quotes
-//x-x //x     def addAttr(k,v,q) { cur.append(builder.createNode(k, '\"' + v +'\"')) }  // quotes
-//x-x     def addAttr(k,v,q) { cur.append(builder.createNode(k, v )) }  // quotes
-//x-x     
-//x-x     
-//x-x     def addComment(c) { Show.showHeaderComment(c); cur.append(builder.c(c)) }
-//x-x     
-//x-x     def stxMeta(n) {  cur = builder.meta(name: n); root.append(cur) }
-//x-x     def etxMeta(n) {  cur = root }
-//x-x     
-//x-x     def stxVar(n) { cur = builder.var(name: n); root.append(cur) }
-//x-x     def etxVar(n) { cur = root}
-//x-x 
-//x-x     def getNodesAsString()    { 
-//x-x         //x println "\nNodes:"
-//x-x         def writer = new StringWriter()
-//x-x         root.print(new PrintWriter(writer))
-//x-x         writer.toString()    
-//x-x     }
-//x-x     
-//x-x     def getXmlNodesAsString() { 
-//x-x         //x println "\nXML Nodes:"
-//x-x         new XmlUtil().serialize(root)    
-//x-x     }
-//x-x     
-//x-x     def dump() {
-//x-x         //x def writer2 = new StringWriter()
-//x-x         //x root.print(new PrintWriter(writer2))
-//x-x         println getNodesAsString()
-//x-x     }
-//x-x }    
-    
-    
-    
-    
-    
-    
 class CefHeaderData {
 
     def headerNodes = new CefHeaderNodes()
@@ -154,7 +84,19 @@ class CefHeaderData {
     
     def getNodesAsString()    { headerNodes.getNodesAsString()                                  }
     def getXmlNodesAsString() { headerNodes.getXmlNodesAsString()                               }
-    
+
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // Legacy Hack!!! TODO DomBuilder should replace ?NodeBuilder above... but this is fine for now!             
+    // 
+    //                  !!!!   This is a Hack   :-(      FIXME    !!!!
+    //                  !!!!   This is a Hack   :-(      FIXME    !!!!
+    //                  !!!!   This is a Hack   :-(      FIXME    !!!!
+    //                  !!!!   This is a Hack   :-(      FIXME    !!!!
+    // 
+    //                  used for rules
+    // 
+    // 
+    def getDocument() { DOMBuilder.parse(new StringReader(getXmlNodesAsString()))             }
     
     def removeQuotes(v) {
         def l = v.length()
@@ -164,7 +106,6 @@ class CefHeaderData {
         [v, q]
     }
 
-    
     def add_kv(k, i_v){
         def (v, q) = removeQuotes(i_v)
 
@@ -180,14 +121,5 @@ class CefHeaderData {
     	else if ("END_VARIABLE".compareToIgnoreCase(k) == 0)	etxVar(v) 
     	else 													addAttr(k,v,q) 
     }
-    
 }
 
-    
-//x     def builder = MarkupBuilder.newInstance()
-//x     def builder = DOMBuilder.newInstance()
-//x     def builder = JsonBuilder.newInstance()
-//x     def builder = NodeBuilder.newInstance()
-//x     def root = builder.root() { 
-
-    
