@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CefHeaderXmlProcessor_Tests" tests="14" skipped="0" failures="0" errors="0" timestamp="2015-04-01T21:42:12" hostname="scala" time="0.25">
+<testsuite name="CefHeaderXmlProcessor_Tests" tests="14" skipped="0" failures="0" errors="0" timestamp="2015-04-04T00:00:51" hostname="scala" time="0.234">
   <properties/>
-  <testcase name="1 CefHeaderXmlProcessor_Tests: getFilename" classname="CefHeaderXmlProcessor_Tests" time="0.063"/>
-  <testcase name="2 CefHeaderXmlProcessor_Tests: getFileFormatVersion" classname="CefHeaderXmlProcessor_Tests" time="0.015"/>
-  <testcase name="3 CefHeaderXmlProcessor_Tests: getEndOfRecordMarker" classname="CefHeaderXmlProcessor_Tests" time="0.016"/>
-  <testcase name="4 CefHeaderXmlProcessor_Tests: getDataUntil" classname="CefHeaderXmlProcessor_Tests" time="0.015"/>
-  <testcase name="5 CefHeaderXmlProcessor_Tests: getLogicalFileId" classname="CefHeaderXmlProcessor_Tests" time="0.016"/>
-  <testcase name="6 CefHeaderXmlProcessor_Tests: getVersionNumber" classname="CefHeaderXmlProcessor_Tests" time="0.016"/>
-  <testcase name="7 CefHeaderXmlProcessor_Tests: getFileType" classname="CefHeaderXmlProcessor_Tests" time="0.0"/>
-  <testcase name="8 CefHeaderXmlProcessor_Tests: getDataSetId" classname="CefHeaderXmlProcessor_Tests" time="0.015"/>
-  <testcase name="9 CefHeaderXmlProcessor_Tests: getVersionNumber" classname="CefHeaderXmlProcessor_Tests" time="0.016"/>
-  <testcase name="10 CefHeaderXmlProcessor_Tests: getMeta" classname="CefHeaderXmlProcessor_Tests" time="0.016"/>
-  <testcase name="11 CefHeaderXmlProcessor_Tests: getMetaList" classname="CefHeaderXmlProcessor_Tests" time="0.015"/>
-  <testcase name="12 CefHeaderXmlProcessor_Tests: getMetaEntry" classname="CefHeaderXmlProcessor_Tests" time="0.0"/>
-  <testcase name="13 CefHeaderXmlProcessor_Tests: getMetaEntryPair" classname="CefHeaderXmlProcessor_Tests" time="0.016"/>
+  <testcase name="01 CefHeaderXmlProcessor_Tests: getFilename" classname="CefHeaderXmlProcessor_Tests" time="0.047"/>
+  <testcase name="02 CefHeaderXmlProcessor_Tests: getFileFormatVersion" classname="CefHeaderXmlProcessor_Tests" time="0.015"/>
+  <testcase name="03 CefHeaderXmlProcessor_Tests: getEndOfRecordMarker" classname="CefHeaderXmlProcessor_Tests" time="0.016"/>
+  <testcase name="04 CefHeaderXmlProcessor_Tests: getDataUntil" classname="CefHeaderXmlProcessor_Tests" time="0.016"/>
+  <testcase name="05 CefHeaderXmlProcessor_Tests: getLogicalFileId" classname="CefHeaderXmlProcessor_Tests" time="0.031"/>
+  <testcase name="06 CefHeaderXmlProcessor_Tests: getVersionNumber" classname="CefHeaderXmlProcessor_Tests" time="0.0"/>
+  <testcase name="07 CefHeaderXmlProcessor_Tests: getFileType" classname="CefHeaderXmlProcessor_Tests" time="0.016"/>
+  <testcase name="08 CefHeaderXmlProcessor_Tests: getDataSetId" classname="CefHeaderXmlProcessor_Tests" time="0.015"/>
+  <testcase name="09 CefHeaderXmlProcessor_Tests: getVersionNumber" classname="CefHeaderXmlProcessor_Tests" time="0.016"/>
+  <testcase name="10 CefHeaderXmlProcessor_Tests: getMeta" classname="CefHeaderXmlProcessor_Tests" time="0.015"/>
+  <testcase name="11 CefHeaderXmlProcessor_Tests: getMetaList" classname="CefHeaderXmlProcessor_Tests" time="0.0"/>
+  <testcase name="12 CefHeaderXmlProcessor_Tests: getMetaEntry" classname="CefHeaderXmlProcessor_Tests" time="0.016"/>
+  <testcase name="13 CefHeaderXmlProcessor_Tests: getMetaEntryPair" classname="CefHeaderXmlProcessor_Tests" time="0.0"/>
   <testcase name="14 CefHeaderXmlProcessor_Tests: getMetaPairNames" classname="CefHeaderXmlProcessor_Tests" time="0.031"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
