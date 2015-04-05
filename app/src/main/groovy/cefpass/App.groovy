@@ -34,7 +34,7 @@ public class App {
         //      vars
         //      
         //      output (header data)
-        //          - groovy nodes
+        //          - //x groovy nodes
         //          - xml 
         //
         //      PASS/FAIL
@@ -67,14 +67,8 @@ public class App {
             CefReader l_reader = new CefReader()
             //i l_reader.showContexts()
             
-            CefHeaderData l_headerData = l_reader.getHeaderData()
-            //i l_headerData.showNodes() 
-            //i l_headerData.showXmlNodes() 
-            
-            Logs.writeTextFile("nodes.txt", l_headerData.getNodesAsString())
-            Logs.writeTextFile("nodes.xml", l_headerData.getXmlNodesAsString())
-
-            Logs.writeTextFile("dombuilder-document.xml", l_headerData.getDocument().documentElement)
+            CefHeaderXml l_headerXml = l_reader.getHeaderXml()
+            Logs.writeTextFile("nodes.xml", l_headerXml.getXmlNodesAsString())
 
             // stage #3 validate XML
             println "Stage 3: "
@@ -96,7 +90,7 @@ public class App {
             // Under development
             // ----------------------------------------------------------------------------------
             
-            RuleSets l_rule_sets = new RuleSets(l_headerData)
+            RuleSets l_rule_sets = new RuleSets(l_headerXml)
             l_rule_sets.run()
             
             result = true

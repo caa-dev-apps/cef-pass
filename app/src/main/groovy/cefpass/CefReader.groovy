@@ -11,28 +11,19 @@ public class CefReader
 {
     def included = []
 
-//x     def m_cmdLnArgs
-    def m_headerData
+    def m_headerXml
     def m_cefContexts = []
     def m_isCommentsOn = false
     
     class MalFormedCef extends Exception{} 
     
-//x     public CefReader(i_cmdLnArgs)
-//x     {
-//x         m_cmdLnArgs = i_cmdLnArgs
-//x         m_isCommentsOn = m_cmdLnArgs.isCommentsOn()
-//x         
-//x         m_headerData = do_process(m_cmdLnArgs.getFilename(), 0, [0])
-//x     }
-    
     public CefReader()
     {
         m_isCommentsOn = CmdLnArgs.isCommentsOn()
-        m_headerData = do_process(CmdLnArgs.getFilename(), 0, [0])
+        m_headerXml = do_process(CmdLnArgs.getFilename(), 0, [0])
     }
     
-    public def getHeaderData() { return m_headerData }
+    public def getHeaderXml() { return m_headerXml }
     public def getCefContects() { return m_cefContexts }
     
     def process_data_line(l) {
@@ -43,7 +34,6 @@ public class CefReader
         Show.showContexts(m_cefContexts)
     }
     
-
     def do_process(i_path, i_level, i_prefix) {
         def l_levelIncludeCount = 0
     
@@ -51,8 +41,8 @@ public class CefReader
         
         m_cefContexts << l_cx
         
-        def l_headerData = new CefHeaderData()
-
+        def l_headerXml = new CefHeaderXml()
+        
         def l_data_until = false
         def l_fileInputStream = new FileInputStream(i_path)
         def l_fileStream = (i_path.endsWith(".gz")) ? new GZIPInputStream(l_fileInputStream) : l_fileInputStream;
@@ -65,18 +55,18 @@ public class CefReader
             def l_filepath = null
             def l_dummy =  null
             
-            (i_filename, l_dummy) = l_headerData.removeQuotes(i_filename)
+            (i_filename, l_dummy) = l_headerXml.removeQuotes(i_filename)
             
             for(d in CmdLnArgs.getSearchFolders()) {
                 def p = d + '/' + i_filename
           
-                if(included.find{ it == p } != null)  { l_headerData.error('include file: already added'); break }
+                if(included.find{ it == p } != null)  { l_headerXml.error('include file: already added'); break }
                 else if (new File(p).exists())  { l_filepath = p; included << p; break }
             }
          
-            if(l_filepath == null) l_headerData.error('include file: Not found')
-            else if(i_level > 8) l_headerData.error('include file: level > 8')
-            else do_process(l_filepath, i_level+1, (i_prefix + l_levelIncludeCount++)).each{ l_headerData.appendDocument(it) }
+            if(l_filepath == null) l_headerXml.error('include file: Not found')
+            else if(i_level > 8) l_headerXml.error('include file: level > 8')
+            else do_process(l_filepath, i_level+1, (i_prefix + l_levelIncludeCount++)).each{ l_headerXml.appendDocument(it) }
         }
         
         l_fileStream.eachLine { it 
@@ -95,14 +85,20 @@ public class CefReader
                     def key = matcher[0][1].trim()
                     def val = matcher[0][2].trim()
             
-                    l_headerData.add_kv(key,
-                                        val)
-                
-                    if("DATA_UNTIL".compareToIgnoreCase(key) == 0) l_data_until = true
-                    else if("include".compareToIgnoreCase(key) == 0) include_ceh(val)
+                    if("include".compareToIgnoreCase(key) == 0) 
+                    { 
+                        l_headerXml.add_kv("include-start", val)
+                        include_ceh(val) 
+                        l_headerXml.add_kv("include-end", val)
+                    }
+                    else
+                    {
+                        if("DATA_UNTIL".compareToIgnoreCase(key) == 0) { l_data_until = true }
+                        l_headerXml.add_kv(key, val)
+                    }
                 }
                 else if ((it =~ regexCommentStr).matches()) {
-                    if(m_isCommentsOn) l_headerData.addComment(it)
+                    if(m_isCommentsOn) l_headerXml.addComment(it)
                 }
                 else if(it.size() == 0) {
                     // ignore
@@ -113,7 +109,7 @@ public class CefReader
             }
         }
         
-        l_headerData
+        l_headerXml
     }
     
 }

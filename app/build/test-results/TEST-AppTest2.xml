@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-04-04T00:00:50" hostname="scala" time="0.234">
+<testsuite name="AppTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-04-05T00:04:08" hostname="scala" time="0.192">
   <properties/>
-  <testcase name="Second Test (args): App.stages" classname="AppTest2" time="0.234"/>
+  <testcase name="Second Test (args): App.stages" classname="AppTest2" time="0.192"/>
   <system-out><![CDATA[Stage 1: 
 
 CEF Filename:
@@ -16,12 +16,8 @@ Search Folders:
 ############ cefpass.LogsC:/work.dev/2015.03.22 github cef pass v2/v0/_logs
 Stage 2: 
 Data: !
-** ** ** ** writeTextFile: nodes.txt
-** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-04.650966\nodes.txt
 ** ** ** ** writeTextFile: nodes.xml
-** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-04.650966\nodes.xml
-** ** ** ** writeTextFile: dombuilder-document.xml
-** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-04.650966\dombuilder-document.xml
+** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-05.248999\nodes.xml
 Stage 3: 
 Stage 4: 
 RuleSets::run()

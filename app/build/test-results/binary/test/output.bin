@@ -12,12 +12,8 @@ Search Folders:
 M############ cefpass.LogsC:/work.dev/2015.03.22 github cef pass v2/v0/_logs
 Stage 2: 
 	Data: !
-&** ** ** ** writeTextFile: nodes.txt
-o** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-04.650481\nodes.txt
 &** ** ** ** writeTextFile: nodes.xml
-o** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-04.650481\nodes.xml
-4** ** ** ** writeTextFile: dombuilder-document.xml
-}** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-04.650481\dombuilder-document.xml
+o** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-05.248578\nodes.xml
 Stage 3: 
 Stage 4: 
 RuleSets::run()
@@ -40,12 +36,8 @@ Search Folders:
 M############ cefpass.LogsC:/work.dev/2015.03.22 github cef pass v2/v0/_logs
 Stage 2: 
 	Data: !
-&** ** ** ** writeTextFile: nodes.txt
-o** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-04.650966\nodes.txt
 &** ** ** ** writeTextFile: nodes.xml
-o** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-04.650966\nodes.xml
-4** ** ** ** writeTextFile: dombuilder-document.xml
-}** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-04.650966\dombuilder-document.xml
+o** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-05.248999\nodes.xml
 Stage 3: 
 Stage 4: 
 RuleSets::run()
