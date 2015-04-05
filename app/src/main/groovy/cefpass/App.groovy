@@ -2,25 +2,17 @@ package cefpass
 
 import java.util.logging.Logger
 
-//x import rules2015.RulesSet01;
-//x import rules2015.RulesSet02;
-
 import rules2015.RuleSets
-
-public class App {
-    boolean m1() {
-        println "Hello, World!"
-        true
-    }
 
 ///////////////////////////////////////////////////////////////////////////////
 //
 
+public class App {
+
+
     boolean args(String[] i_args) {
         true
     }
-
-    
     
     public def boolean  stages(String[] i_args) {
         //  1. command line inputs
@@ -82,15 +74,15 @@ public class App {
      
             // ----------------------------------------------------------------------------------
             // 
-            // ----------------------------------------------------------------------------------
 
+            
             // stage #4
             println "Stage 4: "
             // ----------------------------------------------------------------------------------
             // Under development
             // ----------------------------------------------------------------------------------
             
-            RuleSets l_rule_sets = new RuleSets(l_headerXml)
+            RuleSets l_rule_sets = new RuleSets(l_headerXml.getHeaderXPath())
             l_rule_sets.run()
             
             result = true

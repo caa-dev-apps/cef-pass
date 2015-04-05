@@ -5,7 +5,14 @@ package rules2015
 public class RuleSet99
 {
     def m_data = null
-    
+ 
+//x         def i_data = [
+//x             headerXPath: i_headerXPath,
+//x             info: [ a:1, b:2, c:3]
+//x         ]
+
+
+ 
     public RuleSet99(i_data)
     {
         m_data = i_data
@@ -45,7 +52,7 @@ public class RuleSet99
 
     public def run()
     {
-        println("RuleSet99::run()")
+        println("\nRuleSet99::run()")
         
         try
         {

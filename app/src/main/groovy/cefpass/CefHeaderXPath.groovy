@@ -3,26 +3,32 @@ package cefpass
 import javax.xml.xpath.*
 import javax.xml.parsers.DocumentBuilderFactory
 
-//x import groovy.xml.MarkupBuilder
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
 import groovy.xml.DOMBuilder
-import javax.xml.parsers.DocumentBuilderFactory
-import javax.xml.xpath.*
-//x import groovy.json.JsonBuilder
 
 ///////////////////////////////////////////////////////////////////////////////
 //
  
-public class CefHeaderXmlProcessor
+public class CefHeaderXPath
 {
     def m_xpath = null
-    def m_document = null
+    def m_documentElement = null
     
-    public CefHeaderXmlProcessor(i_xml)
+    public CefHeaderXPath(String i_xml)
     {
         def builder         = DocumentBuilderFactory.newInstance().newDocumentBuilder()
         def inputStream     = new ByteArrayInputStream( i_xml.bytes )
+        m_documentElement   = builder.parse(inputStream).documentElement
         
-        m_document          = builder.parse(inputStream).documentElement
+        m_xpath             = XPathFactory.newInstance().newXPath()
+    }
+
+    // USE ABOVE CONSTRUCTOR - THIS ONE IS NOT WORKING....it should TODO = REVIST!!!
+    public CefHeaderXPath(Element i_documentElement)
+    {
+        m_documentElement   = i_documentElement
         m_xpath             = XPathFactory.newInstance().newXPath()
     }
 
@@ -30,7 +36,7 @@ public class CefHeaderXmlProcessor
     {
         def ls = []
         
-        m_xpath.evaluate(i_xpathQuery, m_document, XPathConstants.NODESET).each{
+        m_xpath.evaluate(i_xpathQuery, m_documentElement, XPathConstants.NODESET).each{
             ls << it
         }
         
@@ -101,11 +107,11 @@ public class CefHeaderXmlProcessor
         def rs = []
         String l_xpathQuery = "/root/meta/VALUE_TYPE/../@name"
         
-        m_xpath.evaluate(l_xpathQuery, m_document, XPathConstants.NODESET ).each{
+        m_xpath.evaluate(l_xpathQuery, m_documentElement, XPathConstants.NODESET ).each{
             def ix = 0
             def l_name = it.getTextContent()
             
-            m_xpath.evaluate('/root/meta[@name="' + l_name + '"]/ENTRY', m_document, XPathConstants.NODESET).each {
+            m_xpath.evaluate('/root/meta[@name="' + l_name + '"]/ENTRY', m_documentElement, XPathConstants.NODESET).each {
                 ix++ 
             }
             

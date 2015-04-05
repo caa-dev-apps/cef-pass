@@ -6,17 +6,9 @@
  */
 
 import spock.lang.Specification
+import cefpass.CefHeaderXPath
 
-//x import cefpass.App
-//x import rules2015.RuleSet99
-import cefpass.CefHeaderXmlProcessor
-
-//x import groovy.xml.MarkupBuilder
-//x import groovy.xml.DOMBuilder
-//x import javax.xml.parsers.DocumentBuilderFactory
-//x import javax.xml.xpath.*
-
-class CefHeaderXmlProcessor_Tests extends Specification{
+class CefHeaderXPath_Tests extends Specification{
 
     def TEST_XML_DOCUMENT = '''<?xml version="1.0" encoding="UTF-8"?>
         <root>
@@ -303,141 +295,140 @@ class CefHeaderXmlProcessor_Tests extends Specification{
         </root>
     '''
     
-    
-    def "01 CefHeaderXmlProcessor_Tests: getFilename"() {
+    def "01 CefHeaderXPath_Tests: getFilename"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getFilename()
         then:
             l_result != null
     }
     
-    def "02 CefHeaderXmlProcessor_Tests: getFileFormatVersion"() {
+    def "02 CefHeaderXPath_Tests: getFileFormatVersion"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getFileFormatVersion()
         then:
             l_result != null
     }
     
-    def "03 CefHeaderXmlProcessor_Tests: getEndOfRecordMarker"() {
+    def "03 CefHeaderXPath_Tests: getEndOfRecordMarker"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getEndOfRecordMarker()
         then:
             l_result == null
     }
     
-    def "04 CefHeaderXmlProcessor_Tests: getDataUntil"() {
+    def "04 CefHeaderXPath_Tests: getDataUntil"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getDataUntil()
         then:
             l_result != null
     }
     
-    def "05 CefHeaderXmlProcessor_Tests: getLogicalFileId"() {
+    def "05 CefHeaderXPath_Tests: getLogicalFileId"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getLogicalFileId()
         then:
             l_result != null
     }
     
-    def "06 CefHeaderXmlProcessor_Tests: getVersionNumber"() {
+    def "06 CefHeaderXPath_Tests: getVersionNumber"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getVersionNumber()
         then:
             l_result != null
     }
     
-    def "07 CefHeaderXmlProcessor_Tests: getFileType"() {
+    def "07 CefHeaderXPath_Tests: getFileType"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getFileType()
         then:
             l_result != null
     }
     
-    def "08 CefHeaderXmlProcessor_Tests: getDataSetId"() {
+    def "08 CefHeaderXPath_Tests: getDataSetId"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getDataSetId()
         then:
             l_result != null
     }
     
-    def "09 CefHeaderXmlProcessor_Tests: getVersionNumber"() {
+    def "09 CefHeaderXPath_Tests: getVersionNumber"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getVersionNumber()
         then:
             l_result != null
     }
     
-    def "10 CefHeaderXmlProcessor_Tests: getMeta"() {
+    def "10 CefHeaderXPath_Tests: getMeta"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getMeta("DATASET_CAVEATS")
         then:
             l_result != null
     }
     
-    def "11 CefHeaderXmlProcessor_Tests: getMetaList"() {
+    def "11 CefHeaderXPath_Tests: getMetaList"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getMetaList()
         then:
             l_result != null
     }
     
-    def "12 CefHeaderXmlProcessor_Tests: getMetaEntry"() {
+    def "12 CefHeaderXPath_Tests: getMetaEntry"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getMetaEntry("LOGICAL_FILE_ID")
         then:
             l_result != null
     }
     
-    def "13 CefHeaderXmlProcessor_Tests: getMetaEntryPair"() {
+    def "13 CefHeaderXPath_Tests: getMetaEntryPair"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getMetaEntryPair("FILE_TIME_SPAN")
         then:
             l_result != null
     }
     
-    def "14 CefHeaderXmlProcessor_Tests: getMetaPairNames"() {
+    def "14 CefHeaderXPath_Tests: getMetaPairNames"() {
 
         setup:
-            def T_XmlProc = new CefHeaderXmlProcessor(TEST_XML_DOCUMENT)
+            def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
             def l_result = T_XmlProc.getMetaPairNames()
         then:

@@ -1,5 +1,8 @@
 package rules2015
 
+///////////////////////////////////////////////////////////////////////////////
+//
+
 public class RuleSets
 {
     def m_set00 = null;
@@ -7,22 +10,22 @@ public class RuleSets
     def m_set02 = null;
     def m_set99 = null;
 
-    public RuleSets(i_headerData)
+    public RuleSets(i_headerXPath)
     {
         def l_data = [
-            document: i_headerData.getDocument(),
+            headerXPath: i_headerXPath,
             info: [ a:1, b:2, c:3]
         ]
         
         m_set00 = new RuleSet00(l_data)
         m_set01 = new RuleSet01(l_data)
-        m_set02 = new RuleSet01(l_data)
+        m_set02 = new RuleSet02(l_data)
         m_set99 = new RuleSet99(l_data)
     }
 
     def run()
     {
-        println("RuleSets::run()")
+        println("\n\nRuleSets::run()")
         
         try
         {

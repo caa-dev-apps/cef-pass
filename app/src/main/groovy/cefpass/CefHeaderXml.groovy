@@ -1,14 +1,7 @@
 package cefpass
 
-import java.io.File;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
  
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
@@ -22,38 +15,42 @@ import groovy.xml.XmlUtil
 public class CefHeaderXml{
     DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
     DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-    Document doc = docBuilder.newDocument();
+    Document m_doc = docBuilder.newDocument();
     
-    Element root = doc.createElement("root");
-    def cur = root
+    Element m_root = m_doc.createElement("root");
+    def m_cur = m_root
     
     def error(i_message) { println i_message; System.exit(-1) }
     def appendDocument(i_from_document) { 
-        def l_next = i_from_document.root.getFirstChild()
+        def l_next = i_from_document.m_root.getFirstChild()
         
         while(l_next != null)
         {
-            cur.appendChild(doc.importNode(l_next, true))
+            m_cur.appendChild(m_doc.importNode(l_next, true))
             l_next = l_next.getNextSibling()
         }
     }
 
     def stxMix(t, n) {  
-        cur = doc.createElement(t); 
-        cur.setAttribute("name", n)
-        root.appendChild(cur)
+        m_cur = m_doc.createElement(t); 
+        m_cur.setAttribute("name", n)
+        m_root.appendChild(m_cur)
     }
 
     def stxMeta(n)              { stxMix("meta", n) }
-    def etxMeta(n)              { cur = root }
+    def etxMeta(n)              { m_cur = m_root }
     def stxVar(n)               { stxMix("var", n) } 
-    def etxVar(n)               { cur = root }
-    def addAttr(k,v)            { cur.appendChild(doc.createElement(k)).appendChild(doc.createTextNode(v)) }
+    def etxVar(n)               { m_cur = m_root }
+    def addAttr(k,v)            { m_cur.appendChild(m_doc.createElement(k)).appendChild(m_doc.createTextNode(v)) }
+    def addComment(c)           { m_cur.appendChild(m_doc.createComment(c)) }
     
-    def addComment(c)           { cur.appendChild(doc.createComment(c)) }
-    def getXmlNodesAsString()   { XmlUtil.serialize(root) }
+    def getDocumentElement()    { return m_root }
+    def getXmlNodesAsString()   { XmlUtil.serialize(m_root) }
     def dumpX()                 { println getXmlNodesAsString() }
-    def getDocument() { doc }
+    
+    def getHeaderXPath()        { return new CefHeaderXPath( getXmlNodesAsString() ) }
+    //x !!! pissed off - this should work and be faster too - than above(reparsing) - need a break from looking at it!!!
+    //x def getHeaderXPath()    { return new CefHeaderXPath( m_root ) }
     
     def removeQuotes(v) {
         def l = v.length()
@@ -72,42 +69,4 @@ public class CefHeaderXml{
     	else if ("END_VARIABLE".compareToIgnoreCase(k) == 0)	etxVar(v) 
     	else 													addAttr(k,v) 
     }
-    
 }    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
