@@ -1,5 +1,7 @@
 package rules2015
 
+import cefpass.CefLog
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 
@@ -25,8 +27,6 @@ public class RuleSets
 
     def run()
     {
-        println("\n\nRuleSets::run()")
-        
         try
         {
             m_set00.run()
@@ -36,8 +36,13 @@ public class RuleSets
         }
         catch(Exception e)
         {
-            println("ERROR!! :: RuleSets::run()")
+            CefLog.error("ERROR!! :: RuleSets::run()")
         }
+    }
+    
+    static void run(i_headerXPath)
+    {
+        new RuleSets(i_headerXPath).run()
     }
 }
 

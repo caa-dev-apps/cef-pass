@@ -1,5 +1,7 @@
 package rules2015
 
+import cefpass.CefLog
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // ## Parser Rules.
@@ -34,7 +36,9 @@ public class RuleSet00 extends RuleSet
             Notes:             "** Moved from 2.00 - Parser stage **"
         )
         
-        println l_rule.skipped()
+        //x CefLog.stage4_info(l_rule.skipped())
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")
+        
     }
 
     def Rule_0_01()
@@ -52,7 +56,7 @@ public class RuleSet00 extends RuleSet
             Notes:             "-"
         )
         
-        println l_rule.skipped(true)
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")
     }
 
     def Rule_0_02()
@@ -70,12 +74,12 @@ public class RuleSet00 extends RuleSet
             Notes:             "** Moved from 1.04 - Parser stage **"
         )
         
-        println l_rule.skipped()
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")
     }
 
     def run()
     {
-        println("\nRuleSet00::run()")
+        CefLog.stage4_info("\n  RuleSet00")
         
         Rule_0_00();
         Rule_0_01();

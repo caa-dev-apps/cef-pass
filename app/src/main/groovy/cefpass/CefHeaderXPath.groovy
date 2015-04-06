@@ -25,7 +25,7 @@ public class CefHeaderXPath
         m_xpath             = XPathFactory.newInstance().newXPath()
     }
 
-    // USE ABOVE CONSTRUCTOR - THIS ONE IS NOT WORKING....it should TODO = REVIST!!!
+    // USE ABOVE CONSTRUCTOR - THIS ONE IS NOT WORKING....it should though! TODO = REVIST!!!
     public CefHeaderXPath(Element i_documentElement)
     {
         m_documentElement   = i_documentElement
@@ -71,7 +71,6 @@ public class CefHeaderXPath
     def getElementText(String i_xpathQuery)
     {
         def txt = getSingleNodeValue(i_xpathQuery + "/text()")
-            //x println txt
         txt
     }
 

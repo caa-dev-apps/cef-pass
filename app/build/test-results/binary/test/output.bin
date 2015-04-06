@@ -1,120 +1,106 @@
 Stage 1: 
-
-CEF Filename:
-R	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz
-
-Search Folders:
-N	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES
-/	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS
-3	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI
-3	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW
-5	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE
-M############ cefpass.LogsC:/work.dev/2015.03.22 github cef pass v2/v0/_logs
+  CEF Filename:
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz                 OK
+  Search Folders:
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES                     OK
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS                                                    OK
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI                                                OK
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW                                                OK
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE                                              OK
 Stage 2: 
-	Data: !
-&** ** ** ** writeTextFile: nodes.xml
-o** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-06.806615\nodes.xml
 Stage 3: 
 Stage 4: 
-
-
-RuleSets::run()
-
-RuleSet00::run()
-mRule: 0.00          All START_META must have END_META                                               Skipped
-ÝRule: 0.01          All START_VARIABLE must have END_VARIABLE                                       Skipped
-  error_Message     Syntax error â€“ START_VARIABLE/ END_VARIABLE mismatch
-  error_Type        Fatal Error
-  keyword           START_VARIABLE/END_VARIABLE
-  rule              0.01
-  caveats           NA
-  cardinality       NA
-  scope             GENERAL
-  notes             -
-  data_type         METADATA
-  description       All START_VARIABLE must have END_VARIABLE
-
-mRule: 0.02          All include files must exist                                                    Skipped
-
-RuleSet01::run()
-mRule: 1.01          Name of file on disk equals FILE_NAME                                           Skipped
-mRule: 1.00          Must exist                                                                      Skipped
-mRule: 1.02          Must exist                                                                      Skipped
-mRule: 1.03          Must exist BUT may be blank                                                     Skipped
-mRule: 1.04          All include files must exist                                                    Skipped
-
-RuleSet02::run()
-mRule: 2.01          Must have ENTRY= field                                                          Skipped
-mRule: 2.02          If VALUE_TYPE provided, value must be of type indicated                         Skipped
-mRule: 2.03          REQUIRED VARIABLES (below)                                                      Skipped
-mRule: 2.04          must be cef                                                                     Skipped
-mRule: 2.05          must be valid integer                                                           Skipped
-mRule: 2.06          Same as Filename without extension                                              Skipped
-mRule: 2.07          VERSION_NUMBER must match version number in filename                            Skipped
-mRule: 2.08          must be valid integer                                                           Skipped
-mRule: 2.09          must be ISO_TIME_RANGE                                                          Skipped
-mRule: 2.10          START_TIME must be before STOP TIME                                             Skipped
-mRule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                         Skipped
-
-RuleSet99::run()
+  
+  RuleSet00
+m    Rule: 0.00          All START_META must have END_META                                           SKIPPED
+m    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
+m    Rule: 0.02          All include files must exist                                                SKIPPED
+  
+  RuleSet01
+m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
+m    Rule: 1.00          Must exist                                                                  SKIPPED
+m    Rule: 1.02          Must exist                                                                  SKIPPED
+m    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
+m    Rule: 1.04          All include files must exist                                                SKIPPED
+  
+  RuleSet02
+m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
+m    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
+m    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
+m    Rule: 2.04          must be cef                                                                 SKIPPED
+m    Rule: 2.05          must be valid integer                                                       SKIPPED
+m    Rule: 2.06          Same as Filename without extension                                          SKIPPED
+m    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
+m    Rule: 2.08          must be valid integer                                                       SKIPPED
+m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
+m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
+m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
+  
+  RuleSet99
 Stage 5: 
 Stage 1: 
-
-CEF Filename:
-R	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz
-
-Search Folders:
-N	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES
-/	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS
-3	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI
-3	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW
-5	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE
-M############ cefpass.LogsC:/work.dev/2015.03.22 github cef pass v2/v0/_logs
+  CEF Filename:
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz                 OK
+  Search Folders:
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES                     OK
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS                                                    OK
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI                                                OK
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW                                                OK
+h    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE                                              OK
 Stage 2: 
-	Data: !
-&** ** ** ** writeTextFile: nodes.xml
-o** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-06.807121\nodes.xml
 Stage 3: 
 Stage 4: 
-
-
-RuleSets::run()
-
-RuleSet00::run()
-mRule: 0.00          All START_META must have END_META                                               Skipped
-ÝRule: 0.01          All START_VARIABLE must have END_VARIABLE                                       Skipped
-  error_Message     Syntax error â€“ START_VARIABLE/ END_VARIABLE mismatch
-  error_Type        Fatal Error
-  keyword           START_VARIABLE/END_VARIABLE
-  rule              0.01
-  caveats           NA
-  cardinality       NA
-  scope             GENERAL
-  notes             -
-  data_type         METADATA
-  description       All START_VARIABLE must have END_VARIABLE
-
-mRule: 0.02          All include files must exist                                                    Skipped
-
-RuleSet01::run()
-mRule: 1.01          Name of file on disk equals FILE_NAME                                           Skipped
-mRule: 1.00          Must exist                                                                      Skipped
-mRule: 1.02          Must exist                                                                      Skipped
-mRule: 1.03          Must exist BUT may be blank                                                     Skipped
-mRule: 1.04          All include files must exist                                                    Skipped
-
-RuleSet02::run()
-mRule: 2.01          Must have ENTRY= field                                                          Skipped
-mRule: 2.02          If VALUE_TYPE provided, value must be of type indicated                         Skipped
-mRule: 2.03          REQUIRED VARIABLES (below)                                                      Skipped
-mRule: 2.04          must be cef                                                                     Skipped
-mRule: 2.05          must be valid integer                                                           Skipped
-mRule: 2.06          Same as Filename without extension                                              Skipped
-mRule: 2.07          VERSION_NUMBER must match version number in filename                            Skipped
-mRule: 2.08          must be valid integer                                                           Skipped
-mRule: 2.09          must be ISO_TIME_RANGE                                                          Skipped
-mRule: 2.10          START_TIME must be before STOP TIME                                             Skipped
-mRule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                         Skipped
-
-RuleSet99::run()
+  
+  RuleSet00
+m    Rule: 0.00          All START_META must have END_META                                           SKIPPED
+m    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
+m    Rule: 0.02          All include files must exist                                                SKIPPED
+  
+  RuleSet01
+m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
+m    Rule: 1.00          Must exist                                                                  SKIPPED
+m    Rule: 1.02          Must exist                                                                  SKIPPED
+m    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
+m    Rule: 1.04          All include files must exist                                                SKIPPED
+  
+  RuleSet02
+m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
+m    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
+m    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
+m    Rule: 2.04          must be cef                                                                 SKIPPED
+m    Rule: 2.05          must be valid integer                                                       SKIPPED
+m    Rule: 2.06          Same as Filename without extension                                          SKIPPED
+m    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
+m    Rule: 2.08          must be valid integer                                                       SKIPPED
+m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
+m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
+m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
+  
+  RuleSet99
 Stage 5: 
+This is an Error Message
+This is a Warning Message
+  Stage #1 info
+  Stage #2 info
+  Stage #3 info
+  Stage #4 info
+  Stage #5 info
+j    Stage #1 info                                                                                   TRUE
+k    Stage #2 info                                                                                   false
+  Stage #3 info
+j    Stage #4 info                                                                                   1234
+i    Stage #5 info                                                                                   Yo!
+This is a stage top message
+This is an Error Message
+This is a Warning Message
+  Stage #1 info
+  Stage #2 info
+  Stage #3 info
+  Stage #4 info
+  Stage #5 info
+j    Stage #1 info                                                                                   TRUE
+k    Stage #2 info                                                                                   false
+  Stage #3 info
+j    Stage #4 info                                                                                   1234
+i    Stage #5 info                                                                                   Yo!
+This is a stage top message

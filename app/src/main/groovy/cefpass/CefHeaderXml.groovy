@@ -20,7 +20,7 @@ public class CefHeaderXml{
     Element m_root = m_doc.createElement("root");
     def m_cur = m_root
     
-    def error(i_message) { println i_message; System.exit(-1) }
+    def error(i_message) { CefLog.error i_message; System.exit(-1) }
     def appendDocument(i_from_document) { 
         def l_next = i_from_document.m_root.getFirstChild()
         
@@ -37,6 +37,14 @@ public class CefHeaderXml{
         m_root.appendChild(m_cur)
     }
 
+//todo      def m_watchVarName = null;
+//todo      def m_watchMetaName = null;
+//todo      
+//todo      def stxMetaWatch(n)         { if(m_cur == m_root)}
+//todo      def etxMetaWatch(n)
+//todo      def stxVarWatch(n)
+//todo      def etxVarWatch(n)
+    
     def stxMeta(n)              { stxMix("meta", n) }
     def etxMeta(n)              { m_cur = m_root }
     def stxVar(n)               { stxMix("var", n) } 
@@ -46,7 +54,7 @@ public class CefHeaderXml{
     
     def getDocumentElement()    { return m_root }
     def getXmlNodesAsString()   { XmlUtil.serialize(m_root) }
-    def dumpX()                 { println getXmlNodesAsString() }
+    def dumpX()                 { CefLog.diag getXmlNodesAsString() }
     
     def getHeaderXPath()        { return new CefHeaderXPath( getXmlNodesAsString() ) }
     //x !!! pissed off - this should work and be faster too - than above(reparsing) - need a break from looking at it!!!

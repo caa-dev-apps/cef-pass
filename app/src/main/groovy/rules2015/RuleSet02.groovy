@@ -1,9 +1,11 @@
 package rules2015
 
+import cefpass.CefLog
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 
-public class RuleSet02
+public class RuleSet02 extends RuleSet
 {
     
 //x         def i_data = [
@@ -11,10 +13,12 @@ public class RuleSet02
 //x             info: [ a:1, b:2, c:3]
 //x         ]
     
+    def m_data
+    
     public RuleSet02(i_data)
     {
+        m_data = i_data
     }
-
     
     def Rule_2_01()
     {
@@ -31,7 +35,7 @@ public class RuleSet02
             Notes:             "-"
         )
         
-        println l_rule.skipped()      
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
     }
 
     def Rule_2_02()
@@ -49,7 +53,7 @@ public class RuleSet02
             Notes:             "-"
         )
         
-        println l_rule.skipped()      
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
     }
 
     def Rule_2_03()
@@ -67,7 +71,7 @@ public class RuleSet02
             Notes:             "-"
         )
         
-        println l_rule.skipped()      
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
     }
 
     def Rule_2_04()
@@ -85,7 +89,7 @@ public class RuleSet02
             Notes:             "-"
         )
         
-        println l_rule.skipped()      
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
     }
 
     def Rule_2_05()
@@ -103,7 +107,7 @@ public class RuleSet02
             Notes:             "-"
         )
         
-        println l_rule.skipped()      
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
     }
 
     def Rule_2_06()
@@ -121,7 +125,7 @@ public class RuleSet02
             Notes:             "-"
         )
         
-        println l_rule.skipped()      
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
     }
 
     def Rule_2_07()
@@ -139,7 +143,7 @@ public class RuleSet02
             Notes:             "-"
         )
         
-        println l_rule.skipped()      
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
     }
 
     def Rule_2_08()
@@ -157,7 +161,7 @@ public class RuleSet02
             Notes:             "-"
         )
         
-        println l_rule.skipped()      
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
     }
 
     def Rule_2_09()
@@ -175,7 +179,7 @@ public class RuleSet02
             Notes:             "-"
         )
         
-        println l_rule.skipped()      
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
     }
 
     def Rule_2_10()
@@ -193,7 +197,7 @@ public class RuleSet02
             Notes:             "-"
         )
         
-        println l_rule.skipped()      
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
     }
 
     def Rule_2_11()
@@ -211,12 +215,12 @@ public class RuleSet02
             Notes:             "-"
         )
         
-        println l_rule.skipped()      
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
     }
 
     public def run()
     {
-        println("\nRuleSet02::run()")
+        CefLog.stage4_info("\n  RuleSet02")
         
         Rule_2_01();
         Rule_2_02();
@@ -229,10 +233,7 @@ public class RuleSet02
         Rule_2_09();        
         Rule_2_10();
         Rule_2_11();
-        
-        
     }
-
 }
 
 

@@ -1,5 +1,7 @@
 package rules2015
 
+import cefpass.CefLog
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 
@@ -21,12 +23,15 @@ public class Rule
         i_key.padRight(i_pad) + this[i_key]
     }
     
-    def skipped(i_dump)
-    {
-       def str = (("Rule: " + this.Rule).padRight(20) + this.Description).padRight(100) + "Skipped"
-       
-       return ((i_dump == true) ? (str + "\n" + to_str()) : str) 
-    }
+    def about()  { ("Rule: " + this.Rule).padRight(20) + this.Description }
+    
+    
+//x     def skipped(i_dump)
+//x     {
+//x        def str = (("\tRule: " + this.Rule).padRight(20) + this.Description).padRight(100) + "Skipped"
+//x        
+//x        return ((i_dump == true) ? (str + "\n" + to_str()) : str) 
+//x     }
     
     def to_str()
     {
@@ -38,5 +43,5 @@ public class Rule
         str
     }
     
-    def dump()  { println(to_str()) }
+    def dump()  { CefLog.diag(to_str()) }
 }

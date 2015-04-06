@@ -1,9 +1,11 @@
 package rules2015
 
+import cefpass.CefLog
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 
-public class RuleSet01
+public class RuleSet01 extends RuleSet
 {
 
 //x         def i_data = [
@@ -32,7 +34,7 @@ public class RuleSet01
             Notes:             "-"
         )
         
-        println l_rule.skipped()
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")
     }
 
     def Rule_1_00()
@@ -50,7 +52,7 @@ public class RuleSet01
             Notes:             "-"
         )
         
-        println l_rule.skipped()
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")
     }
 
     def Rule_1_02()
@@ -68,7 +70,7 @@ public class RuleSet01
             Notes:             "-"
         )
         
-        println l_rule.skipped()
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")
     }
 
     def Rule_1_03()
@@ -86,7 +88,7 @@ public class RuleSet01
             Notes:             "-"
         )
         
-        println l_rule.skipped()
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")
     }
 
     def Rule_1_04()
@@ -104,25 +106,19 @@ public class RuleSet01
             Notes:             "-"
         )
         
-        println l_rule.skipped()
+        CefLog.stage4_info(l_rule.about(), "SKIPPED")
     }
 
     public def run()
     {
-        println("\nRuleSet01::run()")
-        
+        CefLog.stage4_info("\n  RuleSet01")
+      
         Rule_1_00();
         Rule_1_01();
         Rule_1_02();
         Rule_1_03();
         Rule_1_04();
     }
-    
-//x     static public def test()
-//x     {
-//x         println("Zz RuleSet01::test() zZ")
-//x     }
-    
 }
 
 

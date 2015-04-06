@@ -40,7 +40,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.750s</div>
+<div class="counter">0.703s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,7 +78,7 @@
 </thead>
 <tr>
 <td class="success">Second Test (args): App.stages</td>
-<td>0.750s</td>
+<td>0.703s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,64 +87,44 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>Stage 1: 
-
-CEF Filename:
-	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz
-
-Search Folders:
-	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES
-	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS
-	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI
-	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW
-	C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE
-############ cefpass.LogsC:/work.dev/2015.03.22 github cef pass v2/v0/_logs
+  CEF Filename:
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz                 OK
+  Search Folders:
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES                     OK
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS                                                    OK
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI                                                OK
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW                                                OK
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE                                              OK
 Stage 2: 
-Data: !
-** ** ** ** writeTextFile: nodes.xml
-** ++ == ** writeTextFilePath: C:/work.dev/2015.03.22 github cef pass v2/v0/_logs/2015-04-06.806615\nodes.xml
 Stage 3: 
 Stage 4: 
-
-
-RuleSets::run()
-
-RuleSet00::run()
-Rule: 0.00          All START_META must have END_META                                               Skipped
-Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                       Skipped
-  error_Message     Syntax error – START_VARIABLE/ END_VARIABLE mismatch
-  error_Type        Fatal Error
-  keyword           START_VARIABLE/END_VARIABLE
-  rule              0.01
-  caveats           NA
-  cardinality       NA
-  scope             GENERAL
-  notes             -
-  data_type         METADATA
-  description       All START_VARIABLE must have END_VARIABLE
-
-Rule: 0.02          All include files must exist                                                    Skipped
-
-RuleSet01::run()
-Rule: 1.01          Name of file on disk equals FILE_NAME                                           Skipped
-Rule: 1.00          Must exist                                                                      Skipped
-Rule: 1.02          Must exist                                                                      Skipped
-Rule: 1.03          Must exist BUT may be blank                                                     Skipped
-Rule: 1.04          All include files must exist                                                    Skipped
-
-RuleSet02::run()
-Rule: 2.01          Must have ENTRY= field                                                          Skipped
-Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                         Skipped
-Rule: 2.03          REQUIRED VARIABLES (below)                                                      Skipped
-Rule: 2.04          must be cef                                                                     Skipped
-Rule: 2.05          must be valid integer                                                           Skipped
-Rule: 2.06          Same as Filename without extension                                              Skipped
-Rule: 2.07          VERSION_NUMBER must match version number in filename                            Skipped
-Rule: 2.08          must be valid integer                                                           Skipped
-Rule: 2.09          must be ISO_TIME_RANGE                                                          Skipped
-Rule: 2.10          START_TIME must be before STOP TIME                                             Skipped
-Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                         Skipped
-
-RuleSet99::run()
+  
+  RuleSet00
+    Rule: 0.00          All START_META must have END_META                                           SKIPPED
+    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
+    Rule: 0.02          All include files must exist                                                SKIPPED
+  
+  RuleSet01
+    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
+    Rule: 1.00          Must exist                                                                  SKIPPED
+    Rule: 1.02          Must exist                                                                  SKIPPED
+    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
+    Rule: 1.04          All include files must exist                                                SKIPPED
+  
+  RuleSet02
+    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
+    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
+    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
+    Rule: 2.04          must be cef                                                                 SKIPPED
+    Rule: 2.05          must be valid integer                                                       SKIPPED
+    Rule: 2.06          Same as Filename without extension                                          SKIPPED
+    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
+    Rule: 2.08          must be valid integer                                                       SKIPPED
+    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
+    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
+    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
+  
+  RuleSet99
 Stage 5: 
 </pre>
 </span>
@@ -152,7 +132,7 @@ Stage 5:
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 1.12</a> at 06-Apr-2015 00:16:47</p>
+<a href="http://www.gradle.org">Gradle 1.12</a> at 06-Apr-2015 23:17:10</p>
 </div>
 </div>
 </body>

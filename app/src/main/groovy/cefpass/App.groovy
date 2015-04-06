@@ -48,47 +48,51 @@ public class App {
         def result = false
         
         try{
+            ///////////////////////////////////////////////////////////////////////////////
             // stage #1
-            println "Stage 1: "
+            CefLog.top "Stage 1: "
             CmdLnArgs.init(i_args)
             if(CmdLnArgs.isOk() == false) return
-            Logs.init()
+            FileLogs.init()
             
+            ///////////////////////////////////////////////////////////////////////////////
             // stage #2
-            println "Stage 2: "
+            CefLog.top "Stage 2: "
             CefReader l_reader = new CefReader()
             //i l_reader.showContexts()
             
             CefHeaderXml l_headerXml = l_reader.getHeaderXml()
-            Logs.writeTextFile("nodes.xml", l_headerXml.getXmlNodesAsString())
+            FileLogs.writeTextFile("nodes.xml", l_headerXml.getXmlNodesAsString())
 
+            ///////////////////////////////////////////////////////////////////////////////
             // stage #3 validate XML
-            println "Stage 3: "
+            CefLog.top "Stage 3: "
             // ----------------------------------------------------------------------------------
             // Under development
             // ----------------------------------------------------------------------------------
-//x             String l_xmlPath = Logs.getFilePath("nodes.xml")
+//x             String l_xmlPath = FileLogs.getFilePath("nodes.xml")
 //x             String l_xsdPath = "C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/xsd/a1.xsd"
 //x             
-//x             if(XSDValidataion.validateXMLSchema(l_xsdPath, l_xmlPath) == false) return
+//x             if(CefHeaderXsd.validateXMLSchema(l_xsdPath, l_xmlPath) == false) return
      
             // ----------------------------------------------------------------------------------
             // 
 
             
+            ///////////////////////////////////////////////////////////////////////////////
             // stage #4
-            println "Stage 4: "
+            CefLog.top"Stage 4: "
             // ----------------------------------------------------------------------------------
             // Under development
             // ----------------------------------------------------------------------------------
             
-            RuleSets l_rule_sets = new RuleSets(l_headerXml.getHeaderXPath())
-            l_rule_sets.run()
+            RuleSets.run(l_headerXml.getHeaderXPath())
             
             result = true
             
+            ///////////////////////////////////////////////////////////////////////////////
             // stage #5
-            println "Stage 5: "
+            CefLog.top "Stage 5: "
             // ----------------------------------------------------------------------------------
             // Under development
             // ----------------------------------------------------------------------------------
@@ -102,19 +106,15 @@ public class App {
     }
     
     public static void main(String[] i_args) {
-        println "Hello, World!"
-        println "workingDir: "  + System.getProperty("user.dir")
-//x         Logger logger = Logger.getLogger("")
-//x         logger.info ("Hello, World!")
-//x     
-//x         i_args.each { 
-//x             println " ++ " +  it
-//x         }
+        CefLog.diag "Hello, World!"
+        CefLog.diag "workingDir: "  + System.getProperty("user.dir")
+        
+        
         App a = new App();
         
         a.stages(i_args)
         
-        Logs.close()
+        FileLogs.close()
     }
 }
 

@@ -4,7 +4,7 @@ import java.io.FileInputStream
 import java.io.File
 import java.util.zip.GZIPInputStream
 
-//-----------------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////
 //
 
 public class CefReader
@@ -73,7 +73,7 @@ public class CefReader
             l_cx.incLineCount()
             l_cx.diag(it)
         
-            Logs.diag(it)
+            FileLogs.diag(it)
         
             if(l_data_until == true) {
                 process_data_line(it)
