@@ -37,14 +37,6 @@ public class CefHeaderXml{
         m_root.appendChild(m_cur)
     }
 
-//todo      def m_watchVarName = null;
-//todo      def m_watchMetaName = null;
-//todo      
-//todo      def stxMetaWatch(n)         { if(m_cur == m_root)}
-//todo      def etxMetaWatch(n)
-//todo      def stxVarWatch(n)
-//todo      def etxVarWatch(n)
-    
     def stxMeta(n)              { stxMix("meta", n) }
     def etxMeta(n)              { m_cur = m_root }
     def stxVar(n)               { stxMix("var", n) } 
@@ -71,10 +63,13 @@ public class CefHeaderXml{
     def add_kv(k, v){
         Show.showHeaderKV(k,v)
         
-    	if("START_META".compareToIgnoreCase(k) == 0)			stxMeta(v) 
-    	else if ("END_META".compareToIgnoreCase(k) == 0)		etxMeta(v) 
-    	else if ("START_VARIABLE".compareToIgnoreCase(k) == 0) 	stxVar(v) 
-    	else if ("END_VARIABLE".compareToIgnoreCase(k) == 0)	etxVar(v) 
-    	else 													addAttr(k,v) 
+        if(CefParser.test_kv(k, v) == CefParser.Error.eNULL)
+        {
+            if("START_META".compareToIgnoreCase(k) == 0)			stxMeta(v) 
+            else if ("END_META".compareToIgnoreCase(k) == 0)		etxMeta(v) 
+            else if ("START_VARIABLE".compareToIgnoreCase(k) == 0) 	stxVar(v) 
+            else if ("END_VARIABLE".compareToIgnoreCase(k) == 0)	etxVar(v) 
+            else 													addAttr(k,v) 
+        }
     }
 }    

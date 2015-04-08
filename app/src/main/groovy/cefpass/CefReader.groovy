@@ -57,15 +57,26 @@ public class CefReader
             
             (i_filename, l_dummy) = l_headerXml.removeQuotes(i_filename)
             
+//x         for(d in CmdLnArgs.getSearchFolders()) {
+//x             def p = d + '/' + i_filename
+//x         
+//x             if(included.find{ it == p } != null)  { l_headerXml.error('include file: already added'); break }
+//x             else if (new File(p).exists())  { l_filepath = p; included << p; break }
+//x         }
+//x         
+//x         if(l_filepath == null) l_headerXml.error('include file: Not found')
+//x         else if(i_level > 8) l_headerXml.error('include file: level > 8')
+//x         else do_process(l_filepath, i_level+1, (i_prefix + l_levelIncludeCount++)).each{ l_headerXml.appendDocument(it) }
+        
             for(d in CmdLnArgs.getSearchFolders()) {
                 def p = d + '/' + i_filename
           
-                if(included.find{ it == p } != null)  { l_headerXml.error('include file: already added'); break }
+                if(included.find{ it == p } != null)  { CefParser.includeFileDuplicate(i_filename); break }
                 else if (new File(p).exists())  { l_filepath = p; included << p; break }
             }
          
-            if(l_filepath == null) l_headerXml.error('include file: Not found')
-            else if(i_level > 8) l_headerXml.error('include file: level > 8')
+            if(l_filepath == null) CefParser.includeFileNotFound(i_filename)
+            else if(i_level > 8) CefParser.includeFileLevel8(i_filename)
             else do_process(l_filepath, i_level+1, (i_prefix + l_levelIncludeCount++)).each{ l_headerXml.appendDocument(it) }
         }
         
