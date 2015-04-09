@@ -33,21 +33,10 @@ class AppTest extends Specification{
         "C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_QZC__20111022_V01.cef.gz"
     ]
 
-
-//x     def "First Test: App.m1"() {
-//x     
-//x         setup:
-//x         App app = new App()
-//x         when:
-//x         def result = app.m1()
-//x         then:
-//x         result == true
-//x     }
-    
-    
     def "Second Test (args): App.stages"() {
     
         setup:
+        
         def App app = new App()
         String[] l_args = [
             "-f",
@@ -63,6 +52,4 @@ class AppTest extends Specification{
         then:
         result == true
     }
-    
-    
 }

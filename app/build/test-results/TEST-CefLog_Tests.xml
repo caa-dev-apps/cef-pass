@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CefLog_Tests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-04-06T22:17:10" hostname="scala" time="0.016">
+<testsuite name="CefLog_Tests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-04-09T22:17:19" hostname="scala" time="0.0">
   <properties/>
-  <testcase name="01 CefLog_Tests: test each of the static CefLog functions" classname="CefLog_Tests" time="0.016"/>
+  <testcase name="01 CefLog_Tests: test each of the static CefLog functions" classname="CefLog_Tests" time="0.0"/>
   <testcase name="02 CefLog_Tests: check files/folders exist" classname="CefLog_Tests" time="0.0"/>
   <system-out><![CDATA[This is an Error Message
 This is a Warning Message
