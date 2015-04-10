@@ -12,5 +12,4 @@ public class Utils
 
     static def fileExistsS(i_path)         { fileExists(i_path)         ? "OK" : "NOT FOUND" }
     static def directoryExistsS(i_path)    { directoryExists(i_path)    ? "OK" : "NOT FOUND" }
-    
 }

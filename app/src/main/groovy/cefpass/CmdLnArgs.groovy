@@ -32,6 +32,7 @@ public class CmdLnArgs
         if(!options) { CefLog.error "Error";  cli.usage }
         else if (options.h) cli.usage
         else {
+            // values are false if missing i.e. user does not set them
             s_filename = options.f
             s_searchFolders = options.is
             s_xmlSchemas = options.xs
@@ -55,8 +56,8 @@ public class CmdLnArgs
     
     
     public def static show() {
-        Show.showCefFilename(s_filename)
-        Show.showSearchFolders(s_searchFolders)
+        if(s_filename != false)         Show.showCefFilename(s_filename)
+        if(s_searchFolders != false)    Show.showSearchFolders(s_searchFolders)
     }
 
 }

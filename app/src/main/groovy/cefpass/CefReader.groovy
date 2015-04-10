@@ -36,11 +36,9 @@ public class CefReader
     
     def do_process(i_path, i_level, i_prefix) {
         def l_levelIncludeCount = 0
-    
         def l_cx = new CefContext(i_path, i_level, i_prefix)
         
         m_cefContexts << l_cx
-        
         def l_headerXml = new CefHeaderXml()
         
         def l_data_until = false
@@ -49,7 +47,7 @@ public class CefReader
 
         def regexStr = /^\s*(\S+)\s*=\s*(.+)\s*$/
         def regexCommentStr = /^\s*!.*$/
-    
+
         def include_ceh = { i_filename ->
         
             def l_filepath = null
@@ -57,17 +55,6 @@ public class CefReader
             
             (i_filename, l_dummy) = l_headerXml.removeQuotes(i_filename)
             
-//x         for(d in CmdLnArgs.getSearchFolders()) {
-//x             def p = d + '/' + i_filename
-//x         
-//x             if(included.find{ it == p } != null)  { l_headerXml.error('include file: already added'); break }
-//x             else if (new File(p).exists())  { l_filepath = p; included << p; break }
-//x         }
-//x         
-//x         if(l_filepath == null) l_headerXml.error('include file: Not found')
-//x         else if(i_level > 8) l_headerXml.error('include file: level > 8')
-//x         else do_process(l_filepath, i_level+1, (i_prefix + l_levelIncludeCount++)).each{ l_headerXml.appendDocument(it) }
-        
             for(d in CmdLnArgs.getSearchFolders()) {
                 def p = d + '/' + i_filename
           
@@ -81,6 +68,7 @@ public class CefReader
         }
         
         l_fileStream.eachLine { it 
+        
             l_cx.incLineCount()
             l_cx.diag(it)
         

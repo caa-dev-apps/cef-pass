@@ -60,7 +60,6 @@ public class Show {
         }
     }
     
-
     public static void showDataLine(i_line) 
     {
         if(s_show_data_line == true) CefLog.info "Data: " + i_line

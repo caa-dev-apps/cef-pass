@@ -1,133 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RuleSet00_Tests" tests="2" skipped="0" failures="1" errors="0" timestamp="2015-04-09T22:17:19" hostname="scala" time="0.11">
+<testsuite name="RuleSet00_Tests" tests="4" skipped="0" failures="0" errors="0" timestamp="2015-04-10T23:53:52" hostname="scala" time="0.094">
   <properties/>
-  <testcase name="RuleSet00_00 - warm-up read file only" classname="RuleSet00_Tests" time="0.0"/>
-  <testcase name="RuleSet00_00 - warm-up small file no errors" classname="RuleSet00_Tests" time="0.11">
-    <failure message="Condition not satisfied:&#10;&#10;result == true&#10;|      |&#10;false  false&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
-
-result == true
-|      |
-false  false
-
-	at RuleSet00_Tests.RuleSet00_00 - warm-up small file no errors(RuleSet00_Tests.groovy:48)
-</failure>
-  </testcase>
-  <system-out><![CDATA[RuleSet00_00_Tests: file:/C:/work.dev/2015.03.22%20github%20cef%20pass%20v2/v0/cef-pass/app/build/resources/test/RuleSet00_00/C3_CP_EDI_EGD__20111009_V01.cef
-/work.dev/2015.03.22%20github%20cef%20pass%20v2/v0/cef-pass/app/build/resources/test/RuleSet00_00/C3_CP_EDI_EGD__20111009_V01.cef
+  <testcase name="RuleSet00_00_a - warm-up read file only" classname="RuleSet00_Tests" time="0.0"/>
+  <testcase name="RuleSet00_00_b - test " classname="RuleSet00_Tests" time="0.031"/>
+  <testcase name="RuleSet00_01_a - test " classname="RuleSet00_Tests" time="0.031"/>
+  <testcase name="RuleSet00_02_a - test " classname="RuleSet00_Tests" time="0.032"/>
+  <system-out><![CDATA[Stage 1: 
+  CEF Filename:
+    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\RuleSet00_00_b\C3_CP_EDI_EGD__20111009_V01.cefOK
+Stage 2: 
+Stage 3: 
+Stage 4: 
+  
+  RuleSet00
+    Rule: 0.00          All START_META must have END_META                                           SKIPPED
+    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
+    Rule: 0.02          All include files must exist                                                SKIPPED
+  
+  RuleSet01
+    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
+    Rule: 1.00          Must exist                                                                  SKIPPED
+    Rule: 1.02          Must exist                                                                  SKIPPED
+    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
+    Rule: 1.04          All include files must exist                                                SKIPPED
+  
+  RuleSet02
+    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
+    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
+    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
+    Rule: 2.04          must be cef                                                                 SKIPPED
+    Rule: 2.05          must be valid integer                                                       SKIPPED
+    Rule: 2.06          Same as Filename without extension                                          SKIPPED
+    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
+    Rule: 2.08          must be valid integer                                                       SKIPPED
+    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
+    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
+    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
+  
+  RuleSet99
+Stage 5: 
 Stage 1: 
   CEF Filename:
-    /work.dev/2015.03.22%20github%20cef%20pass%20v2/v0/cef-pass/app/build/resources/test/RuleSet00_00/C3_CP_EDI_EGD__20111009_V01.cefNOT FOUND
-  Search Folders:
+    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\RuleSet00_01_a\C3_CP_EDI_EGD__20111009_V01.cefOK
+Stage 2: 
+Stage 3: 
+Stage 4: 
+  
+  RuleSet00
+    Rule: 0.00          All START_META must have END_META                                           SKIPPED
+    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
+    Rule: 0.02          All include files must exist                                                SKIPPED
+  
+  RuleSet01
+    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
+    Rule: 1.00          Must exist                                                                  SKIPPED
+    Rule: 1.02          Must exist                                                                  SKIPPED
+    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
+    Rule: 1.04          All include files must exist                                                SKIPPED
+  
+  RuleSet02
+    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
+    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
+    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
+    Rule: 2.04          must be cef                                                                 SKIPPED
+    Rule: 2.05          must be valid integer                                                       SKIPPED
+    Rule: 2.06          Same as Filename without extension                                          SKIPPED
+    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
+    Rule: 2.08          must be valid integer                                                       SKIPPED
+    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
+    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
+    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
+  
+  RuleSet99
+Stage 5: 
+Stage 1: 
+  CEF Filename:
+    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\RuleSet00_02_a\C3_CP_EDI_EGD__20111009_V01.cefOK
+Stage 2: 
+Stage 3: 
+Stage 4: 
+  
+  RuleSet00
+    Rule: 0.00          All START_META must have END_META                                           SKIPPED
+    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
+    Rule: 0.02          All include files must exist                                                SKIPPED
+  
+  RuleSet01
+    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
+    Rule: 1.00          Must exist                                                                  SKIPPED
+    Rule: 1.02          Must exist                                                                  SKIPPED
+    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
+    Rule: 1.04          All include files must exist                                                SKIPPED
+  
+  RuleSet02
+    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
+    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
+    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
+    Rule: 2.04          must be cef                                                                 SKIPPED
+    Rule: 2.05          must be valid integer                                                       SKIPPED
+    Rule: 2.06          Same as Filename without extension                                          SKIPPED
+    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
+    Rule: 2.08          must be valid integer                                                       SKIPPED
+    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
+    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
+    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
+  
+  RuleSet99
+Stage 5: 
 ]]></system-out>
-  <system-err><![CDATA[groovy.lang.GroovyRuntimeException: Could not find matching constructor for: java.io.File(java.lang.Boolean)
-	at groovy.lang.MetaClassImpl.invokeConstructor(MetaClassImpl.java:1601)
-	at groovy.lang.MetaClassImpl.invokeConstructor(MetaClassImpl.java:1404)
-	at org.codehaus.groovy.runtime.callsite.MetaClassConstructorSite.callConstructor(MetaClassConstructorSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:107)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:190)
-	at cefpass.Utils.directoryExists(Utils.groovy:11)
-	at cefpass.Utils$directoryExists$2.callStatic(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
-	at cefpass.Utils$directoryExists$2.callStatic(Unknown Source)
-	at cefpass.Utils.directoryExistsS(Utils.groovy:14)
-	at cefpass.Utils$directoryExistsS$1.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at cefpass.Utils$directoryExistsS$1.call(Unknown Source)
-	at cefpass.Show$_showSearchFolders_closure1.doCall(Show.groovy:33)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:909)
-	at groovy.lang.Closure.call(Closure.java:423)
-	at groovy.lang.Closure.call(Closure.java:439)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:1324)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:1296)
-	at org.codehaus.groovy.runtime.dgm$147.invoke(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:271)
-	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:55)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
-	at cefpass.Show.showSearchFolders(Show.groovy:32)
-	at cefpass.Show$showSearchFolders$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at cefpass.Show$showSearchFolders$0.call(Unknown Source)
-	at cefpass.CmdLnArgs.show(CmdLnArgs.groovy:59)
-	at cefpass.CmdLnArgs.init(CmdLnArgs.groovy:44)
-	at cefpass.CmdLnArgs$init.call(Unknown Source)
-	at cefpass.App.stages(App.groovy:54)
-	at cefpass.App$stages.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
-	at RuleSet00_Tests.$spock_feature_0_1(RuleSet00_Tests.groovy:46)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.spockframework.util.ReflectionUtil.invokeMethod(ReflectionUtil.java:138)
-	at org.spockframework.runtime.BaseSpecRunner.invokeRaw(BaseSpecRunner.java:330)
-	at org.spockframework.runtime.BaseSpecRunner.invoke(BaseSpecRunner.java:311)
-	at org.spockframework.runtime.BaseSpecRunner.invokeFeatureMethod(BaseSpecRunner.java:285)
-	at org.spockframework.runtime.BaseSpecRunner.doRunIteration(BaseSpecRunner.java:256)
-	at sun.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.spockframework.util.ReflectionUtil.invokeMethod(ReflectionUtil.java:138)
-	at org.spockframework.runtime.BaseSpecRunner.invokeRaw(BaseSpecRunner.java:330)
-	at org.spockframework.runtime.BaseSpecRunner.invoke(BaseSpecRunner.java:311)
-	at org.spockframework.runtime.BaseSpecRunner.runIteration(BaseSpecRunner.java:223)
-	at org.spockframework.runtime.BaseSpecRunner.initializeAndRunIteration(BaseSpecRunner.java:214)
-	at org.spockframework.runtime.BaseSpecRunner.runSimpleFeature(BaseSpecRunner.java:205)
-	at org.spockframework.runtime.BaseSpecRunner.doRunFeature(BaseSpecRunner.java:199)
-	at sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.spockframework.util.ReflectionUtil.invokeMethod(ReflectionUtil.java:138)
-	at org.spockframework.runtime.BaseSpecRunner.invokeRaw(BaseSpecRunner.java:330)
-	at org.spockframework.runtime.BaseSpecRunner.invoke(BaseSpecRunner.java:311)
-	at org.spockframework.runtime.BaseSpecRunner.runFeature(BaseSpecRunner.java:175)
-	at org.spockframework.runtime.BaseSpecRunner.runFeatures(BaseSpecRunner.java:152)
-	at org.spockframework.runtime.BaseSpecRunner.doRunSpec(BaseSpecRunner.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.spockframework.util.ReflectionUtil.invokeMethod(ReflectionUtil.java:138)
-	at org.spockframework.runtime.BaseSpecRunner.invokeRaw(BaseSpecRunner.java:330)
-	at org.spockframework.runtime.BaseSpecRunner.invoke(BaseSpecRunner.java:311)
-	at org.spockframework.runtime.BaseSpecRunner.runSpec(BaseSpecRunner.java:91)
-	at org.spockframework.runtime.BaseSpecRunner.run(BaseSpecRunner.java:82)
-	at org.spockframework.runtime.Sputnik.run(Sputnik.java:63)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:48)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:105)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:355)
-	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:745)
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -109,7 +109,6 @@ public class App {
         CefLog.diag "Hello, World!"
         CefLog.diag "workingDir: "  + System.getProperty("user.dir")
         
-        
         App a = new App();
         
         a.stages(i_args)
