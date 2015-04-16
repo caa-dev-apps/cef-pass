@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-04-10T23:53:52" hostname="scala" time="0.234">
+<testsuite name="AppTest2" tests="1" skipped="0" failures="1" errors="0" timestamp="2015-04-16T22:05:05" hostname="scala" time="0.219">
   <properties/>
-  <testcase name="Second Test (args): App.stages" classname="AppTest2" time="0.234"/>
+  <testcase name="Second Test (args): App.stages" classname="AppTest2" time="0.219">
+    <failure message="Condition not satisfied:&#10;&#10;result == true&#10;|      |&#10;false  false&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
+
+result == true
+|      |
+false  false
+
+	at AppTest2.Second Test (args): App.stages(AppTest2.groovy:64)
+</failure>
+  </testcase>
   <system-out><![CDATA[Stage 1: 
   CEF Filename:
     C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz                 OK
@@ -39,8 +48,6 @@ Stage 4:
     Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
     Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
     Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-  
-  RuleSet99
 Stage 5: 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

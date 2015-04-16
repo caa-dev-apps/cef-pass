@@ -35,8 +35,6 @@
 m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
 m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
 m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-  
-  RuleSet99
 Stage 5: 
 Stage 1: 
   CEF Filename:
@@ -75,8 +73,6 @@
 m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
 m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
 m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-  
-  RuleSet99
 Stage 5: 
 This is an Error Message
 This is a Warning Message
@@ -135,8 +131,6 @@
 !"m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
 !"m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
 !"m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-!"  
-  RuleSet99
 !"Stage 5: 
 !#Stage 1: 
 !#  CEF Filename:
@@ -169,8 +163,6 @@
 !#m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
 !#m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
 !#m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-!#  
-  RuleSet99
 !#Stage 5: 
 !$Stage 1: 
 !$  CEF Filename:
@@ -203,6 +195,4 @@
 !$m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
 !$m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
 !$m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-!$  
-  RuleSet99
 !$Stage 5: 

@@ -14,25 +14,11 @@ class RuleSet00_Tests extends Specification{
 
     def getTestResourcePath(i_path)
     {
-        //x File l_file = ResourceUtils.getFile(this.getClass().getResource('RuleSet00_00_b/C3_CP_EDI_EGD__20111009_V01.cef'))
         File l_file = ResourceUtils.getFile(this.getClass().getResource(i_path))
         
         return l_file.getAbsolutePath()
     }
 
-    ///////////////////////////////////////////////////////////////////////////////
-    //
-
-    def "RuleSet00_00_a - warm-up read file only"() {
-    
-        setup:
-            def l_path = getTestResourcePath('RuleSet00_00_a/C3_CP_EDI_EGD__20111009_V01.cef')
-        when:
-            def result = (l_path != null)
-        then:
-            result == true
-    }
-    
     ///////////////////////////////////////////////////////////////////////////////
     //
     //      Rule:              "0.00",
@@ -47,6 +33,16 @@ class RuleSet00_Tests extends Specification{
     //      Notes:             "** Moved from 2.00 - Parser stage **"
     //        
 
+    def "RuleSet00_00_a - warm-up read file only"() {
+    
+        setup:
+            def l_path = getTestResourcePath('RuleSet00_00_a/C3_CP_EDI_EGD__20111009_V01.cef')
+        when:
+            def result = (l_path != null)
+        then:
+            result == true
+    }
+    
     def "RuleSet00_00_b - test "() {
     
         setup:
@@ -130,24 +126,6 @@ class RuleSet00_Tests extends Specification{
         then:
             result == true
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
 

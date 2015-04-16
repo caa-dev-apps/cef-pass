@@ -28,7 +28,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">6</div>
 <p>failures</p>
 </div>
 </td>
@@ -40,7 +40,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0s</div>
+<div class="counter">0.016s</div>
 <p>duration</p>
 </div>
 </td>
@@ -49,8 +49,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -60,10 +60,82 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="01 CefParser_Tests: test meta matches - no error - eNULL"></a>
+<h3 class="failures">01 CefParser_Tests: test meta matches - no error - eNULL</h3>
+<span class="code">
+<pre>groovy.lang.MissingPropertyException: No such property: Error for class: cefpass.CefParser
+	at CefParser_Tests.01 CefParser_Tests: test meta matches - no error - eNULL(CefParser_Tests.groovy:18)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="02 CefParser_Tests: test variable mismatch"></a>
+<h3 class="failures">02 CefParser_Tests: test variable mismatch</h3>
+<span class="code">
+<pre>groovy.lang.GroovyRuntimeException: Could not find matching constructor for: cefpass.CefParserException(cefpass.CefParserException$Error)
+	at cefpass.CefParser.fatal_error(CefParser.groovy:58)
+	at cefpass.CefParser.etxMeta(CefParser.groovy:71)
+	at cefpass.CefParser.test_kv(CefParser.groovy:122)
+	at CefParser_Tests.02 CefParser_Tests: test variable mismatch(CefParser_Tests.groovy:27)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="03 CefParser_Tests: test start_meta - end variable mismatch"></a>
+<h3 class="failures">03 CefParser_Tests: test start_meta - end variable mismatch</h3>
+<span class="code">
+<pre>groovy.lang.GroovyRuntimeException: Could not find matching constructor for: cefpass.CefParserException(cefpass.CefParserException$Error)
+	at cefpass.CefParser.fatal_error(CefParser.groovy:58)
+	at cefpass.CefParser.etxVar(CefParser.groovy:85)
+	at cefpass.CefParser.test_kv(CefParser.groovy:124)
+	at CefParser_Tests.03 CefParser_Tests: test start_meta - end variable mismatch(CefParser_Tests.groovy:38)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="04 CefParser_Tests: test include errors INCLUDE_FILE_DUPLICATE"></a>
+<h3 class="failures">04 CefParser_Tests: test include errors INCLUDE_FILE_DUPLICATE</h3>
+<span class="code">
+<pre>groovy.lang.GroovyRuntimeException: Could not find matching constructor for: cefpass.CefParserException(cefpass.CefParserException$Error)
+	at cefpass.CefParser.fatal_error(CefParser.groovy:58)
+	at cefpass.CefParser.includeFileDuplicate(CefParser.groovy:96)
+	at CefParser_Tests.04 CefParser_Tests: test include errors INCLUDE_FILE_DUPLICATE(CefParser_Tests.groovy:48)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="05 CefParser_Tests: test include errors INCLUDE_FILE_NOT_FOUND"></a>
+<h3 class="failures">05 CefParser_Tests: test include errors INCLUDE_FILE_NOT_FOUND</h3>
+<span class="code">
+<pre>groovy.lang.GroovyRuntimeException: Could not find matching constructor for: cefpass.CefParserException(cefpass.CefParserException$Error)
+	at cefpass.CefParser.fatal_error(CefParser.groovy:58)
+	at cefpass.CefParser.includeFileNotFound(CefParser.groovy:102)
+	at CefParser_Tests.05 CefParser_Tests: test include errors INCLUDE_FILE_NOT_FOUND(CefParser_Tests.groovy:58)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="06 CefParser_Tests: test include errors INCLUDE_FILE_LEVEL_8"></a>
+<h3 class="failures">06 CefParser_Tests: test include errors INCLUDE_FILE_LEVEL_8</h3>
+<span class="code">
+<pre>groovy.lang.GroovyRuntimeException: Could not find matching constructor for: cefpass.CefParserException(cefpass.CefParserException$Error)
+	at cefpass.CefParser.fatal_error(CefParser.groovy:58)
+	at cefpass.CefParser.includeFileLevel8(CefParser.groovy:108)
+	at CefParser_Tests.06 CefParser_Tests: test include errors INCLUDE_FILE_LEVEL_8(CefParser_Tests.groovy:68)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -74,41 +146,41 @@
 </tr>
 </thead>
 <tr>
-<td class="success">01 CefParser_Tests: test meta matches - no error - eNULL</td>
+<td class="failures">01 CefParser_Tests: test meta matches - no error - eNULL</td>
 <td>0s</td>
-<td class="success">passed</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">02 CefParser_Tests: test variable mismatch</td>
-<td>0s</td>
-<td class="success">passed</td>
+<td class="failures">02 CefParser_Tests: test variable mismatch</td>
+<td>0.016s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">03 CefParser_Tests: test start_meta - end variable mismatch</td>
+<td class="failures">03 CefParser_Tests: test start_meta - end variable mismatch</td>
 <td>0s</td>
-<td class="success">passed</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">04 CefParser_Tests: test include errors INCLUDE_FILE_DUPLICATE</td>
+<td class="failures">04 CefParser_Tests: test include errors INCLUDE_FILE_DUPLICATE</td>
 <td>0s</td>
-<td class="success">passed</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">05 CefParser_Tests: test include errors INCLUDE_FILE_NOT_FOUND</td>
+<td class="failures">05 CefParser_Tests: test include errors INCLUDE_FILE_NOT_FOUND</td>
 <td>0s</td>
-<td class="success">passed</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">06 CefParser_Tests: test include errors INCLUDE_FILE_LEVEL_8</td>
+<td class="failures">06 CefParser_Tests: test include errors INCLUDE_FILE_LEVEL_8</td>
 <td>0s</td>
-<td class="success">passed</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 1.12</a> at 11-Apr-2015 00:53:53</p>
+<a href="http://www.gradle.org">Gradle 1.12</a> at 16-Apr-2015 23:05:06</p>
 </div>
 </div>
 </body>

@@ -21,13 +21,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">31</div>
+<div class="counter">29</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">11</div>
 <p>failures</p>
 </div>
 </td>
@@ -39,7 +39,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.371s</div>
+<div class="counter">1.923s</div>
 <p>duration</p>
 </div>
 </td>
@@ -48,8 +48,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">62%</div>
 <p>successful</p>
 </div>
 </td>
@@ -59,10 +59,62 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Classes</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Classes</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<ul class="linkList">
+<li>
+<a href="../classes/AppTest.html">AppTest</a>.
+<a href="../classes/AppTest.html#Second Test (args): App.stages">Second Test (args): App.stages</a>
+</li>
+<li>
+<a href="../classes/AppTest2.html">AppTest2</a>.
+<a href="../classes/AppTest2.html#Second Test (args): App.stages">Second Test (args): App.stages</a>
+</li>
+<li>
+<a href="../classes/CefParser_Tests.html">CefParser_Tests</a>.
+<a href="../classes/CefParser_Tests.html#01 CefParser_Tests: test meta matches - no error - eNULL">01 CefParser_Tests: test meta matches - no error - eNULL</a>
+</li>
+<li>
+<a href="../classes/CefParser_Tests.html">CefParser_Tests</a>.
+<a href="../classes/CefParser_Tests.html#02 CefParser_Tests: test variable mismatch">02 CefParser_Tests: test variable mismatch</a>
+</li>
+<li>
+<a href="../classes/CefParser_Tests.html">CefParser_Tests</a>.
+<a href="../classes/CefParser_Tests.html#03 CefParser_Tests: test start_meta - end variable mismatch">03 CefParser_Tests: test start_meta - end variable mismatch</a>
+</li>
+<li>
+<a href="../classes/CefParser_Tests.html">CefParser_Tests</a>.
+<a href="../classes/CefParser_Tests.html#04 CefParser_Tests: test include errors INCLUDE_FILE_DUPLICATE">04 CefParser_Tests: test include errors INCLUDE_FILE_DUPLICATE</a>
+</li>
+<li>
+<a href="../classes/CefParser_Tests.html">CefParser_Tests</a>.
+<a href="../classes/CefParser_Tests.html#05 CefParser_Tests: test include errors INCLUDE_FILE_NOT_FOUND">05 CefParser_Tests: test include errors INCLUDE_FILE_NOT_FOUND</a>
+</li>
+<li>
+<a href="../classes/CefParser_Tests.html">CefParser_Tests</a>.
+<a href="../classes/CefParser_Tests.html#06 CefParser_Tests: test include errors INCLUDE_FILE_LEVEL_8">06 CefParser_Tests: test include errors INCLUDE_FILE_LEVEL_8</a>
+</li>
+<li>
+<a href="../classes/RuleSet00_Tests.html">RuleSet00_Tests</a>.
+<a href="../classes/RuleSet00_Tests.html#RuleSet00_00_b - test ">RuleSet00_00_b - test </a>
+</li>
+<li>
+<a href="../classes/RuleSet00_Tests.html">RuleSet00_Tests</a>.
+<a href="../classes/RuleSet00_Tests.html#RuleSet00_01_a - test ">RuleSet00_01_a - test </a>
+</li>
+<li>
+<a href="../classes/RuleSet00_Tests.html">RuleSet00_Tests</a>.
+<a href="../classes/RuleSet00_Tests.html#RuleSet00_02_a - test ">RuleSet00_02_a - test </a>
+</li>
+</ul>
+</div>
+<div id="tab1" class="tab">
 <h2>Classes</h2>
 <table>
 <thread>
@@ -76,24 +128,24 @@
 </tr>
 </thread>
 <tr>
-<td class="success">
+<td class="failures">
 <a href="../classes/AppTest.html">AppTest</a>
 </td>
 <td>1</td>
+<td>1</td>
 <td>0</td>
-<td>0</td>
-<td>0.769s</td>
-<td class="success">100%</td>
+<td>1.235s</td>
+<td class="failures">0%</td>
 </tr>
 <tr>
-<td class="success">
+<td class="failures">
 <a href="../classes/AppTest2.html">AppTest2</a>
 </td>
 <td>1</td>
+<td>1</td>
 <td>0</td>
-<td>0</td>
-<td>0.234s</td>
-<td class="success">100%</td>
+<td>0.219s</td>
+<td class="failures">0%</td>
 </tr>
 <tr>
 <td class="success">
@@ -102,7 +154,7 @@
 <td>14</td>
 <td>0</td>
 <td>0</td>
-<td>0.234s</td>
+<td>0.297s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -112,7 +164,7 @@
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0.016s</td>
+<td>0.031s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -126,41 +178,31 @@
 <td class="success">100%</td>
 </tr>
 <tr>
-<td class="success">
+<td class="failures">
 <a href="../classes/CefParser_Tests.html">CefParser_Tests</a>
 </td>
 <td>6</td>
+<td>6</td>
 <td>0</td>
-<td>0</td>
-<td>0s</td>
-<td class="success">100%</td>
+<td>0.016s</td>
+<td class="failures">0%</td>
 </tr>
 <tr>
-<td class="success">
+<td class="failures">
 <a href="../classes/RuleSet00_Tests.html">RuleSet00_Tests</a>
 </td>
 <td>4</td>
+<td>3</td>
 <td>0</td>
-<td>0</td>
-<td>0.094s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="../classes/RuleSet99_Test.html">RuleSet99_Test</a>
-</td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0.024s</td>
-<td class="success">100%</td>
+<td>0.125s</td>
+<td class="failures">25%</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 1.12</a> at 11-Apr-2015 00:53:53</p>
+<a href="http://www.gradle.org">Gradle 1.12</a> at 16-Apr-2015 23:05:06</p>
 </div>
 </div>
 </body>

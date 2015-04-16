@@ -49,7 +49,7 @@ public class CefHeaderXml{
     def dumpX()                 { CefLog.diag getXmlNodesAsString() }
     
     def getHeaderXPath()        { return new CefHeaderXPath( getXmlNodesAsString() ) }
-    //x !!! pissed off - this should work and be faster too - than above(reparsing) - need a break from looking at it!!!
+    //x !!! ********* - this should work and be faster too - than above(reparsing) - need a break from looking at it ******** !!!
     //x def getHeaderXPath()    { return new CefHeaderXPath( m_root ) }
     
     def removeQuotes(v) {
@@ -63,13 +63,15 @@ public class CefHeaderXml{
     def add_kv(k, v){
         Show.showHeaderKV(k,v)
         
-        if(CefParser.test_kv(k, v) == CefParser.Error.eNULL)
-        {
-            if("START_META".compareToIgnoreCase(k) == 0)			stxMeta(v) 
-            else if ("END_META".compareToIgnoreCase(k) == 0)		etxMeta(v) 
-            else if ("START_VARIABLE".compareToIgnoreCase(k) == 0) 	stxVar(v) 
-            else if ("END_VARIABLE".compareToIgnoreCase(k) == 0)	etxVar(v) 
-            else 													addAttr(k,v) 
-        }
+        //x if(CefParser.test_kv(k, v) == CefParser.Error.eNULL)
+            
+        // throws Exception on fatal error
+        CefParser.test_kv(k, v)
+    
+        if("START_META".compareToIgnoreCase(k) == 0)			stxMeta(v) 
+        else if ("END_META".compareToIgnoreCase(k) == 0)		etxMeta(v) 
+        else if ("START_VARIABLE".compareToIgnoreCase(k) == 0) 	stxVar(v) 
+        else if ("END_VARIABLE".compareToIgnoreCase(k) == 0)	etxVar(v) 
+        else 													addAttr(k,v) 
     }
 }    
