@@ -100,99 +100,99 @@
 j    Stage #4 info                                                                                   1234
 i    Stage #5 info                                                                                   Yo!
 This is a stage top message
-!"Stage 1: 
-!"  CEF Filename:
-!"…    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\RuleSet00_00_b\C3_CP_EDI_EGD__20111009_V01.cefOK
-!"Stage 2: 
-!"Stage 3: 
-!"Stage 4: 
-!"  
++,Stage 1: 
++,  CEF Filename:
++,…    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\RuleSet00_00_b\C3_CP_EDI_EGD__20111009_V01.cefOK
++,Stage 2: 
++,Stage 3: 
++,Stage 4: 
++,  
   RuleSet00
-!"m    Rule: 0.00          All START_META must have END_META                                           SKIPPED
-!"m    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
-!"m    Rule: 0.02          All include files must exist                                                SKIPPED
-!"  
++,m    Rule: 0.00          All START_META must have END_META                                           SKIPPED
++,m    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
++,m    Rule: 0.02          All include files must exist                                                SKIPPED
++,  
   RuleSet01
-!"m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
-!"m    Rule: 1.00          Must exist                                                                  SKIPPED
-!"m    Rule: 1.02          Must exist                                                                  SKIPPED
-!"m    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
-!"m    Rule: 1.04          All include files must exist                                                SKIPPED
-!"  
++,m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
++,m    Rule: 1.00          Must exist                                                                  SKIPPED
++,m    Rule: 1.02          Must exist                                                                  SKIPPED
++,m    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
++,m    Rule: 1.04          All include files must exist                                                SKIPPED
++,  
   RuleSet02
-!"m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
-!"m    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
-!"m    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
-!"m    Rule: 2.04          must be cef                                                                 SKIPPED
-!"m    Rule: 2.05          must be valid integer                                                       SKIPPED
-!"m    Rule: 2.06          Same as Filename without extension                                          SKIPPED
-!"m    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
-!"m    Rule: 2.08          must be valid integer                                                       SKIPPED
-!"m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
-!"m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
-!"m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-!"Stage 5: 
-!#Stage 1: 
-!#  CEF Filename:
-!#…    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\RuleSet00_01_a\C3_CP_EDI_EGD__20111009_V01.cefOK
-!#Stage 2: 
-!#Stage 3: 
-!#Stage 4: 
-!#  
++,m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
++,m    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
++,m    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
++,m    Rule: 2.04          must be cef                                                                 SKIPPED
++,m    Rule: 2.05          must be valid integer                                                       SKIPPED
++,m    Rule: 2.06          Same as Filename without extension                                          SKIPPED
++,m    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
++,m    Rule: 2.08          must be valid integer                                                       SKIPPED
++,m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
++,m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
++,m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
++,Stage 5: 
++-Stage 1: 
++-  CEF Filename:
++-…    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\RuleSet00_01_a\C3_CP_EDI_EGD__20111009_V01.cefOK
++-Stage 2: 
++-Stage 3: 
++-Stage 4: 
++-  
   RuleSet00
-!#m    Rule: 0.00          All START_META must have END_META                                           SKIPPED
-!#m    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
-!#m    Rule: 0.02          All include files must exist                                                SKIPPED
-!#  
++-m    Rule: 0.00          All START_META must have END_META                                           SKIPPED
++-m    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
++-m    Rule: 0.02          All include files must exist                                                SKIPPED
++-  
   RuleSet01
-!#m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
-!#m    Rule: 1.00          Must exist                                                                  SKIPPED
-!#m    Rule: 1.02          Must exist                                                                  SKIPPED
-!#m    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
-!#m    Rule: 1.04          All include files must exist                                                SKIPPED
-!#  
++-m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
++-m    Rule: 1.00          Must exist                                                                  SKIPPED
++-m    Rule: 1.02          Must exist                                                                  SKIPPED
++-m    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
++-m    Rule: 1.04          All include files must exist                                                SKIPPED
++-  
   RuleSet02
-!#m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
-!#m    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
-!#m    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
-!#m    Rule: 2.04          must be cef                                                                 SKIPPED
-!#m    Rule: 2.05          must be valid integer                                                       SKIPPED
-!#m    Rule: 2.06          Same as Filename without extension                                          SKIPPED
-!#m    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
-!#m    Rule: 2.08          must be valid integer                                                       SKIPPED
-!#m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
-!#m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
-!#m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-!#Stage 5: 
-!$Stage 1: 
-!$  CEF Filename:
-!$…    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\RuleSet00_02_a\C3_CP_EDI_EGD__20111009_V01.cefOK
-!$Stage 2: 
-!$Stage 3: 
-!$Stage 4: 
-!$  
++-m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
++-m    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
++-m    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
++-m    Rule: 2.04          must be cef                                                                 SKIPPED
++-m    Rule: 2.05          must be valid integer                                                       SKIPPED
++-m    Rule: 2.06          Same as Filename without extension                                          SKIPPED
++-m    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
++-m    Rule: 2.08          must be valid integer                                                       SKIPPED
++-m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
++-m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
++-m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
++-Stage 5: 
++.Stage 1: 
++.  CEF Filename:
++.…    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\RuleSet00_02_a\C3_CP_EDI_EGD__20111009_V01.cefOK
++.Stage 2: 
++.Stage 3: 
++.Stage 4: 
++.  
   RuleSet00
-!$m    Rule: 0.00          All START_META must have END_META                                           SKIPPED
-!$m    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
-!$m    Rule: 0.02          All include files must exist                                                SKIPPED
-!$  
++.m    Rule: 0.00          All START_META must have END_META                                           SKIPPED
++.m    Rule: 0.01          All START_VARIABLE must have END_VARIABLE                                   SKIPPED
++.m    Rule: 0.02          All include files must exist                                                SKIPPED
++.  
   RuleSet01
-!$m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
-!$m    Rule: 1.00          Must exist                                                                  SKIPPED
-!$m    Rule: 1.02          Must exist                                                                  SKIPPED
-!$m    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
-!$m    Rule: 1.04          All include files must exist                                                SKIPPED
-!$  
++.m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
++.m    Rule: 1.00          Must exist                                                                  SKIPPED
++.m    Rule: 1.02          Must exist                                                                  SKIPPED
++.m    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
++.m    Rule: 1.04          All include files must exist                                                SKIPPED
++.  
   RuleSet02
-!$m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
-!$m    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
-!$m    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
-!$m    Rule: 2.04          must be cef                                                                 SKIPPED
-!$m    Rule: 2.05          must be valid integer                                                       SKIPPED
-!$m    Rule: 2.06          Same as Filename without extension                                          SKIPPED
-!$m    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
-!$m    Rule: 2.08          must be valid integer                                                       SKIPPED
-!$m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
-!$m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
-!$m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-!$Stage 5: 
++.m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
++.m    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
++.m    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
++.m    Rule: 2.04          must be cef                                                                 SKIPPED
++.m    Rule: 2.05          must be valid integer                                                       SKIPPED
++.m    Rule: 2.06          Same as Filename without extension                                          SKIPPED
++.m    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
++.m    Rule: 2.08          must be valid integer                                                       SKIPPED
++.m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
++.m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
++.m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
++.Stage 5: 

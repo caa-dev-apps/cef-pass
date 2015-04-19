@@ -186,7 +186,7 @@ public class App {
 //x             e.printStackTrace()        
 //x         }
         
-        result
+        return true
     }
     
     public static void main(String[] i_args) {

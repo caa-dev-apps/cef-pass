@@ -1,37 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RuleSet00_Tests" tests="4" skipped="0" failures="3" errors="0" timestamp="2015-04-16T22:05:06" hostname="scala" time="0.125">
+<testsuite name="RuleSet00_Tests" tests="4" skipped="0" failures="0" errors="0" timestamp="2015-04-19T22:19:02" hostname="scala" time="0.094">
   <properties/>
-  <testcase name="RuleSet00_00_a - warm-up read file only" classname="RuleSet00_Tests" time="0.031"/>
-  <testcase name="RuleSet00_00_b - test " classname="RuleSet00_Tests" time="0.031">
-    <failure message="Condition not satisfied:&#10;&#10;result == true&#10;|      |&#10;false  false&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
-
-result == true
-|      |
-false  false
-
-	at RuleSet00_Tests.RuleSet00_00_b - test (RuleSet00_Tests.groovy:62)
-</failure>
-  </testcase>
-  <testcase name="RuleSet00_01_a - test " classname="RuleSet00_Tests" time="0.031">
-    <failure message="Condition not satisfied:&#10;&#10;result == true&#10;|      |&#10;false  false&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
-
-result == true
-|      |
-false  false
-
-	at RuleSet00_Tests.RuleSet00_01_a - test (RuleSet00_Tests.groovy:95)
-</failure>
-  </testcase>
-  <testcase name="RuleSet00_02_a - test " classname="RuleSet00_Tests" time="0.032">
-    <failure message="Condition not satisfied:&#10;&#10;result == true&#10;|      |&#10;false  false&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
-
-result == true
-|      |
-false  false
-
-	at RuleSet00_Tests.RuleSet00_02_a - test (RuleSet00_Tests.groovy:127)
-</failure>
-  </testcase>
+  <testcase name="RuleSet00_00_a - warm-up read file only" classname="RuleSet00_Tests" time="0.016"/>
+  <testcase name="RuleSet00_00_b - test " classname="RuleSet00_Tests" time="0.031"/>
+  <testcase name="RuleSet00_01_a - test " classname="RuleSet00_Tests" time="0.031"/>
+  <testcase name="RuleSet00_02_a - test " classname="RuleSet00_Tests" time="0.016"/>
   <system-out><![CDATA[Stage 1: 
   CEF Filename:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\RuleSet00_00_b\C3_CP_EDI_EGD__20111009_V01.cefOK
