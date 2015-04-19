@@ -1,8 +1,3 @@
-package cefpass
-
-///////////////////////////////////////////////////////////////////////////////
-//
-
 public class CefException extends Exception
 {
 }
@@ -28,6 +23,11 @@ public class CefParserException extends CefException
         INCLUDE_FILE_NOT_FOUND,
         INCLUDE_FILE_LEVEL_8
     }
+    
+    Error m_error;
+    public CefParserException(Error i_error) { m_error = i_error}
+    
+    public String toString() { m_error != null ? m_error.toString() : "Exception:Error:undefined"}
 }
 
 public class CefParser
@@ -120,5 +120,89 @@ public class CefParser
         else if ("END_VARIABLE".compareToIgnoreCase(k) == 0)	etxVar(v) 
     }
 }
+
+
+public class App {
+
+    def p = { println it }
+    def test_1 = { p "test_1"; CefParser.init() } 
+    
+
+    def test_x = { i_data -> 
+        try {
+            p "\ntest: " + i_data.ix; 
+            
+            CefParser.init() 
+            
+            CefParser.test_kv(i_data.k1, i_data.v1)
+            CefParser.test_kv(i_data.k2, i_data.v2)
+        }
+        catch (Exception e) {
+            p e.toString()
+            p "Error: "  + i_data.toString()
+        }
+        finally {
+            p "+"
+        }
+    }
+    
+    def do_tests_1()
+    {
+        def l_data = [
+            [ ix:1,   k1:"START_META",    v1:"m1",    k2:"END_META",  v2:"m1" ],
+            [ ix:2,   k1:"START_META",    v1:"m1",    k2:"END_VARIABLE",  v2:"m1" ],
+            [ ix:3,   k1:"START_META",    v1:"m1",    k2:"END_META",  v2:"m1" ],
+            [ ix:4,   k1:"START_META",    v1:"m1",    k2:"END_META",  v2:"m1" ],
+        ]
+        
+        l_data.each { test_x it }
+    }
+    
+    public def boolean stages(String[] i_args) {
+        def result = false
+        
+        p "Stage 1: "  //  /////////////////////////////////////////////////////////////////////////////
+            do_tests_1()
+        p "Stage 2: "  //  /////////////////////////////////////////////////////////////////////////////
+        p "Stage 3: "  //  /////////////////////////////////////////////////////////////////////////////
+        p "Stage 4: "  //  /////////////////////////////////////////////////////////////////////////////
+        p "Stage 5: "  //  /////////////////////////////////////////////////////////////////////////////
+        
+        result
+    }
+    
+    public static void run(String[] i_args) {
+        println "Hello, World!"
+        
+        App a = new App();
+
+        try
+        {
+            a.stages(i_args)
+        }
+        catch(Exception e) {
+            e.printStackTrace()        
+        }
+    }
+}
+
+App.run()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
