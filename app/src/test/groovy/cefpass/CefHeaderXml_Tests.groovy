@@ -61,41 +61,4 @@ class CefHeaderXml_Test extends Specification{
         then:
             result == true
     }
-
-
-    //x def "02 CefHeaderXml_Tests: create and test CefHeaderXPath"() {
-//x 
-//x         setup:
-//x             def H1 = new CefHeaderXml()
-//x 
-//x             H1.addComment("Start of H1 Global Attributes")
-//x             H1.addAttr("K1", "V1")
-//x             H1.addAttr("K2", "V2")
-//x             H1.addAttr("K3", "V3")
-//x 
-//x             H1.addComment("Start of H1 Meta Elements + Values")
-//x             H1.stxMeta("M1")
-//x             H1.addAttr("MK1", "V1")
-//x             H1.addAttr("MK2", "V2")
-//x             H1.addAttr("MK3", "V3")
-//x             H1.etxMeta("M1")
-//x 
-//x             H1.addComment("Start of H1 Variable Elements + Values")
-//x             H1.stxVar("V1")
-//x             H1.addAttr("VK1", "V1")
-//x             H1.addAttr("VK2", "V2")
-//x             H1.addAttr("VK3", "V3")
-//x             H1.etxVar("V1")
-//x 
-//x             def l_headerXPath = H1.getHeaderXPath()
-//x             
-//x         when:
-//x             def result = (l_headerXPath.getElementText("/root/K1") != null)
-//x                         
-//x         then:
-//x             result == true
-//x     }
-
-
-    
 }

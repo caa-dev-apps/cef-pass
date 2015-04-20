@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-04-19T22:19:01" hostname="scala" time="0.735">
+<testsuite name="AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-04-20T22:12:37" hostname="scala" time="0.751">
   <properties/>
-  <testcase name="Second Test (args): App.stages" classname="AppTest" time="0.735"/>
+  <testcase name="Second Test (args): App.stages" classname="AppTest" time="0.751"/>
   <system-out><![CDATA[Stage 1: 
   CEF Filename:
     C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz                 OK

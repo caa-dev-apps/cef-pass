@@ -6,9 +6,6 @@ class CefLog_Tests extends Specification{
 
     def "01 CefLog_Tests: test each of the static CefLog functions"() {
 
-        setup:
-            // no setup - static functions -- all or nothing
-            
         when:
             def result = false
             try

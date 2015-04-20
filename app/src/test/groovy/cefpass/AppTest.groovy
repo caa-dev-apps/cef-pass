@@ -36,20 +36,18 @@ class AppTest extends Specification{
     def "Second Test (args): App.stages"() {
     
         setup:
-        
-        def App app = new App()
-        String[] l_args = [
-            "-f",
-            TEST_FILES[0],
-            "-i",
-            TEST_SEARCH_FOLDERS.join(","),
-            "-l",
-            "C:/work.dev/2015.03.22 github cef pass v2/v0/_logs"
-        ]
-        
+            def App app = new App()
+            String[] l_args = [
+                "-f",
+                TEST_FILES[0],
+                "-i",
+                TEST_SEARCH_FOLDERS.join(","),
+                "-l",
+                "C:/work.dev/2015.03.22 github cef pass v2/v0/_logs"
+            ]
         when:
-        def result = app.stages(l_args)
+            def result = app.stages(l_args)
         then:
-        result == true
+            result == true
     }
 }

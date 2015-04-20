@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CefParser_Tests" tests="16" skipped="0" failures="1" errors="0" timestamp="2015-04-19T22:19:02" hostname="scala" time="0.109">
+<testsuite name="CefParser_Tests" tests="16" skipped="0" failures="0" errors="0" timestamp="2015-04-20T22:12:38" hostname="scala" time="0.012">
   <properties/>
-  <testcase name="ix:0   ex:CefParserException.Error.NO_ERROR" classname="CefParser_Tests" time="0.109">
-    <failure message="Condition not satisfied:&#10;&#10;result == true&#10;|      |&#10;false  false&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
-
-result == true
-|      |
-false  false
-
-	at CefParser_Tests.ix:0   ex:CefParserException.Error.NO_ERROR(CefParser_Tests.groovy:129)
-</failure>
-  </testcase>
-  <testcase name="ix:10  ex:CefParserException.Error.R_0_00___START_META___META_UNCLOSED" classname="CefParser_Tests" time="0.0"/>
+  <testcase name="ix:0   ex:CefParserException.Error.NO_ERROR" classname="CefParser_Tests" time="0.001"/>
+  <testcase name="ix:10  ex:CefParserException.Error.R_0_00___START_META___META_UNCLOSED" classname="CefParser_Tests" time="0.01"/>
   <testcase name="ix:11  ex:CefParserException.Error.R_0_01___START_META___VARIABLE_UNCLOSED" classname="CefParser_Tests" time="0.0"/>
   <testcase name="ix:12  ex:CefParserException.Error.R_0_02___START_META___NAME_ERROR" classname="CefParser_Tests" time="0.0"/>
   <testcase name="ix:20  ex:CefParserException.Error.R_0_10___END_META___VARIABLE_OPENED" classname="CefParser_Tests" time="0.0"/>

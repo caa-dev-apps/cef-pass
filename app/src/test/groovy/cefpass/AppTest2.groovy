@@ -33,36 +33,21 @@ class AppTest2 extends Specification{
         "C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_QZC__20111022_V01.cef.gz"
     ]
 
-
-//x     def "First Test: App.m1"() {
-//x     
-//x         setup:
-//x         App app = new App()
-//x         when:
-//x         def result = app.m1()
-//x         then:
-//x         result == true
-//x     }
-    
-    
     def "Second Test (args): App.stages"() {
     
         setup:
-        def App app = new App()
-        String[] l_args = [
-            "-f",
-            TEST_FILES[0],
-            "-i",
-            TEST_SEARCH_FOLDERS.join(","),
-            "-l",
-            "C:/work.dev/2015.03.22 github cef pass v2/v0/_logs"
-        ]
-        
+            def App app = new App()
+            String[] l_args = [
+                "-f",
+                TEST_FILES[0],
+                "-i",
+                TEST_SEARCH_FOLDERS.join(","),
+                "-l",
+                "C:/work.dev/2015.03.22 github cef pass v2/v0/_logs"
+            ]
         when:
-        def result = app.stages(l_args)
+            def result = app.stages(l_args)
         then:
-        result == true
+            result == true
     }
-    
-    
 }
