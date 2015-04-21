@@ -25,14 +25,6 @@ public class Rule
     
     def about()  { ("Rule: " + this.Rule).padRight(20) + this.Description }
     
-    
-//x     def skipped(i_dump)
-//x     {
-//x        def str = (("\tRule: " + this.Rule).padRight(20) + this.Description).padRight(100) + "Skipped"
-//x        
-//x        return ((i_dump == true) ? (str + "\n" + to_str()) : str) 
-//x     }
-    
     def to_str()
     {
         def str = ""

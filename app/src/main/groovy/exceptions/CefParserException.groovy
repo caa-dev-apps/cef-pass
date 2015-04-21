@@ -26,6 +26,8 @@ public class CefParserException extends CefException
         R_0_42___INCLUDE_FILE_LEVEL_8                                // RULESET 0 rule 42
     }
     
+
+    
     Error m_error;
     
     public CefParserException()                 { m_error = Error.NO_ERROR }

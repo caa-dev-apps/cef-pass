@@ -1,13 +1,90 @@
-package rules2015
 
-import cefpass.CefLog
+public class CefLog
+{
+    enum Type {
+        diag,
+        info,
+        warn,
+        error,
+        stage_info,
+        top
+    }
+
+    static def s_type = Type.info
+    
+    static def println(i_type, i_str)
+    {
+        if(i_type > s_type)                         { println(i_str) }
+        //x else                                    { println("SKIP THIS: " + i_str)}
+    }                                    
+    
+    static def strFmt(i_str1, i_str2)               { ((i_str2 != null) ? ("    " + i_str1).padRight(100) + i_str2 : ("  " + i_str1))} 
+                                         
+    static def error(i_str)                         { CefLog.println(Type.error, i_str) }
+    static def warn(i_str)                          { CefLog.println(Type.warn, i_str) }
+    static def info(i_str)                          { CefLog.println(Type.info, i_str) }
+    static def diag(i_str)                          { CefLog.println(Type.diag, i_str) }
+                                            
+    static def stage_info(i_stage, i_str1, i_str2)  { CefLog.println(Type.stage_info,  strFmt(i_str1, i_str2)) }
+    static def top(i_str)                           { CefLog.println(Type.top, i_str) }
+
+    static def stage1_info(i_str1, i_str2=null)     { stage_info(1, i_str1, i_str2) }   
+    static def stage2_info(i_str1, i_str2=null)     { stage_info(2, i_str1, i_str2) }   
+    static def stage3_info(i_str1, i_str2=null)     { stage_info(3, i_str1, i_str2) }   
+    static def stage4_info(i_str1, i_str2=null)     { stage_info(4, i_str1, i_str2) }   
+    static def stage5_info(i_str1, i_str2=null)     { stage_info(5, i_str1, i_str2) }   
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 //
-// ## Parser Rules.
-// ## Rules which are tested during the parsing of the header data (included in cef and ceh files)
 
-// used for message purposes only. 
+public class Rule
+{
+    def Rule
+    def Scope
+    def Keyword
+    def Data_type
+    def Cardinality
+    def Description
+    def Error_Type
+    def Error_Message
+    def Caveats
+    def Notes
+    
+    def param_string(i_key, i_pad=30)
+    {
+        i_key.padRight(i_pad) + this[i_key]
+    }
+    
+    def about()  { ("Rule: " + this.Rule).padRight(20) + this.Description }
+    
+    def to_str()
+    {
+        def str = ""
+        this.properties.each { prop, val ->
+            if(prop in ["metaClass","class"]) return
+            str += (("  " + prop).padRight(20) + val) + "\n"
+        }
+        str
+    }
+    
+    def dump()  { CefLog.diag(to_str()) }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//
+
+public class RuleSet
+{
+    
+    def rulset_log(i_str)
+    {
+        CefLog.debug i_str
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//
 
 public class RuleSet00 extends RuleSet
 {
@@ -239,3 +316,9 @@ public class RuleSet00 extends RuleSet
     }
 }
 
+//x 
+//x RuleSet00.getRules().each {
+//x     CefLog.stage2_info(it.value.about(), "PASSED")
+//x }
+
+RuleSet00.showAll()
