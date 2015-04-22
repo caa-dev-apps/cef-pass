@@ -5,7 +5,8 @@ import cefpass.CefLog
 ///////////////////////////////////////////////////////////////////////////////
 //
 // ## Parser Rules.
-// ## Rules which are tested during the parsing of the header data (included in cef and ceh files)
+// ## Rules which are tested during the parsing of the header data 
+// (included in cef and ceh files)
 
 // used for message purposes only. 
 

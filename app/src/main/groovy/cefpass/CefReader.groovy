@@ -80,7 +80,10 @@ public class CefReader
             else {
                 def matcher = it =~ regexStr
                 
-                if (matcher.matches()) {
+                if ((it =~ regexCommentStr).matches()) {
+                    if(m_isCommentsOn) l_headerXml.addComment(it)
+                }
+                else if (matcher.matches()) {
                     def key = matcher[0][1].trim()
                     def val = matcher[0][2].trim()
             
@@ -96,9 +99,9 @@ public class CefReader
                         l_headerXml.add_kv(key, val)
                     }
                 }
-                else if ((it =~ regexCommentStr).matches()) {
-                    if(m_isCommentsOn) l_headerXml.addComment(it)
-                }
+//x                 else if ((it =~ regexCommentStr).matches()) {
+//x                     if(m_isCommentsOn) l_headerXml.addComment(it)
+//x                 }
                 else if(it.size() == 0) {
                     // ignore
                 }
