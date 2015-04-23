@@ -1,6 +1,6 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   Nothing wrong with this file - just a little short - basic test for meta/var
+!   R_0_31___END_VARIABLE___VARIABLE_UNOPENED - line 37 missing START_VARIABLE
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
@@ -32,4 +32,6 @@ start_variable = time_tags__C3_CP_EDI_EGD
    VALUE_TYPE = ISO_TIME
    DELTA_PLUS = 0.244e-6
    DELTA_MINUS = 0.244e-6
- end_variable = time_tags__C3_CP_EDI_EGD
+end_variable = time_tags__C3_CP_EDI_EGD
+!
+end_variable = tof__C3_CP_EDI_EGD

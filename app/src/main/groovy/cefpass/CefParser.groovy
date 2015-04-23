@@ -12,6 +12,7 @@ public class CefParser
     static def s_k = null
     static def s_v = null
     static def s_includeFile = null
+    static def s_readLine = null
     
     static def init() { 
         s_var = null
@@ -19,6 +20,7 @@ public class CefParser
         s_k = null
         s_v = null
         s_includeFile = null
+        s_readLine = null
     }
 
     static def save_kv(k, v)        
@@ -92,6 +94,12 @@ public class CefParser
     {
         s_includeFile = f
         fatal_error(CefParserException.Error.R_0_42___INCLUDE_FILE_LEVEL_8)
+    }
+    
+    static def MalFormedReadLine(s)
+    {
+        s_readLine = s
+        fatal_error(CefParserException.Error.R_0_50___MALFORMED_READ_LINE)
     }
     
     ///////////////////////////////////////////////////////////////////////////////

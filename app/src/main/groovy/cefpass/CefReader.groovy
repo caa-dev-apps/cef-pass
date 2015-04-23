@@ -106,7 +106,7 @@ public class CefReader
                     // ignore
                 }
                 else {
-                    throw new MalFormedCef()
+                    CefParser.MalFormedReadLine(it)
                 }    
             }
         }

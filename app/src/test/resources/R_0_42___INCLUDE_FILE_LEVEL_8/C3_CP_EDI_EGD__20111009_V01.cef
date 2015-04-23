@@ -1,6 +1,6 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   Nothing wrong with this file - just a little short - basic test for meta/var
+!   R_0_42___INCLUDE_FILE_LEVEL_8 - TODO !!
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
@@ -10,6 +10,8 @@ FILE_FORMAT_VERSION="CEF-2.0"
 START_META = LOGICAL_FILE_ID
  ENTRY = "C3_CP_EDI_EGD__20111009_V01"
 END_META = LOGICAL_FILE_ID
+!
+include = "CL_CH_MISSION.ceh"
 !
 START_META = VERSION_NUMBER
  ENTRY = "01"

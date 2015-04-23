@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-04-22T22:11:59" hostname="scala" time="0.235">
+<testsuite name="AppTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-04-23T22:28:43" hostname="scala" time="0.226">
   <properties/>
-  <testcase name="Second Test (args): App.stages" classname="AppTest2" time="0.235"/>
+  <testcase name="Second Test (args): App.stages" classname="AppTest2" time="0.226"/>
   <system-out><![CDATA[Stage 1: 
   CEF Filename:
     C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz                 OK
@@ -12,104 +12,6 @@
     C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW                                                OK
     C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE                                              OK
 Stage 2: 
-stxMeta:LOGICAL_FILE_ID
-etxMeta:LOGICAL_FILE_ID
-stxMeta:VERSION_NUMBER
-etxMeta:VERSION_NUMBER
-stxMeta:FILE_TIME_SPAN
-etxMeta:FILE_TIME_SPAN
-stxMeta:GENERATION_DATE
-etxMeta:GENERATION_DATE
-stxMeta:FILE_CAVEATS
-etxMeta:FILE_CAVEATS
-stxMeta:MISSION
-etxMeta:MISSION
-stxMeta:MISSION_TIME_SPAN
-etxMeta:MISSION_TIME_SPAN
-stxMeta:MISSION_AGENCY
-etxMeta:MISSION_AGENCY
-stxMeta:MISSION_DESCRIPTION
-etxMeta:MISSION_DESCRIPTION
-stxMeta:MISSION_KEY_PERSONNEL
-etxMeta:MISSION_KEY_PERSONNEL
-stxMeta:MISSION_REFERENCES
-etxMeta:MISSION_REFERENCES
-stxMeta:MISSION_REGION
-etxMeta:MISSION_REGION
-stxMeta:MISSION_CAVEATS
-etxMeta:MISSION_CAVEATS
-stxMeta:EXPERIMENT
-etxMeta:EXPERIMENT
-stxMeta:EXPERIMENT_DESCRIPTION
-etxMeta:EXPERIMENT_DESCRIPTION
-stxMeta:INVESTIGATOR_COORDINATES
-etxMeta:INVESTIGATOR_COORDINATES
-stxMeta:EXPERIMENT_REFERENCES
-etxMeta:EXPERIMENT_REFERENCES
-stxMeta:EXPERIMENT_KEY_PERSONNEL
-etxMeta:EXPERIMENT_KEY_PERSONNEL
-stxMeta:EXPERIMENT_CAVEATS
-etxMeta:EXPERIMENT_CAVEATS
-stxMeta:OBSERVATORY
-etxMeta:OBSERVATORY
-stxMeta:OBSERVATORY_CAVEATS
-etxMeta:OBSERVATORY_CAVEATS
-stxMeta:OBSERVATORY_DESCRIPTION
-etxMeta:OBSERVATORY_DESCRIPTION
-stxMeta:OBSERVATORY_TIME_SPAN
-etxMeta:OBSERVATORY_TIME_SPAN
-stxMeta:OBSERVATORY_REGION
-etxMeta:OBSERVATORY_REGION
-stxMeta:INSTRUMENT_NAME
-etxMeta:INSTRUMENT_NAME
-stxMeta:INSTRUMENT_DESCRIPTION
-etxMeta:INSTRUMENT_DESCRIPTION
-stxMeta:INSTRUMENT_TYPE
-etxMeta:INSTRUMENT_TYPE
-stxMeta:MEASUREMENT_TYPE
-etxMeta:MEASUREMENT_TYPE
-stxMeta:INSTRUMENT_CAVEATS
-etxMeta:INSTRUMENT_CAVEATS
-stxMeta:DATASET_ID
-etxMeta:DATASET_ID
-stxMeta:DATA_TYPE
-etxMeta:DATA_TYPE
-stxMeta:DATASET_TITLE
-etxMeta:DATASET_TITLE
-stxMeta:DATASET_DESCRIPTION
-etxMeta:DATASET_DESCRIPTION
-stxMeta:CONTACT_COORDINATES
-etxMeta:CONTACT_COORDINATES
-stxMeta:PROCESSING_LEVEL
-etxMeta:PROCESSING_LEVEL
-stxMeta:TIME_RESOLUTION
-etxMeta:TIME_RESOLUTION
-stxMeta:MAX_TIME_RESOLUTION
-etxMeta:MAX_TIME_RESOLUTION
-stxMeta:MIN_TIME_RESOLUTION
-etxMeta:MIN_TIME_RESOLUTION
-stxMeta:DATASET_CAVEATS
-etxMeta:DATASET_CAVEATS
-stxMeta:ACKNOWLEDGEMENT
-etxMeta:ACKNOWLEDGEMENT
-stxMeta:METADATA_TYPE
-etxMeta:METADATA_TYPE
-stxMeta:METADATA_VERSION
-etxMeta:METADATA_VERSION
-stxMeta:FILE_TYPE
-etxMeta:FILE_TYPE
-stxMeta:DATASET_VERSION
-etxMeta:DATASET_VERSION
-stxVar:time_tags__C3_CP_EDI_EGD
-etxVar:time_tags__C3_CP_EDI_EGD
-stxVar:tof__C3_CP_EDI_EGD
-etxVar:tof__C3_CP_EDI_EGD
-stxVar:sigma_tof__C3_CP_EDI_EGD
-etxVar:sigma_tof__C3_CP_EDI_EGD
-stxVar:gdu_flag__C3_CP_EDI_EGD
-etxVar:gdu_flag__C3_CP_EDI_EGD
-stxVar:kine_flag__C3_CP_EDI_EGD
-etxVar:kine_flag__C3_CP_EDI_EGD
 Stage 3: 
 Stage 4: 
   

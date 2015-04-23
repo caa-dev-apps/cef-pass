@@ -23,9 +23,10 @@ public class CefParserException extends CefException
         
         R_0_40___INCLUDE_FILE_DUPLICATE,                             // RULESET 0 rule 40
         R_0_41___INCLUDE_FILE_UNFOUND,                               // RULESET 0 rule 41
-        R_0_42___INCLUDE_FILE_LEVEL_8                                // RULESET 0 rule 42
+        R_0_42___INCLUDE_FILE_LEVEL_8,                               // RULESET 0 rule 42
+        
+        R_0_50___MALFORMED_READ_LINE                                 // RULESET 0 rule 50
     }
-    
 
     
     Error m_error;

@@ -1,6 +1,6 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   Nothing wrong with this file - just a little short - basic test for meta/var
+!   R_0_01___START_META___VARIABLE_UNCLOSED - line 35 END_VARIABLE is missing
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
@@ -32,7 +32,6 @@ start_variable = time_tags__C3_CP_EDI_EGD
    VALUE_TYPE = ISO_TIME
    DELTA_PLUS = 0.244e-6
    DELTA_MINUS = 0.244e-6
-! end_variable = time_tags__C3_CP_EDI_EGD                   COMMENT LINE OUT TO FORCE ERROR - R_0_01___START_META___VARIABLE_UNCLOSED
 START_META = TEST_1
  ENTRY = "Hello"
 END_META = TEST_1

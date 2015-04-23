@@ -1,6 +1,6 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   Nothing wrong with this file - just a little short - basic test for meta/var
+!   R_0_20___START_VARIABLE___VARIABLE_UNCLOSED - line 35 missing END_VARIABLE
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
@@ -32,4 +32,21 @@ start_variable = time_tags__C3_CP_EDI_EGD
    VALUE_TYPE = ISO_TIME
    DELTA_PLUS = 0.244e-6
    DELTA_MINUS = 0.244e-6
- end_variable = time_tags__C3_CP_EDI_EGD
+!end_variable = time_tags__C3_CP_EDI_EGD
+!
+start_variable = tof__C3_CP_EDI_EGD
+   PARAMETER_TYPE  = "Data"
+   ENTITY = "Electron"
+   PROPERTY = "Time-of-Flight"
+   CATDESC  = "electron gyration time"
+   VALUE_TYPE = FLOAT
+   FIELDNAM = "Time-of-Flight"
+   FILLVAL = 0.000 
+   SIGNIFICANT_DIGITS = 10
+   QUALITY = "2"
+   LABLAXIS = "tof"
+   SI_CONVERSION = "1.0e-6>s"
+   UNITS ="microseconds"
+   DEPEND_0 = time_tags__C3_CP_EDI_EGD
+end_variable =  tof__C3_CP_EDI_EGD
+!

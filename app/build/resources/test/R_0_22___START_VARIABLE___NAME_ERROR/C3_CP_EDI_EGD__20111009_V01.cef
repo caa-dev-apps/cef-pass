@@ -1,6 +1,6 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   Nothing wrong with this file - just a little short - basic test for meta/var
+!   R_0_22___START_VARIABLE___NAME_ERROR - line 23 missing START_VARIABLE name
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
@@ -20,7 +20,7 @@ START_META = FILE_TIME_SPAN
  ENTRY = 2011-10-09T00:00:00Z/2011-10-10T00:00:00Z
 END_META = FILE_TIME_SPAN
 !
-start_variable = time_tags__C3_CP_EDI_EGD
+start_variable = 
    PARAMETER_TYPE  = "Support_Data"
    CATDESC  = "Time Tag"
    UNITS = "s"

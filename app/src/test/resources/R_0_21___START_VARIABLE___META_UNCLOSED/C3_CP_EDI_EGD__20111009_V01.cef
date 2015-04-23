@@ -1,6 +1,6 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   Nothing wrong with this file - just a little short - basic test for meta/var
+!   R_0_21___START_VARIABLE___META_UNCLOSED - line 21 END_META mssing
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
@@ -18,7 +18,7 @@ END_META = VERSION_NUMBER
 START_META = FILE_TIME_SPAN
  VALUE_TYPE = ISO_TIME_RANGE
  ENTRY = 2011-10-09T00:00:00Z/2011-10-10T00:00:00Z
-END_META = FILE_TIME_SPAN
+!END_META = FILE_TIME_SPAN
 !
 start_variable = time_tags__C3_CP_EDI_EGD
    PARAMETER_TYPE  = "Support_Data"

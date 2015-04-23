@@ -1,6 +1,6 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   Nothing wrong with this file - just a little short - basic test for meta/var
+!   R_0_32___END_VARIABLE___NAME_ERROR - line 35 name mismatch
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
@@ -32,4 +32,4 @@ start_variable = time_tags__C3_CP_EDI_EGD
    VALUE_TYPE = ISO_TIME
    DELTA_PLUS = 0.244e-6
    DELTA_MINUS = 0.244e-6
- end_variable = time_tags__C3_CP_EDI_EGD
+ end_variable = time_tags__XX_XX_XXX_XXX

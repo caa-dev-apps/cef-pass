@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CefParser_Tests" tests="16" skipped="0" failures="0" errors="0" timestamp="2015-04-22T22:12:00" hostname="scala" time="0.047">
+<testsuite name="CefParser_Tests" tests="17" skipped="0" failures="0" errors="0" timestamp="2015-04-23T22:28:44" hostname="scala" time="0.021">
   <properties/>
   <testcase name="CefParserException.Error.NO_ERROR" classname="CefParser_Tests" time="0.0"/>
-  <testcase name="CefParserException.Error.R_0_00___START_META___META_UNCLOSED" classname="CefParser_Tests" time="0.015"/>
+  <testcase name="CefParserException.Error.R_0_00___START_META___META_UNCLOSED" classname="CefParser_Tests" time="0.021"/>
   <testcase name="CefParserException.Error.R_0_01___START_META___VARIABLE_UNCLOSED" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_02___START_META___NAME_ERROR" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_10___END_META___VARIABLE_OPENED" classname="CefParser_Tests" time="0.0"/>
@@ -17,28 +17,7 @@
   <testcase name="CefParserException.Error.R_0_40___INCLUDE_FILE_DUPLICATE" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_41___INCLUDE_FILE_UNFOUND" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_42___INCLUDE_FILE_LEVEL_8" classname="CefParser_Tests" time="0.0"/>
-  <system-out><![CDATA[stxMeta:m1
-etxMeta:m1
-stxMeta:m1
-stxMeta:m1
-stxVar:m1
-stxMeta:m1
-stxMeta:
-stxVar:m1
-etxMeta:m1
-etxMeta:m1
-stxMeta:m1
-etxMeta:m2
-stxVar:m1
-stxVar:m2
-stxMeta:m1
-stxVar:m1
-stxVar:
-stxMeta:m1
-etxVar:m1
-etxVar:m1
-stxVar:m1
-etxVar:m2
-]]></system-out>
+  <testcase name="CefParserException.Error.R_0_50___MALFORMED_READ_LINE" classname="CefParser_Tests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

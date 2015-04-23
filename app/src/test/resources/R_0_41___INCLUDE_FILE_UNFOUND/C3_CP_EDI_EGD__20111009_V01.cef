@@ -1,11 +1,13 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   Nothing wrong with this file - just a little short - basic test for meta/var
+!   R_0_41___INCLUDE_FILE_UNFOUND - line 10
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
 FILE_NAME="C3_CP_EDI_EGD__20111009_V01.cef"
 FILE_FORMAT_VERSION="CEF-2.0"
+!
+include = "CL_CH_MISSION.ceh"
 !
 START_META = LOGICAL_FILE_ID
  ENTRY = "C3_CP_EDI_EGD__20111009_V01"

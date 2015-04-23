@@ -160,5 +160,16 @@ class CefParser_Tests extends Specification{
             CefParserException ex = thrown()
             ex.getError() == CefParserException.Error.R_0_42___INCLUDE_FILE_LEVEL_8
     }    
+    
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+
+    def "CefParserException.Error.R_0_50___MALFORMED_READ_LINE"() {
+        when:   
+            CefParser.MalFormedReadLine("START_META no_equals_sign")
+        then:   
+            CefParserException ex = thrown()
+            ex.getError() == CefParserException.Error.R_0_50___MALFORMED_READ_LINE
+    }    
 }
 

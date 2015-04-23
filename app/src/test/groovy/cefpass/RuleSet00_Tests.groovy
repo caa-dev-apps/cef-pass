@@ -20,6 +20,12 @@ class RuleSet00_Tests extends Specification{
         CefParser.init() 
     }
 
+    def getParent(i_path)
+    {
+        def l_file = new File(i_path)
+        return l_file.getParent()
+    }
+    
     def getTestResourcePath(i_relative_path)
     {
         File l_file = ResourceUtils.getFile(this.getClass().getResource(i_relative_path))
@@ -30,10 +36,13 @@ class RuleSet00_Tests extends Specification{
     String[] getCommandLineArgs(i_relative_path)
     {
         def l_path = getTestResourcePath(i_relative_path)
+        def l_parent = getParent(l_path)
         
         String[] l_args = [
             "-f",
             l_path,
+            "-i",
+            l_parent,
             "-l",
             "C:/work.dev/2015.03.22 github cef pass v2/v0/_logs"
         ]
@@ -225,8 +234,20 @@ class RuleSet00_Tests extends Specification{
         then:
             CefParserException ex = thrown()
             ex.getError() == CefParserException.Error.R_0_42___INCLUDE_FILE_LEVEL_8
-        
     }
+    
+    def "R_0_50___MALFORMED_READ_LINE"() 
+    {
+        setup:
+            def l_cmd_args = getCommandLineArgs('R_0_50___MALFORMED_READ_LINE/C3_CP_EDI_EGD__20111009_V01.cef')
+        when:
+            def App app = new App()
+            def result = app.stages(l_cmd_args)
+        then:
+            CefParserException ex = thrown()
+            ex.getError() == CefParserException.Error.R_0_50___MALFORMED_READ_LINE
+    }
+    
 }
 
 
