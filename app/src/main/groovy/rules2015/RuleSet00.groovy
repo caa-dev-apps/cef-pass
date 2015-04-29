@@ -226,6 +226,34 @@ public class RuleSet00 extends RuleSet
             Error_Message:     "R_0_42___INCLUDE_FILE_LEVEL_8",
             Caveats:           "NA",
             Notes:             "**"
+        ),
+        
+        R_0_50___MALFORMED_READ_LINE:                                // RULESET 0 rule 50
+        new Rule(
+            Rule:              "0.50",
+            Scope:             "GENERAL",
+            Keyword:           "READ_LINE",
+            Data_type:         "METADATA",
+            Cardinality:       "NA",
+            Description:       "R_0_50___MALFORMED_READ_LINE",
+            Error_Type:        "Fatal Error",
+            Error_Message:     "R_0_50___MALFORMED_READ_LINE",
+            Caveats:           "NA",
+            Notes:             "**"
+        ),
+        
+        R_0_51___MALFORMED_STRING_QUOTES:                           // RULESET 0 rule 51
+        new Rule(
+            Rule:              "0.50",
+            Scope:             "GENERAL",
+            Keyword:           "STRING_QUOTES",
+            Data_type:         "METADATA",
+            Cardinality:       "NA",
+            Description:       "R_0_51___MALFORMED_STRING_QUOTES",
+            Error_Type:        "Fatal Error",
+            Error_Message:     "R_0_51___MALFORMED_STRING_QUOTES",
+            Caveats:           "NA",
+            Notes:             "**"
         )
     ]
     

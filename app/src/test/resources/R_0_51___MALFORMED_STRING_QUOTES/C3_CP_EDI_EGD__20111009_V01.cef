@@ -1,0 +1,52 @@
+! ///////////////////////////////////////////////////////////////////////////////
+!   
+!   R_0_51___MALFORMED_STRING_QUOTES - line 11 quotes not closed
+!   
+! ///////////////////////////////////////////////////////////////////////////////
+!   
+FILE_NAME="C3_CP_EDI_EGD__20111009_V01.cef"
+FILE_FORMAT_VERSION="CEF-2.0"
+!
+START_META = LOGICAL_FILE_ID
+ ENTRY = "C3_CP_EDI_EGD__20111009_V01
+END_META = LOGICAL_FILE_ID
+!
+START_META = VERSION_NUMBER
+ ENTRY = "01"
+END_META = VERSION_NUMBER
+!
+START_META = FILE_TIME_SPAN
+ VALUE_TYPE = ISO_TIME_RANGE
+ ENTRY = 2011-10-09T00:00:00Z/2011-10-10T00:00:00Z
+END_META = FILE_TIME_SPAN
+!
+start_variable = time_tags__C3_CP_EDI_EGD
+   PARAMETER_TYPE  = "Support_Data"
+   CATDESC  = "Time Tag"
+   UNITS = "s"
+   SI_CONVERSION  = "1.0>s"
+   FIELDNAM = "Universal Time"
+   FILLVAL = 9999-12-31T23:59:59.999999Z
+   SIGNIFICANT_DIGITS =27 
+   LABLAXIS = "UT"
+   VALUE_TYPE = ISO_TIME
+   DELTA_PLUS = 0.244e-6
+   DELTA_MINUS = 0.244e-6
+!end_variable = time_tags__C3_CP_EDI_EGD
+!
+start_variable = tof__C3_CP_EDI_EGD
+   PARAMETER_TYPE  = "Data"
+   ENTITY = "Electron"
+   PROPERTY = "Time-of-Flight"
+   CATDESC  = "electron gyration time"
+   VALUE_TYPE = FLOAT
+   FIELDNAM = "Time-of-Flight"
+   FILLVAL = 0.000 
+   SIGNIFICANT_DIGITS = 10
+   QUALITY = "2"
+   LABLAXIS = "tof"
+   SI_CONVERSION = "1.0e-6>s"
+   UNITS ="microseconds"
+   DEPEND_0 = time_tags__C3_CP_EDI_EGD
+end_variable =  tof__C3_CP_EDI_EGD
+!

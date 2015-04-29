@@ -80,7 +80,10 @@ public class CefReader
             else {
                 def matcher = it =~ regexStr
                 
-                if ((it =~ regexCommentStr).matches()) {
+                if(it.size() == 0) {
+                    // ignore
+                }
+                else if ((it =~ regexCommentStr).matches()) {
                     if(m_isCommentsOn) l_headerXml.addComment(it)
                 }
                 else if (matcher.matches()) {
@@ -98,12 +101,6 @@ public class CefReader
                         if("DATA_UNTIL".compareToIgnoreCase(key) == 0) { l_data_until = true }
                         l_headerXml.add_kv(key, val)
                     }
-                }
-//x                 else if ((it =~ regexCommentStr).matches()) {
-//x                     if(m_isCommentsOn) l_headerXml.addComment(it)
-//x                 }
-                else if(it.size() == 0) {
-                    // ignore
                 }
                 else {
                     CefParser.MalFormedReadLine(it)

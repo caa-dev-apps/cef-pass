@@ -90,100 +90,106 @@
 j    Stage #4 info                                                                                   1234
 i    Stage #5 info                                                                                   Yo!
 This is a stage top message
-,+Stage 1: 
-,+  CEF Filename:
-,+š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_00___START_META___META_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
-,+  Search Folders:
-,+z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_00___START_META___META_UNCLOSEDOK
-,+Stage 2: 
-,-Stage 1: 
-,-  CEF Filename:
-,-ž    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_01___START_META___VARIABLE_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
-,-  Search Folders:
-,-~    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_01___START_META___VARIABLE_UNCLOSEDOK
-,-Stage 2: 
-,-)R_0_01___START_META___VARIABLE_UNCLOSED
-,.Stage 1: 
-,.  CEF Filename:
-,.—    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_02___START_META___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
-,.  Search Folders:
-,.w    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_02___START_META___NAME_ERROROK
-,.Stage 2: 
-,/Stage 1: 
-,/  CEF Filename:
-,/š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_10___END_META___VARIABLE_OPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
-,/  Search Folders:
-,/z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_10___END_META___VARIABLE_OPENEDOK
-,/Stage 2: 
-,0Stage 1: 
-,0  CEF Filename:
-,0˜    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_11___END_META___META_UNOPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
-,0  Search Folders:
-,0x    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_11___END_META___META_UNOPENEDOK
-,0Stage 2: 
-,1Stage 1: 
-,1  CEF Filename:
-,1•    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_12___END_META___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
-,1  Search Folders:
-,1u    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_12___END_META___NAME_ERROROK
-,1Stage 2: 
-,2Stage 1: 
-,2  CEF Filename:
-,2¢    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_20___START_VARIABLE___VARIABLE_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
-,2  Search Folders:
-,2‚    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_20___START_VARIABLE___VARIABLE_UNCLOSEDOK
-,2Stage 2: 
-,3Stage 1: 
-,3  CEF Filename:
-,3ž    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_21___START_VARIABLE___META_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
-,3  Search Folders:
-,3~    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_21___START_VARIABLE___META_UNCLOSEDOK
-,3Stage 2: 
-,4Stage 1: 
-,4  CEF Filename:
-,4›    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_22___START_VARIABLE___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
-,4  Search Folders:
-,4{    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_22___START_VARIABLE___NAME_ERROROK
-,4Stage 2: 
-,5Stage 1: 
-,5  CEF Filename:
-,5š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_30___END_VARIABLE___META_OPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
-,5  Search Folders:
-,5z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_30___END_VARIABLE___META_OPENEDOK
-,5Stage 2: 
-,6Stage 1: 
-,6  CEF Filename:
-,6     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_31___END_VARIABLE___VARIABLE_UNOPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
-,6  Search Folders:
-,6€    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_31___END_VARIABLE___VARIABLE_UNOPENEDOK
-,6Stage 2: 
-,7Stage 1: 
-,7  CEF Filename:
-,7™    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_32___END_VARIABLE___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
-,7  Search Folders:
-,7y    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_32___END_VARIABLE___NAME_ERROROK
-,7Stage 2: 
-,8Stage 1: 
-,8  CEF Filename:
-,8–    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_40___INCLUDE_FILE_DUPLICATE\C3_CP_EDI_EGD__20111009_V01.cefOK
-,8  Search Folders:
-,8v    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_40___INCLUDE_FILE_DUPLICATEOK
-,8Stage 2: 
-,9Stage 1: 
-,9  CEF Filename:
-,9”    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_41___INCLUDE_FILE_UNFOUND\C3_CP_EDI_EGD__20111009_V01.cefOK
-,9  Search Folders:
-,9t    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_41___INCLUDE_FILE_UNFOUNDOK
-,9Stage 2: 
-,:Stage 1: 
-,:  CEF Filename:
-,:”    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_42___INCLUDE_FILE_LEVEL_8\C3_CP_EDI_EGD__20111009_V01.cefOK
-,:  Search Folders:
-,:t    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_42___INCLUDE_FILE_LEVEL_8OK
-,:Stage 2: 
-,;Stage 1: 
-,;  CEF Filename:
-,;“    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_50___MALFORMED_READ_LINE\C3_CP_EDI_EGD__20111009_V01.cefOK
-,;  Search Folders:
-,;s    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_50___MALFORMED_READ_LINEOK
-,;Stage 2: 
+-,Stage 1: 
+-,  CEF Filename:
+-,š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_00___START_META___META_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
+-,  Search Folders:
+-,z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_00___START_META___META_UNCLOSEDOK
+-,Stage 2: 
+-.Stage 1: 
+-.  CEF Filename:
+-.ž    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_01___START_META___VARIABLE_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
+-.  Search Folders:
+-.~    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_01___START_META___VARIABLE_UNCLOSEDOK
+-.Stage 2: 
+-.)R_0_01___START_META___VARIABLE_UNCLOSED
+-/Stage 1: 
+-/  CEF Filename:
+-/—    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_02___START_META___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
+-/  Search Folders:
+-/w    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_02___START_META___NAME_ERROROK
+-/Stage 2: 
+-0Stage 1: 
+-0  CEF Filename:
+-0š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_10___END_META___VARIABLE_OPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
+-0  Search Folders:
+-0z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_10___END_META___VARIABLE_OPENEDOK
+-0Stage 2: 
+-1Stage 1: 
+-1  CEF Filename:
+-1˜    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_11___END_META___META_UNOPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
+-1  Search Folders:
+-1x    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_11___END_META___META_UNOPENEDOK
+-1Stage 2: 
+-2Stage 1: 
+-2  CEF Filename:
+-2•    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_12___END_META___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
+-2  Search Folders:
+-2u    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_12___END_META___NAME_ERROROK
+-2Stage 2: 
+-3Stage 1: 
+-3  CEF Filename:
+-3¢    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_20___START_VARIABLE___VARIABLE_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
+-3  Search Folders:
+-3‚    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_20___START_VARIABLE___VARIABLE_UNCLOSEDOK
+-3Stage 2: 
+-4Stage 1: 
+-4  CEF Filename:
+-4ž    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_21___START_VARIABLE___META_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
+-4  Search Folders:
+-4~    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_21___START_VARIABLE___META_UNCLOSEDOK
+-4Stage 2: 
+-5Stage 1: 
+-5  CEF Filename:
+-5›    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_22___START_VARIABLE___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
+-5  Search Folders:
+-5{    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_22___START_VARIABLE___NAME_ERROROK
+-5Stage 2: 
+-6Stage 1: 
+-6  CEF Filename:
+-6š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_30___END_VARIABLE___META_OPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
+-6  Search Folders:
+-6z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_30___END_VARIABLE___META_OPENEDOK
+-6Stage 2: 
+-7Stage 1: 
+-7  CEF Filename:
+-7     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_31___END_VARIABLE___VARIABLE_UNOPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
+-7  Search Folders:
+-7€    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_31___END_VARIABLE___VARIABLE_UNOPENEDOK
+-7Stage 2: 
+-8Stage 1: 
+-8  CEF Filename:
+-8™    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_32___END_VARIABLE___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
+-8  Search Folders:
+-8y    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_32___END_VARIABLE___NAME_ERROROK
+-8Stage 2: 
+-9Stage 1: 
+-9  CEF Filename:
+-9–    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_40___INCLUDE_FILE_DUPLICATE\C3_CP_EDI_EGD__20111009_V01.cefOK
+-9  Search Folders:
+-9v    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_40___INCLUDE_FILE_DUPLICATEOK
+-9Stage 2: 
+-:Stage 1: 
+-:  CEF Filename:
+-:”    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_41___INCLUDE_FILE_UNFOUND\C3_CP_EDI_EGD__20111009_V01.cefOK
+-:  Search Folders:
+-:t    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_41___INCLUDE_FILE_UNFOUNDOK
+-:Stage 2: 
+-;Stage 1: 
+-;  CEF Filename:
+-;”    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_42___INCLUDE_FILE_LEVEL_8\C3_CP_EDI_EGD__20111009_V01.cefOK
+-;  Search Folders:
+-;t    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_42___INCLUDE_FILE_LEVEL_8OK
+-;Stage 2: 
+-<Stage 1: 
+-<  CEF Filename:
+-<“    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_50___MALFORMED_READ_LINE\C3_CP_EDI_EGD__20111009_V01.cefOK
+-<  Search Folders:
+-<s    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_50___MALFORMED_READ_LINEOK
+-<Stage 2: 
+-=Stage 1: 
+-=  CEF Filename:
+-=—    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_51___MALFORMED_STRING_QUOTES\C3_CP_EDI_EGD__20111009_V01.cefOK
+-=  Search Folders:
+-=w    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_51___MALFORMED_STRING_QUOTESOK
+-=Stage 2: 

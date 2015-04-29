@@ -75,6 +75,31 @@ public class CefParser
         else                                s_var = null
     }
     
+    static def test_string_quotes(k,v)
+    {
+        def l_isOk = false
+        
+        if(v != null)
+        {
+            def l = v.size()
+            if(l > 0)
+            {
+                def c1 = v[0]
+                def c2 = v[l-1]
+                
+                if((((c1 == '\'') || (c1 == '\"') || (c2 == '\'') || (c2 == '\"'))  && 
+                    ((c1 != c2) || (l == 1))) == false)
+                {
+                    l_isOk = true
+                }
+            }
+        }
+        
+        if(l_isOk == false) {
+            fatal_error(CefParserException.Error.R_0_51___MALFORMED_STRING_QUOTES)
+        }
+    }
+    
     ///////////////////////////////////////////////////////////////////////////////
     //
 
@@ -108,11 +133,12 @@ public class CefParser
     static def test_kv(k, v)
     {
         save_kv(k,v)
-            
+        
         if("START_META".compareToIgnoreCase(k) == 0)            stxMeta(v) 
         else if ("END_META".compareToIgnoreCase(k) == 0)		etxMeta(v) 
         else if ("START_VARIABLE".compareToIgnoreCase(k) == 0) 	stxVar(v) 
         else if ("END_VARIABLE".compareToIgnoreCase(k) == 0)	etxVar(v) 
+        else test_string_quotes(k,v)
     }
 }
 

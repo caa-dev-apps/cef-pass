@@ -171,5 +171,15 @@ class CefParser_Tests extends Specification{
             CefParserException ex = thrown()
             ex.getError() == CefParserException.Error.R_0_50___MALFORMED_READ_LINE
     }    
+    
+    def "CefParserException.Error.R_0_51___MALFORMED_STRING_QUOTES"() {
+        when:   
+            CefParser.test_kv("TEST_ENTRY", "\"m1")
+        then:   
+            CefParserException ex = thrown()
+            ex.getError() == CefParserException.Error.R_0_51___MALFORMED_STRING_QUOTES
+    }    
+    
+    
 }
 

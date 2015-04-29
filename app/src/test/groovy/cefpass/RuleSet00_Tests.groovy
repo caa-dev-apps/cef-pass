@@ -247,6 +247,18 @@ class RuleSet00_Tests extends Specification{
             CefParserException ex = thrown()
             ex.getError() == CefParserException.Error.R_0_50___MALFORMED_READ_LINE
     }
+
+    def "R_0_51___MALFORMED_STRING_QUOTES"() 
+    {
+        setup:
+            def l_cmd_args = getCommandLineArgs('R_0_51___MALFORMED_STRING_QUOTES/C3_CP_EDI_EGD__20111009_V01.cef')
+        when:
+            def App app = new App()
+            def result = app.stages(l_cmd_args)
+        then:
+            CefParserException ex = thrown()
+            ex.getError() == CefParserException.Error.R_0_51___MALFORMED_STRING_QUOTES
+    }
     
 }
 
