@@ -66,11 +66,11 @@ $ groovy ./cefpass/App.groovy
 ```    
 
     
-### TODO 
+### Status
     stages
-    1. testing
-    2. testing
-    3. in progress
-    4. in progress
-    5. in progress
+    1. passing
+    2. passing
+    3. basic 
+    4. in dev
+    5. next
         
