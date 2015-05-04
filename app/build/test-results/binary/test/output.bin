@@ -12,11 +12,10 @@
 Stage 4: 
   
   RuleSet01
-m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
 m    Rule: 1.00          Must exist                                                                  SKIPPED
+m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
 m    Rule: 1.02          Must exist                                                                  SKIPPED
 m    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
-m    Rule: 1.04          All include files must exist                                                SKIPPED
   
   RuleSet02
 m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
@@ -45,11 +44,10 @@
 Stage 4: 
   
   RuleSet01
-m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
 m    Rule: 1.00          Must exist                                                                  SKIPPED
+m    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
 m    Rule: 1.02          Must exist                                                                  SKIPPED
 m    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
-m    Rule: 1.04          All include files must exist                                                SKIPPED
   
   RuleSet02
 m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED

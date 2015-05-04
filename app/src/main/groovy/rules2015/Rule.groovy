@@ -17,6 +17,7 @@ public class Rule
     def Error_Message
     def Caveats
     def Notes
+    def Test_Func 
     
     def param_string(i_key, i_pad=30)
     {
