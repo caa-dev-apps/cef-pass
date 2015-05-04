@@ -1,13 +1,13 @@
 ! ///////////////////////////////////////////////////////////////////////////////
-!   
-!   R_0_40___INCLUDE_FILE_DUPLICATE - TODO !!
-!   
+!
+!   R_0_40___INCLUDE_FILE_DUPLICATE - lines 10 and 12 are duplicates
+!
 ! ///////////////////////////////////////////////////////////////////////////////
-!   
+!
 FILE_NAME="C3_CP_EDI_EGD__20111009_V01.cef"
 FILE_FORMAT_VERSION="CEF-2.0"
 !
-include = "CL_CH_MISSION.ceh"
+include = "CL_CH_MISSION.ceh" 
 !
 include = "CL_CH_MISSION.ceh"
 !
@@ -31,7 +31,7 @@ start_variable = time_tags__C3_CP_EDI_EGD
    SI_CONVERSION  = "1.0>s"
    FIELDNAM = "Universal Time"
    FILLVAL = 9999-12-31T23:59:59.999999Z
-   SIGNIFICANT_DIGITS =27 
+   SIGNIFICANT_DIGITS =27
    LABLAXIS = "UT"
    VALUE_TYPE = ISO_TIME
    DELTA_PLUS = 0.244e-6

@@ -18,10 +18,10 @@
   <meta name="FILE_CAVEATS">
     <ENTRY>"CAA_EDITOF_V1_04  2011-04-04T10:30:00Z"</ENTRY>
   </meta>
-  <include>"C3_CH_EDI_EGD_DATASET.ceh"</include>
-  <include>"C3_CH_EDI3_INST.ceh"</include>
-  <include>"CL_CH_EDI_EXP.ceh"</include>
-  <include>"CL_CH_MISSION.ceh"</include>
+  <include-start>"C3_CH_EDI_EGD_DATASET.ceh"</include-start>
+  <include-start>"C3_CH_EDI3_INST.ceh"</include-start>
+  <include-start>"CL_CH_EDI_EXP.ceh"</include-start>
+  <include-start>"CL_CH_MISSION.ceh"</include-start>
   <meta name="MISSION">
     <ENTRY>"Cluster"</ENTRY>
   </meta>
@@ -61,6 +61,7 @@
   <meta name="MISSION_CAVEATS">
     <ENTRY>"*CL"</ENTRY>
   </meta>
+  <include-end>"CL_CH_MISSION.ceh"</include-end>
   <meta name="EXPERIMENT">
     <ENTRY>"EDI"</ENTRY>
   </meta>
@@ -105,7 +106,8 @@
     <ENTRY>"in the QSTAT files with 10 min resolution"</ENTRY>
     <ENTRY>""</ENTRY>
   </meta>
-  <include>"C3_CH_OBS.ceh"</include>
+  <include-end>"CL_CH_EDI_EXP.ceh"</include-end>
+  <include-start>"C3_CH_OBS.ceh"</include-start>
   <meta name="OBSERVATORY">
     <ENTRY>"Cluster-3"</ENTRY>
   </meta>
@@ -139,6 +141,7 @@
     <ENTRY>"Radiation_Belt"</ENTRY>
     <ENTRY>"Plasmasphere"</ENTRY>
   </meta>
+  <include-end>"C3_CH_OBS.ceh"</include-end>
   <meta name="INSTRUMENT_NAME">
     <ENTRY>"EDI3"</ENTRY>
   </meta>
@@ -154,6 +157,7 @@
   <meta name="INSTRUMENT_CAVEATS">
     <ENTRY>" "</ENTRY>
   </meta>
+  <include-end>"C3_CH_EDI3_INST.ceh"</include-end>
   <meta name="DATASET_ID">
     <ENTRY>"C3_CP_EDI_EGD"</ENTRY>
   </meta>
@@ -278,5 +282,6 @@
     <UNITS>"Unitless"</UNITS>
     <DEPEND_0>time_tags__C3_CP_EDI_EGD</DEPEND_0>
   </var>
+  <include-end>"C3_CH_EDI_EGD_DATASET.ceh"</include-end>
   <DATA_UNTIL>EOF</DATA_UNTIL>
 </root>
