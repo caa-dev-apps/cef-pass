@@ -70,7 +70,7 @@ $ groovy ./cefpass/App.groovy
     stages
     1. passing
     2. passing
-    3. basic 
+    3. basic version
     4. in dev
     5. next
         
