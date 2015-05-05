@@ -1,6 +1,9 @@
 package rules2015
 
 import cefpass.CefLog
+import cefpass.Utils
+
+import exceptions.RuleSet01Exception
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -12,6 +15,11 @@ public class RuleSet01 extends RuleSet
     public RuleSet01(i_data)
     {
         m_data = i_data
+    }
+    
+    static def fatal_error(i_error)
+    {
+        throw new RuleSet01Exception(i_error)
     }
     
     def m_rules =
@@ -28,7 +36,14 @@ public class RuleSet01 extends RuleSet
             Error_Message:     "Missing FILE_NAME",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
-            Test_Func:         {}
+            Test_Func:         {
+//x             println "getFilename() -> " + m_data.headerXPath.getFilename()
+                
+                if(Utils.isQuotedString(m_data.headerXPath.getFilename()) == false) 
+                    fatal_error(RuleSet01Exception.Error.R_1_00___FILENAME_MUST_EXIST)
+                
+                "OK"
+            }
         ),
         
         R_1_01___FILENAME_MATCHES_ACTUAL:                       // RULESET 1 rule 01
@@ -43,7 +58,7 @@ public class RuleSet01 extends RuleSet
             Error_Message:     "Filename and metadata filename do not match",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
-            Test_Func:         {}
+            Test_Func:         { "XxX" }
         ),
         
         R_1_02___FILE_FORMAT_VERSION_MUST_EXIST:                // RULESET 1 rule 02
@@ -58,7 +73,7 @@ public class RuleSet01 extends RuleSet
             Error_Message:     "Missing FILE_FORMAT_VERSION",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
-            Test_Func:         {}
+            Test_Func:         { "XxX" }
         ),
         
         R_1_03___END_OF_RECORD_MARKER_MUST_EXIST:               // RULESET 1 rule 03
@@ -73,7 +88,7 @@ public class RuleSet01 extends RuleSet
             Error_Message:     "Missing END_OF_RECORD_MARKER",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
-            Test_Func:         {}
+            Test_Func:         { "XxX" }
         )
     ]
 
@@ -86,7 +101,7 @@ public class RuleSet01 extends RuleSet
             //x println it.value.to_str()
             //x it.value.Test_Func()
             
-            CefLog.stage4_info(it.value.about(), "SKIPPED")     
+            CefLog.stage4_info(it.value.about(), it.value.Test_Func())     
         }
     }
 }

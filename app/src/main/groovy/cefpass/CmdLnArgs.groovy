@@ -54,6 +54,10 @@ public class CmdLnArgs
     public def static isOk()               { return s_isOk }
     public def static isCommentsOn()       { return s_isCommentsOn }
     
+
+//x     public def static getFilename()        { return s_filename }
+
+
     
     public def static show() {
         if(s_filename != false)         Show.showCefFilename(s_filename)

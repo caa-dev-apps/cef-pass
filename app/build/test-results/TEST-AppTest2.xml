@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-05-04T21:08:07" hostname="scala" time="0.235">
+<testsuite name="AppTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-05-05T22:08:56" hostname="scala" time="0.231">
   <properties/>
-  <testcase name="Second Test (args): App.stages" classname="AppTest2" time="0.235"/>
+  <testcase name="Second Test (args): App.stages" classname="AppTest2" time="0.231"/>
   <system-out><![CDATA[Stage 1: 
   CEF Filename:
     C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz                 OK
@@ -12,14 +12,32 @@
     C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW                                                OK
     C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE                                              OK
 Stage 2: 
+    Rule: 0.00          R_0_00___START_META___META_UNCLOSED                                         PASSED
+    Rule: 0.01          R_0_01___START_META___VARIABLE_UNCLOSED                                     PASSED
+    Rule: 0.02          R_0_02___START_META___NAME_ERROR                                            PASSED
+    Rule: 0.10          R_0_10___END_META___VARIABLE_OPENED                                         PASSED
+    Rule: 0.11          R_0_11___END_META___META_UNOPENED                                           PASSED
+    Rule: 0.12          R_0_12___END_META___NAME_ERROR                                              PASSED
+    Rule: 0.20          R_0_20___START_VARIABLE___VARIABLE_UNCLOSED                                 PASSED
+    Rule: 0.21          R_0_21___START_VARIABLE___META_UNCLOSED                                     PASSED
+    Rule: 0.22          R_0_22___START_VARIABLE___NAME_ERROR                                        PASSED
+    Rule: 0.30          R_0_30___END_VARIABLE___META_OPENED                                         PASSED
+    Rule: 0.31          R_0_31___END_VARIABLE___VARIABLE_UNOPENED                                   PASSED
+    Rule: 0.32          R_0_32___END_VARIABLE___NAME_ERROR                                          PASSED
+    Rule: 0.40          R_0_40___INCLUDE_FILE_DUPLICATE                                             PASSED
+    Rule: 0.41          R_0_41___INCLUDE_FILE_UNFOUND                                               PASSED
+    Rule: 0.42          R_0_42___INCLUDE_FILE_LEVEL_8                                               PASSED
+    Rule: 0.50          R_0_50___MALFORMED_READ_LINE                                                PASSED
+    Rule: 0.50          R_0_51___MALFORMED_STRING_QUOTES                                            PASSED
 Stage 3: 
+    Placeholder                                                                                     Skipped
 Stage 4: 
   
   RuleSet01
-    Rule: 1.00          Must exist                                                                  SKIPPED
-    Rule: 1.01          Name of file on disk equals FILE_NAME                                       SKIPPED
-    Rule: 1.02          Must exist                                                                  SKIPPED
-    Rule: 1.03          Must exist BUT may be blank                                                 SKIPPED
+    Rule: 1.00          Must exist                                                                  OK
+    Rule: 1.01          Name of file on disk equals FILE_NAME                                       XxX
+    Rule: 1.02          Must exist                                                                  XxX
+    Rule: 1.03          Must exist BUT may be blank                                                 XxX
   
   RuleSet02
     Rule: 2.01          Must have ENTRY= field                                                      SKIPPED

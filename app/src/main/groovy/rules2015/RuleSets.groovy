@@ -25,16 +25,16 @@ public class RuleSets
 
     def run()
     {
-        try
-        {
+//x         try
+//x         {
             //x m_set00.run()
             m_set01.run()
             m_set02.run()
-        }
-        catch(Exception e)
-        {
-            CefLog.error("ERROR!! :: RuleSets::run()")
-        }
+//x         }
+//x         catch(Exception e)
+//x         {
+//x             CefLog.error("ERROR!! :: RuleSets::run()")
+//x         }
     }
     
     static void run(i_headerXPath)

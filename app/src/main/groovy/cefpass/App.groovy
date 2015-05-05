@@ -3,6 +3,9 @@ package cefpass
 import java.util.logging.Logger
 
 import rules2015.RuleSets
+import rules2015.RuleSet00
+import rules2015.RuleSet01
+import rules2015.RuleSet02
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -167,13 +170,14 @@ public class App {
             CefHeaderXml l_headerXml = l_reader.getHeaderXml()
             FileLogs.writeTextFile("nodes.xml", l_headerXml.getXmlNodesAsString())
 
+            RuleSet00.showAll()
             
         CefLog.top "Stage 3: "  //  /////////////////////////////////////////////////////////////////////////////
                                     
             //  String l_xmlPath = FileLogs.getFilePath("nodes.xml")
             //  String l_xsdPath = "C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/xsd/a1.xsd"
             //  if(CefHeaderXsd.validateXMLSchema(l_xsdPath, l_xmlPath) == false) return
-            
+            CefLog.stage3_info("Placeholder", "Skipped")
             
         CefLog.top "Stage 4: "  //  /////////////////////////////////////////////////////////////////////////////
             
