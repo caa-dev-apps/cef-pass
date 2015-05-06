@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CefParser_Tests" tests="18" skipped="0" failures="0" errors="0" timestamp="2015-05-06T22:16:41" hostname="scala" time="0.03">
+<testsuite name="CefParser_Tests" tests="18" skipped="0" failures="0" errors="0" timestamp="2015-05-06T22:26:11" hostname="scala" time="0.032">
   <properties/>
-  <testcase name="CefParserException.Error.NO_ERROR" classname="CefParser_Tests" time="0.001"/>
-  <testcase name="CefParserException.Error.R_0_00___START_META___META_UNCLOSED" classname="CefParser_Tests" time="0.002"/>
+  <testcase name="CefParserException.Error.NO_ERROR" classname="CefParser_Tests" time="0.0"/>
+  <testcase name="CefParserException.Error.R_0_00___START_META___META_UNCLOSED" classname="CefParser_Tests" time="0.016"/>
   <testcase name="CefParserException.Error.R_0_01___START_META___VARIABLE_UNCLOSED" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_02___START_META___NAME_ERROR" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_10___END_META___VARIABLE_OPENED" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_11___END_META___META_UNOPENED" classname="CefParser_Tests" time="0.0"/>
-  <testcase name="CefParserException.Error.R_0_12___END_META___NAME_ERROR" classname="CefParser_Tests" time="0.002"/>
+  <testcase name="CefParserException.Error.R_0_12___END_META___NAME_ERROR" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_20___START_VARIABLE___VARIABLE_UNCLOSED" classname="CefParser_Tests" time="0.0"/>
-  <testcase name="CefParserException.Error.R_0_21___START_VARIABLE___META_UNCLOSED" classname="CefParser_Tests" time="0.001"/>
+  <testcase name="CefParserException.Error.R_0_21___START_VARIABLE___META_UNCLOSED" classname="CefParser_Tests" time="0.016"/>
   <testcase name="CefParserException.Error.R_0_22___START_VARIABLE___NAME_ERROR" classname="CefParser_Tests" time="0.0"/>
-  <testcase name="CefParserException.Error.R_0_30___END_VARIABLE___META_OPENED" classname="CefParser_Tests" time="0.001"/>
+  <testcase name="CefParserException.Error.R_0_30___END_VARIABLE___META_OPENED" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_31___END_VARIABLE___VARIABLE_UNOPENED" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_32___END_VARIABLE___NAME_ERROR" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_40___INCLUDE_FILE_DUPLICATE" classname="CefParser_Tests" time="0.0"/>
-  <testcase name="CefParserException.Error.R_0_41___INCLUDE_FILE_UNFOUND" classname="CefParser_Tests" time="0.001"/>
-  <testcase name="CefParserException.Error.R_0_42___INCLUDE_FILE_LEVEL_8" classname="CefParser_Tests" time="0.001"/>
-  <testcase name="CefParserException.Error.R_0_50___MALFORMED_READ_LINE" classname="CefParser_Tests" time="0.001"/>
-  <testcase name="CefParserException.Error.R_0_51___MALFORMED_STRING_QUOTES" classname="CefParser_Tests" time="0.001"/>
+  <testcase name="CefParserException.Error.R_0_41___INCLUDE_FILE_UNFOUND" classname="CefParser_Tests" time="0.0"/>
+  <testcase name="CefParserException.Error.R_0_42___INCLUDE_FILE_LEVEL_8" classname="CefParser_Tests" time="0.0"/>
+  <testcase name="CefParserException.Error.R_0_50___MALFORMED_READ_LINE" classname="CefParser_Tests" time="0.0"/>
+  <testcase name="CefParserException.Error.R_0_51___MALFORMED_STRING_QUOTES" classname="CefParser_Tests" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

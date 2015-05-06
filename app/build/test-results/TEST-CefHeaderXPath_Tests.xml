@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CefHeaderXPath_Tests" tests="14" skipped="0" failures="0" errors="0" timestamp="2015-05-06T22:16:41" hostname="scala" time="0.234">
+<testsuite name="CefHeaderXPath_Tests" tests="14" skipped="0" failures="0" errors="0" timestamp="2015-05-06T22:26:11" hostname="scala" time="0.219">
   <properties/>
-  <testcase name="01 CefHeaderXPath_Tests: getFilename" classname="CefHeaderXPath_Tests" time="0.017"/>
-  <testcase name="02 CefHeaderXPath_Tests: getFileFormatVersion" classname="CefHeaderXPath_Tests" time="0.014"/>
-  <testcase name="03 CefHeaderXPath_Tests: getEndOfRecordMarker" classname="CefHeaderXPath_Tests" time="0.004"/>
-  <testcase name="04 CefHeaderXPath_Tests: getDataUntil" classname="CefHeaderXPath_Tests" time="0.026"/>
-  <testcase name="05 CefHeaderXPath_Tests: getLogicalFileId" classname="CefHeaderXPath_Tests" time="0.017"/>
-  <testcase name="06 CefHeaderXPath_Tests: getVersionNumber" classname="CefHeaderXPath_Tests" time="0.016"/>
-  <testcase name="07 CefHeaderXPath_Tests: getFileType" classname="CefHeaderXPath_Tests" time="0.015"/>
-  <testcase name="08 CefHeaderXPath_Tests: getDataSetId" classname="CefHeaderXPath_Tests" time="0.011"/>
-  <testcase name="09 CefHeaderXPath_Tests: getVersionNumber" classname="CefHeaderXPath_Tests" time="0.01"/>
-  <testcase name="10 CefHeaderXPath_Tests: getMeta" classname="CefHeaderXPath_Tests" time="0.014"/>
-  <testcase name="11 CefHeaderXPath_Tests: getMetaList" classname="CefHeaderXPath_Tests" time="0.013"/>
-  <testcase name="12 CefHeaderXPath_Tests: getMetaEntry" classname="CefHeaderXPath_Tests" time="0.012"/>
-  <testcase name="13 CefHeaderXPath_Tests: getMetaEntryPair" classname="CefHeaderXPath_Tests" time="0.018"/>
-  <testcase name="14 CefHeaderXPath_Tests: getMetaPairNames" classname="CefHeaderXPath_Tests" time="0.044"/>
+  <testcase name="01 CefHeaderXPath_Tests: getFilename" classname="CefHeaderXPath_Tests" time="0.016"/>
+  <testcase name="02 CefHeaderXPath_Tests: getFileFormatVersion" classname="CefHeaderXPath_Tests" time="0.016"/>
+  <testcase name="03 CefHeaderXPath_Tests: getEndOfRecordMarker" classname="CefHeaderXPath_Tests" time="0.015"/>
+  <testcase name="04 CefHeaderXPath_Tests: getDataUntil" classname="CefHeaderXPath_Tests" time="0.016"/>
+  <testcase name="05 CefHeaderXPath_Tests: getLogicalFileId" classname="CefHeaderXPath_Tests" time="0.016"/>
+  <testcase name="06 CefHeaderXPath_Tests: getVersionNumber" classname="CefHeaderXPath_Tests" time="0.015"/>
+  <testcase name="07 CefHeaderXPath_Tests: getFileType" classname="CefHeaderXPath_Tests" time="0.016"/>
+  <testcase name="08 CefHeaderXPath_Tests: getDataSetId" classname="CefHeaderXPath_Tests" time="0.0"/>
+  <testcase name="09 CefHeaderXPath_Tests: getVersionNumber" classname="CefHeaderXPath_Tests" time="0.0"/>
+  <testcase name="10 CefHeaderXPath_Tests: getMeta" classname="CefHeaderXPath_Tests" time="0.016"/>
+  <testcase name="11 CefHeaderXPath_Tests: getMetaList" classname="CefHeaderXPath_Tests" time="0.016"/>
+  <testcase name="12 CefHeaderXPath_Tests: getMetaEntry" classname="CefHeaderXPath_Tests" time="0.0"/>
+  <testcase name="13 CefHeaderXPath_Tests: getMetaEntryPair" classname="CefHeaderXPath_Tests" time="0.031"/>
+  <testcase name="14 CefHeaderXPath_Tests: getMetaPairNames" classname="CefHeaderXPath_Tests" time="0.031"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
