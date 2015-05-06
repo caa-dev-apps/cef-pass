@@ -97,7 +97,7 @@ class RuleSet01_Tests extends Specification{
             def result = app.stages(l_cmd_args)
         then:
             RuleSet01Exception ex = thrown()
-            ex.getError() == RuleSet01Exception.Error.R_1_03___END_OF_RECORD_MARKER_MUST_EXIST
+            ex.getError() == RuleSet01Exception.Error.R_1_03___END_OF_RECORD_MARKER_MUST_EXIST 
     }
     
 }
