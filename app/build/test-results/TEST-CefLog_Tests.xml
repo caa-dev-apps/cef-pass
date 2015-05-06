@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CefLog_Tests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-05-05T22:08:56" hostname="scala" time="0.007">
+<testsuite name="CefLog_Tests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-05-06T22:16:41" hostname="scala" time="0.009">
   <properties/>
-  <testcase name="01 CefLog_Tests: test each of the static CefLog functions" classname="CefLog_Tests" time="0.004"/>
-  <testcase name="02 CefLog_Tests: check files/folders exist" classname="CefLog_Tests" time="0.002"/>
+  <testcase name="01 CefLog_Tests: test each of the static CefLog functions" classname="CefLog_Tests" time="0.005"/>
+  <testcase name="02 CefLog_Tests: check files/folders exist" classname="CefLog_Tests" time="0.003"/>
   <system-out><![CDATA[This is an Error Message
 This is a Warning Message
   Stage #1 info

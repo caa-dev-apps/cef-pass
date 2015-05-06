@@ -37,7 +37,6 @@ public class RuleSet01 extends RuleSet
             Caveats:           "Within Double Quotes",
             Notes:             "-",
             Test_Func:         {
-//x             println "getFilename() -> " + m_data.headerXPath.getFilename()
                 
                 if(Utils.isQuotedString(m_data.headerXPath.getFilename()) == false) 
                     fatal_error(RuleSet01Exception.Error.R_1_00___FILENAME_MUST_EXIST)
@@ -58,7 +57,7 @@ public class RuleSet01 extends RuleSet
             Error_Message:     "Filename and metadata filename do not match",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
-            Test_Func:         { "XxX" }
+            Test_Func:         { "Under Devlopment" }
         ),
         
         R_1_02___FILE_FORMAT_VERSION_MUST_EXIST:                // RULESET 1 rule 02
@@ -73,7 +72,7 @@ public class RuleSet01 extends RuleSet
             Error_Message:     "Missing FILE_FORMAT_VERSION",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
-            Test_Func:         { "XxX" }
+            Test_Func:         { "Under Devlopment" }
         ),
         
         R_1_03___END_OF_RECORD_MARKER_MUST_EXIST:               // RULESET 1 rule 03
@@ -88,7 +87,7 @@ public class RuleSet01 extends RuleSet
             Error_Message:     "Missing END_OF_RECORD_MARKER",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
-            Test_Func:         { "XxX" }
+            Test_Func:         { "Under Devlopment" }
         )
     ]
 

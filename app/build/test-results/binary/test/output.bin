@@ -31,9 +31,9 @@
   
   RuleSet01
 h    Rule: 1.00          Must exist                                                                  OK
-i    Rule: 1.01          Name of file on disk equals FILE_NAME                                       XxX
-i    Rule: 1.02          Must exist                                                                  XxX
-i    Rule: 1.03          Must exist BUT may be blank                                                 XxX
+v    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
+v    Rule: 1.02          Must exist                                                                  Under Devlopment
+v    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
   
   RuleSet02
 m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
@@ -81,9 +81,9 @@
   
   RuleSet01
 h    Rule: 1.00          Must exist                                                                  OK
-i    Rule: 1.01          Name of file on disk equals FILE_NAME                                       XxX
-i    Rule: 1.02          Must exist                                                                  XxX
-i    Rule: 1.03          Must exist BUT may be blank                                                 XxX
+v    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
+v    Rule: 1.02          Must exist                                                                  Under Devlopment
+v    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
   
   RuleSet02
 m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
@@ -227,3 +227,169 @@
 -=  Search Folders:
 -=w    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_51___MALFORMED_STRING_QUOTESOK
 -=Stage 2: 
+?>Stage 1: 
+?>  CEF Filename:
+?>“    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_00___FILENAME_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
+?>  Search Folders:
+?>s    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_00___FILENAME_MUST_EXISTOK
+?>Stage 2: 
+?>l    Rule: 0.00          R_0_00___START_META___META_UNCLOSED                                         PASSED
+?>l    Rule: 0.01          R_0_01___START_META___VARIABLE_UNCLOSED                                     PASSED
+?>l    Rule: 0.02          R_0_02___START_META___NAME_ERROR                                            PASSED
+?>l    Rule: 0.10          R_0_10___END_META___VARIABLE_OPENED                                         PASSED
+?>l    Rule: 0.11          R_0_11___END_META___META_UNOPENED                                           PASSED
+?>l    Rule: 0.12          R_0_12___END_META___NAME_ERROR                                              PASSED
+?>l    Rule: 0.20          R_0_20___START_VARIABLE___VARIABLE_UNCLOSED                                 PASSED
+?>l    Rule: 0.21          R_0_21___START_VARIABLE___META_UNCLOSED                                     PASSED
+?>l    Rule: 0.22          R_0_22___START_VARIABLE___NAME_ERROR                                        PASSED
+?>l    Rule: 0.30          R_0_30___END_VARIABLE___META_OPENED                                         PASSED
+?>l    Rule: 0.31          R_0_31___END_VARIABLE___VARIABLE_UNOPENED                                   PASSED
+?>l    Rule: 0.32          R_0_32___END_VARIABLE___NAME_ERROR                                          PASSED
+?>l    Rule: 0.40          R_0_40___INCLUDE_FILE_DUPLICATE                                             PASSED
+?>l    Rule: 0.41          R_0_41___INCLUDE_FILE_UNFOUND                                               PASSED
+?>l    Rule: 0.42          R_0_42___INCLUDE_FILE_LEVEL_8                                               PASSED
+?>l    Rule: 0.50          R_0_50___MALFORMED_READ_LINE                                                PASSED
+?>l    Rule: 0.50          R_0_51___MALFORMED_STRING_QUOTES                                            PASSED
+?>Stage 3: 
+?>m    Placeholder                                                                                     Skipped
+?>Stage 4: 
+?>  
+  RuleSet01
+?@Stage 1: 
+?@  CEF Filename:
+?@—    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_01___FILENAME_MATCHES_ACTUAL\C3_CP_EDI_EGD__20111009_V01.cefOK
+?@  Search Folders:
+?@w    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_01___FILENAME_MATCHES_ACTUALOK
+?@Stage 2: 
+?@l    Rule: 0.00          R_0_00___START_META___META_UNCLOSED                                         PASSED
+?@l    Rule: 0.01          R_0_01___START_META___VARIABLE_UNCLOSED                                     PASSED
+?@l    Rule: 0.02          R_0_02___START_META___NAME_ERROR                                            PASSED
+?@l    Rule: 0.10          R_0_10___END_META___VARIABLE_OPENED                                         PASSED
+?@l    Rule: 0.11          R_0_11___END_META___META_UNOPENED                                           PASSED
+?@l    Rule: 0.12          R_0_12___END_META___NAME_ERROR                                              PASSED
+?@l    Rule: 0.20          R_0_20___START_VARIABLE___VARIABLE_UNCLOSED                                 PASSED
+?@l    Rule: 0.21          R_0_21___START_VARIABLE___META_UNCLOSED                                     PASSED
+?@l    Rule: 0.22          R_0_22___START_VARIABLE___NAME_ERROR                                        PASSED
+?@l    Rule: 0.30          R_0_30___END_VARIABLE___META_OPENED                                         PASSED
+?@l    Rule: 0.31          R_0_31___END_VARIABLE___VARIABLE_UNOPENED                                   PASSED
+?@l    Rule: 0.32          R_0_32___END_VARIABLE___NAME_ERROR                                          PASSED
+?@l    Rule: 0.40          R_0_40___INCLUDE_FILE_DUPLICATE                                             PASSED
+?@l    Rule: 0.41          R_0_41___INCLUDE_FILE_UNFOUND                                               PASSED
+?@l    Rule: 0.42          R_0_42___INCLUDE_FILE_LEVEL_8                                               PASSED
+?@l    Rule: 0.50          R_0_50___MALFORMED_READ_LINE                                                PASSED
+?@l    Rule: 0.50          R_0_51___MALFORMED_STRING_QUOTES                                            PASSED
+?@Stage 3: 
+?@m    Placeholder                                                                                     Skipped
+?@Stage 4: 
+?@  
+  RuleSet01
+?@h    Rule: 1.00          Must exist                                                                  OK
+?@v    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
+?@v    Rule: 1.02          Must exist                                                                  Under Devlopment
+?@v    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
+?@  
+  RuleSet02
+?@m    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
+?@m    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
+?@m    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
+?@m    Rule: 2.04          must be cef                                                                 SKIPPED
+?@m    Rule: 2.05          must be valid integer                                                       SKIPPED
+?@m    Rule: 2.06          Same as Filename without extension                                          SKIPPED
+?@m    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
+?@m    Rule: 2.08          must be valid integer                                                       SKIPPED
+?@m    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
+?@m    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
+?@m    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
+?@Stage 5: 
+?AStage 1: 
+?A  CEF Filename:
+?Až    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_02___FILE_FORMAT_VERSION_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
+?A  Search Folders:
+?A~    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_02___FILE_FORMAT_VERSION_MUST_EXISTOK
+?AStage 2: 
+?Al    Rule: 0.00          R_0_00___START_META___META_UNCLOSED                                         PASSED
+?Al    Rule: 0.01          R_0_01___START_META___VARIABLE_UNCLOSED                                     PASSED
+?Al    Rule: 0.02          R_0_02___START_META___NAME_ERROR                                            PASSED
+?Al    Rule: 0.10          R_0_10___END_META___VARIABLE_OPENED                                         PASSED
+?Al    Rule: 0.11          R_0_11___END_META___META_UNOPENED                                           PASSED
+?Al    Rule: 0.12          R_0_12___END_META___NAME_ERROR                                              PASSED
+?Al    Rule: 0.20          R_0_20___START_VARIABLE___VARIABLE_UNCLOSED                                 PASSED
+?Al    Rule: 0.21          R_0_21___START_VARIABLE___META_UNCLOSED                                     PASSED
+?Al    Rule: 0.22          R_0_22___START_VARIABLE___NAME_ERROR                                        PASSED
+?Al    Rule: 0.30          R_0_30___END_VARIABLE___META_OPENED                                         PASSED
+?Al    Rule: 0.31          R_0_31___END_VARIABLE___VARIABLE_UNOPENED                                   PASSED
+?Al    Rule: 0.32          R_0_32___END_VARIABLE___NAME_ERROR                                          PASSED
+?Al    Rule: 0.40          R_0_40___INCLUDE_FILE_DUPLICATE                                             PASSED
+?Al    Rule: 0.41          R_0_41___INCLUDE_FILE_UNFOUND                                               PASSED
+?Al    Rule: 0.42          R_0_42___INCLUDE_FILE_LEVEL_8                                               PASSED
+?Al    Rule: 0.50          R_0_50___MALFORMED_READ_LINE                                                PASSED
+?Al    Rule: 0.50          R_0_51___MALFORMED_STRING_QUOTES                                            PASSED
+?AStage 3: 
+?Am    Placeholder                                                                                     Skipped
+?AStage 4: 
+?A  
+  RuleSet01
+?Ah    Rule: 1.00          Must exist                                                                  OK
+?Av    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
+?Av    Rule: 1.02          Must exist                                                                  Under Devlopment
+?Av    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
+?A  
+  RuleSet02
+?Am    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
+?Am    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
+?Am    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
+?Am    Rule: 2.04          must be cef                                                                 SKIPPED
+?Am    Rule: 2.05          must be valid integer                                                       SKIPPED
+?Am    Rule: 2.06          Same as Filename without extension                                          SKIPPED
+?Am    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
+?Am    Rule: 2.08          must be valid integer                                                       SKIPPED
+?Am    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
+?Am    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
+?Am    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
+?AStage 5: 
+?BStage 1: 
+?B  CEF Filename:
+?BŸ    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_03___END_OF_RECORD_MARKER_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
+?B  Search Folders:
+?B    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_03___END_OF_RECORD_MARKER_MUST_EXISTOK
+?BStage 2: 
+?Bl    Rule: 0.00          R_0_00___START_META___META_UNCLOSED                                         PASSED
+?Bl    Rule: 0.01          R_0_01___START_META___VARIABLE_UNCLOSED                                     PASSED
+?Bl    Rule: 0.02          R_0_02___START_META___NAME_ERROR                                            PASSED
+?Bl    Rule: 0.10          R_0_10___END_META___VARIABLE_OPENED                                         PASSED
+?Bl    Rule: 0.11          R_0_11___END_META___META_UNOPENED                                           PASSED
+?Bl    Rule: 0.12          R_0_12___END_META___NAME_ERROR                                              PASSED
+?Bl    Rule: 0.20          R_0_20___START_VARIABLE___VARIABLE_UNCLOSED                                 PASSED
+?Bl    Rule: 0.21          R_0_21___START_VARIABLE___META_UNCLOSED                                     PASSED
+?Bl    Rule: 0.22          R_0_22___START_VARIABLE___NAME_ERROR                                        PASSED
+?Bl    Rule: 0.30          R_0_30___END_VARIABLE___META_OPENED                                         PASSED
+?Bl    Rule: 0.31          R_0_31___END_VARIABLE___VARIABLE_UNOPENED                                   PASSED
+?Bl    Rule: 0.32          R_0_32___END_VARIABLE___NAME_ERROR                                          PASSED
+?Bl    Rule: 0.40          R_0_40___INCLUDE_FILE_DUPLICATE                                             PASSED
+?Bl    Rule: 0.41          R_0_41___INCLUDE_FILE_UNFOUND                                               PASSED
+?Bl    Rule: 0.42          R_0_42___INCLUDE_FILE_LEVEL_8                                               PASSED
+?Bl    Rule: 0.50          R_0_50___MALFORMED_READ_LINE                                                PASSED
+?Bl    Rule: 0.50          R_0_51___MALFORMED_STRING_QUOTES                                            PASSED
+?BStage 3: 
+?Bm    Placeholder                                                                                     Skipped
+?BStage 4: 
+?B  
+  RuleSet01
+?Bh    Rule: 1.00          Must exist                                                                  OK
+?Bv    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
+?Bv    Rule: 1.02          Must exist                                                                  Under Devlopment
+?Bv    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
+?B  
+  RuleSet02
+?Bm    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
+?Bm    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
+?Bm    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
+?Bm    Rule: 2.04          must be cef                                                                 SKIPPED
+?Bm    Rule: 2.05          must be valid integer                                                       SKIPPED
+?Bm    Rule: 2.06          Same as Filename without extension                                          SKIPPED
+?Bm    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
+?Bm    Rule: 2.08          must be valid integer                                                       SKIPPED
+?Bm    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
+?Bm    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
+?Bm    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
+?BStage 5: 
