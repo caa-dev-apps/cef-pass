@@ -40,7 +40,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.172s</div>
+<div class="counter">0.125s</div>
 <p>duration</p>
 </div>
 </td>
@@ -75,10 +75,20 @@
 <a name="R_1_01___FILENAME_MATCHES_ACTUAL"></a>
 <h3 class="failures">R_1_01___FILENAME_MATCHES_ACTUAL</h3>
 <span class="code">
-<pre>Expected exception exceptions.RuleSet01Exception, but no exception was thrown
+<pre>Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:79)
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:60)
 	at RuleSet01_Tests.R_1_01___FILENAME_MATCHES_ACTUAL(RuleSet01_Tests.groovy:73)
+Caused by: groovy.lang.MissingPropertyException: No such property: CmdLnArgs for class: rules2015.RuleSet01
+	at rules2015.RuleSet01$_closure2.doCall(RuleSet01.groovy:64)
+	at rules2015.RuleSet01.run_closure5(RuleSet01.groovy:124)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at rules2015.RuleSet01.run(RuleSet01.groovy:119)
+	at rules2015.RuleSets.run(RuleSets.groovy:26)
+	at rules2015.RuleSets.run(RuleSets.groovy:32)
+	at cefpass.App.stages(App.groovy:184)
+	at RuleSet01_Tests.R_1_01___FILENAME_MATCHES_ACTUAL(RuleSet01_Tests.groovy:71)
 </pre>
 </span>
 </div>
@@ -86,10 +96,20 @@
 <a name="R_1_02___FILE_FORMAT_VERSION_MUST_EXIST"></a>
 <h3 class="failures">R_1_02___FILE_FORMAT_VERSION_MUST_EXIST</h3>
 <span class="code">
-<pre>Expected exception exceptions.RuleSet01Exception, but no exception was thrown
+<pre>Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:79)
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:60)
 	at RuleSet01_Tests.R_1_02___FILE_FORMAT_VERSION_MUST_EXIST(RuleSet01_Tests.groovy:86)
+Caused by: groovy.lang.MissingPropertyException: No such property: CmdLnArgs for class: rules2015.RuleSet01
+	at rules2015.RuleSet01$_closure2.doCall(RuleSet01.groovy:64)
+	at rules2015.RuleSet01.run_closure5(RuleSet01.groovy:124)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at rules2015.RuleSet01.run(RuleSet01.groovy:119)
+	at rules2015.RuleSets.run(RuleSets.groovy:26)
+	at rules2015.RuleSets.run(RuleSets.groovy:32)
+	at cefpass.App.stages(App.groovy:184)
+	at RuleSet01_Tests.R_1_02___FILE_FORMAT_VERSION_MUST_EXIST(RuleSet01_Tests.groovy:84)
 </pre>
 </span>
 </div>
@@ -97,10 +117,20 @@
 <a name="R_1_03___END_OF_RECORD_MARKER_MUST_EXIST"></a>
 <h3 class="failures">R_1_03___END_OF_RECORD_MARKER_MUST_EXIST</h3>
 <span class="code">
-<pre>Expected exception exceptions.RuleSet01Exception, but no exception was thrown
+<pre>Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:79)
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:60)
 	at RuleSet01_Tests.R_1_03___END_OF_RECORD_MARKER_MUST_EXIST(RuleSet01_Tests.groovy:99)
+Caused by: groovy.lang.MissingPropertyException: No such property: CmdLnArgs for class: rules2015.RuleSet01
+	at rules2015.RuleSet01$_closure2.doCall(RuleSet01.groovy:64)
+	at rules2015.RuleSet01.run_closure5(RuleSet01.groovy:124)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at rules2015.RuleSet01.run(RuleSet01.groovy:119)
+	at rules2015.RuleSets.run(RuleSets.groovy:26)
+	at rules2015.RuleSets.run(RuleSets.groovy:32)
+	at cefpass.App.stages(App.groovy:184)
+	at RuleSet01_Tests.R_1_03___END_OF_RECORD_MARKER_MUST_EXIST(RuleSet01_Tests.groovy:97)
 </pre>
 </span>
 </div>
@@ -117,22 +147,22 @@
 </thead>
 <tr>
 <td class="success">R_1_00___FILENAME_MUST_EXIST</td>
-<td>0.031s</td>
+<td>0.047s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">R_1_01___FILENAME_MATCHES_ACTUAL</td>
-<td>0.047s</td>
+<td>0.031s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">R_1_02___FILE_FORMAT_VERSION_MUST_EXIST</td>
-<td>0.063s</td>
+<td>0.015s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">R_1_03___END_OF_RECORD_MARKER_MUST_EXIST</td>
-<td>0.031s</td>
+<td>0.032s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -197,23 +227,6 @@ Stage 4:
   
   RuleSet01
     Rule: 1.00          Must exist                                                                  OK
-    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
-    Rule: 1.02          Must exist                                                                  Under Devlopment
-    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
-  
-  RuleSet02
-    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
-    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
-    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
-    Rule: 2.04          must be cef                                                                 SKIPPED
-    Rule: 2.05          must be valid integer                                                       SKIPPED
-    Rule: 2.06          Same as Filename without extension                                          SKIPPED
-    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
-    Rule: 2.08          must be valid integer                                                       SKIPPED
-    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
-    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
-    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-Stage 5: 
 Stage 1: 
   CEF Filename:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_02___FILE_FORMAT_VERSION_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
@@ -243,23 +256,6 @@ Stage 4:
   
   RuleSet01
     Rule: 1.00          Must exist                                                                  OK
-    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
-    Rule: 1.02          Must exist                                                                  Under Devlopment
-    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
-  
-  RuleSet02
-    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
-    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
-    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
-    Rule: 2.04          must be cef                                                                 SKIPPED
-    Rule: 2.05          must be valid integer                                                       SKIPPED
-    Rule: 2.06          Same as Filename without extension                                          SKIPPED
-    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
-    Rule: 2.08          must be valid integer                                                       SKIPPED
-    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
-    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
-    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-Stage 5: 
 Stage 1: 
   CEF Filename:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_03___END_OF_RECORD_MARKER_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
@@ -289,30 +285,13 @@ Stage 4:
   
   RuleSet01
     Rule: 1.00          Must exist                                                                  OK
-    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
-    Rule: 1.02          Must exist                                                                  Under Devlopment
-    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
-  
-  RuleSet02
-    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
-    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
-    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
-    Rule: 2.04          must be cef                                                                 SKIPPED
-    Rule: 2.05          must be valid integer                                                       SKIPPED
-    Rule: 2.06          Same as Filename without extension                                          SKIPPED
-    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
-    Rule: 2.08          must be valid integer                                                       SKIPPED
-    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
-    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
-    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-Stage 5: 
 </pre>
 </span>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 1.12</a> at 06-May-2015 23:26:12</p>
+<a href="http://www.gradle.org">Gradle 1.12</a> at 07-May-2015 23:55:59</p>
 </div>
 </div>
 </body>

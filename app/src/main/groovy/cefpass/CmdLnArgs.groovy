@@ -54,9 +54,16 @@ public class CmdLnArgs
     public def static isOk()               { return s_isOk }
     public def static isCommentsOn()       { return s_isCommentsOn }
     
-
-//x     public def static getFilename()        { return s_filename }
-
+    // only the filename - not full path
+    public def static getCefFilename()     { 
+        def f = Utils.getFilename(s_filename); 
+        if(f != null) {
+            def ix = f.lastIndexOf(".gz")
+            f = (ix >= 0) ? f.substring(0, ix) : f
+        }
+        f
+    }
+    
 
     
     public def static show() {

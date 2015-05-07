@@ -1,26 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RuleSet01_Tests" tests="4" skipped="0" failures="3" errors="0" timestamp="2015-05-06T22:26:12" hostname="scala" time="0.172">
+<testsuite name="RuleSet01_Tests" tests="4" skipped="0" failures="3" errors="0" timestamp="2015-05-07T22:55:58" hostname="scala" time="0.125">
   <properties/>
-  <testcase name="R_1_00___FILENAME_MUST_EXIST" classname="RuleSet01_Tests" time="0.031"/>
-  <testcase name="R_1_01___FILENAME_MATCHES_ACTUAL" classname="RuleSet01_Tests" time="0.047">
-    <failure message="Expected exception exceptions.RuleSet01Exception, but no exception was thrown" type="org.spockframework.runtime.WrongExceptionThrownError">Expected exception exceptions.RuleSet01Exception, but no exception was thrown
+  <testcase name="R_1_00___FILENAME_MUST_EXIST" classname="RuleSet01_Tests" time="0.047"/>
+  <testcase name="R_1_01___FILENAME_MATCHES_ACTUAL" classname="RuleSet01_Tests" time="0.031">
+    <failure message="Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException" type="org.spockframework.runtime.WrongExceptionThrownError">Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:79)
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:60)
 	at RuleSet01_Tests.R_1_01___FILENAME_MATCHES_ACTUAL(RuleSet01_Tests.groovy:73)
+Caused by: groovy.lang.MissingPropertyException: No such property: CmdLnArgs for class: rules2015.RuleSet01
+	at rules2015.RuleSet01$_closure2.doCall(RuleSet01.groovy:64)
+	at rules2015.RuleSet01.run_closure5(RuleSet01.groovy:124)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at rules2015.RuleSet01.run(RuleSet01.groovy:119)
+	at rules2015.RuleSets.run(RuleSets.groovy:26)
+	at rules2015.RuleSets.run(RuleSets.groovy:32)
+	at cefpass.App.stages(App.groovy:184)
+	at RuleSet01_Tests.R_1_01___FILENAME_MATCHES_ACTUAL(RuleSet01_Tests.groovy:71)
 </failure>
   </testcase>
-  <testcase name="R_1_02___FILE_FORMAT_VERSION_MUST_EXIST" classname="RuleSet01_Tests" time="0.063">
-    <failure message="Expected exception exceptions.RuleSet01Exception, but no exception was thrown" type="org.spockframework.runtime.WrongExceptionThrownError">Expected exception exceptions.RuleSet01Exception, but no exception was thrown
+  <testcase name="R_1_02___FILE_FORMAT_VERSION_MUST_EXIST" classname="RuleSet01_Tests" time="0.015">
+    <failure message="Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException" type="org.spockframework.runtime.WrongExceptionThrownError">Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:79)
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:60)
 	at RuleSet01_Tests.R_1_02___FILE_FORMAT_VERSION_MUST_EXIST(RuleSet01_Tests.groovy:86)
+Caused by: groovy.lang.MissingPropertyException: No such property: CmdLnArgs for class: rules2015.RuleSet01
+	at rules2015.RuleSet01$_closure2.doCall(RuleSet01.groovy:64)
+	at rules2015.RuleSet01.run_closure5(RuleSet01.groovy:124)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at rules2015.RuleSet01.run(RuleSet01.groovy:119)
+	at rules2015.RuleSets.run(RuleSets.groovy:26)
+	at rules2015.RuleSets.run(RuleSets.groovy:32)
+	at cefpass.App.stages(App.groovy:184)
+	at RuleSet01_Tests.R_1_02___FILE_FORMAT_VERSION_MUST_EXIST(RuleSet01_Tests.groovy:84)
 </failure>
   </testcase>
-  <testcase name="R_1_03___END_OF_RECORD_MARKER_MUST_EXIST" classname="RuleSet01_Tests" time="0.031">
-    <failure message="Expected exception exceptions.RuleSet01Exception, but no exception was thrown" type="org.spockframework.runtime.WrongExceptionThrownError">Expected exception exceptions.RuleSet01Exception, but no exception was thrown
+  <testcase name="R_1_03___END_OF_RECORD_MARKER_MUST_EXIST" classname="RuleSet01_Tests" time="0.032">
+    <failure message="Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException" type="org.spockframework.runtime.WrongExceptionThrownError">Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:79)
 	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:60)
 	at RuleSet01_Tests.R_1_03___END_OF_RECORD_MARKER_MUST_EXIST(RuleSet01_Tests.groovy:99)
+Caused by: groovy.lang.MissingPropertyException: No such property: CmdLnArgs for class: rules2015.RuleSet01
+	at rules2015.RuleSet01$_closure2.doCall(RuleSet01.groovy:64)
+	at rules2015.RuleSet01.run_closure5(RuleSet01.groovy:124)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at rules2015.RuleSet01.run(RuleSet01.groovy:119)
+	at rules2015.RuleSets.run(RuleSets.groovy:26)
+	at rules2015.RuleSets.run(RuleSets.groovy:32)
+	at cefpass.App.stages(App.groovy:184)
+	at RuleSet01_Tests.R_1_03___END_OF_RECORD_MARKER_MUST_EXIST(RuleSet01_Tests.groovy:97)
 </failure>
   </testcase>
   <system-out><![CDATA[Stage 1: 
@@ -80,23 +110,6 @@ Stage 4:
   
   RuleSet01
     Rule: 1.00          Must exist                                                                  OK
-    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
-    Rule: 1.02          Must exist                                                                  Under Devlopment
-    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
-  
-  RuleSet02
-    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
-    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
-    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
-    Rule: 2.04          must be cef                                                                 SKIPPED
-    Rule: 2.05          must be valid integer                                                       SKIPPED
-    Rule: 2.06          Same as Filename without extension                                          SKIPPED
-    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
-    Rule: 2.08          must be valid integer                                                       SKIPPED
-    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
-    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
-    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-Stage 5: 
 Stage 1: 
   CEF Filename:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_02___FILE_FORMAT_VERSION_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
@@ -126,23 +139,6 @@ Stage 4:
   
   RuleSet01
     Rule: 1.00          Must exist                                                                  OK
-    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
-    Rule: 1.02          Must exist                                                                  Under Devlopment
-    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
-  
-  RuleSet02
-    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
-    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
-    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
-    Rule: 2.04          must be cef                                                                 SKIPPED
-    Rule: 2.05          must be valid integer                                                       SKIPPED
-    Rule: 2.06          Same as Filename without extension                                          SKIPPED
-    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
-    Rule: 2.08          must be valid integer                                                       SKIPPED
-    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
-    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
-    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-Stage 5: 
 Stage 1: 
   CEF Filename:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_03___END_OF_RECORD_MARKER_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
@@ -172,23 +168,6 @@ Stage 4:
   
   RuleSet01
     Rule: 1.00          Must exist                                                                  OK
-    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
-    Rule: 1.02          Must exist                                                                  Under Devlopment
-    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
-  
-  RuleSet02
-    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
-    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
-    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
-    Rule: 2.04          must be cef                                                                 SKIPPED
-    Rule: 2.05          must be valid integer                                                       SKIPPED
-    Rule: 2.06          Same as Filename without extension                                          SKIPPED
-    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
-    Rule: 2.08          must be valid integer                                                       SKIPPED
-    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
-    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
-    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-Stage 5: 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

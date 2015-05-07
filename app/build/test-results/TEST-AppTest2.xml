@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-05-06T22:26:11" hostname="scala" time="0.218">
+<testsuite name="AppTest2" tests="1" skipped="0" failures="1" errors="0" timestamp="2015-05-07T22:55:57" hostname="scala" time="0.235">
   <properties/>
-  <testcase name="Second Test (args): App.stages" classname="AppTest2" time="0.218"/>
+  <testcase name="Second Test (args): App.stages" classname="AppTest2" time="0.235">
+    <failure message="groovy.lang.MissingPropertyException: No such property: CmdLnArgs for class: rules2015.RuleSet01" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: CmdLnArgs for class: rules2015.RuleSet01
+	at rules2015.RuleSet01$_closure2.doCall(RuleSet01.groovy:64)
+	at rules2015.RuleSet01.run_closure5(RuleSet01.groovy:124)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at rules2015.RuleSet01.run(RuleSet01.groovy:119)
+	at rules2015.RuleSets.run(RuleSets.groovy:26)
+	at rules2015.RuleSets.run(RuleSets.groovy:32)
+	at cefpass.App.stages(App.groovy:184)
+	at AppTest2.Second Test (args): App.stages(AppTest2.groovy:49)
+</failure>
+  </testcase>
   <system-out><![CDATA[Stage 1: 
   CEF Filename:
     C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz                 OK
@@ -35,23 +47,6 @@ Stage 4:
   
   RuleSet01
     Rule: 1.00          Must exist                                                                  OK
-    Rule: 1.01          Name of file on disk equals FILE_NAME                                       Under Devlopment
-    Rule: 1.02          Must exist                                                                  Under Devlopment
-    Rule: 1.03          Must exist BUT may be blank                                                 Under Devlopment
-  
-  RuleSet02
-    Rule: 2.01          Must have ENTRY= field                                                      SKIPPED
-    Rule: 2.02          If VALUE_TYPE provided, value must be of type indicated                     SKIPPED
-    Rule: 2.03          REQUIRED VARIABLES (below)                                                  SKIPPED
-    Rule: 2.04          must be cef                                                                 SKIPPED
-    Rule: 2.05          must be valid integer                                                       SKIPPED
-    Rule: 2.06          Same as Filename without extension                                          SKIPPED
-    Rule: 2.07          VERSION_NUMBER must match version number in filename                        SKIPPED
-    Rule: 2.08          must be valid integer                                                       SKIPPED
-    Rule: 2.09          must be ISO_TIME_RANGE                                                      SKIPPED
-    Rule: 2.10          START_TIME must be before STOP TIME                                         SKIPPED
-    Rule: 2.11          Timespan of data RECORDS must be between FILE_TIME_SPAN                     SKIPPED
-Stage 5: 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

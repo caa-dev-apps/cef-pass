@@ -57,7 +57,16 @@ public class RuleSet01 extends RuleSet
             Error_Message:     "Filename and metadata filename do not match",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
-            Test_Func:         { "Under Devlopment" }
+            
+            Test_Func:         {
+                def l_filename = Utils.getUnQuotedString(m_data.headerXPath.getFilename())
+                
+                if(CmdLnArgs.getCefFilename() != l_filename) 
+                    fatal_error(RuleSet01Exception.Error.R_1_01___FILENAME_MATCHES_ACTUAL)
+                
+                "OK"
+            }
+            
         ),
         
         R_1_02___FILE_FORMAT_VERSION_MUST_EXIST:                // RULESET 1 rule 02
@@ -72,7 +81,13 @@ public class RuleSet01 extends RuleSet
             Error_Message:     "Missing FILE_FORMAT_VERSION",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
-            Test_Func:         { "Under Devlopment" }
+            Test_Func:         {
+                
+                if(Utils.isQuotedString(m_data.headerXPath.getFileFormatVersion()) == false) 
+                    fatal_error(RuleSet01Exception.Error.R_1_02___FILE_FORMAT_VERSION_MUST_EXIST)
+                
+                "OK"
+            }
         ),
         
         R_1_03___END_OF_RECORD_MARKER_MUST_EXIST:               // RULESET 1 rule 03
@@ -87,7 +102,13 @@ public class RuleSet01 extends RuleSet
             Error_Message:     "Missing END_OF_RECORD_MARKER",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
-            Test_Func:         { "Under Devlopment" }
+            Test_Func:         {
+                
+                if(Utils.isQuotedString(m_data.headerXPath.getEndOfRecordMarker()) == false) 
+                    fatal_error(RuleSet01Exception.Error.R_1_03___END_OF_RECORD_MARKER_MUST_EXIST)
+                
+                "OK"
+            }
         )
     ]
 

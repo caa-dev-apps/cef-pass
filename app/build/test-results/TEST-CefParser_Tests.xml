@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CefParser_Tests" tests="18" skipped="0" failures="0" errors="0" timestamp="2015-05-06T22:26:11" hostname="scala" time="0.032">
+<testsuite name="CefParser_Tests" tests="18" skipped="0" failures="0" errors="0" timestamp="2015-05-07T22:55:58" hostname="scala" time="0.032">
   <properties/>
   <testcase name="CefParserException.Error.NO_ERROR" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_00___START_META___META_UNCLOSED" classname="CefParser_Tests" time="0.016"/>
@@ -9,7 +9,7 @@
   <testcase name="CefParserException.Error.R_0_11___END_META___META_UNOPENED" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_12___END_META___NAME_ERROR" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_20___START_VARIABLE___VARIABLE_UNCLOSED" classname="CefParser_Tests" time="0.0"/>
-  <testcase name="CefParserException.Error.R_0_21___START_VARIABLE___META_UNCLOSED" classname="CefParser_Tests" time="0.016"/>
+  <testcase name="CefParserException.Error.R_0_21___START_VARIABLE___META_UNCLOSED" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_22___START_VARIABLE___NAME_ERROR" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_30___END_VARIABLE___META_OPENED" classname="CefParser_Tests" time="0.0"/>
   <testcase name="CefParserException.Error.R_0_31___END_VARIABLE___VARIABLE_UNOPENED" classname="CefParser_Tests" time="0.0"/>
