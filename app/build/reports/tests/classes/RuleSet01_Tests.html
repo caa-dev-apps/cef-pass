@@ -28,7 +28,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">3</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -40,7 +40,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.125s</div>
+<div class="counter">0.140s</div>
 <p>duration</p>
 </div>
 </td>
@@ -49,8 +49,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">25%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -60,82 +60,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="R_1_01___FILENAME_MATCHES_ACTUAL"></a>
-<h3 class="failures">R_1_01___FILENAME_MATCHES_ACTUAL</h3>
-<span class="code">
-<pre>Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException
-	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:79)
-	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:60)
-	at RuleSet01_Tests.R_1_01___FILENAME_MATCHES_ACTUAL(RuleSet01_Tests.groovy:73)
-Caused by: groovy.lang.MissingPropertyException: No such property: CmdLnArgs for class: rules2015.RuleSet01
-	at rules2015.RuleSet01$_closure2.doCall(RuleSet01.groovy:64)
-	at rules2015.RuleSet01.run_closure5(RuleSet01.groovy:124)
-	at groovy.lang.Closure.call(Closure.java:423)
-	at groovy.lang.Closure.call(Closure.java:439)
-	at rules2015.RuleSet01.run(RuleSet01.groovy:119)
-	at rules2015.RuleSets.run(RuleSets.groovy:26)
-	at rules2015.RuleSets.run(RuleSets.groovy:32)
-	at cefpass.App.stages(App.groovy:184)
-	at RuleSet01_Tests.R_1_01___FILENAME_MATCHES_ACTUAL(RuleSet01_Tests.groovy:71)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="R_1_02___FILE_FORMAT_VERSION_MUST_EXIST"></a>
-<h3 class="failures">R_1_02___FILE_FORMAT_VERSION_MUST_EXIST</h3>
-<span class="code">
-<pre>Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException
-	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:79)
-	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:60)
-	at RuleSet01_Tests.R_1_02___FILE_FORMAT_VERSION_MUST_EXIST(RuleSet01_Tests.groovy:86)
-Caused by: groovy.lang.MissingPropertyException: No such property: CmdLnArgs for class: rules2015.RuleSet01
-	at rules2015.RuleSet01$_closure2.doCall(RuleSet01.groovy:64)
-	at rules2015.RuleSet01.run_closure5(RuleSet01.groovy:124)
-	at groovy.lang.Closure.call(Closure.java:423)
-	at groovy.lang.Closure.call(Closure.java:439)
-	at rules2015.RuleSet01.run(RuleSet01.groovy:119)
-	at rules2015.RuleSets.run(RuleSets.groovy:26)
-	at rules2015.RuleSets.run(RuleSets.groovy:32)
-	at cefpass.App.stages(App.groovy:184)
-	at RuleSet01_Tests.R_1_02___FILE_FORMAT_VERSION_MUST_EXIST(RuleSet01_Tests.groovy:84)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="R_1_03___END_OF_RECORD_MARKER_MUST_EXIST"></a>
-<h3 class="failures">R_1_03___END_OF_RECORD_MARKER_MUST_EXIST</h3>
-<span class="code">
-<pre>Expected exception exceptions.RuleSet01Exception, but got groovy.lang.MissingPropertyException
-	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:79)
-	at org.spockframework.lang.SpecInternals.thrownImpl(SpecInternals.java:60)
-	at RuleSet01_Tests.R_1_03___END_OF_RECORD_MARKER_MUST_EXIST(RuleSet01_Tests.groovy:99)
-Caused by: groovy.lang.MissingPropertyException: No such property: CmdLnArgs for class: rules2015.RuleSet01
-	at rules2015.RuleSet01$_closure2.doCall(RuleSet01.groovy:64)
-	at rules2015.RuleSet01.run_closure5(RuleSet01.groovy:124)
-	at groovy.lang.Closure.call(Closure.java:423)
-	at groovy.lang.Closure.call(Closure.java:439)
-	at rules2015.RuleSet01.run(RuleSet01.groovy:119)
-	at rules2015.RuleSets.run(RuleSets.groovy:26)
-	at rules2015.RuleSets.run(RuleSets.groovy:32)
-	at cefpass.App.stages(App.groovy:184)
-	at RuleSet01_Tests.R_1_03___END_OF_RECORD_MARKER_MUST_EXIST(RuleSet01_Tests.groovy:97)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -151,23 +82,23 @@ Caused by: groovy.lang.MissingPropertyException: No such property: CmdLnArgs for
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">R_1_01___FILENAME_MATCHES_ACTUAL</td>
+<td class="success">R_1_01___FILENAME_MATCHES_ACTUAL</td>
 <td>0.031s</td>
-<td class="failures">failed</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">R_1_02___FILE_FORMAT_VERSION_MUST_EXIST</td>
-<td>0.015s</td>
-<td class="failures">failed</td>
+<td class="success">R_1_02___FILE_FORMAT_VERSION_MUST_EXIST</td>
+<td>0.031s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">R_1_03___END_OF_RECORD_MARKER_MUST_EXIST</td>
-<td>0.032s</td>
-<td class="failures">failed</td>
+<td class="success">R_1_03___END_OF_RECORD_MARKER_MUST_EXIST</td>
+<td>0.031s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>Stage 1: 
@@ -256,6 +187,7 @@ Stage 4:
   
   RuleSet01
     Rule: 1.00          Must exist                                                                  OK
+    Rule: 1.01          Name of file on disk equals FILE_NAME                                       OK
 Stage 1: 
   CEF Filename:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_03___END_OF_RECORD_MARKER_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
@@ -285,13 +217,15 @@ Stage 4:
   
   RuleSet01
     Rule: 1.00          Must exist                                                                  OK
+    Rule: 1.01          Name of file on disk equals FILE_NAME                                       OK
+    Rule: 1.02          Must exist                                                                  OK
 </pre>
 </span>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 1.12</a> at 07-May-2015 23:55:59</p>
+<a href="http://www.gradle.org">Gradle 1.12</a> at 09-May-2015 14:30:09</p>
 </div>
 </div>
 </body>

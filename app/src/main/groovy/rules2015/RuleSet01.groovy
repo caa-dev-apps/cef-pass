@@ -2,6 +2,7 @@ package rules2015
 
 import cefpass.CefLog
 import cefpass.Utils
+import cefpass.CmdLnArgs
 
 import exceptions.RuleSet01Exception
 
@@ -66,7 +67,6 @@ public class RuleSet01 extends RuleSet
                 
                 "OK"
             }
-            
         ),
         
         R_1_02___FILE_FORMAT_VERSION_MUST_EXIST:                // RULESET 1 rule 02
@@ -97,7 +97,7 @@ public class RuleSet01 extends RuleSet
             Keyword:           "END_OF_RECORD_MARKER",
             Data_type:         "METADATA",
             Cardinality:       "1",
-            Description:       "Must exist BUT may be blank",
+            Description:       "Must exist BUT may be blank e.g. END_OF_RECORD_MARKER=\"\"???",
             Error_Type:        "Fatal Error",
             Error_Message:     "Missing END_OF_RECORD_MARKER",
             Caveats:           "Within Double Quotes",

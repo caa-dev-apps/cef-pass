@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CmdLnArgs_UnitTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-05-07T22:55:58" hostname="scala" time="0.015">
+<testsuite name="CmdLnArgs_UnitTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-05-09T13:30:09" hostname="scala" time="0.015">
   <properties/>
   <testcase name="Test 001 Plain cef file" classname="CmdLnArgs_UnitTests" time="0.015"/>
   <testcase name="Test 002 cef.gz file" classname="CmdLnArgs_UnitTests" time="0.0"/>

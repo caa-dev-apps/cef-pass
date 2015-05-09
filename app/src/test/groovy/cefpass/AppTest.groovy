@@ -33,13 +33,14 @@ class AppTest extends Specification{
         "C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_QZC__20111022_V01.cef.gz"
     ]
 
-    def "Second Test (args): App.stages"() {
+    def "First Test (args): App.stages"() {
     
         setup:
             def App app = new App()
             String[] l_args = [
                 "-f",
-                TEST_FILES[0],
+                //x TEST_FILES[0],
+                TEST_FILES[1],          // had to add a END_OF_RECORD_MARKER = ""
                 "-i",
                 TEST_SEARCH_FOLDERS.join(","),
                 "-l",

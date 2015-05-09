@@ -1,11 +1,12 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   R_1_01___FILENAME_MATCHES_ACTUAL - (in quotes ) TODO UNDER DEVELOPMENT
+!   R_1_01___FILENAME_MATCHES_ACTUAL - (in quotes ) line 7 XXX replaces v01
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-FILE_NAME="C3_CP_EDI_EGD__20111009_V01.cef"
+FILE_NAME="C3_CP_EDI_EGD__20111009_XXX.cef"
 FILE_FORMAT_VERSION="CEF-2.0"
+END_OF_RECORD_MARKER = "$"
 !
 START_META = LOGICAL_FILE_ID
  ENTRY = "C3_CP_EDI_EGD__20111009_V01"

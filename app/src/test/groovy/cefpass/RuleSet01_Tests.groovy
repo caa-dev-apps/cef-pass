@@ -61,7 +61,6 @@ class RuleSet01_Tests extends Specification{
         
     }
     
-    // UNDER DEVELOPMENT
     def "R_1_01___FILENAME_MATCHES_ACTUAL"() 
     {
         setup:
@@ -73,7 +72,6 @@ class RuleSet01_Tests extends Specification{
             RuleSet01Exception ex = thrown()
             ex.getError() == RuleSet01Exception.Error.R_1_01___FILENAME_MATCHES_ACTUAL
     }
-
 
     def "R_1_02___FILE_FORMAT_VERSION_MUST_EXIST"() 
     {
