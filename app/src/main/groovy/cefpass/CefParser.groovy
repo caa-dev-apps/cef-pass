@@ -1,6 +1,6 @@
 package cefpass
 
-import exceptions.CefParserException
+import exceptions.RS0_CefParserException
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -31,16 +31,16 @@ public class CefParser
     
     static def fatal_error(i_error)
     {
-        throw new CefParserException(i_error)
+        throw new RS0_CefParserException(i_error)
     }
     
     static def stxMeta(v)
     {
         //x println "stxMeta:" + v
         
-        if(s_meta != null)                  fatal_error(CefParserException.Error.R_0_00___START_META___META_UNCLOSED)
-        else if(s_var != null)              fatal_error(CefParserException.Error.R_0_01___START_META___VARIABLE_UNCLOSED)
-        else if(v==null || v.length()==0)   fatal_error(CefParserException.Error.R_0_02___START_META___NAME_ERROR)
+        if(s_meta != null)                  fatal_error(RS0_CefParserException.Error.R_0_00___START_META___META_UNCLOSED)
+        else if(s_var != null)              fatal_error(RS0_CefParserException.Error.R_0_01___START_META___VARIABLE_UNCLOSED)
+        else if(v==null || v.length()==0)   fatal_error(RS0_CefParserException.Error.R_0_02___START_META___NAME_ERROR)
         else                                s_meta = v
     }
     
@@ -48,9 +48,9 @@ public class CefParser
     {
         //x println "etxMeta:" + v
         
-        if(s_var != null)                   fatal_error(CefParserException.Error.R_0_10___END_META___VARIABLE_OPENED)         // NEW
-        else if(s_meta == null)             fatal_error(CefParserException.Error.R_0_11___END_META___META_UNOPENED)
-        else if(s_meta != v)                fatal_error(CefParserException.Error.R_0_12___END_META___NAME_ERROR)
+        if(s_var != null)                   fatal_error(RS0_CefParserException.Error.R_0_10___END_META___VARIABLE_OPENED)         // NEW
+        else if(s_meta == null)             fatal_error(RS0_CefParserException.Error.R_0_11___END_META___META_UNOPENED)
+        else if(s_meta != v)                fatal_error(RS0_CefParserException.Error.R_0_12___END_META___NAME_ERROR)
         else                                s_meta = null
     }
 
@@ -59,9 +59,9 @@ public class CefParser
     {
         //x println "stxVar:" + v
         
-        if(s_var != null)                   fatal_error(CefParserException.Error.R_0_20___START_VARIABLE___VARIABLE_UNCLOSED)
-        else if(s_meta != null)             fatal_error(CefParserException.Error.R_0_21___START_VARIABLE___META_UNCLOSED)
-        else if(v==null || v.length()==0)   fatal_error(CefParserException.Error.R_0_22___START_VARIABLE___NAME_ERROR)
+        if(s_var != null)                   fatal_error(RS0_CefParserException.Error.R_0_20___START_VARIABLE___VARIABLE_UNCLOSED)
+        else if(s_meta != null)             fatal_error(RS0_CefParserException.Error.R_0_21___START_VARIABLE___META_UNCLOSED)
+        else if(v==null || v.length()==0)   fatal_error(RS0_CefParserException.Error.R_0_22___START_VARIABLE___NAME_ERROR)
         else                                s_var = v
     }
     
@@ -69,9 +69,9 @@ public class CefParser
     {
         //x println "etxVar:" + v
         
-        if(s_meta != null)                  fatal_error(CefParserException.Error.R_0_30___END_VARIABLE___META_OPENED)            // NEW
-        else if(s_var == null)              fatal_error(CefParserException.Error.R_0_31___END_VARIABLE___VARIABLE_UNOPENED)
-        else if(s_var != v)                 fatal_error(CefParserException.Error.R_0_32___END_VARIABLE___NAME_ERROR)
+        if(s_meta != null)                  fatal_error(RS0_CefParserException.Error.R_0_30___END_VARIABLE___META_OPENED)            // NEW
+        else if(s_var == null)              fatal_error(RS0_CefParserException.Error.R_0_31___END_VARIABLE___VARIABLE_UNOPENED)
+        else if(s_var != v)                 fatal_error(RS0_CefParserException.Error.R_0_32___END_VARIABLE___NAME_ERROR)
         else                                s_var = null
     }
     
@@ -96,7 +96,7 @@ public class CefParser
         }
         
         if(l_isOk == false) {
-            fatal_error(CefParserException.Error.R_0_51___MALFORMED_STRING_QUOTES)
+            fatal_error(RS0_CefParserException.Error.R_0_51___MALFORMED_STRING_QUOTES)
         }
     }
     
@@ -106,25 +106,25 @@ public class CefParser
     static def includeFileDuplicate(f)
     {
         s_includeFile = f
-        fatal_error(CefParserException.Error.R_0_40___INCLUDE_FILE_DUPLICATE)
+        fatal_error(RS0_CefParserException.Error.R_0_40___INCLUDE_FILE_DUPLICATE)
     }
     
     static def includeFileNotFound(f)
     {
         s_includeFile = f
-        fatal_error(CefParserException.Error.R_0_41___INCLUDE_FILE_UNFOUND)
+        fatal_error(RS0_CefParserException.Error.R_0_41___INCLUDE_FILE_UNFOUND)
     }
 
     static def includeFileLevel8(f)
     {
         s_includeFile = f
-        fatal_error(CefParserException.Error.R_0_42___INCLUDE_FILE_LEVEL_8)
+        fatal_error(RS0_CefParserException.Error.R_0_42___INCLUDE_FILE_LEVEL_8)
     }
     
     static def MalFormedReadLine(s)
     {
         s_readLine = s
-        fatal_error(CefParserException.Error.R_0_50___MALFORMED_READ_LINE)
+        fatal_error(RS0_CefParserException.Error.R_0_50___MALFORMED_READ_LINE)
     }
     
     ///////////////////////////////////////////////////////////////////////////////

@@ -17,8 +17,8 @@ public class RuleSets
             info: [ a:1, b:2, c:3]
         ]
         
-        m_set01 = new RuleSet01(l_data)
-        m_set02 = new RuleSet02(l_data)
+        m_set01 = new RS1_GlobalAttributes(l_data)
+        m_set02 = new RS2_MetaObjects(l_data)
     }
 
     def run()

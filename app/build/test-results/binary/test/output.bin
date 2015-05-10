@@ -28,14 +28,14 @@
 Stage 3: 
 m    Placeholder                                                                                     Skipped
 Stage 4: 
-  
-  RuleSet01
+  
+  RS1_GlobalAttributes
 h    Rule: 1.00          Check FILE_NAME attribute must exist                                        OK
 h    Rule: 1.01          Check FILE_NAME attribute value matches actual Filename                     OK
 h    Rule: 1.02          Check FILE_FORMAT_VERSION attribute must exist                              OK
 h    Rule: 1.03          Check END_OF_RECORD_MARKER attribute must exist (may be blank??)            OK
-  
-  RuleSet02
+  
+  RS2_MetaObjects
 j    Rule: 2.01          Check METADATA must have ENTRY = field                                      TODO
 j    Rule: 2.02          Check if METADATA VALUE_TYPE provided, ENTRY value must be of type          TODO
 j    Rule: 2.03          Check REQUIRED VARIABLES (below) XXXXXXXXXX WTF XXXXXXXXXX ???????????      TODO
@@ -48,262 +48,268 @@
 j    Rule: 2.10          Check FILE_TIME_SPAN, START_TIME must be before STOP TIME                   TODO
 j    Rule: 2.11          Check Data Records Timestamp must be with FILE_TIME_SPAN                    TODO
 Stage 5: 
-This is an Error Message
-This is a Warning Message
-  Stage #1 info
-  Stage #2 info
-  Stage #3 info
-  Stage #4 info
-  Stage #5 info
-j    Stage #1 info                                                                                   TRUE
-k    Stage #2 info                                                                                   false
-  Stage #3 info
-j    Stage #4 info                                                                                   1234
-i    Stage #5 info                                                                                   Yo!
-This is a stage top message
-This is an Error Message
-This is a Warning Message
-  Stage #1 info
-  Stage #2 info
-  Stage #3 info
-  Stage #4 info
-  Stage #5 info
-j    Stage #1 info                                                                                   TRUE
-k    Stage #2 info                                                                                   false
-  Stage #3 info
-j    Stage #4 info                                                                                   1234
-i    Stage #5 info                                                                                   Yo!
-This is a stage top message
-+*  CEF Filename:
-+*o    R_1_00___FILENAME_MUST_EXIST/C3_CP_EDI_EGD__20111009_V01.cef                                    NOT FOUND
-+*,+ = + + = + + = + + = + + = + + = + + = + 
-+*!C3_CP_EDI_EGD__20111009_V01.cef
-+*!C3_CP_EDI_EGD__20111009_V01.cef
-+*,+ = + + = + + = + + = + + = + + = + + = + 
-+,  CEF Filename:
-+,o    R_1_00___FILENAME_MUST_EXIST/C3_CP_EDI_EGD__20111009_V01.cef.gz                                 NOT FOUND
-+,,+ = + + = + + = + + = + + = + + = + + = + 
-+,!C3_CP_EDI_EGD__20111009_V01.cef
-+,!C3_CP_EDI_EGD__20111009_V01.cef
-+,,+ = + + = + + = + + = + + = + + = + + = + 
-.-Stage 1: 
-.-  CEF Filename:
-.-š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_00___START_META___META_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
-.-  Search Folders:
-.-z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_00___START_META___META_UNCLOSEDOK
-.-Stage 2: 
-./Stage 1: 
-./  CEF Filename:
-./ž    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_01___START_META___VARIABLE_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
-./  Search Folders:
-./~    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_01___START_META___VARIABLE_UNCLOSEDOK
-./Stage 2: 
-./)R_0_01___START_META___VARIABLE_UNCLOSED
-.0Stage 1: 
-.0  CEF Filename:
-.0—    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_02___START_META___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
-.0  Search Folders:
-.0w    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_02___START_META___NAME_ERROROK
-.0Stage 2: 
-.1Stage 1: 
-.1  CEF Filename:
-.1š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_10___END_META___VARIABLE_OPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
-.1  Search Folders:
-.1z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_10___END_META___VARIABLE_OPENEDOK
-.1Stage 2: 
-.2Stage 1: 
-.2  CEF Filename:
-.2˜    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_11___END_META___META_UNOPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
-.2  Search Folders:
-.2x    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_11___END_META___META_UNOPENEDOK
-.2Stage 2: 
-.3Stage 1: 
-.3  CEF Filename:
-.3•    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_12___END_META___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
-.3  Search Folders:
-.3u    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_12___END_META___NAME_ERROROK
-.3Stage 2: 
-.4Stage 1: 
-.4  CEF Filename:
-.4¢    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_20___START_VARIABLE___VARIABLE_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
-.4  Search Folders:
-.4‚    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_20___START_VARIABLE___VARIABLE_UNCLOSEDOK
-.4Stage 2: 
-.5Stage 1: 
-.5  CEF Filename:
-.5ž    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_21___START_VARIABLE___META_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
-.5  Search Folders:
-.5~    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_21___START_VARIABLE___META_UNCLOSEDOK
-.5Stage 2: 
-.6Stage 1: 
-.6  CEF Filename:
-.6›    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_22___START_VARIABLE___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
-.6  Search Folders:
-.6{    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_22___START_VARIABLE___NAME_ERROROK
-.6Stage 2: 
-.7Stage 1: 
-.7  CEF Filename:
-.7š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_30___END_VARIABLE___META_OPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
-.7  Search Folders:
-.7z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_30___END_VARIABLE___META_OPENEDOK
-.7Stage 2: 
-.8Stage 1: 
-.8  CEF Filename:
-.8     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_31___END_VARIABLE___VARIABLE_UNOPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
-.8  Search Folders:
-.8€    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_31___END_VARIABLE___VARIABLE_UNOPENEDOK
-.8Stage 2: 
-.9Stage 1: 
-.9  CEF Filename:
-.9™    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_32___END_VARIABLE___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
-.9  Search Folders:
-.9y    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_32___END_VARIABLE___NAME_ERROROK
-.9Stage 2: 
-.:Stage 1: 
-.:  CEF Filename:
-.:–    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_40___INCLUDE_FILE_DUPLICATE\C3_CP_EDI_EGD__20111009_V01.cefOK
-.:  Search Folders:
-.:v    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_40___INCLUDE_FILE_DUPLICATEOK
-.:Stage 2: 
-.;Stage 1: 
-.;  CEF Filename:
-.;”    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_41___INCLUDE_FILE_UNFOUND\C3_CP_EDI_EGD__20111009_V01.cefOK
-.;  Search Folders:
-.;t    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_41___INCLUDE_FILE_UNFOUNDOK
-.;Stage 2: 
-.<Stage 1: 
-.<  CEF Filename:
-.<”    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_42___INCLUDE_FILE_LEVEL_8\C3_CP_EDI_EGD__20111009_V01.cefOK
-.<  Search Folders:
-.<t    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_42___INCLUDE_FILE_LEVEL_8OK
-.<Stage 2: 
-.=Stage 1: 
-.=  CEF Filename:
-.=“    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_50___MALFORMED_READ_LINE\C3_CP_EDI_EGD__20111009_V01.cefOK
-.=  Search Folders:
-.=s    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_50___MALFORMED_READ_LINEOK
-.=Stage 2: 
-.>Stage 1: 
-.>  CEF Filename:
-.>—    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_51___MALFORMED_STRING_QUOTES\C3_CP_EDI_EGD__20111009_V01.cefOK
-.>  Search Folders:
-.>w    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_51___MALFORMED_STRING_QUOTESOK
-.>Stage 2: 
-@?Stage 1: 
-@?  CEF Filename:
-@?“    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_00___FILENAME_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
-@?  Search Folders:
-@?s    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_00___FILENAME_MUST_EXISTOK
-@?Stage 2: 
-@?h    Rule: 0.00          Check START_META when previous START_META is open                           OK
-@?h    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
-@?h    Rule: 0.02          Check START_META for name erros                                             OK
-@?h    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
-@?h    Rule: 0.11          Check END_META when no previous START_META                                  OK
-@?h    Rule: 0.12          Check END_META for name erros                                               OK
-@?h    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
-@?h    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
-@?h    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
-@?h    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
-@?h    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
-@?h    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
-@?h    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
-@?h    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
-@?h    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
-@?h    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
-@?h    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
-@?Stage 3: 
-@?m    Placeholder                                                                                     Skipped
-@?Stage 4: 
-@?  
-  RuleSet01
-@AStage 1: 
-@A  CEF Filename:
-@A—    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_01___FILENAME_MATCHES_ACTUAL\C3_CP_EDI_EGD__20111009_V01.cefOK
-@A  Search Folders:
-@Aw    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_01___FILENAME_MATCHES_ACTUALOK
-@AStage 2: 
-@Ah    Rule: 0.00          Check START_META when previous START_META is open                           OK
-@Ah    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
-@Ah    Rule: 0.02          Check START_META for name erros                                             OK
-@Ah    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
-@Ah    Rule: 0.11          Check END_META when no previous START_META                                  OK
-@Ah    Rule: 0.12          Check END_META for name erros                                               OK
-@Ah    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
-@Ah    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
-@Ah    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
-@Ah    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
-@Ah    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
-@Ah    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
-@Ah    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
-@Ah    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
-@Ah    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
-@Ah    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
-@Ah    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
-@AStage 3: 
-@Am    Placeholder                                                                                     Skipped
-@AStage 4: 
-@A  
-  RuleSet01
-@Ah    Rule: 1.00          Check FILE_NAME attribute must exist                                        OK
-@BStage 1: 
-@B  CEF Filename:
-@Bž    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_02___FILE_FORMAT_VERSION_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
-@B  Search Folders:
-@B~    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_02___FILE_FORMAT_VERSION_MUST_EXISTOK
-@BStage 2: 
-@Bh    Rule: 0.00          Check START_META when previous START_META is open                           OK
-@Bh    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
-@Bh    Rule: 0.02          Check START_META for name erros                                             OK
-@Bh    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
-@Bh    Rule: 0.11          Check END_META when no previous START_META                                  OK
-@Bh    Rule: 0.12          Check END_META for name erros                                               OK
-@Bh    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
-@Bh    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
-@Bh    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
-@Bh    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
-@Bh    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
-@Bh    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
-@Bh    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
-@Bh    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
-@Bh    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
-@Bh    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
-@Bh    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
-@BStage 3: 
-@Bm    Placeholder                                                                                     Skipped
-@BStage 4: 
-@B  
-  RuleSet01
-@Bh    Rule: 1.00          Check FILE_NAME attribute must exist                                        OK
-@Bh    Rule: 1.01          Check FILE_NAME attribute value matches actual Filename                     OK
-@CStage 1: 
-@C  CEF Filename:
-@CŸ    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_03___END_OF_RECORD_MARKER_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
-@C  Search Folders:
-@C    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_03___END_OF_RECORD_MARKER_MUST_EXISTOK
-@CStage 2: 
-@Ch    Rule: 0.00          Check START_META when previous START_META is open                           OK
-@Ch    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
-@Ch    Rule: 0.02          Check START_META for name erros                                             OK
-@Ch    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
-@Ch    Rule: 0.11          Check END_META when no previous START_META                                  OK
-@Ch    Rule: 0.12          Check END_META for name erros                                               OK
-@Ch    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
-@Ch    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
-@Ch    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
-@Ch    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
-@Ch    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
-@Ch    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
-@Ch    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
-@Ch    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
-@Ch    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
-@Ch    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
-@Ch    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
-@CStage 3: 
-@Cm    Placeholder                                                                                     Skipped
-@CStage 4: 
-@C  
-  RuleSet01
-@Ch    Rule: 1.00          Check FILE_NAME attribute must exist                                        OK
-@Ch    Rule: 1.01          Check FILE_NAME attribute value matches actual Filename                     OK
-@Ch    Rule: 1.02          Check FILE_FORMAT_VERSION attribute must exist                              OK
+Stage 1: 
+  CEF Filename:
+š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_00___START_META___META_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_00___START_META___META_UNCLOSEDOK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+ž    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_01___START_META___VARIABLE_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+~    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_01___START_META___VARIABLE_UNCLOSEDOK
+Stage 2: 
+)R_0_01___START_META___VARIABLE_UNCLOSED
+Stage 1: 
+  CEF Filename:
+—    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_02___START_META___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+w    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_02___START_META___NAME_ERROROK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_10___END_META___VARIABLE_OPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_10___END_META___VARIABLE_OPENEDOK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+˜    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_11___END_META___META_UNOPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+x    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_11___END_META___META_UNOPENEDOK
+Stage 2: 
+	Stage 1: 
+	  CEF Filename:
+	•    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_12___END_META___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
+	  Search Folders:
+	u    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_12___END_META___NAME_ERROROK
+	Stage 2: 
+
+Stage 1: 
+
+  CEF Filename:
+
+¢    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_20___START_VARIABLE___VARIABLE_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
+
+  Search Folders:
+
+‚    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_20___START_VARIABLE___VARIABLE_UNCLOSEDOK
+
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+ž    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_21___START_VARIABLE___META_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+~    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_21___START_VARIABLE___META_UNCLOSEDOK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+›    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_22___START_VARIABLE___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+{    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_22___START_VARIABLE___NAME_ERROROK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+š    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_30___END_VARIABLE___META_OPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+z    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_30___END_VARIABLE___META_OPENEDOK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_31___END_VARIABLE___VARIABLE_UNOPENED\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+€    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_31___END_VARIABLE___VARIABLE_UNOPENEDOK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+™    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_32___END_VARIABLE___NAME_ERROR\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+y    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_32___END_VARIABLE___NAME_ERROROK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+–    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_40___INCLUDE_FILE_DUPLICATE\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+v    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_40___INCLUDE_FILE_DUPLICATEOK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+”    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_41___INCLUDE_FILE_UNFOUND\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+t    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_41___INCLUDE_FILE_UNFOUNDOK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+”    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_42___INCLUDE_FILE_LEVEL_8\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+t    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_42___INCLUDE_FILE_LEVEL_8OK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+“    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_50___MALFORMED_READ_LINE\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+s    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_50___MALFORMED_READ_LINEOK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+—    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_51___MALFORMED_STRING_QUOTES\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+w    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_51___MALFORMED_STRING_QUOTESOK
+Stage 2: 
+Stage 1: 
+  CEF Filename:
+“    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_00___FILENAME_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+s    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_00___FILENAME_MUST_EXISTOK
+Stage 2: 
+h    Rule: 0.00          Check START_META when previous START_META is open                           OK
+h    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
+h    Rule: 0.02          Check START_META for name erros                                             OK
+h    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
+h    Rule: 0.11          Check END_META when no previous START_META                                  OK
+h    Rule: 0.12          Check END_META for name erros                                               OK
+h    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
+h    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
+h    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
+h    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
+h    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
+h    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
+h    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
+h    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
+h    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
+h    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
+h    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
+Stage 3: 
+m    Placeholder                                                                                     Skipped
+Stage 4: 
+  
+  RS1_GlobalAttributes
+Stage 1: 
+  CEF Filename:
+—    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_01___FILENAME_MATCHES_ACTUAL\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+w    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_01___FILENAME_MATCHES_ACTUALOK
+Stage 2: 
+h    Rule: 0.00          Check START_META when previous START_META is open                           OK
+h    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
+h    Rule: 0.02          Check START_META for name erros                                             OK
+h    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
+h    Rule: 0.11          Check END_META when no previous START_META                                  OK
+h    Rule: 0.12          Check END_META for name erros                                               OK
+h    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
+h    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
+h    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
+h    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
+h    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
+h    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
+h    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
+h    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
+h    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
+h    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
+h    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
+Stage 3: 
+m    Placeholder                                                                                     Skipped
+Stage 4: 
+  
+  RS1_GlobalAttributes
+h    Rule: 1.00          Check FILE_NAME attribute must exist                                        OK
+Stage 1: 
+  CEF Filename:
+ž    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_02___FILE_FORMAT_VERSION_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+~    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_02___FILE_FORMAT_VERSION_MUST_EXISTOK
+Stage 2: 
+h    Rule: 0.00          Check START_META when previous START_META is open                           OK
+h    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
+h    Rule: 0.02          Check START_META for name erros                                             OK
+h    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
+h    Rule: 0.11          Check END_META when no previous START_META                                  OK
+h    Rule: 0.12          Check END_META for name erros                                               OK
+h    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
+h    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
+h    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
+h    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
+h    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
+h    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
+h    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
+h    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
+h    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
+h    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
+h    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
+Stage 3: 
+m    Placeholder                                                                                     Skipped
+Stage 4: 
+  
+  RS1_GlobalAttributes
+h    Rule: 1.00          Check FILE_NAME attribute must exist                                        OK
+h    Rule: 1.01          Check FILE_NAME attribute value matches actual Filename                     OK
+Stage 1: 
+  CEF Filename:
+Ÿ    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_03___END_OF_RECORD_MARKER_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
+  Search Folders:
+    C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_03___END_OF_RECORD_MARKER_MUST_EXISTOK
+Stage 2: 
+h    Rule: 0.00          Check START_META when previous START_META is open                           OK
+h    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
+h    Rule: 0.02          Check START_META for name erros                                             OK
+h    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
+h    Rule: 0.11          Check END_META when no previous START_META                                  OK
+h    Rule: 0.12          Check END_META for name erros                                               OK
+h    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
+h    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
+h    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
+h    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
+h    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
+h    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
+h    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
+h    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
+h    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
+h    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
+h    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
+Stage 3: 
+m    Placeholder                                                                                     Skipped
+Stage 4: 
+  
+  RS1_GlobalAttributes
+h    Rule: 1.00          Check FILE_NAME attribute must exist                                        OK
+h    Rule: 1.01          Check FILE_NAME attribute value matches actual Filename                     OK
+h    Rule: 1.02          Check FILE_FORMAT_VERSION attribute must exist                              OK
+,+This is an Error Message
+,+This is a Warning Message
+,+  Stage #1 info
+,+  Stage #2 info
+,+  Stage #3 info
+,+  Stage #4 info
+,+  Stage #5 info
+,+j    Stage #1 info                                                                                   TRUE
+,+k    Stage #2 info                                                                                   false
+,+  Stage #3 info
+,+j    Stage #4 info                                                                                   1234
+,+i    Stage #5 info                                                                                   Yo!
+,+This is a stage top message
+,-This is an Error Message
+,-This is a Warning Message
+,-  Stage #1 info
+,-  Stage #2 info
+,-  Stage #3 info
+,-  Stage #4 info
+,-  Stage #5 info
+,-j    Stage #1 info                                                                                   TRUE
+,-k    Stage #2 info                                                                                   false
+,-  Stage #3 info
+,-j    Stage #4 info                                                                                   1234
+,-i    Stage #5 info                                                                                   Yo!
+,-This is a stage top message
+BA  CEF Filename:
+BAo    R_1_00___FILENAME_MUST_EXIST/C3_CP_EDI_EGD__20111009_V01.cef                                    NOT FOUND
+BA,+ = + + = + + = + + = + + = + + = + + = + 
+BA!C3_CP_EDI_EGD__20111009_V01.cef
+BA!C3_CP_EDI_EGD__20111009_V01.cef
+BA,+ = + + = + + = + + = + + = + + = + + = + 
+BC  CEF Filename:
+BCo    R_1_00___FILENAME_MUST_EXIST/C3_CP_EDI_EGD__20111009_V01.cef.gz                                 NOT FOUND
+BC,+ = + + = + + = + + = + + = + + = + + = + 
+BC!C3_CP_EDI_EGD__20111009_V01.cef
+BC!C3_CP_EDI_EGD__20111009_V01.cef
+BC,+ = + + = + + = + + = + + = + + = + + = + 

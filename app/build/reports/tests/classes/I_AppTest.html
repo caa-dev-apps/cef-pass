@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Test results - Class I_AppTest</title>
+<link href="css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<script src="js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class I_AppTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; I_AppTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.844s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">First Test (args): App.stages</td>
+<td>0.844s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Stage 1: 
+  CEF Filename:
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef                    OK
+  Search Folders:
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES                     OK
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS                                                    OK
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI                                                OK
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW                                                OK
+    C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE                                              OK
+Stage 2: 
+    Rule: 0.00          Check START_META when previous START_META is open                           OK
+    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
+    Rule: 0.02          Check START_META for name erros                                             OK
+    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
+    Rule: 0.11          Check END_META when no previous START_META                                  OK
+    Rule: 0.12          Check END_META for name erros                                               OK
+    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
+    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
+    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
+    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
+    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
+    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
+    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
+    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
+    Rule: 0.42          Check INCLUDE_FILE nested LEVELS &gt; 8                                        OK
+    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
+    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
+Stage 3: 
+    Placeholder                                                                                     Skipped
+Stage 4: 
+  
+  RS1_GlobalAttributes
+    Rule: 1.00          Check FILE_NAME attribute must exist                                        OK
+    Rule: 1.01          Check FILE_NAME attribute value matches actual Filename                     OK
+    Rule: 1.02          Check FILE_FORMAT_VERSION attribute must exist                              OK
+    Rule: 1.03          Check END_OF_RECORD_MARKER attribute must exist (may be blank??)            OK
+  
+  RS2_MetaObjects
+    Rule: 2.01          Check METADATA must have ENTRY = field                                      TODO
+    Rule: 2.02          Check if METADATA VALUE_TYPE provided, ENTRY value must be of type          TODO
+    Rule: 2.03          Check REQUIRED VARIABLES (below) XXXXXXXXXX WTF XXXXXXXXXX ???????????      TODO
+    Rule: 2.04          Check FILE_TYPE must be cef                                                 TODO
+    Rule: 2.05          Check DATASET_VERSION must be valid integer                                 TODO
+    Rule: 2.06          Check LOGICAL_FILE_ID is same as Filename without extension                 TODO
+    Rule: 2.07          Check VERSION_NUMBER must match version number in filename                  TODO
+    Rule: 2.08          Check VERSION_NUMBER must be valid integer                                  TODO
+    Rule: 2.09          Check FILE_TIME_SPAN must be ISO_TIME_RANGE                                 TODO
+    Rule: 2.10          Check FILE_TIME_SPAN, START_TIME must be before STOP TIME                   TODO
+    Rule: 2.11          Check Data Records Timestamp must be with FILE_TIME_SPAN                    TODO
+Stage 5: 
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>Generated by 
+<a href="http://www.gradle.org">Gradle 1.12</a> at 10-May-2015 20:01:33</p>
+</div>
+</div>
+</body>
