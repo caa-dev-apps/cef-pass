@@ -1,18 +1,16 @@
 package rules2015
 
 import cefpass.CefLog
+import cefpass.Utils
+import cefpass.CmdLnArgs
+
+import exceptions.RuleSet02Exception
 
 ///////////////////////////////////////////////////////////////////////////////
 //
 
 public class RuleSet02 extends RuleSet
 {
-    
-//x         def i_data = [
-//x             headerXPath: i_headerXPath,
-//x             info: [ a:1, b:2, c:3]
-//x         ]
-    
     def m_data
     
     public RuleSet02(i_data)
@@ -20,234 +18,216 @@ public class RuleSet02 extends RuleSet
         m_data = i_data
     }
     
-    def Rule_2_01()
+    static def fatal_error(i_error)
     {
-        def l_rule = new Rule(
+        throw new RuleSet02Exception(i_error)
+    }
+    
+    
+    def m_rules =
+    [
+        R_2_00___MUST_HAVE_ENTRY:                                                       // RULESET 1 rule 00
+        new Rule(
             Rule:              "2.01",
             Scope:             "GENERAL",
             Keyword:           "START_META/END_META",
             Data_type:         "METADATA",
             Cardinality:       "NA",
-            Description:       "Must have ENTRY= field",
+            Description:       "Check METADATA must have ENTRY = field",
             Error_Type:        "Fatal Error",
-            Error_Message:     "VARIABLE <x> EMPTY",
+            Error_Message:     "VARIABLE <x> EMPTY ????? XXXXX ????????",
             Caveats:           "NA",
-            Notes:             "-"
-        )
-        
-        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
-    }
+            Notes:             "-",
+            Test_Func:         {
+                "TODO"
+            }
+        ),        
 
-    def Rule_2_02()
-    {
-        def l_rule = new Rule(
+        R_2_02___ENTRY_MISMATCH_VALUE_TYPE:                                             // RULESET 2 rule 02
+        new Rule(
             Rule:              "2.02",
             Scope:             "GENERAL",
             Keyword:           "START_META/END_META",
             Data_type:         "METADATA",
             Cardinality:       "NA",
-            Description:       "If VALUE_TYPE provided, value must be of type indicated",
+            Description:       "Check if METADATA VALUE_TYPE provided, ENTRY value must be of type",
             Error_Type:        "Fatal Error",
             Error_Message:     "VARIABLE <x> VALUE DOES NOT MATCH TYPE",
             Caveats:           "NA",
-            Notes:             "-"
-        )
-        
-        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
-    }
+            Notes:             "-",
+            Test_Func:         {
+                "TODO"
+            }
+        ),        
 
-    def Rule_2_03()
-    {
-        def l_rule = new Rule(
+        R_2_03___REQUIRED_VARIABLES_XXXX:                                               // RULESET 2 rule 03
+        new Rule(
             Rule:              "2.03",
             Scope:             "GENERAL",
             Keyword:           "START_META/END_META",
             Data_type:         "METADATA",
             Cardinality:       "1",
-            Description:       "REQUIRED VARIABLES (below)",
+            Description:       "Check REQUIRED VARIABLES (below) XXXXXXXXXX WTF XXXXXXXXXX ???????????",
             Error_Type:        "Fatal Error",
             Error_Message:     "MISSING <x> VARIABLE",
             Caveats:           "NA",
-            Notes:             "-"
-        )
-        
-        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
-    }
+            Notes:             "-",
+            Test_Func:         {
+                "TODO"
+            }
+        ),        
 
-    def Rule_2_04()
-    {
-        def l_rule = new Rule(
+        R_2_04___FILE_TYPE_MUST_BE_CEF:                                                 // RULESET 2 rule 04
+        new Rule(
             Rule:              "2.04",
             Scope:             "GENERAL",
             Keyword:           "FILE_TYPE",
             Data_type:         "METADATA",
             Cardinality:       "1",
-            Description:       "must be cef",
+            Description:       "Check FILE_TYPE must be cef",
             Error_Type:        "Fatal Error",
             Error_Message:     "FILE_TYPE is not CEF, unable to validate non CEF files",
             Caveats:           "NA",
-            Notes:             "-"
-        )
-        
-        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
-    }
+            Notes:             "-",
+            Test_Func:         {
+                "TODO"
+            }
+        ),        
 
-    def Rule_2_05()
-    {
-        def l_rule = new Rule(
+        R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER:                                 // RULESET 2 rule 05
+        new Rule(
             Rule:              "2.05",
             Scope:             "GENERAL",
             Keyword:           "DATASET_VERSION",
             Data_type:         "METADATA",
             Cardinality:       "1",
-            Description:       "must be valid integer",
+            Description:       "Check DATASET_VERSION must be valid integer",
             Error_Type:        "Fatal Error",
             Error_Message:     "Invalid value",
             Caveats:           "NA",
-            Notes:             "-"
-        )
-        
-        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
-    }
+            Notes:             "-",
+            Test_Func:         {
+                "TODO"
+            }
+        ),        
 
-    def Rule_2_06()
-    {
-        def l_rule = new Rule(
+        R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME:                                      // RULESET 2 rule 06
+        new Rule(
             Rule:              "2.06",
             Scope:             "GENERAL",
             Keyword:           "LOGICAL_FILE_ID",
             Data_type:         "METADATA",
             Cardinality:       "1",
-            Description:       "Same as Filename without extension",
+            Description:       "Check LOGICAL_FILE_ID is same as Filename without extension",
             Error_Type:        "Fatal Error?",
             Error_Message:     "Logical File ID does not match filename",
             Caveats:           "NA",
-            Notes:             "-"
-        )
-        
-        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
-    }
+            Notes:             "-",
+            Test_Func:         {
+                "TODO"
+            }
+        ),        
 
-    def Rule_2_07()
-    {
-        def l_rule = new Rule(
+        R_2_07___VERSION_NUMBER_MATCHES_FILENAME:                                       // RULESET 2 rule 07
+        new Rule(
             Rule:              "2.07",
             Scope:             "GENERAL",
             Keyword:           "VERSION_NUMBER",
             Data_type:         "METADATA",
             Cardinality:       "1",
-            Description:       "VERSION_NUMBER must match version number in filename",
+            Description:       "Check VERSION_NUMBER must match version number in filename",
             Error_Type:        "Fatal Error",
             Error_Message:     "VERSION_NUMBER does not match version in filename",
             Caveats:           "NA",
-            Notes:             "-"
-        )
-        
-        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
-    }
+            Notes:             "-",
+            Test_Func:         {
+                "TODO"
+            }
+        ),        
 
-    def Rule_2_08()
-    {
-        def l_rule = new Rule(
+        R_2_08___VERSION_NUMBER_MUST_BE_VALID_INTEGER:                                  // RULESET 2 rule 08
+        new Rule(
             Rule:              "2.08",
             Scope:             "GENERAL",
             Keyword:           "VERSION_NUMBER",
             Data_type:         "METADATA",
             Cardinality:       "1",
-            Description:       "must be valid integer",
+            Description:       "Check VERSION_NUMBER must be valid integer",
             Error_Type:        "Fatal Error",
             Error_Message:     "Invalid value",
             Caveats:           "NA",
-            Notes:             "-"
-        )
-        
-        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
-    }
+            Notes:             "-",
+            Test_Func:         {
+                "TODO"
+            }
+        ),        
 
-    def Rule_2_09()
-    {
-        def l_rule = new Rule(
+        R_2_09___FILE_TIME_SPAN_MUST_BE_ISO_TIME_RANGE:                                 // RULESET 2 rule 09
+        new Rule(
             Rule:              "2.09",
             Scope:             "GENERAL",
             Keyword:           "FILE_TIME_SPAN",
             Data_type:         "METADATA",
             Cardinality:       "1",
-            Description:       "must be ISO_TIME_RANGE",
+            Description:       "Check FILE_TIME_SPAN must be ISO_TIME_RANGE",
             Error_Type:        "Fatal Error",
             Error_Message:     "VARIABLE <x> Invalid Format",
             Caveats:           "NA",
-            Notes:             "-"
-        )
-        
-        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
-    }
+            Notes:             "-",
+            Test_Func:         {
+                "TODO"
+            }
+        ),        
 
-    def Rule_2_10()
-    {
-        def l_rule = new Rule(
+        R_2_10___FILE_TIME_SPAN_START_TIME_MUST_BE_BEFORE_STOP_TIME:                    // RULESET 2 rule 10
+        new Rule(
             Rule:              "2.10",
             Scope:             "GENERAL",
             Keyword:           "FILE_TIME_SPAN",
             Data_type:         "METADATA",
             Cardinality:       "1",
-            Description:       "START_TIME must be before STOP TIME",
+            Description:       "Check FILE_TIME_SPAN, START_TIME must be before STOP TIME",
             Error_Type:        "Fatal Error",
             Error_Message:     "VARIABLE <x> Start Time must be before Stop time",
             Caveats:           "NA",
-            Notes:             "-"
-        )
-        
-        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
-    }
+            Notes:             "-",
+            Test_Func:         {
+                "TODO"
+            }
+        ),        
 
-    def Rule_2_11()
-    {
-        def l_rule = new Rule(
+        
+        // MOVE TO DATA RULES
+        R_2_11___DATA_RECORD_TIME_STAMP_MUST_BE_BETWEEN_FILE_TIME_SPAN:                 // RULESET 2 rule 11
+        new 
+        Rule(
             Rule:              "2.11",
             Scope:             "GENERAL",
             Keyword:           "FILE_TIME_SPAN",
             Data_type:         "METADATA / DATA",
             Cardinality:       "1",
-            Description:       "Timespan of data RECORDS must be between FILE_TIME_SPAN",
+            Description:       "Check Data Records Timestamp must be with FILE_TIME_SPAN",
             Error_Type:        "Fatal Error",
             Error_Message:     "Data outside FILE_TIME_SPAN",
             Caveats:           "NA",
-            Notes:             "-"
-        )
-        
-        CefLog.stage4_info(l_rule.about(), "SKIPPED")      
-    }
+            Notes:             "-",
+            Test_Func:         {
+                "TODO"
+            }
+        )        
+
+    ]
 
     public def run()
     {
         CefLog.stage4_info("\n  RuleSet02")
-        
-        Rule_2_01();
-        Rule_2_02();
-        Rule_2_03();
-        Rule_2_04();        
-        Rule_2_05();
-        Rule_2_06();
-        Rule_2_07();
-        Rule_2_08();
-        Rule_2_09();        
-        Rule_2_10();
-        Rule_2_11();
+
+        m_rules.each {
+            //x println it.value
+            //x println it.value.to_str()
+            //x it.value.Test_Func()
+            
+            CefLog.stage4_info(it.value.about(), it.value.Test_Func())     
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

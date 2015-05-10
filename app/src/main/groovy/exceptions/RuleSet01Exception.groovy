@@ -20,6 +20,3 @@ public class RuleSet01Exception extends CefException
     public Error getError()                     { return m_error }
 }
 
-
-
-

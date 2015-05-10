@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RuleSet01_Tests" tests="4" skipped="0" failures="0" errors="0" timestamp="2015-05-09T13:30:09" hostname="scala" time="0.14">
+<testsuite name="RuleSet01_Tests" tests="4" skipped="0" failures="0" errors="0" timestamp="2015-05-10T00:26:28" hostname="scala" time="0.125">
   <properties/>
-  <testcase name="R_1_00___FILENAME_MUST_EXIST" classname="RuleSet01_Tests" time="0.047"/>
+  <testcase name="R_1_00___FILENAME_MUST_EXIST" classname="RuleSet01_Tests" time="0.031"/>
   <testcase name="R_1_01___FILENAME_MATCHES_ACTUAL" classname="RuleSet01_Tests" time="0.031"/>
   <testcase name="R_1_02___FILE_FORMAT_VERSION_MUST_EXIST" classname="RuleSet01_Tests" time="0.031"/>
-  <testcase name="R_1_03___END_OF_RECORD_MARKER_MUST_EXIST" classname="RuleSet01_Tests" time="0.031"/>
+  <testcase name="R_1_03___END_OF_RECORD_MARKER_MUST_EXIST" classname="RuleSet01_Tests" time="0.032"/>
   <system-out><![CDATA[Stage 1: 
   CEF Filename:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_00___FILENAME_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
   Search Folders:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_00___FILENAME_MUST_EXISTOK
 Stage 2: 
-    Rule: 0.00          R_0_00___START_META___META_UNCLOSED                                         PASSED
-    Rule: 0.01          R_0_01___START_META___VARIABLE_UNCLOSED                                     PASSED
-    Rule: 0.02          R_0_02___START_META___NAME_ERROR                                            PASSED
-    Rule: 0.10          R_0_10___END_META___VARIABLE_OPENED                                         PASSED
-    Rule: 0.11          R_0_11___END_META___META_UNOPENED                                           PASSED
-    Rule: 0.12          R_0_12___END_META___NAME_ERROR                                              PASSED
-    Rule: 0.20          R_0_20___START_VARIABLE___VARIABLE_UNCLOSED                                 PASSED
-    Rule: 0.21          R_0_21___START_VARIABLE___META_UNCLOSED                                     PASSED
-    Rule: 0.22          R_0_22___START_VARIABLE___NAME_ERROR                                        PASSED
-    Rule: 0.30          R_0_30___END_VARIABLE___META_OPENED                                         PASSED
-    Rule: 0.31          R_0_31___END_VARIABLE___VARIABLE_UNOPENED                                   PASSED
-    Rule: 0.32          R_0_32___END_VARIABLE___NAME_ERROR                                          PASSED
-    Rule: 0.40          R_0_40___INCLUDE_FILE_DUPLICATE                                             PASSED
-    Rule: 0.41          R_0_41___INCLUDE_FILE_UNFOUND                                               PASSED
-    Rule: 0.42          R_0_42___INCLUDE_FILE_LEVEL_8                                               PASSED
-    Rule: 0.50          R_0_50___MALFORMED_READ_LINE                                                PASSED
-    Rule: 0.50          R_0_51___MALFORMED_STRING_QUOTES                                            PASSED
+    Rule: 0.00          Check START_META when previous START_META is open                           OK
+    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
+    Rule: 0.02          Check START_META for name erros                                             OK
+    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
+    Rule: 0.11          Check END_META when no previous START_META                                  OK
+    Rule: 0.12          Check END_META for name erros                                               OK
+    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
+    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
+    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
+    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
+    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
+    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
+    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
+    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
+    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
+    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
+    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
 Stage 3: 
     Placeholder                                                                                     Skipped
 Stage 4: 
@@ -39,90 +39,90 @@ Stage 1:
   Search Folders:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_01___FILENAME_MATCHES_ACTUALOK
 Stage 2: 
-    Rule: 0.00          R_0_00___START_META___META_UNCLOSED                                         PASSED
-    Rule: 0.01          R_0_01___START_META___VARIABLE_UNCLOSED                                     PASSED
-    Rule: 0.02          R_0_02___START_META___NAME_ERROR                                            PASSED
-    Rule: 0.10          R_0_10___END_META___VARIABLE_OPENED                                         PASSED
-    Rule: 0.11          R_0_11___END_META___META_UNOPENED                                           PASSED
-    Rule: 0.12          R_0_12___END_META___NAME_ERROR                                              PASSED
-    Rule: 0.20          R_0_20___START_VARIABLE___VARIABLE_UNCLOSED                                 PASSED
-    Rule: 0.21          R_0_21___START_VARIABLE___META_UNCLOSED                                     PASSED
-    Rule: 0.22          R_0_22___START_VARIABLE___NAME_ERROR                                        PASSED
-    Rule: 0.30          R_0_30___END_VARIABLE___META_OPENED                                         PASSED
-    Rule: 0.31          R_0_31___END_VARIABLE___VARIABLE_UNOPENED                                   PASSED
-    Rule: 0.32          R_0_32___END_VARIABLE___NAME_ERROR                                          PASSED
-    Rule: 0.40          R_0_40___INCLUDE_FILE_DUPLICATE                                             PASSED
-    Rule: 0.41          R_0_41___INCLUDE_FILE_UNFOUND                                               PASSED
-    Rule: 0.42          R_0_42___INCLUDE_FILE_LEVEL_8                                               PASSED
-    Rule: 0.50          R_0_50___MALFORMED_READ_LINE                                                PASSED
-    Rule: 0.50          R_0_51___MALFORMED_STRING_QUOTES                                            PASSED
+    Rule: 0.00          Check START_META when previous START_META is open                           OK
+    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
+    Rule: 0.02          Check START_META for name erros                                             OK
+    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
+    Rule: 0.11          Check END_META when no previous START_META                                  OK
+    Rule: 0.12          Check END_META for name erros                                               OK
+    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
+    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
+    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
+    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
+    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
+    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
+    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
+    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
+    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
+    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
+    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
 Stage 3: 
     Placeholder                                                                                     Skipped
 Stage 4: 
   
   RuleSet01
-    Rule: 1.00          Must exist                                                                  OK
+    Rule: 1.00          Check FILE_NAME attribute must exist                                        OK
 Stage 1: 
   CEF Filename:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_02___FILE_FORMAT_VERSION_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
   Search Folders:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_02___FILE_FORMAT_VERSION_MUST_EXISTOK
 Stage 2: 
-    Rule: 0.00          R_0_00___START_META___META_UNCLOSED                                         PASSED
-    Rule: 0.01          R_0_01___START_META___VARIABLE_UNCLOSED                                     PASSED
-    Rule: 0.02          R_0_02___START_META___NAME_ERROR                                            PASSED
-    Rule: 0.10          R_0_10___END_META___VARIABLE_OPENED                                         PASSED
-    Rule: 0.11          R_0_11___END_META___META_UNOPENED                                           PASSED
-    Rule: 0.12          R_0_12___END_META___NAME_ERROR                                              PASSED
-    Rule: 0.20          R_0_20___START_VARIABLE___VARIABLE_UNCLOSED                                 PASSED
-    Rule: 0.21          R_0_21___START_VARIABLE___META_UNCLOSED                                     PASSED
-    Rule: 0.22          R_0_22___START_VARIABLE___NAME_ERROR                                        PASSED
-    Rule: 0.30          R_0_30___END_VARIABLE___META_OPENED                                         PASSED
-    Rule: 0.31          R_0_31___END_VARIABLE___VARIABLE_UNOPENED                                   PASSED
-    Rule: 0.32          R_0_32___END_VARIABLE___NAME_ERROR                                          PASSED
-    Rule: 0.40          R_0_40___INCLUDE_FILE_DUPLICATE                                             PASSED
-    Rule: 0.41          R_0_41___INCLUDE_FILE_UNFOUND                                               PASSED
-    Rule: 0.42          R_0_42___INCLUDE_FILE_LEVEL_8                                               PASSED
-    Rule: 0.50          R_0_50___MALFORMED_READ_LINE                                                PASSED
-    Rule: 0.50          R_0_51___MALFORMED_STRING_QUOTES                                            PASSED
+    Rule: 0.00          Check START_META when previous START_META is open                           OK
+    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
+    Rule: 0.02          Check START_META for name erros                                             OK
+    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
+    Rule: 0.11          Check END_META when no previous START_META                                  OK
+    Rule: 0.12          Check END_META for name erros                                               OK
+    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
+    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
+    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
+    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
+    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
+    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
+    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
+    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
+    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
+    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
+    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
 Stage 3: 
     Placeholder                                                                                     Skipped
 Stage 4: 
   
   RuleSet01
-    Rule: 1.00          Must exist                                                                  OK
-    Rule: 1.01          Name of file on disk equals FILE_NAME                                       OK
+    Rule: 1.00          Check FILE_NAME attribute must exist                                        OK
+    Rule: 1.01          Check FILE_NAME attribute value matches actual Filename                     OK
 Stage 1: 
   CEF Filename:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_03___END_OF_RECORD_MARKER_MUST_EXIST\C3_CP_EDI_EGD__20111009_V01.cefOK
   Search Folders:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_1_03___END_OF_RECORD_MARKER_MUST_EXISTOK
 Stage 2: 
-    Rule: 0.00          R_0_00___START_META___META_UNCLOSED                                         PASSED
-    Rule: 0.01          R_0_01___START_META___VARIABLE_UNCLOSED                                     PASSED
-    Rule: 0.02          R_0_02___START_META___NAME_ERROR                                            PASSED
-    Rule: 0.10          R_0_10___END_META___VARIABLE_OPENED                                         PASSED
-    Rule: 0.11          R_0_11___END_META___META_UNOPENED                                           PASSED
-    Rule: 0.12          R_0_12___END_META___NAME_ERROR                                              PASSED
-    Rule: 0.20          R_0_20___START_VARIABLE___VARIABLE_UNCLOSED                                 PASSED
-    Rule: 0.21          R_0_21___START_VARIABLE___META_UNCLOSED                                     PASSED
-    Rule: 0.22          R_0_22___START_VARIABLE___NAME_ERROR                                        PASSED
-    Rule: 0.30          R_0_30___END_VARIABLE___META_OPENED                                         PASSED
-    Rule: 0.31          R_0_31___END_VARIABLE___VARIABLE_UNOPENED                                   PASSED
-    Rule: 0.32          R_0_32___END_VARIABLE___NAME_ERROR                                          PASSED
-    Rule: 0.40          R_0_40___INCLUDE_FILE_DUPLICATE                                             PASSED
-    Rule: 0.41          R_0_41___INCLUDE_FILE_UNFOUND                                               PASSED
-    Rule: 0.42          R_0_42___INCLUDE_FILE_LEVEL_8                                               PASSED
-    Rule: 0.50          R_0_50___MALFORMED_READ_LINE                                                PASSED
-    Rule: 0.50          R_0_51___MALFORMED_STRING_QUOTES                                            PASSED
+    Rule: 0.00          Check START_META when previous START_META is open                           OK
+    Rule: 0.01          Check START_META when previous START_VARIABLE is open                       OK
+    Rule: 0.02          Check START_META for name erros                                             OK
+    Rule: 0.10          Check END_META when previous START_VARIABLE is open                         OK
+    Rule: 0.11          Check END_META when no previous START_META                                  OK
+    Rule: 0.12          Check END_META for name erros                                               OK
+    Rule: 0.20          Check START_VARIABLE when previous START_VARIABLE is open                   OK
+    Rule: 0.21          Check START_VARIABLE when previous START_META is open                       OK
+    Rule: 0.22          Check START_VARIABLE for name erros                                         OK
+    Rule: 0.30          Check END_VARIABLE when previous START_META is open                         OK
+    Rule: 0.31          Check END_VARIABLE when no previous START_VARIABLE                          OK
+    Rule: 0.32          Check END_VARIABLE for name erros                                           OK
+    Rule: 0.40          Check INCLUDE_FILE duplicates                                               OK
+    Rule: 0.41          Check INCLUDE_FILE not found                                                OK
+    Rule: 0.42          Check INCLUDE_FILE nested LEVELS > 8                                        OK
+    Rule: 0.50          Check READ_LINE malformed (e.g. missing = )                                 OK
+    Rule: 0.50          Check STRING QUOTES mismatch                                                OK
 Stage 3: 
     Placeholder                                                                                     Skipped
 Stage 4: 
   
   RuleSet01
-    Rule: 1.00          Must exist                                                                  OK
-    Rule: 1.01          Name of file on disk equals FILE_NAME                                       OK
-    Rule: 1.02          Must exist                                                                  OK
+    Rule: 1.00          Check FILE_NAME attribute must exist                                        OK
+    Rule: 1.01          Check FILE_NAME attribute value matches actual Filename                     OK
+    Rule: 1.02          Check FILE_FORMAT_VERSION attribute must exist                              OK
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
