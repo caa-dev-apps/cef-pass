@@ -20,10 +20,10 @@ public class RS2_MetaObjectsException extends CefException
 
     Error m_error;
     
-    public RS2_MetaObjectsException()                 { m_error = Error.NO_ERROR }
-    public RS2_MetaObjectsException(Error i_error)    { m_error = i_error}
+    public RS2_MetaObjectsException()                       { m_error = Error.NO_ERROR }
+    public RS2_MetaObjectsException(Error i_error)          { m_error = i_error}
     
-    public String toString()                    { m_error != null ? m_error.toString() : "Exception,Error,undefined"}
-    public Error getError()                     { return m_error }
+    public String toString()                                { m_error != null ? m_error.toString() : "Exception,Error,undefined"}
+    public Error getError()                                 { return m_error }
 }
 

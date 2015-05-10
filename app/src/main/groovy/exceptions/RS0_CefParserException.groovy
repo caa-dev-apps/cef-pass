@@ -32,9 +32,9 @@ public class RS0_CefParserException extends CefException
     
     Error m_error;
     
-    public RS0_CefParserException()                 { m_error = Error.NO_ERROR }
-    public RS0_CefParserException(Error i_error)    { m_error = i_error}
+    public RS0_CefParserException()                         { m_error = Error.NO_ERROR }
+    public RS0_CefParserException(Error i_error)            { m_error = i_error}
     
-    public String toString()                    { m_error != null ? m_error.toString() : "Exception:Error:undefined"}
-    public Error getError()                     { return m_error }
+    public String toString()                                { m_error != null ? m_error.toString() : "Exception:Error:undefined"}
+    public Error getError()                                 { return m_error }
 }
