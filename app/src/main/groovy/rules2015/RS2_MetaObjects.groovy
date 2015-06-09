@@ -90,8 +90,13 @@ public class RS2_MetaObjects extends RuleSet
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                "TODO"
+            
+                if("\"cef\"".equals(m_data.headerXPath.getFileType()) == false)
+                    fatal_error(RS2_MetaObjectsException.Error.R_2_04___FILE_TYPE_MUST_BE_CEF)
+                
+                "OK"
             }
+            
         ),        
 
         R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER:                                 // RULESET 2 rule 05

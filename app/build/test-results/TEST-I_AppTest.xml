@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="I_AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-05-10T22:06:11" hostname="scala" time="0.876">
+<testsuite name="I_AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-06-09T20:13:46" hostname="scala" time="0.865">
   <properties/>
-  <testcase name="First Test (args): App.stages" classname="I_AppTest" time="0.876"/>
+  <testcase name="First Test (args): App.stages" classname="I_AppTest" time="0.865"/>
   <system-out><![CDATA[Stage 1: 
   CEF Filename:
     C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef                    OK
@@ -43,7 +43,7 @@ Stage 4:
     Rule: 2.01          Check METADATA must have ENTRY = field                                      TODO
     Rule: 2.02          Check if METADATA VALUE_TYPE provided, ENTRY value must be of type          TODO
     Rule: 2.03          Check REQUIRED VARIABLES (below) XXXXXXXXXX WTF XXXXXXXXXX ???????????      TODO
-    Rule: 2.04          Check FILE_TYPE must be cef                                                 TODO
+    Rule: 2.04          Check FILE_TYPE must be cef                                                 OK
     Rule: 2.05          Check DATASET_VERSION must be valid integer                                 TODO
     Rule: 2.06          Check LOGICAL_FILE_ID is same as Filename without extension                 TODO
     Rule: 2.07          Check VERSION_NUMBER must match version number in filename                  TODO

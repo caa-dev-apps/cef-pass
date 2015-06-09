@@ -16,6 +16,27 @@ public class FileLogs
     static File s_appFileLogsFile = null;
     FileLogs s_logs = new FileLogs()
 
+//x     def static init() {
+//x         s_logsFolder = CmdLnArgs.getLogsFolder()
+//x         
+//x         CefLog.diag("############ cefpass.FileLogs" + s_logsFolder);
+//x         
+//x         if(s_logsFolder == null) {
+//x             s_logsFolder = System.getProperty("user.dir") + "../logs"
+//x         }
+//x         
+//x         s_logsFolder += "/" 
+//x         s_logsFolder += new Date().format('yyyy-MM-dd') 
+//x         s_logsFolder += "." 
+//x         s_logsFolder += sprintf("%06d", System.currentTimeMillis() % 1000000)
+//x         
+//x         new File(s_logsFolder).mkdirs();
+//x         
+//x         s_appFileLogsFile = new File(s_logsFolder + "\\" + "app-logs.txt")
+//x         //x s_appFileLogsFile << "Hello, World!"
+//x         
+//x     }
+
     def static init() {
         s_logsFolder = CmdLnArgs.getLogsFolder()
         
@@ -25,8 +46,14 @@ public class FileLogs
             s_logsFolder = System.getProperty("user.dir") + "../logs"
         }
         
+        
+        def l_date_str = new Date().format('yyyy-MM-dd') 
+        
         s_logsFolder += "/" 
-        s_logsFolder += new Date().format('yyyy-MM-dd') 
+        //x s_logsFolder += new Date().format('yyyy-MM-dd') 
+        s_logsFolder += l_date_str
+        s_logsFolder += "/" 
+        s_logsFolder += l_date_str
         s_logsFolder += "." 
         s_logsFolder += sprintf("%06d", System.currentTimeMillis() % 1000000)
         

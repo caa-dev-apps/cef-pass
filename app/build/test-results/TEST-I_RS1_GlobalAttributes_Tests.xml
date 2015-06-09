@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="I_RS1_GlobalAttributes_Tests" tests="4" skipped="0" failures="0" errors="0" timestamp="2015-05-10T22:06:13" hostname="scala" time="0.125">
+<testsuite name="I_RS1_GlobalAttributes_Tests" tests="4" skipped="0" failures="0" errors="0" timestamp="2015-06-09T20:13:47" hostname="scala" time="0.156">
   <properties/>
-  <testcase name="R_1_00___FILENAME_MUST_EXIST" classname="I_RS1_GlobalAttributes_Tests" time="0.031"/>
-  <testcase name="R_1_01___FILENAME_MATCHES_ACTUAL" classname="I_RS1_GlobalAttributes_Tests" time="0.031"/>
+  <testcase name="R_1_00___FILENAME_MUST_EXIST" classname="I_RS1_GlobalAttributes_Tests" time="0.047"/>
+  <testcase name="R_1_01___FILENAME_MATCHES_ACTUAL" classname="I_RS1_GlobalAttributes_Tests" time="0.046"/>
   <testcase name="R_1_02___FILE_FORMAT_VERSION_MUST_EXIST" classname="I_RS1_GlobalAttributes_Tests" time="0.032"/>
   <testcase name="R_1_03___END_OF_RECORD_MARKER_MUST_EXIST" classname="I_RS1_GlobalAttributes_Tests" time="0.031"/>
   <system-out><![CDATA[Stage 1: 
