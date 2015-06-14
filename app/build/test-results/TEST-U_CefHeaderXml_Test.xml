@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="U_CefHeaderXml_Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-06-09T20:13:47" hostname="scala" time="0.016">
+<testsuite name="U_CefHeaderXml_Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-06-14T19:24:46" hostname="scala" time="0.0">
   <properties/>
-  <testcase name="01 CefHeaderXml_Tests: create and merge 2 x CefHeaderXml" classname="U_CefHeaderXml_Test" time="0.016"/>
+  <testcase name="01 CefHeaderXml_Tests: create and merge 2 x CefHeaderXml" classname="U_CefHeaderXml_Test" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

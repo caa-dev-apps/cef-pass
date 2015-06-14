@@ -35,14 +35,21 @@ public class RS2_MetaObjects extends RuleSet
             Cardinality:       "NA",
             Description:       "Check METADATA must have ENTRY = field",
             Error_Type:        "Fatal Error",
-            Error_Message:     "VARIABLE <x> EMPTY ????? XXXXX ????????",
+            Error_Message:     "Empty Meta Object(s)",
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                "TODO"
+    
+                // number of empty meta objects -> def countEmptyMetaObjects()
+                if(m_data.headerXPath.hasEmptyMetaObjects() == true)
+                    fatal_error(RS2_MetaObjectsException.Error.R_2_00___MUST_HAVE_ENTRY)
+                
+                "OK"
             }
         ),        
 
+        
+        
         R_2_02___ENTRY_MISMATCH_VALUE_TYPE:                                             // RULESET 2 rule 02
         new Rule(
             Rule:              "2.02",
@@ -52,7 +59,7 @@ public class RS2_MetaObjects extends RuleSet
             Cardinality:       "NA",
             Description:       "Check if METADATA VALUE_TYPE provided, ENTRY value must be of type",
             Error_Type:        "Fatal Error",
-            Error_Message:     "VARIABLE <x> VALUE DOES NOT MATCH TYPE",
+            Error_Message:     "VARIABLE <x> VALUE DOES NOT MATCH TYPE Valid Types(CHAR,DOUBLE,FLOAT,INT,ISO_TIME,ISO_TIME_RANGE)",
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {

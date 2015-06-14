@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="I_RS0_CefParser_Tests" tests="17" skipped="0" failures="0" errors="0" timestamp="2015-06-09T20:13:46" hostname="scala" time="0.359">
+<testsuite name="I_RS0_CefParser_Tests" tests="17" skipped="0" failures="0" errors="0" timestamp="2015-06-14T19:24:45" hostname="scala" time="0.343">
   <properties/>
   <testcase name="R_0_00___START_META___META_UNCLOSED" classname="I_RS0_CefParser_Tests" time="0.047"/>
   <testcase name="R_0_01___START_META___VARIABLE_UNCLOSED" classname="I_RS0_CefParser_Tests" time="0.015"/>
   <testcase name="R_0_02___START_META___NAME_ERROR" classname="I_RS0_CefParser_Tests" time="0.016"/>
-  <testcase name="R_0_10___END_META___VARIABLE_OPENED" classname="I_RS0_CefParser_Tests" time="0.031"/>
-  <testcase name="R_0_11___END_META___META_UNOPENED" classname="I_RS0_CefParser_Tests" time="0.0"/>
+  <testcase name="R_0_10___END_META___VARIABLE_OPENED" classname="I_RS0_CefParser_Tests" time="0.015"/>
+  <testcase name="R_0_11___END_META___META_UNOPENED" classname="I_RS0_CefParser_Tests" time="0.016"/>
   <testcase name="R_0_12___END_META___NAME_ERROR" classname="I_RS0_CefParser_Tests" time="0.016"/>
   <testcase name="R_0_20___START_VARIABLE___VARIABLE_UNCLOSED" classname="I_RS0_CefParser_Tests" time="0.031"/>
   <testcase name="R_0_21___START_VARIABLE___META_UNCLOSED" classname="I_RS0_CefParser_Tests" time="0.016"/>
   <testcase name="R_0_22___START_VARIABLE___NAME_ERROR" classname="I_RS0_CefParser_Tests" time="0.015"/>
   <testcase name="R_0_30___END_VARIABLE___META_OPENED" classname="I_RS0_CefParser_Tests" time="0.016"/>
-  <testcase name="R_0_31___END_VARIABLE___VARIABLE_UNOPENED" classname="I_RS0_CefParser_Tests" time="0.031"/>
+  <testcase name="R_0_31___END_VARIABLE___VARIABLE_UNOPENED" classname="I_RS0_CefParser_Tests" time="0.015"/>
   <testcase name="R_0_32___END_VARIABLE___NAME_ERROR" classname="I_RS0_CefParser_Tests" time="0.016"/>
-  <testcase name="R_0_40___INCLUDE_FILE_DUPLICATE" classname="I_RS0_CefParser_Tests" time="0.015"/>
-  <testcase name="R_0_41___INCLUDE_FILE_UNFOUND" classname="I_RS0_CefParser_Tests" time="0.016"/>
+  <testcase name="R_0_40___INCLUDE_FILE_DUPLICATE" classname="I_RS0_CefParser_Tests" time="0.016"/>
+  <testcase name="R_0_41___INCLUDE_FILE_UNFOUND" classname="I_RS0_CefParser_Tests" time="0.015"/>
   <testcase name="R_0_42___INCLUDE_FILE_LEVEL_8" classname="I_RS0_CefParser_Tests" time="0.047"/>
   <testcase name="R_0_50___MALFORMED_READ_LINE" classname="I_RS0_CefParser_Tests" time="0.015"/>
-  <testcase name="R_0_51___MALFORMED_STRING_QUOTES" classname="I_RS0_CefParser_Tests" time="0.016"/>
+  <testcase name="R_0_51___MALFORMED_STRING_QUOTES" classname="I_RS0_CefParser_Tests" time="0.0"/>
   <system-out><![CDATA[Stage 1: 
   CEF Filename:
     C:\work.dev\2015.03.22 github cef pass v2\v0\cef-pass\app\build\resources\test\R_0_00___START_META___META_UNCLOSED\C3_CP_EDI_EGD__20111009_V01.cefOK

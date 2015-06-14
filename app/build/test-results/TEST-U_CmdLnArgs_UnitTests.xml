@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="U_CmdLnArgs_UnitTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-06-09T20:13:47" hostname="scala" time="0.0">
+<testsuite name="U_CmdLnArgs_UnitTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-06-14T19:24:46" hostname="scala" time="0.016">
   <properties/>
-  <testcase name="Test 001 Plain cef file" classname="U_CmdLnArgs_UnitTests" time="0.0"/>
+  <testcase name="Test 001 Plain cef file" classname="U_CmdLnArgs_UnitTests" time="0.016"/>
   <testcase name="Test 002 cef.gz file" classname="U_CmdLnArgs_UnitTests" time="0.0"/>
   <system-out><![CDATA[  CEF Filename:
     R_1_00___FILENAME_MUST_EXIST/C3_CP_EDI_EGD__20111009_V01.cef                                    NOT FOUND

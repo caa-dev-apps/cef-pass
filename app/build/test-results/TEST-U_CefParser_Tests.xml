@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="U_CefParser_Tests" tests="18" skipped="0" failures="0" errors="0" timestamp="2015-06-09T20:13:47" hostname="scala" time="0.016">
+<testsuite name="U_CefParser_Tests" tests="18" skipped="0" failures="0" errors="0" timestamp="2015-06-14T19:24:46" hostname="scala" time="0.015">
   <properties/>
   <testcase name="RS0_CefParserException.Error.NO_ERROR" classname="U_CefParser_Tests" time="0.0"/>
   <testcase name="RS0_CefParserException.Error.R_0_00___START_META___META_UNCLOSED" classname="U_CefParser_Tests" time="0.0"/>
@@ -7,7 +7,7 @@
   <testcase name="RS0_CefParserException.Error.R_0_02___START_META___NAME_ERROR" classname="U_CefParser_Tests" time="0.0"/>
   <testcase name="RS0_CefParserException.Error.R_0_10___END_META___VARIABLE_OPENED" classname="U_CefParser_Tests" time="0.0"/>
   <testcase name="RS0_CefParserException.Error.R_0_11___END_META___META_UNOPENED" classname="U_CefParser_Tests" time="0.0"/>
-  <testcase name="RS0_CefParserException.Error.R_0_12___END_META___NAME_ERROR" classname="U_CefParser_Tests" time="0.0"/>
+  <testcase name="RS0_CefParserException.Error.R_0_12___END_META___NAME_ERROR" classname="U_CefParser_Tests" time="0.015"/>
   <testcase name="RS0_CefParserException.Error.R_0_20___START_VARIABLE___VARIABLE_UNCLOSED" classname="U_CefParser_Tests" time="0.0"/>
   <testcase name="RS0_CefParserException.Error.R_0_21___START_VARIABLE___META_UNCLOSED" classname="U_CefParser_Tests" time="0.0"/>
   <testcase name="RS0_CefParserException.Error.R_0_22___START_VARIABLE___NAME_ERROR" classname="U_CefParser_Tests" time="0.0"/>
@@ -17,7 +17,7 @@
   <testcase name="RS0_CefParserException.Error.R_0_40___INCLUDE_FILE_DUPLICATE" classname="U_CefParser_Tests" time="0.0"/>
   <testcase name="RS0_CefParserException.Error.R_0_41___INCLUDE_FILE_UNFOUND" classname="U_CefParser_Tests" time="0.0"/>
   <testcase name="RS0_CefParserException.Error.R_0_42___INCLUDE_FILE_LEVEL_8" classname="U_CefParser_Tests" time="0.0"/>
-  <testcase name="RS0_CefParserException.Error.R_0_50___MALFORMED_READ_LINE" classname="U_CefParser_Tests" time="0.016"/>
+  <testcase name="RS0_CefParserException.Error.R_0_50___MALFORMED_READ_LINE" classname="U_CefParser_Tests" time="0.0"/>
   <testcase name="RS0_CefParserException.Error.R_0_51___MALFORMED_STRING_QUOTES" classname="U_CefParser_Tests" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

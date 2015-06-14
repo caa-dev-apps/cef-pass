@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="U_CefLog_Tests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-06-09T20:13:47" hostname="scala" time="0.0">
+<testsuite name="U_CefLog_Tests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-06-14T19:24:46" hostname="scala" time="0.0">
   <properties/>
   <testcase name="01 CefLog_Tests: test each of the static CefLog functions" classname="U_CefLog_Tests" time="0.0"/>
   <testcase name="02 CefLog_Tests: check files/folders exist" classname="U_CefLog_Tests" time="0.0"/>
