@@ -5,16 +5,8 @@ package cefpass
 
 public class DataTypes
 {
-//x     enum Types {
-//x         (CHAR, "CHAR"),
-//x         (DOUBLE, "DOUBLE"),
-//x         (FLOAT, "FLOAT"),
-//x         (INT, "INT"),
-//x         (ISO_TIME, "ISO_TIME"),
-//x         (ISO_TIME_RANGE, "ISO_TIME_RANGE")
-//x     }
     
-    TYPES = [
+    static def VALUE_TYPES = [
         "CHAR",
         "DOUBLE",
         "FLOAT",
@@ -22,44 +14,104 @@ public class DataTypes
         "ISO_TIME",
         "ISO_TIME_RANGE"
     ]
-        
-    static isValidType(i_type)
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    
+
+    def static isValidString(i_value)
     {
-        i_type.toUpperCase() in TYPES
+        return Utils.isQuotedString(i_value)
+    }
+    
+    def static isValidDouble(i_value)
+    {
+        def r = false
+        
+        try {
+            Double.parseDouble(i_value);
+            r = true;
+        } 
+        catch (Exception e) { }
+        
+        r
+    }        
+    
+    def static isValidFloat(i_value)
+    {
+        def r = false
+        
+        try {
+            Float.parseFloat(i_value);
+            r = true;
+        } 
+        catch (Exception e) { }
+        
+        r
+    }
+    
+    def static isValidInt(i_value)
+    {
+        def r = false
+        
+        try {
+            Integer.parseInt(i_value);
+            r = true;
+        } 
+        catch (Exception e) { }
+        
+        r
+    }
+    
+    def static isValidISOTime(i_value)
+    {
+        def r = false
+        
+        try {
+            def i = Instant.parse(i_value)
+            println i
+            
+            r = true;
+        } 
+        catch (Exception e) { println e }
+        
+        r
+    }
+    
+    def static isValidISOTimeRange(i_value)
+    {
+        true
+    }
+    
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    
+    static def isValidType(i_valueType)
+    {
+        i_valueType.toUpperCase() in VALUE_TYPES
     }
 
-    static isEntryTypeMatch(i_entry, i_value_type)
+    // SWITCHED ORDER!!!!!!!
+    static def isEntryTypeMatch(i_valueType, i_value)
     {
         def rs = false
-        if(isValidType(i_value_type)
+        
+        if((i_valueType != null) && (i_value != null))
         {
-            switch(i_value_type)
-            {
-                case "CHAR" :
-                    rs = Utils.isQuotedString(i_entry)
-                break
-                case "DOUBLE" :
-                    rs = Utils.isValidDouble(i_entry);
-                break
-                case "FLOAT" :
-                    rs = Utils.isValidFloat(i_entry);
-                break
-                case "INT" :
-                    rs = Utils.isValidInt(i_entry);
-                break
-                case "ISO_TIME" :
-                    rs = Utils.isValidISOTime(i_entry);
-                break
-                case "ISO_TIME_RANGE" :
-                    rs = Utils.isValidISOTimeRange(i_entry;
-                break
-            }
+            def l_value_type = i_valueType.toUpperCase();
+            
+            if(l_value_type.equals("CHAR"))                   rs = isValidString(i_value)
+            else if(l_value_type.equals("DOUBLE"))            rs = isValidDouble(i_value)
+            else if(l_value_type.equals("FLOAT"))             rs = isValidFloat(i_value)
+            else if(l_value_type.equals("INT"))               rs = isValidInt(i_value)
+            else if(l_value_type.equals("ISO_TIME"))          rs = isValidISOTime(i_value)
+            else if(l_value_type.equals("ISO_TIME_RANGE"))    rs = isValidISOTimeRange(i_value)
         }
-
+    
         rs
     }
     
-    static isEntryTypeMatch(i_map)
+    static def isEntryTypeMatch(i_map)
     {
         println i_map
         
