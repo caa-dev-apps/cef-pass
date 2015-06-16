@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="I_RS2_MetaObjects_Tests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-06-14T19:24:46" hostname="scala" time="0.078">
+<testsuite name="I_RS2_MetaObjects_Tests" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-06-16T20:50:35" hostname="scala" time="0.062">
   <properties/>
-  <testcase name="R_2_00___MUST_HAVE_ENTRY" classname="I_RS2_MetaObjects_Tests" time="0.047"/>
+  <testcase name="R_2_00___MUST_HAVE_ENTRY" classname="I_RS2_MetaObjects_Tests" time="0.031"/>
   <testcase name="R_2_04___FILE_TYPE_MUST_BE_CEF" classname="I_RS2_MetaObjects_Tests" time="0.031"/>
   <system-out><![CDATA[Stage 1: 
   CEF Filename:

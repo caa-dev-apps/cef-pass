@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="U_DataTypes_Tests" tests="16" skipped="0" failures="0" errors="0" timestamp="2015-06-16T20:50:36" hostname="scala" time="0.199">
+  <properties/>
+  <testcase name="DataTypes.isEntryTypeMatch__CHAR_OK" classname="U_DataTypes_Tests" time="0.007"/>
+  <testcase name="DataTypes.isEntryTypeMatch__CHAR_ERROR" classname="U_DataTypes_Tests" time="0.002"/>
+  <testcase name="DataTypes.isEntryTypeMatch__DOUBLE_OK" classname="U_DataTypes_Tests" time="0.006"/>
+  <testcase name="DataTypes.isEntryTypeMatch__DOUBLE_ERROR" classname="U_DataTypes_Tests" time="0.001"/>
+  <testcase name="DataTypes.isEntryTypeMatch__FLOAT_OK" classname="U_DataTypes_Tests" time="0.003"/>
+  <testcase name="DataTypes.isEntryTypeMatch__FLOAT_ERROR" classname="U_DataTypes_Tests" time="0.0"/>
+  <testcase name="DataTypes.isEntryTypeMatch__INT_OK" classname="U_DataTypes_Tests" time="0.001"/>
+  <testcase name="DataTypes.isEntryTypeMatch__INT_ERROR" classname="U_DataTypes_Tests" time="0.0"/>
+  <testcase name="DataTypes.isEntryTypeMatch__ISO_TIME_OK_1" classname="U_DataTypes_Tests" time="0.166"/>
+  <testcase name="DataTypes.isEntryTypeMatch__ISO_TIME_ERROR_1" classname="U_DataTypes_Tests" time="0.001"/>
+  <testcase name="DataTypes.isEntryTypeMatch__ISO_TIME_OK_2" classname="U_DataTypes_Tests" time="0.002"/>
+  <testcase name="DataTypes.isEntryTypeMatch__ISO_TIME_ERROR_2" classname="U_DataTypes_Tests" time="0.001"/>
+  <testcase name="DataTypes.isEntryTypeMatch__ISO_TIME_RANGE_OK_1" classname="U_DataTypes_Tests" time="0.001"/>
+  <testcase name="DataTypes.isEntryTypeMatch__ISO_TIME_RANGE_ERROR_1" classname="U_DataTypes_Tests" time="0.001"/>
+  <testcase name="DataTypes.isEntryTypeMatch__ISO_TIME_RANGE_OK_2" classname="U_DataTypes_Tests" time="0.001"/>
+  <testcase name="DataTypes.isEntryTypeMatch__ISO_TIME_RANGE_ERROR_2" classname="U_DataTypes_Tests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

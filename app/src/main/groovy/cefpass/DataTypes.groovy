@@ -1,8 +1,7 @@
 package cefpass
 
-///////////////////////////////////////////////////////////////////////////////
-//
-
+import java.time.Instant
+ 
 public class DataTypes
 {
     
@@ -17,7 +16,6 @@ public class DataTypes
 
     ///////////////////////////////////////////////////////////////////////////////
     //
-    
 
     def static isValidString(i_value)
     {
@@ -69,19 +67,32 @@ public class DataTypes
         
         try {
             def i = Instant.parse(i_value)
-            println i
-            
+            //x println i
             r = true;
         } 
-        catch (Exception e) { println e }
+        catch (Exception e) { }
         
         r
     }
     
+    // e.g. "2011-10-09T00:00:00Z/2011-10-10T00:00:00Z"
     def static isValidISOTimeRange(i_value)
     {
-        true
+        def r = false
+        
+        try {
+            def ix = i_value.indexOf("/")
+            
+            if(ix > 0) {
+                r = isValidISOTime(i_value.substring(0, ix)) && 
+                    isValidISOTime(i_value.substring(ix + 1)) 
+            }
+        } 
+        catch (Exception e) { println e }
+    
+        r
     }
+
     
     ///////////////////////////////////////////////////////////////////////////////
     //
@@ -119,3 +130,4 @@ public class DataTypes
                             i_map["VALUE_TYPE"])
     }
 }
+
