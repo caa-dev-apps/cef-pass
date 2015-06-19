@@ -45,6 +45,32 @@ class I_RS2_MetaObjects_Tests extends Specification{
         ]
     }
     
+    String[][] getCommandLineArgsList(i_relative_path)
+    {
+        def l_argsList = [];
+        def l_path = getTestResourcePath(i_relative_path)
+        
+        new File(l_path).eachFileMatch(~/.*.(?i)CEF/) { file ->  
+            println "##### >>>> " + file.getName()  
+            
+            String[] l_args = [
+                "-f",
+                file.getCanonicalPath(),
+                "-i",
+                l_path,
+                "-l",
+                "C:/Dump/_logs"    // TODO FIXME FOR LINUX!!
+            ]
+            
+            l_argsList << l_args
+        }      
+        
+        l_argsList
+    }
+
+    
+    
+    
     ///////////////////////////////////////////////////////////////////////////////
     //
 
@@ -77,6 +103,25 @@ class I_RS2_MetaObjects_Tests extends Specification{
             ex.getError() == RS2_MetaObjectsException.Error.R_2_00___MUST_HAVE_ENTRY
         
     }
+    
+    def "R_2_00___MUST_HAVE_ENTRY NEW METHOD MULTIPLE INPUTS WHERE CLAUSE"() 
+    {
+        given:
+            println l_cmd_args
+            def App app = new App()
+        when:
+            def result = app.stages(l_cmd_args)
+        then:
+            RS2_MetaObjectsException ex = thrown()
+            ex.getError() == RS2_MetaObjectsException.Error.R_2_00___MUST_HAVE_ENTRY
+            
+        where :
+            l_cmd_args << getCommandLineArgsList('R_2_00___MUST_HAVE_ENTRY')
+    }    
+    
+    
+    
+    
     
 //todo      def "R_2_02___ENTRY_MISMATCH_VALUE_TYPE"() 
 //todo      {
