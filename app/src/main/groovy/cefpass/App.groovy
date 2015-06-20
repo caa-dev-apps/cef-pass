@@ -18,6 +18,12 @@ public class App {
     }
     
     public def boolean  stages(String[] i_args) {
+        println "Command Line Args:"
+        i_args.each {
+            println "\t" + it
+        }
+        
+        
         //  1. command line inputs
         //
         //      PASS/FAIL
