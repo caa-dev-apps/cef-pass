@@ -19,7 +19,7 @@ public class Show {
     ///////////////////////////////////////////////////////////////////////////////
     //
 
-    public static void showCefFilename(i_path) {
+    public static void showCefFilePath(i_path) {
         if(s_show_cef_filename == true) {
             CefLog.stage1_info "CEF Filename:"    
             CefLog.stage1_info(i_path, Utils.fileExistsS(i_path))

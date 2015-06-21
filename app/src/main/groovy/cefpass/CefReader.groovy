@@ -20,7 +20,8 @@ public class CefReader
     public CefReader()
     {
         m_isCommentsOn = CmdLnArgs.isCommentsOn()
-        m_headerXml = do_process(CmdLnArgs.getFilename(), 0, [0])
+//x         m_headerXml = do_process(CmdLnArgs.getFilename(), 0, [0])
+        m_headerXml = do_process(CmdLnArgs.getFilePath(), 0, [0])
     }
     
     public def getHeaderXml() { return m_headerXml }

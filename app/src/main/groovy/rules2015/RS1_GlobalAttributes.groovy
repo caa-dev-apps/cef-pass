@@ -62,7 +62,7 @@ public class RS1_GlobalAttributes extends RuleSet
             Test_Func:         {
                 def l_filename = Utils.getUnQuotedString(m_data.headerXPath.getFilename())
                 
-                if(CmdLnArgs.getCefFilename() != l_filename) 
+                if(CmdLnArgs.getFilename() != l_filename) 
                     fatal_error(RS1_GlobalAttributesException.Error.R_1_01___FILENAME_MATCHES_ACTUAL)
                 
                 "OK"

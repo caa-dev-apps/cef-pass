@@ -22,7 +22,7 @@ START_META = FILE_TIME_SPAN
 END_META = FILE_TIME_SPAN
 !
 START_META     =   FILE_TYPE
-   ENTRY  =   "cefX"
+   ENTRY  =   "cef"
 END_META  =   FILE_TYPE
 start_variable = time_tags__C3_CP_EDI_EGD
    PARAMETER_TYPE  = "Support_Data"

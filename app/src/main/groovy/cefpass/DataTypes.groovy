@@ -87,7 +87,7 @@ public class DataTypes
                     isValidISOTime(i_value.substring(ix + 1)) 
             }
         } 
-        catch (Exception e) { println e }
+        catch (Exception e) { }
     
         r
     }
@@ -123,7 +123,7 @@ public class DataTypes
     
     public static def isEntryTypeMismatch(i_map)
     {
-        println i_map
+        //x println i_map
         
         isEntryTypeMismatch(i_map["VALUE_TYPE"], 
                             i_map["ENTRY"])

@@ -53,7 +53,6 @@ public class CefHeaderXPath
         return ls
     }
     
-    
     def getSingleNode(String i_xpathQuery)
     {
         def v = null
@@ -212,5 +211,40 @@ public class CefHeaderXPath
         
         result
     }    
+    
+    def datasetVersionIsValidInt()
+    {
+        // "\"123\""
+        def vers = Utils.getUnQuotedString(getVersionNumber())
+        
+        DataTypes.isValidInt(vers)
+    }
+
+    def logicalFileIdMatchesFilename()
+    {
+        def l1 = Utils.getUnQuotedString(getLogicalFileId())
+        def l2 = CmdLnArgs.getLogicalFileId()
+        
+        return (l1 != null) && (l2 != null) && l1.toUpperCase().equals(l2.toUpperCase())
+    }
+ 
+    def versionNumberMatchesFilename()
+    {
+        def l1 = Utils.getUnQuotedString(getVersionNumber())
+        def l2 = CmdLnArgs.getCefFileVersion()
+        
+        return (l1 != null) && (l2 != null) && l1.toUpperCase().equals(l2.toUpperCase())
+    }
+ 
+//x     def versionNumberIsValidInteger()
+//x     {
+//x         def l1 = Utils.getUnQuotedString(getVersionNumber())
+//x     
+//x     }
+//x  
+ 
+ 
+ 
+ 
 }
 

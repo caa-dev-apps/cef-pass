@@ -62,8 +62,6 @@ class I_RS2_MetaObjects_Tests extends Specification{
     // done
     def "R_2_04___FILE_TYPE_MUST_BE_CEF"() 
     {
-//x         given:
-//x             def l_cmd_args = Helper_Resources.getCommandLineArgs('R_2_04___FILE_TYPE_MUST_BE_CEF/C3_CP_EDI_EGD__20111009_V01.cef')
         given:
             def App app = new App()
         when:
@@ -75,47 +73,44 @@ class I_RS2_MetaObjects_Tests extends Specification{
             l_cmd_args << Helper_Resources.getCommandLineArgsList('R_2_04___FILE_TYPE_MUST_BE_CEF')
     }
     
+    def "R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER"() 
+    {
+        given:
+            def App app = new App()
+        when:
+            def result = app.stages(l_cmd_args)
+        then:
+            RS2_MetaObjectsException ex = thrown()
+            ex.getError() == RS2_MetaObjectsException.Error.R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER
+        where :
+            l_cmd_args << Helper_Resources.getCommandLineArgsList('R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER')
+    }
     
-//todo      def "R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER"() 
-//todo      {
-//todo          given:
-//todo              def l_cmd_args = getCommandLineArgs('R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER/C3_CP_EDI_EGD__20111009_V01.cef')
-//todo          when:
-//todo              def App app = new App()
-//todo              def result = app.stages(l_cmd_args)
-//todo          then:
-//todo              RS2_MetaObjectsException ex = thrown()
-//todo              ex.getError() == RS2_MetaObjectsException.Error.R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER
-//todo          
-//todo      }
+    def "R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME"() 
+    {
+        given:
+            def App app = new App()
+        when:
+            def result = app.stages(l_cmd_args)
+        then:
+            RS2_MetaObjectsException ex = thrown()
+            ex.getError() == RS2_MetaObjectsException.Error.R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME
+        where :
+            l_cmd_args << Helper_Resources.getCommandLineArgsList('R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME')
+    }
     
-    
-//todo      def "R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME"() 
-//todo      {
-//todo          given:
-//todo              def l_cmd_args = getCommandLineArgs('R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME/C3_CP_EDI_EGD__20111009_V01.cef')
-//todo          when:
-//todo              def App app = new App()
-//todo              def result = app.stages(l_cmd_args)
-//todo          then:
-//todo              RS2_MetaObjectsException ex = thrown()
-//todo              ex.getError() == RS2_MetaObjectsException.Error.R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME
-//todo          
-//todo      }
-    
-    
-//todo      def "R_2_07___VERSION_NUMBER_MATCHES_FILENAME"() 
-//todo      {
-//todo          given:
-//todo              def l_cmd_args = getCommandLineArgs('R_2_07___VERSION_NUMBER_MATCHES_FILENAME/C3_CP_EDI_EGD__20111009_V01.cef')
-//todo          when:
-//todo              def App app = new App()
-//todo              def result = app.stages(l_cmd_args)
-//todo          then:
-//todo              RS2_MetaObjectsException ex = thrown()
-//todo              ex.getError() == RS2_MetaObjectsException.Error.R_2_07___VERSION_NUMBER_MATCHES_FILENAME
-//todo          
-//todo      }
+    def "R_2_07___VERSION_NUMBER_MATCHES_FILENAME"() 
+    {
+        given:
+            def App app = new App()
+        when:
+            def result = app.stages(l_cmd_args)
+        then:
+            RS2_MetaObjectsException ex = thrown()
+            ex.getError() == RS2_MetaObjectsException.Error.R_2_07___VERSION_NUMBER_MATCHES_FILENAME
+        where :
+            l_cmd_args << Helper_Resources.getCommandLineArgsList('R_2_07___VERSION_NUMBER_MATCHES_FILENAME')
+    }
     
     
 //todo      def "R_2_08___VERSION_NUMBER_MUST_BE_VALID_INTEGER"() 

@@ -1,6 +1,6 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   R_2_04___FILE_TYPE_MUST_BE_CEF - (in quotes ) line 25  commented "cefX" intead of "cef"
+!   R_2_07___VERSION_NUMBER_MATCHES_FILENAME - line 16 mismatch
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
@@ -13,7 +13,7 @@ START_META = LOGICAL_FILE_ID
 END_META = LOGICAL_FILE_ID                                
 !
 START_META = VERSION_NUMBER
- ENTRY = "01"
+ ENTRY = "02"
 END_META = VERSION_NUMBER
 !
 START_META = FILE_TIME_SPAN
@@ -22,7 +22,7 @@ START_META = FILE_TIME_SPAN
 END_META = FILE_TIME_SPAN
 !
 START_META     =   FILE_TYPE
-   ENTRY  =   "cefX"
+   ENTRY  =   "cef"
 END_META  =   FILE_TYPE
 start_variable = time_tags__C3_CP_EDI_EGD
    PARAMETER_TYPE  = "Support_Data"

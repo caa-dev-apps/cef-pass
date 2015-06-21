@@ -112,7 +112,6 @@ public class RS2_MetaObjects extends RuleSet
                 
                 "OK"
             }
-            
         ),        
 
         R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER:                                 // RULESET 2 rule 05
@@ -124,11 +123,15 @@ public class RS2_MetaObjects extends RuleSet
             Cardinality:       "1",
             Description:       "Check DATASET_VERSION must be valid integer",
             Error_Type:        "Fatal Error",
-            Error_Message:     "Invalid value",
+            Error_Message:     "DATASET_VERSION IS NOT VALID INTEGER",
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                "TODO"
+                
+                if(m_data.headerXPath.datasetVersionIsValidInt() == false)
+                    fatal_error(RS2_MetaObjectsException.Error.R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER)
+                
+                "OK"
             }
         ),        
 
@@ -145,7 +148,11 @@ public class RS2_MetaObjects extends RuleSet
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                "TODO"
+                
+                if(m_data.headerXPath.logicalFileIdMatchesFilename() == false)
+                    fatal_error(RS2_MetaObjectsException.Error.R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME)
+                
+                "OK"
             }
         ),        
 
@@ -162,7 +169,11 @@ public class RS2_MetaObjects extends RuleSet
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                "TODO"
+                
+                if(m_data.headerXPath.versionNumberMatchesFilename() == false)
+                    fatal_error(RS2_MetaObjectsException.Error.R_2_07___VERSION_NUMBER_MATCHES_FILENAME)
+                
+                "OK"
             }
         ),        
 

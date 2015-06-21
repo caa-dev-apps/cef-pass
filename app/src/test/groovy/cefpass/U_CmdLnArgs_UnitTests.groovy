@@ -32,10 +32,10 @@ class U_CmdLnArgs_UnitTests extends Specification{
         then:
             println "+ = + + = + + = + + = + + = + + = + + = + "
             println l_filename
-            println CmdLnArgs.getCefFilename()
+            println CmdLnArgs.getFilename()
             println "+ = + + = + + = + + = + + = + + = + + = + "
             
-            l_filename == CmdLnArgs.getCefFilename()
+            l_filename == CmdLnArgs.getFilename()
     }
 
     
@@ -55,10 +55,10 @@ class U_CmdLnArgs_UnitTests extends Specification{
         then:
             println "+ = + + = + + = + + = + + = + + = + + = + "
             println l_filename
-            println CmdLnArgs.getCefFilename()
+            println CmdLnArgs.getFilename()
             println "+ = + + = + + = + + = + + = + + = + + = + "
             
-            l_filename == CmdLnArgs.getCefFilename()
+            l_filename == CmdLnArgs.getFilename()
     }
 }
 

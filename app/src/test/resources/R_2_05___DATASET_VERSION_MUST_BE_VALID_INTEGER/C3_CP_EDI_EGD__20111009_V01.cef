@@ -1,7 +1,8 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   R_2_04___FILE_TYPE_MUST_BE_CEF - (in quotes ) line 25  commented "cefX" intead of "cef"
-!   
+!   R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER - line 16 error
+!
+!   (VERSION_NUMBER/ENTRY can be in quotes when no VALUE_TYPE present)
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
 FILE_NAME="C3_CP_EDI_EGD__20111009_V01.cef"
@@ -13,7 +14,7 @@ START_META = LOGICAL_FILE_ID
 END_META = LOGICAL_FILE_ID                                
 !
 START_META = VERSION_NUMBER
- ENTRY = "01"
+ ENTRY = "xx"
 END_META = VERSION_NUMBER
 !
 START_META = FILE_TIME_SPAN
@@ -22,7 +23,7 @@ START_META = FILE_TIME_SPAN
 END_META = FILE_TIME_SPAN
 !
 START_META     =   FILE_TYPE
-   ENTRY  =   "cefX"
+   ENTRY  =   "cef"
 END_META  =   FILE_TYPE
 start_variable = time_tags__C3_CP_EDI_EGD
    PARAMETER_TYPE  = "Support_Data"
