@@ -4,7 +4,6 @@ import java.time.Instant
  
 public class DataTypes
 {
-    
     static def VALUE_TYPES = [
         "CHAR",
         "DOUBLE",
@@ -17,12 +16,12 @@ public class DataTypes
     ///////////////////////////////////////////////////////////////////////////////
     //
 
-    def static isValidString(i_value)
+    public def static isValidString(i_value)
     {
         return Utils.isQuotedString(i_value)
     }
     
-    def static isValidDouble(i_value)
+    public def static isValidDouble(i_value)
     {
         def r = false
         
@@ -35,7 +34,7 @@ public class DataTypes
         r
     }        
     
-    def static isValidFloat(i_value)
+    public def static isValidFloat(i_value)
     {
         def r = false
         
@@ -48,7 +47,7 @@ public class DataTypes
         r
     }
     
-    def static isValidInt(i_value)
+    public def static isValidInt(i_value)
     {
         def r = false
         
@@ -61,7 +60,7 @@ public class DataTypes
         r
     }
     
-    def static isValidISOTime(i_value)
+    public def static isValidISOTime(i_value)
     {
         def r = false
         
@@ -76,7 +75,7 @@ public class DataTypes
     }
     
     // e.g. "2011-10-09T00:00:00Z/2011-10-10T00:00:00Z"
-    def static isValidISOTimeRange(i_value)
+    public def static isValidISOTimeRange(i_value)
     {
         def r = false
         
@@ -92,42 +91,42 @@ public class DataTypes
     
         r
     }
-
     
     ///////////////////////////////////////////////////////////////////////////////
     //
     
-    static def isValidType(i_valueType)
+    public static def isValidType(String i_valueType)
     {
         i_valueType.toUpperCase() in VALUE_TYPES
     }
 
     // SWITCHED ORDER!!!!!!!
-    static def isEntryTypeMatch(i_valueType, i_value)
+    public static def isEntryTypeMismatch(String i_valueType, 
+                                          String i_value)
     {
-        def rs = false
-        
+        def rs = true
+
         if((i_valueType != null) && (i_value != null))
         {
             def l_value_type = i_valueType.toUpperCase();
-            
-            if(l_value_type.equals("CHAR"))                   rs = isValidString(i_value)
-            else if(l_value_type.equals("DOUBLE"))            rs = isValidDouble(i_value)
-            else if(l_value_type.equals("FLOAT"))             rs = isValidFloat(i_value)
-            else if(l_value_type.equals("INT"))               rs = isValidInt(i_value)
-            else if(l_value_type.equals("ISO_TIME"))          rs = isValidISOTime(i_value)
-            else if(l_value_type.equals("ISO_TIME_RANGE"))    rs = isValidISOTimeRange(i_value)
+
+            if(l_value_type.equals("CHAR"))                   rs = !isValidString(i_value)
+            else if(l_value_type.equals("DOUBLE"))            rs = !isValidDouble(i_value)
+            else if(l_value_type.equals("FLOAT"))             rs = !isValidFloat(i_value)
+            else if(l_value_type.equals("INT"))               rs = !isValidInt(i_value)
+            else if(l_value_type.equals("ISO_TIME"))          rs = !isValidISOTime(i_value)
+            else if(l_value_type.equals("ISO_TIME_RANGE"))    rs = !isValidISOTimeRange(i_value)
         }
     
         rs
     }
     
-    static def isEntryTypeMatch(i_map)
+    public static def isEntryTypeMismatch(i_map)
     {
         println i_map
         
-        isEntryTypeMismatch(i_map["ENTRY"], 
-                            i_map["VALUE_TYPE"])
+        isEntryTypeMismatch(i_map["VALUE_TYPE"], 
+                            i_map["ENTRY"])
     }
 }
 

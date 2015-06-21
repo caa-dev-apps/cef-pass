@@ -48,7 +48,12 @@ public class RS2_MetaObjects extends RuleSet
             }
         ),        
 
-        
+        //x R_2_01___XXXXXXXXXXXXXXXXXXXXXXXXX:                                             
+        //x //x 
+        //x //x 
+        //x //x 
+        //x //x 
+        //x 
         
         R_2_02___ENTRY_MISMATCH_VALUE_TYPE:                                             // RULESET 2 rule 02
         new Rule(
@@ -63,7 +68,11 @@ public class RS2_MetaObjects extends RuleSet
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                "TODO"
+                
+                if(m_data.headerXPath.anyMetaEntryTypeMismatches() == true)
+                    fatal_error(RS2_MetaObjectsException.Error.R_2_02___ENTRY_MISMATCH_VALUE_TYPE)
+                
+                "OK"
             }
         ),        
 

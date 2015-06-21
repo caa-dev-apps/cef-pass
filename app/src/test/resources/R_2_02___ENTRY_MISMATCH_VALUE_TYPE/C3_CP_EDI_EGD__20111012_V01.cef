@@ -1,25 +1,25 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   R_2_02___ENTRY_MISMATCH_VALUE_TYPE - line 21  malformed ISO_TIME_SPAN          
+!   R_2_02___ENTRY_MISMATCH_VALUE_TYPE - line 21  malformed ENTRY
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-FILE_NAME="C3_CP_EDI_EGD__20111009_V01.cef"
+FILE_NAME="C3_CP_EDI_EGD__20111012_V01.cef"
 FILE_FORMAT_VERSION="CEF-2.0"
 END_OF_RECORD_MARKER = "$"
 !
 START_META = LOGICAL_FILE_ID
- ENTRY = "C3_CP_EDI_EGD__20111009_V01"
+ ENTRY = "C3_CP_EDI_EGD__20111012_V01"
 END_META = LOGICAL_FILE_ID                                
 !
 START_META = VERSION_NUMBER
  ENTRY = "01"
 END_META = VERSION_NUMBER
 !
-START_META = FILE_TIME_SPAN
- VALUE_TYPE = ISO_TIME_RANGE
- ENTRY = 2011-10-09T00:00:00Z/xxxx-10-10T00:00:00Z
-END_META = FILE_TIME_SPAN
+START_META = TEST_FLOAT
+ VALUE_TYPE = FLOAT
+ ENTRY = "This is not a float"
+END_META = TEST_FLOAT
 !
 START_META     =   FILE_TYPE
    ENTRY  =   "cef"

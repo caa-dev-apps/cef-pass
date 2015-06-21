@@ -6,6 +6,7 @@ public class RS2_MetaObjectsException extends CefException
         NO_ERROR,
         
         R_2_00___MUST_HAVE_ENTRY,                                                       // RULESET 2 rule 00
+    //x R_2_00___
         R_2_02___ENTRY_MISMATCH_VALUE_TYPE,                                             // RULESET 2 rule 02
         R_2_03___REQUIRED_VARIABLES_XXXX,                                               // RULESET 2 rule 03
         R_2_04___FILE_TYPE_MUST_BE_CEF,                                                 // RULESET 2 rule 04

@@ -18,36 +18,6 @@ class I_RS2_MetaObjects_Tests extends Specification{
     ///////////////////////////////////////////////////////////////////////////////
     //
 
-//x     def "R_2_04___FILE_TYPE_MUST_BE_CEF"() 
-//x     {
-//x         given:
-//x             def l_cmd_args = getCommandLineArgs('R_2_04___FILE_TYPE_MUST_BE_CEF/C3_CP_EDI_EGD__20111009_V01.cef')
-//x         when:
-//x             def App app = new App()
-//x             def result = app.stages(l_cmd_args)
-//x         then:
-//x             RS2_MetaObjectsException ex = thrown()
-//x             ex.getError() == RS2_MetaObjectsException.Error.R_2_04___FILE_TYPE_MUST_BE_CEF
-//x         
-//x     }
-
-
-///////////////////////////////////////////////////////////////////////////////
-//
-
-//x     def "R_2_00___MUST_HAVE_ENTRY"() 
-//x     {
-//x         given:
-//x             def l_cmd_args = Helper_Resources.getCommandLineArgs('R_2_00___MUST_HAVE_ENTRY/C3_CP_EDI_EGD__20111009_V01.cef')
-//x         when:
-//x             def App app = new App()
-//x             def result = app.stages(l_cmd_args)
-//x         then:
-//x             RS2_MetaObjectsException ex = thrown()
-//x             ex.getError() == RS2_MetaObjectsException.Error.R_2_00___MUST_HAVE_ENTRY
-//x     }
-
-
     def "R_2_00___MUST_HAVE_ENTRY"() 
     {
         given:
@@ -61,18 +31,19 @@ class I_RS2_MetaObjects_Tests extends Specification{
             l_cmd_args << Helper_Resources.getCommandLineArgsList('R_2_00___MUST_HAVE_ENTRY')
     }
     
-//todo      def "R_2_02___ENTRY_MISMATCH_VALUE_TYPE"() 
-//todo      {
-//todo          given:
-//todo              def l_cmd_args = getCommandLineArgs('R_2_02___ENTRY_MISMATCH_VALUE_TYPE/C3_CP_EDI_EGD__20111009_V01.cef')
-//todo          when:
-//todo              def App app = new App()
-//todo              def result = app.stages(l_cmd_args)
-//todo          then:
-//todo              RS2_MetaObjectsException ex = thrown()
-//todo              ex.getError() == RS2_MetaObjectsException.Error.R_2_02___ENTRY_MISMATCH_VALUE_TYPE
-//todo          
-//todo      }
+    def "R_2_02___ENTRY_MISMATCH_VALUE_TYPE"() 
+    {
+        given:
+            def App app = new App()
+        when:
+            def result = app.stages(l_cmd_args)
+        then:
+            RS2_MetaObjectsException ex = thrown()
+            ex.getError() == RS2_MetaObjectsException.Error.R_2_02___ENTRY_MISMATCH_VALUE_TYPE
+        where :
+            l_cmd_args << Helper_Resources.getCommandLineArgsList('R_2_02___ENTRY_MISMATCH_VALUE_TYPE')
+        
+    }
     
     
 //todo      def "R_2_03___REQUIRED_VARIABLES_XXXX"() 
