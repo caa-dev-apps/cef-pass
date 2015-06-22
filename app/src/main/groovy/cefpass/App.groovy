@@ -77,7 +77,7 @@ public class App {
             //  String l_xmlPath = FileLogs.getFilePath("nodes.xml")
             //  String l_xsdPath = "C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/xsd/a1.xsd"
             //  if(CefHeaderXsd.validateXMLSchema(l_xsdPath, l_xmlPath) == false) return
-            CefLog.stage3_info("Placeholder", "Skipped")
+            CefLog.stage3_info("validateXMLSchema", "Skipped")
             
         CefLog.top "Stage 4: "  //  /////////////////////////////////////////////////////////////////////////////
             

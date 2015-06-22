@@ -1,8 +1,7 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER - line 16 error
-!
-!   (VERSION_NUMBER/ENTRY can be in quotes when no VALUE_TYPE present)
+!   R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER - error line 20
+!   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
 FILE_NAME="C3_CP_EDI_EGD__20111009_V01.cef"
@@ -14,8 +13,12 @@ START_META = LOGICAL_FILE_ID
 END_META = LOGICAL_FILE_ID                                
 !
 START_META = VERSION_NUMBER
- ENTRY = "xx"
+ ENTRY = "01"
 END_META = VERSION_NUMBER
+!
+START_META = DATASET_VERSION
+ ENTRY = "xx"
+END_META = DATASET_VERSION
 !
 START_META = FILE_TIME_SPAN
  VALUE_TYPE = ISO_TIME_RANGE

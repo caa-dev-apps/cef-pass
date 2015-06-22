@@ -365,12 +365,12 @@ class U_CefHeaderXPath_Tests extends Specification{
             l_result != null
     }
     
-    def "08 CefHeaderXPath_Tests: getDataSetId"() {
+    def "08 CefHeaderXPath_Tests: getDatasetVersionNumber"() {
 
         setup:
             def T_XmlProc = new CefHeaderXPath(TEST_XML_DOCUMENT)
         when:
-            def l_result = T_XmlProc.getDataSetId()
+            def l_result = T_XmlProc.getDatasetVersionNumber()
         then:
             l_result != null
     }

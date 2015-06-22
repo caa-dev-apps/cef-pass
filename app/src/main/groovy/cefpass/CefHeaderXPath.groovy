@@ -183,11 +183,18 @@ public class CefHeaderXPath
         getMetaEntry("FILE_TYPE")                                               //              </meta>
     }
 
-    def getDataSetId()                                                          //              <meta name="DATASET_VERSION">
+    def getDatasetVersionNumber()                                               //              <meta name="DATASET_VERSION">
     {                                                                           //                <ENTRY>"2.0"</ENTRY>
         getMetaEntry("DATASET_VERSION")                                         //              </meta>
     }
 
+//x     def getDatasetId()                                                          
+//x     {                                                                           
+//x         getMetaEntry("DATASET_VERSION")                                         
+//x     }
+    
+
+    
     ///////////////////////////////////////////////////////////////////////////////
     //
 
@@ -215,7 +222,9 @@ public class CefHeaderXPath
     def datasetVersionIsValidInt()
     {
         // "\"123\""
-        def vers = Utils.getUnQuotedString(getVersionNumber())
+        def vers = Utils.getUnQuotedString(getDatasetVersionNumber())
+
+        println "datasetVersionIsValidInt @@@@@@@@@@@@@@@  " + vers
         
         DataTypes.isValidInt(vers)
     }
@@ -236,15 +245,15 @@ public class CefHeaderXPath
         return (l1 != null) && (l2 != null) && l1.toUpperCase().equals(l2.toUpperCase())
     }
  
-//x     def versionNumberIsValidInteger()
-//x     {
-//x         def l1 = Utils.getUnQuotedString(getVersionNumber())
-//x     
-//x     }
-//x  
- 
- 
- 
+    def versionNumberIsValidInteger()
+    {
+        // "\"123\""
+        def vers = Utils.getUnQuotedString(getVersionNumber())
+        
+        println "versionNumberIsValidInteger @@@@@@@@@@@@@@@  " + vers
+        
+        DataTypes.isValidInt(vers)
+    } 
  
 }
 

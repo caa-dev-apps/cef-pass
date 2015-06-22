@@ -83,7 +83,7 @@ public class RS2_MetaObjects extends RuleSet
             Keyword:           "START_META/END_META",
             Data_type:         "METADATA",
             Cardinality:       "1",
-            Description:       "Check REQUIRED VARIABLES (below) XXXXXXXXXX WTF XXXXXXXXXX ???????????",
+            Description:       "Check REQUIRED VARIABLES (below) NEED TO TRANSLATE ????????????????????????",
             Error_Type:        "Fatal Error",
             Error_Message:     "MISSING <x> VARIABLE",
             Caveats:           "NA",
@@ -128,8 +128,8 @@ public class RS2_MetaObjects extends RuleSet
             Notes:             "-",
             Test_Func:         {
                 
-                if(m_data.headerXPath.datasetVersionIsValidInt() == false)
-                    fatal_error(RS2_MetaObjectsException.Error.R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER)
+                 if(m_data.headerXPath.datasetVersionIsValidInt() == false)
+                     fatal_error(RS2_MetaObjectsException.Error.R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER)
                 
                 "OK"
             }
@@ -156,7 +156,27 @@ public class RS2_MetaObjects extends RuleSet
             }
         ),        
 
-        R_2_07___VERSION_NUMBER_MATCHES_FILENAME:                                       // RULESET 2 rule 07
+        R_2_07___VERSION_NUMBER_MUST_BE_VALID_INTEGER:                                  // RULESET 2 rule 08
+        new Rule(
+            Rule:              "2.08",
+            Scope:             "GENERAL",
+            Keyword:           "VERSION_NUMBER",
+            Data_type:         "METADATA",
+            Cardinality:       "1",
+            Description:       "Check VERSION_NUMBER must be valid integer",
+            Error_Type:        "Fatal Error",
+            Error_Message:     "Invalid value",
+            Caveats:           "NA",
+            Notes:             "-",
+            Test_Func:         {
+                
+                if(m_data.headerXPath.versionNumberIsValidInteger() == false)
+                    fatal_error(RS2_MetaObjectsException.Error.R_2_07___VERSION_NUMBER_MUST_BE_VALID_INTEGER)
+                "OK"
+            }
+        ),        
+
+        R_2_08___VERSION_NUMBER_MATCHES_FILENAME:                                       // RULESET 2 rule 07
         new Rule(
             Rule:              "2.07",
             Scope:             "GENERAL",
@@ -171,29 +191,12 @@ public class RS2_MetaObjects extends RuleSet
             Test_Func:         {
                 
                 if(m_data.headerXPath.versionNumberMatchesFilename() == false)
-                    fatal_error(RS2_MetaObjectsException.Error.R_2_07___VERSION_NUMBER_MATCHES_FILENAME)
+                    fatal_error(RS2_MetaObjectsException.Error.R_2_08___VERSION_NUMBER_MATCHES_FILENAME)
                 
                 "OK"
             }
         ),        
-
-        R_2_08___VERSION_NUMBER_MUST_BE_VALID_INTEGER:                                  // RULESET 2 rule 08
-        new Rule(
-            Rule:              "2.08",
-            Scope:             "GENERAL",
-            Keyword:           "VERSION_NUMBER",
-            Data_type:         "METADATA",
-            Cardinality:       "1",
-            Description:       "Check VERSION_NUMBER must be valid integer",
-            Error_Type:        "Fatal Error",
-            Error_Message:     "Invalid value",
-            Caveats:           "NA",
-            Notes:             "-",
-            Test_Func:         {
-                "TODO"
-            }
-        ),        
-
+        
         R_2_09___FILE_TIME_SPAN_MUST_BE_ISO_TIME_RANGE:                                 // RULESET 2 rule 09
         new Rule(
             Rule:              "2.09",

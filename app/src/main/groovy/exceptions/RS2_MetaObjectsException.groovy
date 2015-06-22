@@ -12,8 +12,10 @@ public class RS2_MetaObjectsException extends CefException
         R_2_04___FILE_TYPE_MUST_BE_CEF,                                                 // RULESET 2 rule 04
         R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER,                                 // RULESET 2 rule 05
         R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME,                                      // RULESET 2 rule 06
-        R_2_07___VERSION_NUMBER_MATCHES_FILENAME,                                       // RULESET 2 rule 07
-        R_2_08___VERSION_NUMBER_MUST_BE_VALID_INTEGER,                                  // RULESET 2 rule 08
+        
+        R_2_07___VERSION_NUMBER_MUST_BE_VALID_INTEGER,                                  // RULESET 2 rule 07    swapped
+        R_2_08___VERSION_NUMBER_MATCHES_FILENAME,                                       // RULESET 2 rule 08    swapped
+        
         R_2_09___FILE_TIME_SPAN_MUST_BE_ISO_TIME_RANGE,                                 // RULESET 2 rule 09
         R_2_10___FILE_TIME_SPAN_START_TIME_MUST_BE_BEFORE_STOP_TIME,                    // RULESET 2 rule 10
         R_2_11___DATA_RECORD_TIME_STAMP_MUST_BE_BETWEEN_FILE_TIME_SPAN                  // RULESET 2 rule 11
