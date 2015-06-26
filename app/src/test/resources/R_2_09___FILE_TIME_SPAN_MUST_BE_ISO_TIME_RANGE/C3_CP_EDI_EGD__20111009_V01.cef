@@ -1,6 +1,6 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   R_2_04___FILE_TYPE_MUST_BE_CEF - (in quotes ) line 25  commented "cef" intead of "cef"
+!   R_2_09___FILE_TIME_SPAN_MUST_BE_ISO_TIME_RANGE - commented/removed line 24 (valid type test would be triggered) | Error line 25
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
@@ -21,8 +21,8 @@ START_META = DATASET_VERSION
 END_META = DATASET_VERSION
 !
 START_META = FILE_TIME_SPAN
- VALUE_TYPE = ISO_TIME_RANGE
- ENTRY = 2011-10-09T00:00:00Z/2011-10-10T00:00:00Z
+! VALUE_TYPE = ISO_TIME_RANGE
+ ENTRY = 2011-10-09T00:00:00Z/----------T00:00:00Z
 END_META = FILE_TIME_SPAN
 !
 START_META     =   FILE_TYPE

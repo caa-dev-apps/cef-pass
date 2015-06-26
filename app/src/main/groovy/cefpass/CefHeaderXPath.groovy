@@ -224,8 +224,6 @@ public class CefHeaderXPath
         // "\"123\""
         def vers = Utils.getUnQuotedString(getDatasetVersionNumber())
 
-        println "datasetVersionIsValidInt @@@@@@@@@@@@@@@  " + vers
-        
         DataTypes.isValidInt(vers)
     }
 
@@ -250,10 +248,28 @@ public class CefHeaderXPath
         // "\"123\""
         def vers = Utils.getUnQuotedString(getVersionNumber())
         
-        println "versionNumberIsValidInteger @@@@@@@@@@@@@@@  " + vers
-        
         DataTypes.isValidInt(vers)
     } 
+ 
+     //x FILE_TIME_SPAN_MUST_BE_ISO_TIME_RANGE... will fail earlier test if VALUE_TYPE is present
+    def fileTimeSpanIsValidISOTimeRange()
+    {
+        def l_value = getMetaEntry("FILE_TIME_SPAN")
+        
+        DataTypes.isValidISOTimeRange(l_value)
+    }
+ 
+    //x FILE_TIME_SPAN_START_TIME_MUST_BE_BEFORE_STOP_TIME
+    def fileTimeSpanStartIsBeforeFileTimeSpanStop()
+    {
+        def l_value = getMetaEntry("FILE_TIME_SPAN")
+        
+        DataTypes.isValidISOTimeRangeStartStop(l_value)
+    }
+    
+    
+    
+    
  
 }
 

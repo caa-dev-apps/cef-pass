@@ -92,6 +92,27 @@ public class DataTypes
         r
     }
     
+    public def static isValidISOTimeRangeStartStop(i_value)
+    {
+        def r = false
+        
+        try {
+            def ix = i_value.indexOf("/")
+            
+            if(ix > 0) {
+                def l_start = Instant.parse(i_value.substring(0, ix))
+                def l_stop  = Instant.parse(i_value.substring(ix + 1))
+
+                r = (l_start < l_stop)
+            }
+        } 
+        catch (Exception e) { }
+    
+        r
+    }
+    
+    
+    
     ///////////////////////////////////////////////////////////////////////////////
     //
     

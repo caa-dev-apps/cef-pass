@@ -109,7 +109,7 @@ public class RS2_MetaObjects extends RuleSet
             
                 if("\"cef\"".equals(m_data.headerXPath.getFileType()) == false)
                     fatal_error(RS2_MetaObjectsException.Error.R_2_04___FILE_TYPE_MUST_BE_CEF)
-                
+
                 "OK"
             }
         ),        
@@ -130,8 +130,8 @@ public class RS2_MetaObjects extends RuleSet
                 
                  if(m_data.headerXPath.datasetVersionIsValidInt() == false)
                      fatal_error(RS2_MetaObjectsException.Error.R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER)
-                
-                "OK"
+
+                 "OK"
             }
         ),        
 
@@ -172,6 +172,7 @@ public class RS2_MetaObjects extends RuleSet
                 
                 if(m_data.headerXPath.versionNumberIsValidInteger() == false)
                     fatal_error(RS2_MetaObjectsException.Error.R_2_07___VERSION_NUMBER_MUST_BE_VALID_INTEGER)
+                
                 "OK"
             }
         ),        
@@ -210,7 +211,11 @@ public class RS2_MetaObjects extends RuleSet
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                "TODO"
+
+                if(m_data.headerXPath.fileTimeSpanIsValidISOTimeRange() == false)
+                    fatal_error(RS2_MetaObjectsException.Error.R_2_09___FILE_TIME_SPAN_MUST_BE_ISO_TIME_RANGE)
+                
+                "OK"
             }
         ),        
 
@@ -227,10 +232,13 @@ public class RS2_MetaObjects extends RuleSet
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                "TODO"
+
+                if(m_data.headerXPath.fileTimeSpanStartIsBeforeFileTimeSpanStop() == false)
+                    fatal_error(RS2_MetaObjectsException.Error.R_2_10___FILE_TIME_SPAN_START_TIME_MUST_BE_BEFORE_STOP_TIME)
+                                                            
+                "OK"
             }
         ),        
-
         
         // MOVE TO DATA RULES
         R_2_11___DATA_RECORD_TIME_STAMP_MUST_BE_BETWEEN_FILE_TIME_SPAN:                 // RULESET 2 rule 11

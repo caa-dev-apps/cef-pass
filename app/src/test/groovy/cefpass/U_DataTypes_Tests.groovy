@@ -127,5 +127,19 @@ class U_DataTypes_Tests extends Specification{
             result == true
     }
 
+    def "DataTypes.isValidISOTimeRangeStartStop__ISO_TIME_RANGE_START_BEFORE_STOP_OK"() {
+        when:   
+            def result = DataTypes.isValidISOTimeRangeStartStop("2011-10-09T00:00:00Z/2011-10-10T00:00:00Z")    
+        then:
+            result == true
+    }
+
+    def "DataTypes.isValidISOTimeRangeStartStop__ISO_TIME_RANGE_START_BEFORE_STOP_ERROR"() {
+        when:   
+            def result = DataTypes.isValidISOTimeRangeStartStop("2012-10-09T00:00:00Z/2011-10-10T00:00:00Z")    
+        then:
+            result == false
+    }
+    
 }
 

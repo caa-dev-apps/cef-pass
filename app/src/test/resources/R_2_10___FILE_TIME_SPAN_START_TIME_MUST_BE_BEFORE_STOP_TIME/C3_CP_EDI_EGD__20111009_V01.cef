@@ -1,6 +1,6 @@
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
-!   R_2_04___FILE_TYPE_MUST_BE_CEF - (in quotes ) line 25  commented "cefX" intead of "cef"
+!   R_2_10___FILE_TIME_SPAN_START_TIME_MUST_BE_BEFORE_STOP_TIME - commented line 24 - line 25 reversed start and stop
 !   
 ! ///////////////////////////////////////////////////////////////////////////////
 !   
@@ -21,8 +21,8 @@ START_META = DATASET_VERSION
 END_META = DATASET_VERSION
 !
 START_META = FILE_TIME_SPAN
- VALUE_TYPE = ISO_TIME_RANGE
- ENTRY = 2011-10-09T00:00:00Z/2011-10-10T00:00:00Z
+!VALUE_TYPE = ISO_TIME_RANGE
+ ENTRY = 2011-10-10T00:00:00Z/2011-10-09T00:00:00Z
 END_META = FILE_TIME_SPAN
 !
 START_META     =   FILE_TYPE
