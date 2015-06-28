@@ -28,5 +28,8 @@ public class RS2_MetaObjectsException extends CefException
     
     public String toString()                                { m_error != null ? m_error.toString() : "Exception,Error,undefined"}
     public Error getError()                                 { return m_error }
+    
+    public Boolean matches(i_rule_name)                     { return m_error != null && i_rule_name != null && m_error.toString().equals(i_rule_name) }
+    
 }
 
