@@ -4,7 +4,8 @@ import org.springframework.util.ResourceUtils
 
 import cefpass.App
 import cefpass.CefParser
-import exceptions.RS2_MetaObjectsException
+//x import exceptions.RS2_MetaObjectsException
+import exceptions.CefException
 import spock.lang.Unroll
 
 import Helper_Resources;
@@ -29,7 +30,8 @@ class I_RS2_MetaObjects_Tests_v2 extends Specification{
         when:
             def result = app.stages((String[])test_cmd_args)
         then:
-            RS2_MetaObjectsException ex = thrown()
+            //x RS2_MetaObjectsException ex = thrown()
+            CefException ex = thrown()
             ex.matches(l_rule_name) == true
         where :
             [rule_name, test_file, test_cmd_args, test_ix, total_ix, rule_test_name] <<  Helper_Resources.getMultiRuleTestsArgsList_v2([

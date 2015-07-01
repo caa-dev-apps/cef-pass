@@ -1,7 +1,8 @@
 package exceptions
 
-public class CefException extends Exception
+abstract public class CefException extends Exception
 {
+    abstract public Boolean matches(i_rule_name);
 }
 
 

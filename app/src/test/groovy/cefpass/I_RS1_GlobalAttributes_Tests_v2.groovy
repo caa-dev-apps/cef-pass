@@ -8,7 +8,9 @@ import org.springframework.util.ResourceUtils
 
 import cefpass.App
 import cefpass.CefParser
-import exceptions.RS1_GlobalAttributesException
+//x import exceptions.RS1_GlobalAttributesException
+import exceptions.CefException
+
 import spock.lang.Unroll
 
 class I_RS1_GlobalAttributes_Tests_v2 extends Specification{
@@ -30,7 +32,8 @@ class I_RS1_GlobalAttributes_Tests_v2 extends Specification{
         when:
             def result = app.stages((String[])test_cmd_args)
         then:
-            RS1_GlobalAttributesException ex = thrown()
+            //x RS1_GlobalAttributesException ex = thrown()
+            CefException ex = thrown()
             ex.matches(l_rule_name) == true
         where :
             [rule_name, test_file, test_cmd_args, test_ix, total_ix, rule_test_name] <<  Helper_Resources.getMultiRuleTestsArgsList_v2([

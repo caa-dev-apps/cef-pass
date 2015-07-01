@@ -23,48 +23,17 @@ public class App {
             println "\t" + it
         }
         
-        
-        //  1. command line inputs
-        //
-        //      PASS/FAIL
-        //
-        //  2. cef header read + includes
-        //
-        //      attributes
-        //      meta
-        //      vars
-        //      
-        //      output (header data)
-        //          - //x groovy nodes
-        //          - xml 
-        //
-        //      PASS/FAIL
-        //
-        //  3. xml validation
-        //
-        //      PASS/FAIL
-        //
-        //  4. Groovy/JS Rules
-        //
-        //      PASS/FAIL
-        //
-        //
-        //  5. Data Validations
-        //      - Date Time checks
-        //      - Data format/type
-        //      - # Data cells
-
         def result = false
         
 //x         try{
-        CefLog.top "Stage 1: "  //  /////////////////////////////////////////////////////////////////////////////
+        CefLog.top "Stage 1: "  //  /////////////////////////////////////////////////////////////////////////////   command line inputs 
             
             CmdLnArgs.init(i_args)
             if(CmdLnArgs.isOk() == false) return
             FileLogs.init()
 
             
-        CefLog.top "Stage 2: "  //  /////////////////////////////////////////////////////////////////////////////
+        CefLog.top "Stage 2: "  //  /////////////////////////////////////////////////////////////////////////////   cef header read + includes
             
             CefReader l_reader = new CefReader()
             CefHeaderXml l_headerXml = l_reader.getHeaderXml()
@@ -72,18 +41,18 @@ public class App {
 
             RS0_CefParser.showAll()
             
-        CefLog.top "Stage 3: "  //  /////////////////////////////////////////////////////////////////////////////
+        CefLog.top "Stage 3: "  //  /////////////////////////////////////////////////////////////////////////////   xml validation
                                     
             //  String l_xmlPath = FileLogs.getFilePath("nodes.xml")
             //  String l_xsdPath = "C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/xsd/a1.xsd"
             //  if(CefHeaderXsd.validateXMLSchema(l_xsdPath, l_xmlPath) == false) return
             CefLog.stage3_info("validateXMLSchema", "Skipped")
             
-        CefLog.top "Stage 4: "  //  /////////////////////////////////////////////////////////////////////////////
+        CefLog.top "Stage 4: "  //  /////////////////////////////////////////////////////////////////////////////   Globals Attrs, Meta Object, Variable Objects
             
             RuleSets.run(l_headerXml.getHeaderXPath())
             
-        CefLog.top "Stage 5: "  //  /////////////////////////////////////////////////////////////////////////////
+        CefLog.top "Stage 5: "  //  /////////////////////////////////////////////////////////////////////////////   Data
             
 //x         }
 //x         catch(Exception e) {
