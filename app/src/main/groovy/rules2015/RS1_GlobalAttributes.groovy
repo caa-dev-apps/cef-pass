@@ -37,12 +37,22 @@ public class RS1_GlobalAttributes extends RuleSet
             Error_Message:     "Missing FILE_NAME Attribute",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
+//x             Test_Func:         {
+//x                 if(Utils.isQuotedString(m_data.headerXPath.getFilename()) == false) 
+//x                     fatal_error(RS1_GlobalAttributesException.Error.R_1_00___FILENAME_MUST_EXIST)
+//x                 
+//x                 "OK"
+//x             }
             Test_Func:         {
+                def l_result = new Rule_TestResult("R_1_00___FILENAME_MUST_EXIST")
                 
                 if(Utils.isQuotedString(m_data.headerXPath.getFilename()) == false) 
-                    fatal_error(RS1_GlobalAttributesException.Error.R_1_00___FILENAME_MUST_EXIST)
+                {
+                    l_result.setIsError(true)
+                    setStatus("Fail")
+                }
                 
-                "OK"
+                l_result
             }
         ),
         
@@ -59,14 +69,32 @@ public class RS1_GlobalAttributes extends RuleSet
             Caveats:           "Within Double Quotes",
             Notes:             "-",
             
+//x             Test_Func:         {
+//x                 def l_filename = Utils.getUnQuotedString(m_data.headerXPath.getFilename())
+//x                 
+//x                 if(CmdLnArgs.getFilename() != l_filename) 
+//x                     fatal_error(RS1_GlobalAttributesException.Error.R_1_01___FILENAME_MATCHES_ACTUAL)
+//x                 
+//x                 "OK"
+//x             }
+            
             Test_Func:         {
+                def l_result = new Rule_TestResult("R_1_01___FILENAME_MATCHES_ACTUAL")
+
+
+                
                 def l_filename = Utils.getUnQuotedString(m_data.headerXPath.getFilename())
                 
                 if(CmdLnArgs.getFilename() != l_filename) 
-                    fatal_error(RS1_GlobalAttributesException.Error.R_1_01___FILENAME_MATCHES_ACTUAL)
+                {
+                    l_result.setIsError(true)
+                    setStatus("Fail")
+                }
                 
-                "OK"
+                l_result
+                
             }
+            
         ),
         
         R_1_02___FILE_FORMAT_VERSION_MUST_EXIST:                // RULESET 1 rule 02
@@ -81,13 +109,27 @@ public class RS1_GlobalAttributes extends RuleSet
             Error_Message:     "Missing FILE_FORMAT_VERSION",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
+//x             Test_Func:         {
+//x                 
+//x                 if(Utils.isQuotedString(m_data.headerXPath.getFileFormatVersion()) == false) 
+//x                     fatal_error(RS1_GlobalAttributesException.Error.R_1_02___FILE_FORMAT_VERSION_MUST_EXIST)
+//x                 
+//x                 "OK"
+//x             }
+            
             Test_Func:         {
+                def l_result = new Rule_TestResult("R_1_02___FILE_FORMAT_VERSION_MUST_EXIST")
                 
                 if(Utils.isQuotedString(m_data.headerXPath.getFileFormatVersion()) == false) 
-                    fatal_error(RS1_GlobalAttributesException.Error.R_1_02___FILE_FORMAT_VERSION_MUST_EXIST)
+                {
+                    l_result.setIsError(true)
+                    setStatus("Fail")
+                }
                 
-                "OK"
+                l_result
+                
             }
+            
         ),
         
         R_1_03___END_OF_RECORD_MARKER_MUST_EXIST:               // RULESET 1 rule 03
@@ -102,13 +144,26 @@ public class RS1_GlobalAttributes extends RuleSet
             Error_Message:     "Missing END_OF_RECORD_MARKER",
             Caveats:           "Within Double Quotes",
             Notes:             "-",
+//x             Test_Func:         {
+//x                 
+//x                 if(Utils.isQuotedString(m_data.headerXPath.getEndOfRecordMarker()) == false) 
+//x                     fatal_error(RS1_GlobalAttributesException.Error.R_1_03___END_OF_RECORD_MARKER_MUST_EXIST)
+//x                 
+//x                 "OK"
+//x             }
+            
             Test_Func:         {
+                def l_result = new Rule_TestResult("R_1_03___END_OF_RECORD_MARKER_MUST_EXIST")
                 
                 if(Utils.isQuotedString(m_data.headerXPath.getEndOfRecordMarker()) == false) 
-                    fatal_error(RS1_GlobalAttributesException.Error.R_1_03___END_OF_RECORD_MARKER_MUST_EXIST)
+                {
+                    l_result.setIsError(true)
+                    setStatus("Fail")
+                }
                 
-                "OK"
+                l_result
             }
+            
         )
     ]
 
@@ -124,6 +179,28 @@ public class RS1_GlobalAttributes extends RuleSet
             CefLog.stage4_info(it.value.about(), it.value.Test_Func())     
         }
     }
+    
+//todo    public def run()
+//todo    {
+//todo        CefLog.stage4_info("\n  RS1_GlobalAttributes")
+//todo
+//todo        m_rules.each {
+//todo            //x println it.value
+//todo            //x println it.value.to_str()
+//todo            //x it.value.Test_Func()
+//todo            def l_result = "x"
+//todo            
+//todo            try {
+//todo                l_result = it.value.Test_Func()
+//todo            }
+//todo            catch (Execption e) {
+//todo            }
+//todo            
+//todo            //x CefLog.stage4_info(it.value.about(), it.value.Test_Func())     
+//todo            CefLog.stage4_info(it.value.about(), l_result)     
+//todo        }
+//todo    }
+    
 }
 
 

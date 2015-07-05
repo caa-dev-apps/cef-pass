@@ -8,7 +8,6 @@ import org.springframework.util.ResourceUtils
 
 import cefpass.App
 import cefpass.CefParser
-//x import exceptions.RS0_CefParserException
 import exceptions.CefException
 import spock.lang.Unroll
 

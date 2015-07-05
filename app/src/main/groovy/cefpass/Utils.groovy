@@ -60,4 +60,22 @@ public class Utils
         v
     }
     
+    static def getIntegerInRange(i_value, i_lo, i_hi, i_default) {
+        def l_result = i_default
+        
+        if(DataTypes.isValidInt(i_value) == true)
+        {
+            try {
+                def l_value = Integer.parseInt(i_value);
+                if((l_value >= i_lo) && (l_value <= i_hi))
+                    l_result = l_value
+            } 
+            catch (Exception e) { 
+            }
+        }
+        
+        l_result
+    }
 }
+
+

@@ -60,6 +60,140 @@ class U_CmdLnArgs_UnitTests extends Specification{
             
             l_filename == CmdLnArgs.getFilename()
     }
+    
+    
+    def "Test 003 -r rules"() 
+    {
+        setup:
+            String[] l_cmd_args = [
+                "-f", "a-filename.cef",
+                "-r", "1.02, 2.01, 3.04"
+            ]            
+        when:
+            CmdLnArgs.init(l_cmd_args)
+        then:
+            def l_rules = CmdLnArgs.getTestRuleIds()
+            println "Rules:" + l_rules
+            
+            l_rules != null
+    }
+    
+    def "Test 003a -s stop on fail default"() 
+    {
+        setup:
+            String[] l_cmd_args = [
+                "-f", "a-filename.cef"
+            ]            
+        when:
+            CmdLnArgs.init(l_cmd_args)
+        then:
+            def l_stopOnFail = CmdLnArgs.getStopOnFail()
+            println l_stopOnFail.getClass().getName()
+            
+            println "Stop on Fail:" + l_stopOnFail
+            
+            l_stopOnFail == false
+    }
+    
+    def "Test 003b -s stop on fail False"() 
+    {
+        setup:
+            String[] l_cmd_args = [
+                "-f", "a-filename.cef",
+                "-s", "false"
+            ]            
+        when:
+            CmdLnArgs.init(l_cmd_args)
+        then:
+            def l_stopOnFail = CmdLnArgs.getStopOnFail()
+            println l_stopOnFail.getClass().getName()
+            
+            println "Stop on Fail:" + l_stopOnFail
+            
+            l_stopOnFail == false
+    }
+    
+    def "Test 003c -s stop on fail True"() 
+    {
+        setup:
+            String[] l_cmd_args = [
+                "-f", "a-filename.cef",
+                "-s", "true"
+            ]            
+        when:
+            CmdLnArgs.init(l_cmd_args)
+        then:
+            def l_stopOnFail = CmdLnArgs.getStopOnFail()
+            println l_stopOnFail.getClass().getName()
+            
+            println "Stop on Fail:" + l_stopOnFail
+            
+            l_stopOnFail == true
+    }
+    
+
+    def "Test 004a -o Output Results Level default (1)"() 
+    {
+        setup:
+            String[] l_cmd_args = [
+                "-f", "a-filename.cef"
+            ]            
+        when:
+            CmdLnArgs.init(l_cmd_args)
+        then:
+            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
+            println "Output Results Level:" + s_outputResultsLevel
+            
+            s_outputResultsLevel == 1
+    }
+    
+    def "Test 004b -o Output Results Level 0"() 
+    {
+        setup:
+            String[] l_cmd_args = [
+                "-f", "a-filename.cef",
+                "-o", "0"
+            ]            
+        when:
+            CmdLnArgs.init(l_cmd_args)
+        then:
+            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
+            println "Output Results Level:" + s_outputResultsLevel
+            
+            s_outputResultsLevel == 0
+    }
+    
+    def "Test 004c -o Output Results Level 1"() 
+    {
+        setup:
+            String[] l_cmd_args = [
+                "-f", "a-filename.cef",
+                "-o", "1"
+            ]            
+        when:
+            CmdLnArgs.init(l_cmd_args)
+        then:
+            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
+            println "Output Results Level:" + s_outputResultsLevel
+            
+            s_outputResultsLevel == 1
+    }
+    
+    def "Test 004d -o Output Results Level 2"() 
+    {
+        setup:
+            String[] l_cmd_args = [
+                "-f", "a-filename.cef",
+                "-o", "2"
+            ]            
+        when:
+            CmdLnArgs.init(l_cmd_args)
+        then:
+            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
+            println "Output Results Level:" + s_outputResultsLevel
+            
+            s_outputResultsLevel == 2
+    }
 }
 
 

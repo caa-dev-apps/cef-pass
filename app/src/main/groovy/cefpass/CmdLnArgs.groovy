@@ -16,6 +16,10 @@ public class CmdLnArgs
     def static s_logsFolder
     def static s_isCommentsOn = false
     
+    def static s_testRuleIds
+    def static s_stopOnFail
+    def static s_outputResultsLevel
+    
     def static s_logicalFileId
     def static s_cefFileVersion
     
@@ -30,7 +34,11 @@ public class CmdLnArgs
         cli.x(argName: 'xsd',      longOpt: 'xsd',         args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) list of xml schema files to validate header data against')
         cli.o(                     longOpt: 'xo',                                                                                          'output header meta data in xml format')
         cli.q(                     longOpt: 'qv',                                                                                          'quick validation (only checks 1st data row) ')
- 
+        
+        cli.r(argName: 'rules',    longOpt: 'rules',       args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) Test specific Rules. Default=All e.g. "1.02", "2.03"')
+        cli.s(argName: 'stop',     longOpt: 'stop',        args: 1,                            required: false,                            '(Optional) Stop on Fail. TRUE/FALSE Default=FALSE')
+        cli.o(argName: 'output',   longOpt: 'output',      args: 1,                            required: false,                            '(Optional) Output Results Level(0,1,2): 0:Pass/Fail, 1:Details 2:Verbose=Todo Default=1')
+
         def options = cli.parse(i_args)
  
         if(!options) { CefLog.error "Error";  cli.usage }
@@ -42,6 +50,10 @@ public class CmdLnArgs
             s_xmlSchemas = options.xs
             s_logsFolder = options.l  
             s_isCommentsOn = options.c ? true : false
+
+            s_testRuleIds = options.rs
+            s_stopOnFail = Boolean.valueOf(options.s)
+            s_outputResultsLevel = Utils.getIntegerInRange(options.o, 0, 2, 1)
             
             s_filename = Utils.getCefFilename(s_filepath)
             s_logicalFileId = Utils.getCefLogicalFileId(s_filename)
@@ -56,21 +68,24 @@ public class CmdLnArgs
     ///////////////////////////////////////////////////////////////////////////////
     //
     
-    public def static getSearchFolders()   { return s_searchFolders }
-    public def static getFilePath()        { return s_filepath }
-    public def static getLogsFolder()      { return s_logsFolder }
-    public def static isOk()               { return s_isOk }
-    public def static isCommentsOn()       { return s_isCommentsOn }
+    public def static getSearchFolders()        { s_searchFolders }
+    public def static getFilePath()             { s_filepath }
+    public def static getLogsFolder()           { s_logsFolder }
+    public def static isOk()                    { s_isOk }
+    public def static isCommentsOn()            { s_isCommentsOn }
     
-    public def static getFilename()        { return s_filename }
-    public def static getLogicalFileId()   { return s_logicalFileId }
-    public def static getCefFileVersion()  { return s_cefFileVersion }
+    public def static getTestRuleIds()          { s_testRuleIds }
+    public def static getStopOnFail()           { s_stopOnFail }
+    public def static getOutputResultsLevel()   { s_outputResultsLevel }
+    
+    public def static getFilename()             { s_filename }
+    public def static getLogicalFileId()        { s_logicalFileId }
+    public def static getCefFileVersion()       { s_cefFileVersion }
     
     public def static show() {
-        if(s_filepath != false)         Show.showCefFilePath(s_filepath)
-        if(s_searchFolders != false)    Show.showSearchFolders(s_searchFolders)
+        if(s_filepath != false)                 Show.showCefFilePath(s_filepath)
+        if(s_searchFolders != false)            Show.showSearchFolders(s_searchFolders)
     }
-
 }
 
 

@@ -1,65 +1,96 @@
 package cefpass
 
-import java.util.logging.Logger
-
 import rules2015.RuleSets
 import rules2015.RS0_CefParser
-//x import rules2015.RS1_GlobalAttributes
-//x import rules2015.RS2_MetaObjects
 
 ///////////////////////////////////////////////////////////////////////////////
 //
 
 public class App {
 
-
+    CefHeaderXml m_headerXml = null
+    
     boolean args(String[] i_args) {
         true
     }
     
-    public def boolean  stages(String[] i_args) {
+    public def stage_1__cmdln_args(i_args) {
+        CefLog.top "Stage 1: " 
+        
         println "Command Line Args:"
         i_args.each {
             println "\t" + it
         }
         
+        CmdLnArgs.init(i_args)
+        if(CmdLnArgs.isOk() == false) { System.exit(-1); } 
+        FileLogs.init()
+    }
+    
+    public def stage_2__parser() {
+        CefLog.top "Stage 2: " 
+        
+        CefReader l_reader = new CefReader()
+        //x CefHeaderXml 
+        m_headerXml = l_reader.getHeaderXml()
+        FileLogs.writeTextFile("nodes.xml", m_headerXml.getXmlNodesAsString())
+
+        RS0_CefParser.showAll()
+    }
+    
+    public def stage_3__xsd_schema() {
+        CefLog.top "Stage 3: " 
+        
+        //  String l_xmlPath = FileLogs.getFilePath("nodes.xml")
+        //  String l_xsdPath = "C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/xsd/a1.xsd"
+        //  if(CefHeaderXsd.validateXMLSchema(l_xsdPath, l_xmlPath) == false) return
+        CefLog.stage3_info("validateXMLSchema", "Skipped")
+    }
+    
+    public def stage_4__rules__global_attributes() {
+    }
+
+    public def stage_4__rules__meta_objects() {
+    }
+
+    public def stage_4__rules__variable_objects() {
+    }
+
+    public def stage_4__rules() {
+        CefLog.top "Stage 4: " 
+        
+        RuleSets.run(m_headerXml.getHeaderXPath())
+    }
+
+    public def stage_5__data() {
+        CefLog.top "Stage 5: " 
+    }
+    
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    
+    public def boolean  stages(String[] i_args) {
+        
         def result = false
-        
-//x         try{
-        CefLog.top "Stage 1: "  //  /////////////////////////////////////////////////////////////////////////////   command line inputs 
-            
-            CmdLnArgs.init(i_args)
-            if(CmdLnArgs.isOk() == false) return
-            FileLogs.init()
 
+        //x try
+        //x {
+            stage_1__cmdln_args(i_args)
+            stage_2__parser()
+            stage_3__xsd_schema()
+            //x stage_4__rules__global_attributes()
+            //x stage_4__rules__meta_objects()
+            //x stage_4__rules__variable_objects()
+            stage_4__rules()
+            stage_5__data()
             
-        CefLog.top "Stage 2: "  //  /////////////////////////////////////////////////////////////////////////////   cef header read + includes
-            
-            CefReader l_reader = new CefReader()
-            CefHeaderXml l_headerXml = l_reader.getHeaderXml()
-            FileLogs.writeTextFile("nodes.xml", l_headerXml.getXmlNodesAsString())
-
-            RS0_CefParser.showAll()
-            
-        CefLog.top "Stage 3: "  //  /////////////////////////////////////////////////////////////////////////////   xml validation
-                                    
-            //  String l_xmlPath = FileLogs.getFilePath("nodes.xml")
-            //  String l_xsdPath = "C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/xsd/a1.xsd"
-            //  if(CefHeaderXsd.validateXMLSchema(l_xsdPath, l_xmlPath) == false) return
-            CefLog.stage3_info("validateXMLSchema", "Skipped")
-            
-        CefLog.top "Stage 4: "  //  /////////////////////////////////////////////////////////////////////////////   Globals Attrs, Meta Object, Variable Objects
-            
-            RuleSets.run(l_headerXml.getHeaderXPath())
-            
-        CefLog.top "Stage 5: "  //  /////////////////////////////////////////////////////////////////////////////   Data
-            
-//x         }
-//x         catch(Exception e) {
-//x             e.printStackTrace()        
-//x         }
+            result = true
+        //x }
+        //x catch(Exception e) {
+        //x     println "Error"
+        //x }
         
-        return true
+        return result
     }
     
     public static void main(String[] i_args) {
