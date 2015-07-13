@@ -5,13 +5,13 @@ import cefpass.CefLog
 ///////////////////////////////////////////////////////////////////////////////
 //
 
-public class Rule_TestResult
+public class Result_RuleTest
 {
     def m_ruleName
     def m_status = "Ok"
     def m_isError = false
     
-    public Rule_TestResult(i_ruleName)
+    public Result_RuleTest(i_ruleName)
     {
         m_ruleName = i_ruleName
     }

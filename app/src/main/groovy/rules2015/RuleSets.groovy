@@ -1,6 +1,8 @@
 package rules2015
 
 import cefpass.CefLog
+import cefpass.CefResult
+import cefpass.CmdLnArgs
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -9,44 +11,43 @@ public class RuleSets
 {
     def m_set01 = null;
     def m_set02 = null;
-
     def m_rules = null;
+    def m_stopOnFail = true;
     
     public RuleSets(i_headerXPath)
     {
         def l_data = [
-            headerXPath: i_headerXPath,
-            info: [ a:1, b:2, c:3]
+            headerXPath: i_headerXPath
         ]
         
         m_set01 = new RS1_GlobalAttributes(l_data)
         m_set02 = new RS2_MetaObjects(l_data)
         
+        m_stopOnFail = CmdLnArgs.getStopOnFail()
         m_rules = getRules()
     }
         
-        
-    // Either full list, or list based on Ids passed on cmdline
+    // Either full list, or 1 x list based on Id passed on cmdline
     def getRules()
     {
         def l_allRules = m_set01.m_rules + 
                          m_set02.m_rules;
         
-        def l_testRuleIds = CmdLnArgs.getTestRuleIds()  // 1.02, 2.03...
+        def l_testRuleId = CmdLnArgs.getTestRuleId()  // 1.02, 
         
-        if(l_testRuleIds != null) {
-            
-            l_testRuleIds.each{ rule_id ->
-                def l_rule = l_allRules.find { it ->
-                    it.value.rule == rule_id
-                }
-            
-                if (l_rule != null) l_rules += l_rule
+        if(l_testRuleId != null) {
+            def l_rules = []
+            //x l_testRuleIds.each{ rule_id ->
+            def l_rule = l_allRules.find { it ->
+                it.value.rule == l_testRuleId
             }
+        
+            if (l_rule != null) l_rules += l_rule
+            //x }
             
             l_allRules = l_rules
+            m_stopOnFail = true
         } 
-        
         
         l_allRules
     }
@@ -54,98 +55,61 @@ public class RuleSets
     ///////////////////////////////////////////////////////////////////////////////
     //
 
-//          CmdLnArgs.getTestRuleIds()            { s_testRules }
-//          CmdLnArgs.getStopOnFail()           { s_stopOnFail }
-//          CmdLnArgs.getOutputResultsLevel()   { s_outputResultsLevel }
-//      
-//          CefLog.stage4_info("\n  RS1_GlobalAttributes")
-//  
-//          m_rules.each {
-//              //x println it.value
-//              //x println it.value.to_str()
-//              //x it.value.Test_Func()
-//              
-//              CefLog.stage4_info(it.value.about(), it.value.Test_Func())     
-//          }    
-    
-            //x println it.value
-            //x println it.value.to_str()
-            //x it.value.Test_Func()
-    
-    public getStatus()              {   m_status}
-    public isError()                {   m_isError}
-    
-    
     // run all tests
     def run_all() {
-        l_errors = false
+        def l_result = new CefResult("RuleSet-All")
+        def l_errors = false
        
         m_rules.each {
             def l_rule_testResult = it.value.Test_Func()
             
-            l_errors = l_errors || l_rule_testResult.isError()
+            l_errors = l_errors || l_rule_testResult.isError
             
-            //x CefLog.stage4_info(it.value.about(), it.value.Test_Func())     
-            
-            CefLog.stage4_info(it.value.about(), l_rule_testResult.getStatus())     
+            CefLog.stage4_info(it.value.about(), l_rule_testResult.status)     
         }  
 
-        !l_errors
-    }
-    
-    // stop on fail 
-    def run_stopOnFail() {
-        l_errors = false
-        
-        m_rules.any {
-            def l_rule_testResult = it.value.Test_Func()
-            
-            l_errors = l_errors || l_rule_testResult.isError()
-            
-            //x CefLog.stage4_info(it.value.about(), it.value.Test_Func())     
-            
-            CefLog.stage4_info(it.value.about(), l_rule_testResult.getStatus())     
-            l_errors
-        }
-        
-        !l_errors
-    }
-    
-    def run() 
-    {
-        def l_result = null
-        
-        if(CmdLnArgs.getStopOnFail()) l_result = run_stopOnFail()
-        else                          l_result = run_all()
+        if(l_errors == false)
+            l_result.setPass()
         
         l_result
     }
     
-    static void run(i_headerXPath)
+    // stop on fail 
+    def run_stopOnFail() {
+        
+        def l_result = new CefResult("RuleSet-Stop-On-Fail")
+        def l_errors = false
+        def l_rule_testResult
+        
+        m_rules.any {
+            l_rule_testResult = it.value.Test_Func()
+            l_errors = l_errors || l_rule_testResult.isError
+            CefLog.stage4_info(it.value.about(), l_rule_testResult.status)     
+            
+            l_errors
+        }
+        
+        if(l_errors == false)  l_result.setPass()
+        else                   l_result.setLastError(l_rule_testResult)
+        
+        l_result
+    }
+    
+    def run() {
+        def l_result = null
+        
+        if(m_stopOnFail) l_result = run_stopOnFail()
+        else             l_result = run_all()
+        
+        l_result.diag()
+        l_result.lastError.diag()
+        
+        l_result
+    }
+    
+    static CefResult run(i_headerXPath)
     {
         new RuleSets(i_headerXPath).run()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

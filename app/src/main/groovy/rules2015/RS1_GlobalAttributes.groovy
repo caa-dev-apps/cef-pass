@@ -3,6 +3,7 @@ package rules2015
 import cefpass.CefLog
 import cefpass.Utils
 import cefpass.CmdLnArgs
+import cefpass.CefResult
 
 import exceptions.RS1_GlobalAttributesException
 
@@ -44,13 +45,10 @@ public class RS1_GlobalAttributes extends RuleSet
 //x                 "OK"
 //x             }
             Test_Func:         {
-                def l_result = new Rule_TestResult("R_1_00___FILENAME_MUST_EXIST")
+                def l_result = new CefResult("R_1_00___FILENAME_MUST_EXIST")
                 
-                if(Utils.isQuotedString(m_data.headerXPath.getFilename()) == false) 
-                {
-                    l_result.setIsError(true)
-                    setStatus("Fail")
-                }
+                if(Utils.isQuotedString(m_data.headerXPath.getFilename()) == true) 
+                    l_result.setPass()
                 
                 l_result
             }
@@ -79,22 +77,15 @@ public class RS1_GlobalAttributes extends RuleSet
 //x             }
             
             Test_Func:         {
-                def l_result = new Rule_TestResult("R_1_01___FILENAME_MATCHES_ACTUAL")
-
-
+                def l_result = new CefResult("R_1_01___FILENAME_MATCHES_ACTUAL")
                 
                 def l_filename = Utils.getUnQuotedString(m_data.headerXPath.getFilename())
                 
-                if(CmdLnArgs.getFilename() != l_filename) 
-                {
-                    l_result.setIsError(true)
-                    setStatus("Fail")
-                }
+                if(CmdLnArgs.getFilename() == l_filename) 
+                    l_result.setPass()
                 
                 l_result
-                
             }
-            
         ),
         
         R_1_02___FILE_FORMAT_VERSION_MUST_EXIST:                // RULESET 1 rule 02
@@ -118,16 +109,12 @@ public class RS1_GlobalAttributes extends RuleSet
 //x             }
             
             Test_Func:         {
-                def l_result = new Rule_TestResult("R_1_02___FILE_FORMAT_VERSION_MUST_EXIST")
+                def l_result = new CefResult("R_1_02___FILE_FORMAT_VERSION_MUST_EXIST")
                 
-                if(Utils.isQuotedString(m_data.headerXPath.getFileFormatVersion()) == false) 
-                {
-                    l_result.setIsError(true)
-                    setStatus("Fail")
-                }
+                if(Utils.isQuotedString(m_data.headerXPath.getFileFormatVersion()) == true) 
+                    l_result.setPass()
                 
                 l_result
-                
             }
             
         ),
@@ -153,13 +140,10 @@ public class RS1_GlobalAttributes extends RuleSet
 //x             }
             
             Test_Func:         {
-                def l_result = new Rule_TestResult("R_1_03___END_OF_RECORD_MARKER_MUST_EXIST")
+                def l_result = new CefResult("R_1_03___END_OF_RECORD_MARKER_MUST_EXIST")
                 
-                if(Utils.isQuotedString(m_data.headerXPath.getEndOfRecordMarker()) == false) 
-                {
-                    l_result.setIsError(true)
-                    setStatus("Fail")
-                }
+                if(Utils.isQuotedString(m_data.headerXPath.getEndOfRecordMarker()) == true) 
+                    l_result.setPass()
                 
                 l_result
             }
@@ -167,19 +151,19 @@ public class RS1_GlobalAttributes extends RuleSet
         )
     ]
 
-    public def run()
-    {
-        CefLog.stage4_info("\n  RS1_GlobalAttributes")
-
-        m_rules.each {
-            //x println it.value
-            //x println it.value.to_str()
-            //x it.value.Test_Func()
-            
-            CefLog.stage4_info(it.value.about(), it.value.Test_Func())     
-        }
-    }
-    
+//x     public def run()
+//x     {
+//x         CefLog.stage4_info("\n  RS1_GlobalAttributes")
+//x 
+//x         m_rules.each {
+//x             //x println it.value
+//x             //x println it.value.to_str()
+//x             //x it.value.Test_Func()
+//x             
+//x             CefLog.stage4_info(it.value.about(), it.value.Test_Func())     
+//x         }
+//x     }
+//x     
 //todo    public def run()
 //todo    {
 //todo        CefLog.stage4_info("\n  RS1_GlobalAttributes")

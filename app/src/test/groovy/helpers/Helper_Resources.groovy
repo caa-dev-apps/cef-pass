@@ -21,6 +21,20 @@ public class Helper_Resources
         return l_file.getAbsolutePath()
     }
     
+    
+    static def ruleName2RuleId(i_ruleName) {
+        def s = ""
+        try {
+            def v1 =  i_ruleName.substring(2,3)
+            def v2 =  i_ruleName.substring(4,6)
+            s = v1 + "." + v2;
+        }
+        catch(Exception e){
+        }
+    
+        s
+    }  
+    
     public static String[] getCommandLineArgs(i_rule_name_path)
     {
         def l_path = getTestResourcePath(i_rule_name_path)
@@ -66,12 +80,16 @@ public class Helper_Resources
     }
     
     
+    
+    // WE ARE ONLY TESTING 1 RULE HERE - WITH THE ADDITION OF THE -r ruleId CMDLN ARG OPTION
     // [ [ rule_name, file_name, cmd_args, ix] ]
     public static getRuleTestsArgsList_v2(i_rule_name, i_ix)
     {
         def l_ix = 1 // local = this rule only
         def l_ruleTestsArgsList = [];
         def l_path = getTestResourcePath(i_rule_name)
+        
+        def l_ruleId = ruleName2RuleId(i_rule_name)
         
         println "Test Input:"
         println "\tFolder: "
@@ -86,6 +104,8 @@ public class Helper_Resources
                 file.getCanonicalPath(),
                 "-i",
                 l_path,
+                "-r",
+                l_ruleId,
                 "-l",
                 "C:/Dump/_logs"    // TODO FIXME FOR LINUX!!
             ]

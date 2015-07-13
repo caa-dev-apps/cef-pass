@@ -16,7 +16,7 @@ public class CmdLnArgs
     def static s_logsFolder
     def static s_isCommentsOn = false
     
-    def static s_testRuleIds
+    def static s_testRuleId
     def static s_stopOnFail
     def static s_outputResultsLevel
     
@@ -35,7 +35,8 @@ public class CmdLnArgs
         cli.o(                     longOpt: 'xo',                                                                                          'output header meta data in xml format')
         cli.q(                     longOpt: 'qv',                                                                                          'quick validation (only checks 1st data row) ')
         
-        cli.r(argName: 'rules',    longOpt: 'rules',       args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) Test specific Rules. Default=All e.g. "1.02", "2.03"')
+//x         cli.r(argName: 'rules',    longOpt: 'rules',       args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) Test specific Rules. Default=All e.g. "1.02", "2.03"')
+        cli.r(argName: 'rule',     longOpt: 'rule-id',     args: 1,                            required: false,                            '(Optional) Test specific Rule Id. Default=All e.g. "1.02"')
         cli.s(argName: 'stop',     longOpt: 'stop',        args: 1,                            required: false,                            '(Optional) Stop on Fail. TRUE/FALSE Default=FALSE')
         cli.o(argName: 'output',   longOpt: 'output',      args: 1,                            required: false,                            '(Optional) Output Results Level(0,1,2): 0:Pass/Fail, 1:Details 2:Verbose=Todo Default=1')
 
@@ -51,7 +52,7 @@ public class CmdLnArgs
             s_logsFolder = options.l  
             s_isCommentsOn = options.c ? true : false
 
-            s_testRuleIds = options.rs
+            s_testRuleId = options.r
             s_stopOnFail = Boolean.valueOf(options.s)
             s_outputResultsLevel = Utils.getIntegerInRange(options.o, 0, 2, 1)
             
@@ -74,7 +75,7 @@ public class CmdLnArgs
     public def static isOk()                    { s_isOk }
     public def static isCommentsOn()            { s_isCommentsOn }
     
-    public def static getTestRuleIds()          { s_testRuleIds }
+    public def static getTestRuleId()           { s_testRuleId }
     public def static getStopOnFail()           { s_stopOnFail }
     public def static getOutputResultsLevel()   { s_outputResultsLevel }
     

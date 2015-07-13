@@ -8,7 +8,6 @@ import org.springframework.util.ResourceUtils
 
 import cefpass.App
 import cefpass.CefParser
-//x import exceptions.RS1_GlobalAttributesException
 import exceptions.CefException
 
 import spock.lang.Unroll
@@ -32,15 +31,15 @@ class I_RS1_GlobalAttributes_Tests_v2 extends Specification{
         when:
             def result = app.stages((String[])test_cmd_args)
         then:
-            //x RS1_GlobalAttributesException ex = thrown()
-            CefException ex = thrown()
-            ex.matches(l_rule_name) == true
+            //x CefException ex = thrown()
+            //x ex.matches(l_rule_name) == true
+            (result.isError == true) && (result.stage_results.STAGE_4.lastError.tag == l_rule_name)
         where :
             [rule_name, test_file, test_cmd_args, test_ix, total_ix, rule_test_name] <<  Helper_Resources.getMultiRuleTestsArgsList_v2([
-//x                                                                         "R_1_00___FILENAME_MUST_EXIST",
-//x                                                                         "R_1_01___FILENAME_MATCHES_ACTUAL",
-//x                                                                         "R_1_02___FILE_FORMAT_VERSION_MUST_EXIST",
-//x                                                                         "R_1_03___END_OF_RECORD_MARKER_MUST_EXIST",
+                                                                                "R_1_00___FILENAME_MUST_EXIST",
+                                                                                "R_1_01___FILENAME_MATCHES_ACTUAL",
+                                                                                "R_1_02___FILE_FORMAT_VERSION_MUST_EXIST",
+                                                                                "R_1_03___END_OF_RECORD_MARKER_MUST_EXIST"
                                                                   ])
     }
 

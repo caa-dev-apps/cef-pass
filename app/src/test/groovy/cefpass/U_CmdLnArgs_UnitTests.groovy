@@ -72,10 +72,10 @@ class U_CmdLnArgs_UnitTests extends Specification{
         when:
             CmdLnArgs.init(l_cmd_args)
         then:
-            def l_rules = CmdLnArgs.getTestRuleIds()
-            println "Rules:" + l_rules
+            def l_ruleId = CmdLnArgs.getTestRuleId()
+            println "Rules:" + l_ruleId
             
-            l_rules != null
+            l_ruleId != null
     }
     
     def "Test 003a -s stop on fail default"() 
