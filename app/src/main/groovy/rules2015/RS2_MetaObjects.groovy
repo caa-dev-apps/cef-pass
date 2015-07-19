@@ -1,11 +1,6 @@
 package rules2015
 
-import cefpass.CefLog
-import cefpass.Utils
-import cefpass.CmdLnArgs
 import cefpass.CefResult
-
-import exceptions.RS2_MetaObjectsException
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -18,12 +13,6 @@ public class RS2_MetaObjects extends RuleSet
     {
         m_data = i_data
     }
-    
-    static def fatal_error(i_error)
-    {
-        throw new RS2_MetaObjectsException(i_error)
-    }
-    
     
     def m_rules =
     [
@@ -41,12 +30,6 @@ public class RS2_MetaObjects extends RuleSet
             Notes:             "-",
             Test_Func:         {
     
-//x                 // number of empty meta objects -> def countEmptyMetaObjects()
-//x                 if(m_data.headerXPath.hasEmptyMetaObjects() == true)
-//x                     fatal_error(RS2_MetaObjectsException.Error.R_2_00___MUST_HAVE_ENTRY)
-//x                 
-//x                 "OK"
-
                 def l_result = new CefResult("R_2_00___MUST_HAVE_ENTRY")
 
                 // number of empty meta objects -> def countEmptyMetaObjects()
@@ -77,12 +60,6 @@ public class RS2_MetaObjects extends RuleSet
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                
-//x                 if(m_data.headerXPath.anyMetaEntryTypeMismatches() == true)
-//x                     fatal_error(RS2_MetaObjectsException.Error.R_2_02___ENTRY_MISMATCH_VALUE_TYPE)
-//x                 
-//x                 "OK"
-//x                 
                 
                 def l_result = new CefResult("R_2_02___ENTRY_MISMATCH_VALUE_TYPE")
                 
@@ -124,11 +101,6 @@ public class RS2_MetaObjects extends RuleSet
             Notes:             "-",
             Test_Func:         {
             
-//x                 if("\"cef\"".equals(m_data.headerXPath.getFileType()) == false)
-//x                     fatal_error(RS2_MetaObjectsException.Error.R_2_04___FILE_TYPE_MUST_BE_CEF)
-//x 
-//x                 "OK"
-
                 def l_result = new CefResult("R_2_04___FILE_TYPE_MUST_BE_CEF")
                 
                 if("\"cef\"".equals(m_data.headerXPath.getFileType()) == true)
@@ -152,11 +124,6 @@ public class RS2_MetaObjects extends RuleSet
             Notes:             "-",
             Test_Func:         {
                 
-//x                  if(m_data.headerXPath.datasetVersionIsValidInt() == false)
-//x                      fatal_error(RS2_MetaObjectsException.Error.R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER)
-//x 
-//x                  "OK"
-                 
                 def l_result = new CefResult("R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER")
                  
                 if(m_data.headerXPath.datasetVersionIsValidInt() == true)
@@ -179,11 +146,6 @@ public class RS2_MetaObjects extends RuleSet
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                
-//x                 if(m_data.headerXPath.logicalFileIdMatchesFilename() == false)
-//x                     fatal_error(RS2_MetaObjectsException.Error.R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME)
-//x                 
-//x                 "OK"
                 
                 def l_result = new CefResult("R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME")
                 
@@ -209,11 +171,6 @@ public class RS2_MetaObjects extends RuleSet
             Notes:             "-",
             Test_Func:         {
                 
-//x                 if(m_data.headerXPath.versionNumberIsValidInteger() == false)
-//x                     fatal_error(RS2_MetaObjectsException.Error.R_2_07___VERSION_NUMBER_MUST_BE_VALID_INTEGER)
-//x                 
-//x                 "OK"
-                
                 def l_result = new CefResult("R_2_07___VERSION_NUMBER_MUST_BE_VALID_INTEGER")
                 
                 if(m_data.headerXPath.versionNumberIsValidInteger() == true)
@@ -237,11 +194,6 @@ public class RS2_MetaObjects extends RuleSet
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                
-//x                 if(m_data.headerXPath.versionNumberMatchesFilename() == false)
-//x                     fatal_error(RS2_MetaObjectsException.Error.R_2_08___VERSION_NUMBER_MATCHES_FILENAME)
-//x                 
-//x                 "OK"
                 
                 def l_result = new CefResult("R_2_08___VERSION_NUMBER_MATCHES_FILENAME")
                 
@@ -267,11 +219,6 @@ public class RS2_MetaObjects extends RuleSet
             Notes:             "-",
             Test_Func:         {
 
-//x                 if(m_data.headerXPath.fileTimeSpanIsValidISOTimeRange() == false)
-//x                     fatal_error(RS2_MetaObjectsException.Error.R_2_09___FILE_TIME_SPAN_MUST_BE_ISO_TIME_RANGE)
-//x                 
-//x                 "OK"
-                
                 def l_result = new CefResult("R_2_09___FILE_TIME_SPAN_MUST_BE_ISO_TIME_RANGE")
                 
                 if(m_data.headerXPath.fileTimeSpanIsValidISOTimeRange() == true)
@@ -296,11 +243,6 @@ public class RS2_MetaObjects extends RuleSet
             Notes:             "-",
             Test_Func:         {
 
-//x                 if(m_data.headerXPath.fileTimeSpanStartIsBeforeFileTimeSpanStop() == false)
-//x                     fatal_error(RS2_MetaObjectsException.Error.R_2_10___FILE_TIME_SPAN_START_TIME_MUST_BE_BEFORE_STOP_TIME)
-//x                                                             
-//x                 "OK"
-                
                 def l_result = new CefResult("R_2_10___FILE_TIME_SPAN_START_TIME_MUST_BE_BEFORE_STOP_TIME")
                 
                 if(m_data.headerXPath.fileTimeSpanStartIsBeforeFileTimeSpanStop() == true)
@@ -331,16 +273,4 @@ public class RS2_MetaObjects extends RuleSet
         )        
     ]
 
-//x     public def run()
-//x     {
-//x         CefLog.stage4_info("\n  RS2_MetaObjects")
-//x 
-//x         m_rules.each {
-//x             //x println it.value
-//x             //x println it.value.to_str()
-//x             //x it.value.Test_Func()
-//x             
-//x             CefLog.stage4_info(it.value.about(), it.value.Test_Func())     
-//x         }
-//x     }
 }

@@ -1,9 +1,4 @@
-/*
-  * @author sp, @date 19/07/14 22:43
- */
-
 import spock.lang.Specification
-
 import org.springframework.util.ResourceUtils
 
 import cefpass.App
