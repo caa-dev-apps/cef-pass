@@ -38,7 +38,8 @@ public class FileLogs
 //x     }
 
     def static init() {
-        s_logsFolder = CmdLnArgs.getLogsFolder()
+//x_args        s_logsFolder = CmdLnArgs.getLogsFolder()
+        s_logsFolder = CmdLnArgs_v2.getObject().getLogsFolder()
         
         CefLog.diag("############ cefpass.FileLogs" + s_logsFolder);
         

@@ -4,7 +4,7 @@
 
 import spock.lang.Specification
 
-import cefpass.CmdLnArgs
+//x_argsimport cefpass.CmdLnArgs
 import exceptions.RS1_GlobalAttributesException
 
 class U_CmdLnArgs_UnitTests extends Specification{
@@ -16,184 +16,184 @@ class U_CmdLnArgs_UnitTests extends Specification{
     ///////////////////////////////////////////////////////////////////////////////
     //
     
-    def "Test 001 Plain cef file"() 
-    {
-        setup:
-            def l_filename = "C3_CP_EDI_EGD__20111009_V01.cef"
-            def l_filename_gz = 'R_1_00___FILENAME_MUST_EXIST/' + l_filename;
-            
-            String[] l_cmd_args = [
-                "-f",
-                l_filename_gz,
-            ]            
-            
-        when:
-            CmdLnArgs.init(l_cmd_args)
-        then:
-            println "+ = + + = + + = + + = + + = + + = + + = + "
-            println l_filename
-            println CmdLnArgs.getFilename()
-            println "+ = + + = + + = + + = + + = + + = + + = + "
-            
-            l_filename == CmdLnArgs.getFilename()
-    }
-
-    
-    def "Test 002 cef.gz file"() 
-    {
-        setup:
-            def l_filename = "C3_CP_EDI_EGD__20111009_V01.cef"
-            def l_filename_gz = 'R_1_00___FILENAME_MUST_EXIST/' + l_filename + ".gz"
-            
-            String[] l_cmd_args = [
-                "-f",
-                l_filename_gz,
-            ]            
-            
-        when:
-            CmdLnArgs.init(l_cmd_args)
-        then:
-            println "+ = + + = + + = + + = + + = + + = + + = + "
-            println l_filename
-            println CmdLnArgs.getFilename()
-            println "+ = + + = + + = + + = + + = + + = + + = + "
-            
-            l_filename == CmdLnArgs.getFilename()
-    }
-    
-    
-    def "Test 003 -r rules"() 
-    {
-        setup:
-            String[] l_cmd_args = [
-                "-f", "a-filename.cef",
-                "-r", "1.02, 2.01, 3.04"
-            ]            
-        when:
-            CmdLnArgs.init(l_cmd_args)
-        then:
-            def l_ruleId = CmdLnArgs.getTestRuleId()
-            println "Rules:" + l_ruleId
-            
-            l_ruleId != null
-    }
-    
-    def "Test 003a -s stop on fail default"() 
-    {
-        setup:
-            String[] l_cmd_args = [
-                "-f", "a-filename.cef"
-            ]            
-        when:
-            CmdLnArgs.init(l_cmd_args)
-        then:
-            def l_stopOnFail = CmdLnArgs.getStopOnFail()
-            println l_stopOnFail.getClass().getName()
-            
-            println "Stop on Fail:" + l_stopOnFail
-            
-            l_stopOnFail == false
-    }
-    
-    def "Test 003b -s stop on fail False"() 
-    {
-        setup:
-            String[] l_cmd_args = [
-                "-f", "a-filename.cef",
-                "-s", "false"
-            ]            
-        when:
-            CmdLnArgs.init(l_cmd_args)
-        then:
-            def l_stopOnFail = CmdLnArgs.getStopOnFail()
-            println l_stopOnFail.getClass().getName()
-            
-            println "Stop on Fail:" + l_stopOnFail
-            
-            l_stopOnFail == false
-    }
-    
-    def "Test 003c -s stop on fail True"() 
-    {
-        setup:
-            String[] l_cmd_args = [
-                "-f", "a-filename.cef",
-                "-s", "true"
-            ]            
-        when:
-            CmdLnArgs.init(l_cmd_args)
-        then:
-            def l_stopOnFail = CmdLnArgs.getStopOnFail()
-            println l_stopOnFail.getClass().getName()
-            
-            println "Stop on Fail:" + l_stopOnFail
-            
-            l_stopOnFail == true
-    }
-    
-
-    def "Test 004a -o Output Results Level default (1)"() 
-    {
-        setup:
-            String[] l_cmd_args = [
-                "-f", "a-filename.cef"
-            ]            
-        when:
-            CmdLnArgs.init(l_cmd_args)
-        then:
-            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
-            println "Output Results Level:" + s_outputResultsLevel
-            
-            s_outputResultsLevel == 1
-    }
-    
-    def "Test 004b -o Output Results Level 0"() 
-    {
-        setup:
-            String[] l_cmd_args = [
-                "-f", "a-filename.cef",
-                "-o", "0"
-            ]            
-        when:
-            CmdLnArgs.init(l_cmd_args)
-        then:
-            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
-            println "Output Results Level:" + s_outputResultsLevel
-            
-            s_outputResultsLevel == 0
-    }
-    
-    def "Test 004c -o Output Results Level 1"() 
-    {
-        setup:
-            String[] l_cmd_args = [
-                "-f", "a-filename.cef",
-                "-o", "1"
-            ]            
-        when:
-            CmdLnArgs.init(l_cmd_args)
-        then:
-            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
-            println "Output Results Level:" + s_outputResultsLevel
-            
-            s_outputResultsLevel == 1
-    }
-    
-    def "Test 004d -o Output Results Level 2"() 
-    {
-        setup:
-            String[] l_cmd_args = [
-                "-f", "a-filename.cef",
-                "-o", "2"
-            ]            
-        when:
-            CmdLnArgs.init(l_cmd_args)
-        then:
-            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
-            println "Output Results Level:" + s_outputResultsLevel
-            
-            s_outputResultsLevel == 2
-    }
+//x_args    def "Test 001 Plain cef file"() 
+//x_args    {
+//x_args        setup:
+//x_args            def l_filename = "C3_CP_EDI_EGD__20111009_V01.cef"
+//x_args            def l_filename_gz = 'R_1_00___FILENAME_MUST_EXIST/' + l_filename;
+//x_args            
+//x_args            String[] l_cmd_args = [
+//x_args                "-f",
+//x_args                l_filename_gz,
+//x_args            ]            
+//x_args            
+//x_args        when:
+//x_args            CmdLnArgs.init(l_cmd_args)
+//x_args        then:
+//x_args            println "+ = + + = + + = + + = + + = + + = + + = + "
+//x_args            println l_filename
+//x_args            println CmdLnArgs.getFilename()
+//x_args            println "+ = + + = + + = + + = + + = + + = + + = + "
+//x_args            
+//x_args            l_filename == CmdLnArgs.getFilename()
+//x_args    }
+//x_args
+//x_args    
+//x_args    def "Test 002 cef.gz file"() 
+//x_args    {
+//x_args        setup:
+//x_args            def l_filename = "C3_CP_EDI_EGD__20111009_V01.cef"
+//x_args            def l_filename_gz = 'R_1_00___FILENAME_MUST_EXIST/' + l_filename + ".gz"
+//x_args            
+//x_args            String[] l_cmd_args = [
+//x_args                "-f",
+//x_args                l_filename_gz,
+//x_args            ]            
+//x_args            
+//x_args        when:
+//x_args            CmdLnArgs.init(l_cmd_args)
+//x_args        then:
+//x_args            println "+ = + + = + + = + + = + + = + + = + + = + "
+//x_args            println l_filename
+//x_args            println CmdLnArgs.getFilename()
+//x_args            println "+ = + + = + + = + + = + + = + + = + + = + "
+//x_args            
+//x_args            l_filename == CmdLnArgs.getFilename()
+//x_args    }
+//x_args    
+//x_args    
+//x_args    def "Test 003 -r rules"() 
+//x_args    {
+//x_args        setup:
+//x_args            String[] l_cmd_args = [
+//x_args                "-f", "a-filename.cef",
+//x_args                "-r", "1.02, 2.01, 3.04"
+//x_args            ]            
+//x_args        when:
+//x_args            CmdLnArgs.init(l_cmd_args)
+//x_args        then:
+//x_args            def l_ruleId = CmdLnArgs.getTestRuleId()
+//x_args            println "Rules:" + l_ruleId
+//x_args            
+//x_args            l_ruleId != null
+//x_args    }
+//x_args    
+//x_args    def "Test 003a -s stop on fail default"() 
+//x_args    {
+//x_args        setup:
+//x_args            String[] l_cmd_args = [
+//x_args                "-f", "a-filename.cef"
+//x_args            ]            
+//x_args        when:
+//x_args            CmdLnArgs.init(l_cmd_args)
+//x_args        then:
+//x_args            def l_stopOnFail = CmdLnArgs.getStopOnFail()
+//x_args            println l_stopOnFail.getClass().getName()
+//x_args            
+//x_args            println "Stop on Fail:" + l_stopOnFail
+//x_args            
+//x_args            l_stopOnFail == false
+//x_args    }
+//x_args    
+//x_args    def "Test 003b -s stop on fail False"() 
+//x_args    {
+//x_args        setup:
+//x_args            String[] l_cmd_args = [
+//x_args                "-f", "a-filename.cef",
+//x_args                "-s", "false"
+//x_args            ]            
+//x_args        when:
+//x_args            CmdLnArgs.init(l_cmd_args)
+//x_args        then:
+//x_args            def l_stopOnFail = CmdLnArgs.getStopOnFail()
+//x_args            println l_stopOnFail.getClass().getName()
+//x_args            
+//x_args            println "Stop on Fail:" + l_stopOnFail
+//x_args            
+//x_args            l_stopOnFail == false
+//x_args    }
+//x_args    
+//x_args    def "Test 003c -s stop on fail True"() 
+//x_args    {
+//x_args        setup:
+//x_args            String[] l_cmd_args = [
+//x_args                "-f", "a-filename.cef",
+//x_args                "-s", "true"
+//x_args            ]            
+//x_args        when:
+//x_args            CmdLnArgs.init(l_cmd_args)
+//x_args        then:
+//x_args            def l_stopOnFail = CmdLnArgs.getStopOnFail()
+//x_args            println l_stopOnFail.getClass().getName()
+//x_args            
+//x_args            println "Stop on Fail:" + l_stopOnFail
+//x_args            
+//x_args            l_stopOnFail == true
+//x_args    }
+//x_args    
+//x_args
+//x_args    def "Test 004a -o Output Results Level default (1)"() 
+//x_args    {
+//x_args        setup:
+//x_args            String[] l_cmd_args = [
+//x_args                "-f", "a-filename.cef"
+//x_args            ]            
+//x_args        when:
+//x_args            CmdLnArgs.init(l_cmd_args)
+//x_args        then:
+//x_args            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
+//x_args            println "Output Results Level:" + s_outputResultsLevel
+//x_args            
+//x_args            s_outputResultsLevel == 1
+//x_args    }
+//x_args    
+//x_args    def "Test 004b -o Output Results Level 0"() 
+//x_args    {
+//x_args        setup:
+//x_args            String[] l_cmd_args = [
+//x_args                "-f", "a-filename.cef",
+//x_args                "-o", "0"
+//x_args            ]            
+//x_args        when:
+//x_args            CmdLnArgs.init(l_cmd_args)
+//x_args        then:
+//x_args            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
+//x_args            println "Output Results Level:" + s_outputResultsLevel
+//x_args            
+//x_args            s_outputResultsLevel == 0
+//x_args    }
+//x_args    
+//x_args    def "Test 004c -o Output Results Level 1"() 
+//x_args    {
+//x_args        setup:
+//x_args            String[] l_cmd_args = [
+//x_args                "-f", "a-filename.cef",
+//x_args                "-o", "1"
+//x_args            ]            
+//x_args        when:
+//x_args            CmdLnArgs.init(l_cmd_args)
+//x_args        then:
+//x_args            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
+//x_args            println "Output Results Level:" + s_outputResultsLevel
+//x_args            
+//x_args            s_outputResultsLevel == 1
+//x_args    }
+//x_args    
+//x_args    def "Test 004d -o Output Results Level 2"() 
+//x_args    {
+//x_args        setup:
+//x_args            String[] l_cmd_args = [
+//x_args                "-f", "a-filename.cef",
+//x_args                "-o", "2"
+//x_args            ]            
+//x_args        when:
+//x_args            CmdLnArgs.init(l_cmd_args)
+//x_args        then:
+//x_args            def s_outputResultsLevel = CmdLnArgs.getOutputResultsLevel()
+//x_args            println "Output Results Level:" + s_outputResultsLevel
+//x_args            
+//x_args            s_outputResultsLevel == 2
+//x_args    }
 }
 
 

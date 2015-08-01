@@ -230,7 +230,8 @@ public class CefHeaderXPath
     def logicalFileIdMatchesFilename()
     {
         def l1 = Utils.getUnQuotedString(getLogicalFileId())
-        def l2 = CmdLnArgs.getLogicalFileId()
+//x_args        def l2 = CmdLnArgs.getLogicalFileId()
+        def l2 = CmdLnArgs_v2.getObject().getLogicalFileId()
         
         return (l1 != null) && (l2 != null) && l1.toUpperCase().equals(l2.toUpperCase())
     }
@@ -238,7 +239,8 @@ public class CefHeaderXPath
     def versionNumberMatchesFilename()
     {
         def l1 = Utils.getUnQuotedString(getVersionNumber())
-        def l2 = CmdLnArgs.getCefFileVersion()
+//x_args        def l2 = CmdLnArgs.getCefFileVersion()
+        def l2 = CmdLnArgs_v2.getObject().getCefFileVersion()
         
         return (l1 != null) && (l2 != null) && l1.toUpperCase().equals(l2.toUpperCase())
     }

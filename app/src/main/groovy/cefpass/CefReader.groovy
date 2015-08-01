@@ -19,9 +19,12 @@ public class CefReader
     
     public CefReader()
     {
-        m_isCommentsOn = CmdLnArgs.isCommentsOn()
-//x         m_headerXml = do_process(CmdLnArgs.getFilename(), 0, [0])
-        m_headerXml = do_process(CmdLnArgs.getFilePath(), 0, [0])
+//x_args        m_isCommentsOn = CmdLnArgs.isCommentsOn()
+//x_args//x         m_headerXml = do_process(CmdLnArgs.getFilename(), 0, [0])
+//x_args        m_headerXml = do_process(CmdLnArgs.getFilePath(), 0, [0])
+        
+        m_isCommentsOn = CmdLnArgs_v2.getObject().getIsCommentsOn()
+        m_headerXml = do_process(CmdLnArgs_v2.getObject().getFilePath(), 0, [0])
     }
     
     public def getHeaderXml() { return m_headerXml }
@@ -56,7 +59,8 @@ public class CefReader
             
             (i_filename, l_dummy) = l_headerXml.removeQuotes(i_filename)
             
-            for(d in CmdLnArgs.getSearchFolders()) {
+//x_args            for(d in CmdLnArgs.getSearchFolders()) {
+            for(d in CmdLnArgs_v2.getObject().getSearchFolders()) {
                 def p = d + '/' + i_filename
           
                 if(included.find{ it == p } != null)  { CefParser.includeFileDuplicate(i_filename); break }

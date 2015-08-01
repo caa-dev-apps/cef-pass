@@ -1,7 +1,8 @@
 package rules2015
 
 import cefpass.Utils
-import cefpass.CmdLnArgs
+//x_args    import cefpass.CmdLnArgs
+import cefpass.CmdLnArgs_v2
 import cefpass.CefResult
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -59,7 +60,8 @@ public class RS1_GlobalAttributes extends RuleSet
                 
                 def l_filename = Utils.getUnQuotedString(m_data.headerXPath.getFilename())
                 
-                if(CmdLnArgs.getFilename() == l_filename) 
+//x_args                if(CmdLnArgs.getFilename() == l_filename) 
+                if(CmdLnArgs_v2.getObject().getFilename() == l_filename) 
                     l_result.setPass()
                 
                 l_result

@@ -2,7 +2,8 @@ package rules2015
 
 import cefpass.CefLog
 import cefpass.CefResult
-import cefpass.CmdLnArgs
+//x_args    import cefpass.CmdLnArgs
+import cefpass.CmdLnArgs_v2
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -23,7 +24,8 @@ public class RuleSets
         m_set01 = new RS1_GlobalAttributes(l_data)
         m_set02 = new RS2_MetaObjects(l_data)
         
-        m_stopOnFail = CmdLnArgs.getStopOnFail()
+//x_args        m_stopOnFail = CmdLnArgs.getStopOnFail()
+        m_stopOnFail = CmdLnArgs_v2.getObject().getIsStopOnFail()
         m_rules = getRules()
     }
         
@@ -33,7 +35,8 @@ public class RuleSets
         def l_allRules = m_set01.m_rules + 
                          m_set02.m_rules;
         
-        def l_testRuleId = CmdLnArgs.getTestRuleId()  // 1.02, 
+//x_args        def l_testRuleId = CmdLnArgs.getTestRuleId()  // 1.02, 
+        def l_testRuleId = CmdLnArgs_v2.getObject().getTestRuleId()  // 1.02, 
         
         if(l_testRuleId != null) {
             def l_rules = []

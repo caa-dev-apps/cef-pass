@@ -52,8 +52,11 @@ public class App {
                 println "\t" + it
             }
             
-            CmdLnArgs.init(m_args)
-            if(CmdLnArgs.isOk() == false) { throw new Exception("Error: CmdLnArgs") } 
+//x_args            CmdLnArgs.init(m_args)
+//x_args            if(CmdLnArgs.isOk() == false) { throw new Exception("Error: CmdLnArgs") } 
+            
+            CmdLnArgs_v2.getObject().init(m_args)
+            if(CmdLnArgs_v2.getObject().getIsOk() == false) { throw new Exception("Error: CmdLnArgs_v2") } 
             FileLogs.init()
             
             l_result.setPass()
