@@ -60,18 +60,37 @@ public class Utils
         v
     }
     
+//x     static def getIntegerInRange(i_value, i_lo, i_hi, i_default) {
+//x         def l_result = i_default
+//x 
+//x         if(DataTypes.isValidInt(i_value) == true)
+//x         {
+//x             try {
+//x                 def l_value = Integer.parseInt(i_value);
+//x                 if((l_value >= i_lo) && (l_value <= i_hi))
+//x                     l_result = l_value
+//x             } 
+//x             catch (Exception e) { 
+//x             }
+//x         }
+//x         
+//x         l_result
+//x     }
+    
     static def getIntegerInRange(i_value, i_lo, i_hi, i_default) {
         def l_result = i_default
-        
-        if(DataTypes.isValidInt(i_value) == true)
+
+        if(i_value instanceof java.lang.String)
         {
             try {
-                def l_value = Integer.parseInt(i_value);
-                if((l_value >= i_lo) && (l_value <= i_hi))
-                    l_result = l_value
-            } 
-            catch (Exception e) { 
-            }
+                i_value = Integer.parseInt(i_value);
+            } catch (Exception e) { }
+        }
+        
+        if(i_value instanceof java.lang.Integer)
+        {
+            if((i_value >= i_lo) && (i_value <= i_hi))
+                l_result = i_value
         }
         
         l_result

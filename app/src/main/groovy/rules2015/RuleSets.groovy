@@ -13,7 +13,7 @@ public class RuleSets
     def m_set01 = null;
     def m_set02 = null;
     def m_rules = null;
-    def m_stopOnFail = true;
+    def m_NoStopOnFail = true;
     
     public RuleSets(i_headerXPath)
     {
@@ -24,8 +24,8 @@ public class RuleSets
         m_set01 = new RS1_GlobalAttributes(l_data)
         m_set02 = new RS2_MetaObjects(l_data)
         
-//x_args        m_stopOnFail = CmdLnArgs.getStopOnFail()
-        m_stopOnFail = CmdLnArgs_v2.getObject().getIsStopOnFail()
+//x_args        m_NoStopOnFail = CmdLnArgs.getNoStopOnFail()
+        m_NoStopOnFail = CmdLnArgs_v2.getObject().getIsNoStopOnFail()
         m_rules = getRules()
     }
         
@@ -49,7 +49,7 @@ public class RuleSets
             //x }
             
             l_allRules = l_rules
-            m_stopOnFail = true
+            m_NoStopOnFail = true
         } 
         
         l_allRules
@@ -78,7 +78,7 @@ public class RuleSets
     }
     
     // stop on fail 
-    def run_stopOnFail() {
+    def run_NoStopOnFail() {
         
         def l_result = new CefResult("RuleSet-Stop-On-Fail")
         def l_errors = false
@@ -101,7 +101,7 @@ public class RuleSets
     def run() {
         def l_result = null
         
-        if(m_stopOnFail) l_result = run_stopOnFail()
+        if(m_NoStopOnFail) l_result = run_NoStopOnFail()
         else             l_result = run_all()
         
         l_result.diag()

@@ -15,8 +15,8 @@ environments {
 }    
 
 settings {
-     isCommentsOn          = true
-     filepath              = "C:/work.dev/2015.03.22 github cef pass v2/v0/cef-pass/app/src/test/resources/R_0_00___START_META___META_UNCLOSED/C3_CP_EDI_EGD__20111009_V01.cef.gz"
+     isCommentsOn         = true
+//x      filepath              = "C:/work.dev/2015.03.22 github cef pass v2/v0/cef-pass/app/src/test/resources/R_0_00___START_META___META_UNCLOSED/C3_CP_EDI_EGD__20111009_V01.cef.gz"
 //x     searchFolders         = [
 //x                                 "C:/work.dev/2015.03.22 github cef pass v2/v0/cef-pass/app/src/test/resources/R_0_00___START_META___META_UNCLOSED"
 //x                             ]
@@ -27,6 +27,6 @@ settings {
     quickValidation       = true
     
     testRuleId            = 1.02
-    stopOnFail            = true
-    outputResultsLevel    = 1
+    noStopOnFail          = true
+    outputResultsLevel    = 2
 }

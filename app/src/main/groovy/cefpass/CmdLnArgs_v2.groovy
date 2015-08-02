@@ -24,7 +24,7 @@ public class CmdLnArgs_v2
     def isQuickValidation
     
     def testRuleId
-    def isStopOnFail
+    def isNoStopOnFail
     def outputResultsLevel
     
     def configFilePath
@@ -67,7 +67,6 @@ public class CmdLnArgs_v2
         cli.width = 120
         cli.usage()
 
-        
         def options = cli.parse(i_args)
  
         if(!options) { CefLog.error "Error";  cli.usage }
@@ -86,7 +85,7 @@ public class CmdLnArgs_v2
             isQuickValidation         = options.q
             
             testRuleId                = options.r
-            isStopOnFail              = options.s
+            isNoStopOnFail            = options.s
             outputResultsLevel        = options.o
             
             configFilePath            = options.g
@@ -99,21 +98,30 @@ public class CmdLnArgs_v2
                                                                                                 // slurper changes [:] into false
                 isCommentsOn          =  isCommentsOn                                   ?: Boolean.valueOf(slurper_val(l_config.settings.isCommentsOn))
                 
-                searchFolders         += (slurper_val(l_config.settings.searchFolders)    ?: [])
-                xmlSchemas            += (slurper_val(l_config.settings.xmlSchemas)       ?: [])
+                searchFolders         += (slurper_val(l_config.settings.searchFolders)  ?: [])
+                xmlSchemas            += (slurper_val(l_config.settings.xmlSchemas)     ?: [])
                 logsFolder            = logsFolder                                      ?: slurper_val(l_config.settings.logsFolder)
                 
                 isOutputHeaderXML     = isOutputHeaderXML                               ?: slurper_val(l_config.settings.outputHeaderXML)
                 isQuickValidation     = isQuickValidation                               ?: slurper_val(l_config.settings.quickValidation)
                 
-                testRuleId            = testRuleId                                      ?: slurper_val(l_config.settings.testRuleId)
-                isStopOnFail          = isStopOnFail                                    ?: slurper_val(l_config.settings.stopOnFail)
+                if(testRuleId == false) {
+                    if(l_config.settings.testRuleId instanceof java.lang.Number) {
+                        testRuleId = l_config.settings.testRuleId.toString()
+                    }
+                }
+
+                isNoStopOnFail          = isNoStopOnFail                                ?: slurper_val(l_config.settings.noStopOnFail)
                 
-                outputResultsLevel    = outputResultsLevel                              ?: slurper_val(l_config.settings.outputResultsLevel)
+                if(outputResultsLevel == false) {
+                    if(l_config.settings.outputResultsLevel instanceof java.lang.Integer) {
+                        outputResultsLevel = l_config.settings.outputResultsLevel
+                    }
+                }
             }
-
-            outputResultsLevel        = Utils.getIntegerInRange(outputResultsLevel, "0", "2", "1")
-
+            
+            outputResultsLevel        = Utils.getIntegerInRange(outputResultsLevel, 0, 2, 1)
+            
             filename              = Utils.getCefFilename(filePath)
             logicalFileId         = Utils.getCefLogicalFileId(filename)
             cefFileVersion        = Utils.getCefFileVersion(filename)
@@ -132,9 +140,6 @@ public class CmdLnArgs_v2
     }
 
     def show() {
-        //x if(filePath != false)         Show.showCefFilePath(filePath)
-        //x if(searchFolders != false)    Show.showSearchFolders(searchFolders)
-
         showLine "isCommentsOn",           getIsCommentsOn()
 
         showLine "filePath",               getFilePath()
@@ -146,7 +151,7 @@ public class CmdLnArgs_v2
         showLine "isQuickValidation",      getIsQuickValidation()
 
         showLine "testRuleId",             getTestRuleId()
-        showLine "isStopOnFail",           getIsStopOnFail()
+        showLine "isNoStopOnFail",         getIsNoStopOnFail()
         showLine "outputResultsLevel",     getOutputResultsLevel()
 
         showLine "filename",               getFilename()
