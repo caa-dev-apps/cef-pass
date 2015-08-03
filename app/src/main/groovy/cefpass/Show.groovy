@@ -21,16 +21,16 @@ public class Show {
 
     public static void showCefFilePath(i_path) {
         if(s_show_cef_filename == true) {
-            CefLog.stage1_info "CEF Filename:"    
-            CefLog.stage1_info(i_path, Utils.fileExistsS(i_path))
+            CefLog.stage_info  1, "CEF Filename:"    
+            CefLog.stage_info(1, i_path, Utils.fileExistsS(i_path))
         }
     }
     
     public static void showSearchFolders(i_searchFolders) {
         if(s_show_search_folders == true) {
-            CefLog.stage1_info "Search Folders:"    
+            CefLog.stage_info 1,"Search Folders:"    
             i_searchFolders.each { 
-                CefLog.stage1_info(it, Utils.directoryExistsS(it))
+                CefLog.stage_info(1, it, Utils.directoryExistsS(it))
             }
         }
     }

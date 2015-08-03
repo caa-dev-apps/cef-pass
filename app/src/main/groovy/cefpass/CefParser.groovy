@@ -36,8 +36,6 @@ public class CefParser
     
     static def stxMeta(v)
     {
-        //x println "stxMeta:" + v
-        
         if(s_meta != null)                  fatal_error(RS0_CefParserException.Error.R_0_00___START_META___META_UNCLOSED)
         else if(s_var != null)              fatal_error(RS0_CefParserException.Error.R_0_01___START_META___VARIABLE_UNCLOSED)
         else if(v==null || v.length()==0)   fatal_error(RS0_CefParserException.Error.R_0_02___START_META___NAME_ERROR)
@@ -46,8 +44,6 @@ public class CefParser
     
     static def etxMeta(v) 
     {
-        //x println "etxMeta:" + v
-        
         if(s_var != null)                   fatal_error(RS0_CefParserException.Error.R_0_10___END_META___VARIABLE_OPENED)         // NEW
         else if(s_meta == null)             fatal_error(RS0_CefParserException.Error.R_0_11___END_META___META_UNOPENED)
         else if(s_meta != v)                fatal_error(RS0_CefParserException.Error.R_0_12___END_META___NAME_ERROR)
@@ -57,8 +53,6 @@ public class CefParser
 
     static def stxVar(v) 
     {
-        //x println "stxVar:" + v
-        
         if(s_var != null)                   fatal_error(RS0_CefParserException.Error.R_0_20___START_VARIABLE___VARIABLE_UNCLOSED)
         else if(s_meta != null)             fatal_error(RS0_CefParserException.Error.R_0_21___START_VARIABLE___META_UNCLOSED)
         else if(v==null || v.length()==0)   fatal_error(RS0_CefParserException.Error.R_0_22___START_VARIABLE___NAME_ERROR)
@@ -67,8 +61,6 @@ public class CefParser
     
     static def etxVar(v) 
     {
-        //x println "etxVar:" + v
-        
         if(s_meta != null)                  fatal_error(RS0_CefParserException.Error.R_0_30___END_VARIABLE___META_OPENED)            // NEW
         else if(s_var == null)              fatal_error(RS0_CefParserException.Error.R_0_31___END_VARIABLE___VARIABLE_UNOPENED)
         else if(s_var != v)                 fatal_error(RS0_CefParserException.Error.R_0_32___END_VARIABLE___NAME_ERROR)

@@ -15,19 +15,30 @@ class U_CefLog_Tests extends Specification{
                 CefLog.info("This is an Info Message") 
                 CefLog.diag("This is a Diag Message") 
 
-                CefLog.stage1_info("Stage #1 info")
-                CefLog.stage2_info("Stage #2 info")
-                CefLog.stage3_info("Stage #3 info")
-                CefLog.stage4_info("Stage #4 info")
-                CefLog.stage5_info("Stage #5 info")
+//x                 CefLog.stage1_info("Stage #1 info")
+//x                 CefLog.stage2_info("Stage #2 info")
+//x                 CefLog.stage3_info("Stage #3 info")
+//x                 CefLog.stage4_info("Stage #4 info")
+//x                 CefLog.stage5_info("Stage #5 info")
+//x 
+//x                 CefLog.stage1_info("Stage #1 info", "TRUE")
+//x                 CefLog.stage2_info("Stage #2 info", false)
+//x                 CefLog.stage3_info("Stage #3 info")
+//x                 CefLog.stage4_info("Stage #4 info", 1234)
+//x                 CefLog.stage5_info("Stage #5 info", "Yo!")
+                
+                CefLog.stage_info(1,"Stage #1 info")
+                CefLog.stage_info(2,"Stage #2 info")
+                CefLog.stage_info(3,"Stage #3 info")
+                CefLog.stage_info(4,"Stage #4 info")
+                CefLog.stage_info(5,"Stage #5 info")
+                                  
+                CefLog.stage_info(1,"Stage #1 info", "TRUE")
+                CefLog.stage_info(2,"Stage #2 info", false)
+                CefLog.stage_info(3,"Stage #3 info")
+                CefLog.stage_info(4,"Stage #4 info", 1234)
+                CefLog.stage_info(5,"Stage #5 info", "Yo!")
 
-                CefLog.stage1_info("Stage #1 info", "TRUE")
-                CefLog.stage2_info("Stage #2 info", false)
-                CefLog.stage3_info("Stage #3 info")
-                CefLog.stage4_info("Stage #4 info", 1234)
-                CefLog.stage5_info("Stage #5 info", "Yo!")
-
-                CefLog.top("This is a stage top message")
                 
                 result = true
             }
@@ -67,19 +78,19 @@ class U_CefLog_Tests extends Specification{
                 CefLog.info("This is an Info Message") 
                 CefLog.diag("This is a Diag Message") 
 
-                CefLog.stage1_info("Stage #1 info")
-                CefLog.stage2_info("Stage #2 info")
-                CefLog.stage3_info("Stage #3 info")
-                CefLog.stage4_info("Stage #4 info")
-                CefLog.stage5_info("Stage #5 info")
+                CefLog.stage_info(1,"Stage #1 info")
+                CefLog.stage_info(2,"Stage #2 info")
+                CefLog.stage_info(3,"Stage #3 info")
+                CefLog.stage_info(4,"Stage #4 info")
+                CefLog.stage_info(5,"Stage #5 info")
+                                  
+                CefLog.stage_info(1,"Stage #1 info", "TRUE")
+                CefLog.stage_info(2,"Stage #2 info", false)
+                CefLog.stage_info(3,"Stage #3 info")
+                CefLog.stage_info(4,"Stage #4 info", 1234)
+                CefLog.stage_info(5,"Stage #5 info", "Yo!")
 
-                CefLog.stage1_info("Stage #1 info", "TRUE")
-                CefLog.stage2_info("Stage #2 info", false)
-                CefLog.stage3_info("Stage #3 info")
-                CefLog.stage4_info("Stage #4 info", 1234)
-                CefLog.stage5_info("Stage #5 info", "Yo!")
-
-                CefLog.top("This is a stage top message")
+//x                 CefLog.top("This is a stage top message")
                 
                 result = true
             }

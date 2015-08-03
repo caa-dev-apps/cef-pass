@@ -19,6 +19,8 @@ class CefResult
     CefResult(i_tag){
         tag = i_tag
     }
+
+    def setSkipped()                    { isError=false; status="Skipped";  this }
     
     def setOk(i_status="Ok")            { isError=false; status=i_status;  this }
     def setError(i_status="Error")      { isError=true;  status=i_status;  this }
@@ -29,5 +31,9 @@ class CefResult
     def setLastError(i_lastError)       { setFail(); lastError = i_lastError; this }
     def setException(i_exception)       { setFail(); exception = i_exception; this }
 
-    def diag() { println "TAG: ${tag}  isError: ${isError}  status:${status}  lastError:${lastError}  exception:${exception}" }
+
+    def info()                          { CefLog.info "TAG: ${tag}  isError: ${isError}  status:${status}  lastError:${lastError}  exception:${exception}" }
+
+    def stage_result()                  { CefLog.stage_result "${tag} : ${status} " }
+    def full_result()                   { CefLog.full_result  "${tag} : ${status} " }
 }

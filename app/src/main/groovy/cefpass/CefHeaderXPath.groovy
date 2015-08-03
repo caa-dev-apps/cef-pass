@@ -212,7 +212,6 @@ public class CefHeaderXPath
     def anyMetaEntryTypeMismatches()
     {
         def result = getMetaEntryPairs().any{
-            //x println it
             DataTypes.isEntryTypeMismatch(it) == true
         }
         

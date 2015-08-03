@@ -83,7 +83,11 @@ public class RS2_MetaObjects extends RuleSet
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                "TODO"
+                // "TODO"
+                
+                def l_result = new CefResult("R_2_03___REQUIRED_VARIABLES_XXXX")
+                l_result.setSkipped()
+                l_result
             }
         ),        
 
@@ -124,10 +128,17 @@ public class RS2_MetaObjects extends RuleSet
             Notes:             "-",
             Test_Func:         {
                 
+//x                 def l_result = new CefResult("R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER")
+//x                  
+//x                 if(m_data.headerXPath.datasetVersionIsValidInt() == true)
+//x                     l_result.setPass()
+//x                 
+//x                 l_result
+
+                // now it is a String!!! 
                 def l_result = new CefResult("R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER")
                  
-                if(m_data.headerXPath.datasetVersionIsValidInt() == true)
-                    l_result.setPass()
+                l_result.setSkipped()
                 
                 l_result
             }
@@ -268,7 +279,11 @@ public class RS2_MetaObjects extends RuleSet
             Caveats:           "NA",
             Notes:             "-",
             Test_Func:         {
-                "TODO"
+                //x "TODO"
+                
+                def l_result = new CefResult("R_2_11___DATA_RECORD_TIME_STAMP_MUST_BE_BETWEEN_FILE_TIME_SPAN")
+                l_result.setSkipped()
+                l_result                
             }
         )        
     ]

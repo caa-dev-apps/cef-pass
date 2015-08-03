@@ -2,7 +2,6 @@ package rules2015
 
 import cefpass.CefLog
 import cefpass.CefResult
-//x_args    import cefpass.CmdLnArgs
 import cefpass.CmdLnArgs_v2
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -13,7 +12,7 @@ public class RuleSets
     def m_set01 = null;
     def m_set02 = null;
     def m_rules = null;
-    def m_NoStopOnFail = true;
+    def m_noStopOnFail = false;
     
     public RuleSets(i_headerXPath)
     {
@@ -24,8 +23,7 @@ public class RuleSets
         m_set01 = new RS1_GlobalAttributes(l_data)
         m_set02 = new RS2_MetaObjects(l_data)
         
-//x_args        m_NoStopOnFail = CmdLnArgs.getNoStopOnFail()
-        m_NoStopOnFail = CmdLnArgs_v2.getObject().getIsNoStopOnFail()
+        m_noStopOnFail = CmdLnArgs_v2.getObject().getIsNoStopOnFail()
         m_rules = getRules()
     }
         
@@ -35,10 +33,9 @@ public class RuleSets
         def l_allRules = m_set01.m_rules + 
                          m_set02.m_rules;
         
-//x_args        def l_testRuleId = CmdLnArgs.getTestRuleId()  // 1.02, 
         def l_testRuleId = CmdLnArgs_v2.getObject().getTestRuleId()  // 1.02, 
         
-        if(l_testRuleId != null) {
+        if(l_testRuleId != false) {
             def l_rules = []
             //x l_testRuleIds.each{ rule_id ->
             def l_rule = l_allRules.find { it ->
@@ -49,7 +46,7 @@ public class RuleSets
             //x }
             
             l_allRules = l_rules
-            m_NoStopOnFail = true
+            m_noStopOnFail = false
         } 
         
         l_allRules
@@ -68,7 +65,7 @@ public class RuleSets
             
             l_errors = l_errors || l_rule_testResult.isError
             
-            CefLog.stage4_info(it.value.about(), l_rule_testResult.status)     
+            CefLog.stage_info(4, it.value.about(), l_rule_testResult.status)     
         }  
 
         if(l_errors == false)
@@ -78,7 +75,7 @@ public class RuleSets
     }
     
     // stop on fail 
-    def run_NoStopOnFail() {
+    def run_stopOnFail() {
         
         def l_result = new CefResult("RuleSet-Stop-On-Fail")
         def l_errors = false
@@ -87,8 +84,7 @@ public class RuleSets
         m_rules.any {
             l_rule_testResult = it.value.Test_Func()
             l_errors = l_errors || l_rule_testResult.isError
-            CefLog.stage4_info(it.value.about(), l_rule_testResult.status)     
-            
+            CefLog.stage_info(4, it.value.about(), l_rule_testResult.status)     
             l_errors
         }
         
@@ -101,11 +97,11 @@ public class RuleSets
     def run() {
         def l_result = null
         
-        if(m_NoStopOnFail) l_result = run_NoStopOnFail()
-        else             l_result = run_all()
+        if(m_noStopOnFail)  l_result = run_all()
+        else                l_result = run_stopOnFail()
         
-        l_result.diag()
-        l_result.lastError.diag()
+        //x l_result.info()
+        //x l_result.lastError.info()
         
         l_result
     }

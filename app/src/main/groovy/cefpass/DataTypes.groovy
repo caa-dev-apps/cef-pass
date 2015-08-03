@@ -66,7 +66,6 @@ public class DataTypes
         
         try {
             def i = Instant.parse(i_value)
-            //x println i
             r = true;
         } 
         catch (Exception e) { }
@@ -144,8 +143,6 @@ public class DataTypes
     
     public static def isEntryTypeMismatch(i_map)
     {
-        //x println i_map
-        
         isEntryTypeMismatch(i_map["VALUE_TYPE"], 
                             i_map["ENTRY"])
     }

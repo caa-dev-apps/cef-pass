@@ -37,7 +37,7 @@ class I_RS2_MetaObjects_Tests_v2 extends Specification{
                                                                         "R_2_02___ENTRY_MISMATCH_VALUE_TYPE",
                                                                         //.."R_2_03___REQUIRED_VARIABLES_XXXX",
                                                                         "R_2_04___FILE_TYPE_MUST_BE_CEF",
-                                                                        "R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER",
+                                                                        //.."R_2_05___DATASET_VERSION_MUST_BE_VALID_INTEGER",
                                                                         "R_2_06___LOGICAL_FILE_ID_MATCHES_FILENAME",
                                                                         "R_2_07___VERSION_NUMBER_MUST_BE_VALID_INTEGER",
                                                                         "R_2_08___VERSION_NUMBER_MATCHES_FILENAME",

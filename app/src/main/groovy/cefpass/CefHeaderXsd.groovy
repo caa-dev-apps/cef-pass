@@ -31,8 +31,8 @@ public class CefHeaderXsd
             CefLog.error("Exception: "+e.getMessage());
         }
         
-        if(l_result == false) CefLog.top "XML Validation Error!"
-        else                  CefLog.top "XML Validation OK!"
+        if(l_result == false) CefLog.error "XML Validation Error!"
+        else                  CefLog.error "XML Validation OK!"
         
         return l_result
     }

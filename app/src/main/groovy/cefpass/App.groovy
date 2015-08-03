@@ -28,7 +28,8 @@ public class App {
         
         def pushResult(i_key, i_result) {
             stage_results[i_key] = i_result
-            i_result.diag()
+            //x i_result.info()
+            i_result.stage_result()
             i_result.isError
         }
     }
@@ -41,19 +42,11 @@ public class App {
     }
     
     def stage_1__cmdln_args = {
-        CefLog.top "Stage 1: " 
-        println "Stage 1: ========================================== "
+        CefLog.info "\nStage 1: ========================================== "
         
         def l_result = new CefResult("stage_1__cmdln_args")
         
         try{
-            println "Command Line Args:"
-            m_args.each {
-                println "\t" + it
-            }
-            
-//x_args            CmdLnArgs.init(m_args)
-//x_args            if(CmdLnArgs.isOk() == false) { throw new Exception("Error: CmdLnArgs") } 
             
             CmdLnArgs_v2.getObject().init(m_args)
             if(CmdLnArgs_v2.getObject().getIsOk() == false) { throw new Exception("Error: CmdLnArgs_v2") } 
@@ -69,8 +62,7 @@ public class App {
     }
     
     def stage_2__parser = {
-        CefLog.top "Stage 2: " 
-        println "Stage 2: ========================================== "
+        CefLog.info "\nStage 2: ========================================== "
         
         def l_result = new CefResult("stage_2__parser")
         
@@ -92,8 +84,7 @@ public class App {
     }
     
     def stage_3__xsd_schema = {
-        CefLog.top "Stage 3: " 
-        println "Stage 3: ========================================== "
+        CefLog.info "\nStage 3: ========================================== "
         
         def l_result = new CefResult("stage_3__xsd_schema")
         
@@ -103,7 +94,8 @@ public class App {
             //  if(CefHeaderXsd.validateXMLSchema(l_xsdPath, l_xmlPath) == false) return
             CefLog.stage3_info("validateXMLSchema", "Skipped")
             
-            l_result.setPass()
+//x             l_result.setPass()
+            l_result.setSkipped()
         }
         catch (Exception e) {
            l_result.setException(e)
@@ -113,18 +105,14 @@ public class App {
     }
     
     def stage_4__rules = {
-        CefLog.top "Stage 4: " 
-        println "Stage 4: ========================================== "
+        CefLog.info "\nStage 4: ========================================== "
         
         def l_result = new CefResult("stage_4__rules")
         
         try{
-//x             def r = RuleSets.run(m_headerXml.getHeaderXPath())
-//x             
-//x             if(r.isError == false) l_result.setPass()
-//x             else                   l_result.setFail()
         
             l_result = RuleSets.run(m_headerXml.getHeaderXPath())
+            l_result.tag = "stage_4__rules"
         }
         catch (Exception e) {
             
@@ -135,8 +123,7 @@ public class App {
     }
 
     def stage_5__data = {
-        CefLog.top "Stage 5: " 
-        println "Stage 5: ========================================== "
+        CefLog.info "\nStage 5: ========================================== "
         
         def l_result = new CefResult("stage_5__data")
         
@@ -167,7 +154,7 @@ public class App {
         ] as TreeMap // retain order
 
         def r = l_stages.any { it ->
-            println it.key
+            //x CefLog.info it.key
             def res = it.value()
             l_result.pushResult(it.key, res)
         }
@@ -186,7 +173,8 @@ public class App {
 
         try
         {
-            a.stages(i_args)
+            def l_result = a.stages(i_args)
+            l_result.full_result()
         }
         catch(Exception e) {
             e.printStackTrace()        

@@ -13,6 +13,9 @@ public class CmdLnArgs_v2
     private CmdLnArgs_v2() {}
     static CmdLnArgs_v2 getObject() { return s_object}
 
+    def m_args
+    def m_cli
+    
     def isCommentsOn = false
     
     def filePath 
@@ -33,6 +36,8 @@ public class CmdLnArgs_v2
     def filename
     def logicalFileId
     def cefFileVersion
+
+    def isDebugInfo4CmdLnArgs
     
     def isOk = false;
     
@@ -43,34 +48,36 @@ public class CmdLnArgs_v2
     
     
     def init(String[] i_args) {
-
-        def cli = new CliBuilder(usage:'java -jar cefpass-0.1.0.jar -f <path-to-cef> -i <search include dirs> -x <xml-schema files>')
+        m_args = i_args
+        m_cli = new CliBuilder(usage:'java -jar cefpass-0.1.0.jar -f <path-to-cef> -i <search include dirs> -x <xml-schema files>')
                 
-        cli.h(longOpt: 'help',                                                                                                       'usage information')
-        cli.c(longOpt: 'comments-on',                                                                                                '(Optional) include comments in the output data(XML)')
+        m_cli.h(longOpt: 'help',                                                                                                       'usage information')
+        m_cli.c(longOpt: 'comments-on',                                                                                                '(Optional) include comments in the output data(XML). Default=False')
         
-        cli.f(longOpt: 'cef',                        args: 1,                            required: true,                             '(Required) path to cef file')
-        cli.i(longOpt: 'include',                    args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) list of include folders to search for ceh files')
-        cli.l(longOpt: 'logs',                       args: 1,                            required: false,                            '(Optional) path to logs folder')
-        cli.x(longOpt: 'xsd',                        args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) list of xml schema files to validate header data against')
+        m_cli.f(longOpt: 'cef',                        args: 1,                            required: true,                             '(Required) path to cef file')
+        m_cli.i(longOpt: 'include',                    args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) list of include folders to search for ceh files')
+        m_cli.l(longOpt: 'logs',                       args: 1,                            required: false,                            '(Optional) path to logs folder')
+        m_cli.x(longOpt: 'xsd',                        args: Option.UNLIMITED_VALUES,      required: false,    valueSeparator: ',',    '(Optional) list of xml schema files to validate header data against')
         
-        cli.u(longOpt: 'xo',                                                                                                         '(Optional) output header meta data in xml format')
-        cli.q(longOpt: 'qv',                                                                                                         '(Optional) quick validation (only checks 1st data row) ')
+        m_cli.u(longOpt: 'xo',                                                                                                         '(Optional) output header meta data in xml format. Default=False')
+        m_cli.q(longOpt: 'qv',                                                                                                         '(Optional) quick validation (only checks 1st data row). Default=False ')
               
-        cli.r(longOpt: 'rule-id',                    args: 1,                            required: false,                            '(Optional) Test specific Rule Id. Default=All e.g. "1.02"')
-        cli.s(longOpt: 'stop',                                                           required: false,                            '(Optional) Stop on Fail. TRUE/FALSE Default=FALSE')
-        cli.o(longOpt: 'output',                     args: 1,                            required: false,                            '(Optional) Output Results Level(0,1,2): 0:Pass/Fail, 1:Details 2:Verbose=Todo Default=1')
+        m_cli.r(longOpt: 'rule-id',                    args: 1,                            required: false,                            '(Optional) Test specific Rule Id. Default=All e.g. "1.02"')
+        m_cli.s(longOpt: 'stop',                                                           required: false,                            '(Optional) No-Stop on Fail. Default=False')
+        m_cli.o(longOpt: 'output',                     args: 1,                            required: false,                            '(Optional) Output Results Level(0,1,2): 0:Diag 1:Info 2:Result Only')
               
-        cli.g(longOpt: 'config',                     args: 1,                            required: false,                            '(Optional) A groovy dsl config file')
-        cli.e(longOpt: 'config-env',                 args: 1,                            required: false,                            '(Optional) A config environment tag (e.g. dev, test, default=none)')
+        m_cli.g(longOpt: 'config',                     args: 1,                            required: false,                            '(Optional) A groovy dsl config file')
+        m_cli.e(longOpt: 'config-env',                 args: 1,                            required: false,                            '(Optional) A config environment tag (e.g. dev, test, default=none)')
 
-        cli.width = 120
-        cli.usage()
+        m_cli.z(longOpt: 'debug-info',                                                                                                 '(Optional) Outputs the cmdline args data and exits immediately. For debug Only!')
+        
+        m_cli.width = 120
+        //x m_cli.usage()
 
-        def options = cli.parse(i_args)
+        def options = m_cli.parse(i_args)
  
-        if(!options) { CefLog.error "Error";  cli.usage }
-        else if (options.h) cli.usage
+        if(!options) { CefLog.error "Error";  m_cli.usage() }
+        else if (options.h) m_cli.usage()
         else {
             // values are false if missing i.e. user does not set them
             isCommentsOn              = options.c                         // -c presence = true, abscence = false
@@ -91,6 +98,8 @@ public class CmdLnArgs_v2
             configFilePath            = options.g
             configEnv                 = options.e
 
+            isDebugInfo4CmdLnArgs     = options.z                           // used to dump internal state of CmdLnArgs_v2 via show() method below.
+            
             if(configFilePath)
             {
                 def l_env = configEnv ?: ""
@@ -129,14 +138,19 @@ public class CmdLnArgs_v2
             isOk = true
         }
         
-        show()
+        if(isDebugInfo4CmdLnArgs) {
+            showAll()
+            CefLog.p("-z : Exiting now..")
+
+            System.exit(-1) // used for debug only!
+        }
     }
     
     ///////////////////////////////////////////////////////////////////////////////
     //
     
     def showLine(i_key, i_value) {
-        println i_key.padRight(50) + i_value            
+        CefLog.info i_key.padRight(50) + i_value            
     }
 
     def show() {
@@ -158,6 +172,24 @@ public class CmdLnArgs_v2
         showLine "logicalFileId",          getLogicalFileId()
         showLine "cefFileVersion",         getCefFileVersion()
 
+        showLine "isDebugInfo4CmdLnArgs",  getIsDebugInfo4CmdLnArgs()
+        
         showLine "isOk",                   getIsOk()
     }
+    
+    def showAll() {
+        CefLog.p "Command Line Args:"
+        m_args.each {
+            CefLog.p "\t" + it
+        }
+        
+        CefLog.p("\n")
+        
+        m_cli.usage()
+        
+        CefLog.p("\n")
+        
+        show()
+    }
+    
 }

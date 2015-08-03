@@ -16,29 +16,7 @@ public class FileLogs
     static File s_appFileLogsFile = null;
     FileLogs s_logs = new FileLogs()
 
-//x     def static init() {
-//x         s_logsFolder = CmdLnArgs.getLogsFolder()
-//x         
-//x         CefLog.diag("############ cefpass.FileLogs" + s_logsFolder);
-//x         
-//x         if(s_logsFolder == null) {
-//x             s_logsFolder = System.getProperty("user.dir") + "../logs"
-//x         }
-//x         
-//x         s_logsFolder += "/" 
-//x         s_logsFolder += new Date().format('yyyy-MM-dd') 
-//x         s_logsFolder += "." 
-//x         s_logsFolder += sprintf("%06d", System.currentTimeMillis() % 1000000)
-//x         
-//x         new File(s_logsFolder).mkdirs();
-//x         
-//x         s_appFileLogsFile = new File(s_logsFolder + "\\" + "app-logs.txt")
-//x         //x s_appFileLogsFile << "Hello, World!"
-//x         
-//x     }
-
     def static init() {
-//x_args        s_logsFolder = CmdLnArgs.getLogsFolder()
         s_logsFolder = CmdLnArgs_v2.getObject().getLogsFolder()
         
         CefLog.diag("############ cefpass.FileLogs" + s_logsFolder);
@@ -104,12 +82,7 @@ public class FileLogs
 
     def static write_logs(i_level, i_str)
     {
-        
-        
     }
-    
-    
-    
 }
 
 

@@ -8,5 +8,5 @@ CEF_FILE=$CEF_FOLDER/C3_CP_EDI_EGD__20111009_V01.cef
 
 ## These are all failing tests
                                     
-java -jar $APP_JAR -f $CEF_FILE -i $CEH_FOLDER -l $LOGS_FOLDER
-       
+## java -jar $APP_JAR -f $CEF_FILE -i $CEH_FOLDER -l $LOGS_FOLDER -z
+java -jar $APP_JAR -f $CEF_FILE -i $CEH_FOLDER -l $LOGS_FOLDER 

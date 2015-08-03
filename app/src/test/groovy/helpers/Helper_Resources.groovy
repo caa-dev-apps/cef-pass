@@ -1,8 +1,9 @@
 //x package helpers; ???????????????????
 
 import spock.lang.Specification
-
 import org.springframework.util.ResourceUtils
+import cefpass.CefLog
+
 
 public class Helper_Resources
 {
@@ -55,13 +56,13 @@ public class Helper_Resources
         def l_argsList = [];
         def l_path = getTestResourcePath(i_rule_name_path)
         
-        println "Test Input:"
-        println "\tFolder: "
-        println "\t\t" + l_path
-        println "\tFile(s): "
+        CefLog.diag "Test Input:"
+        CefLog.diag "\tFolder: "
+        CefLog.diag "\t\t" + l_path
+        CefLog.diag "\tFile(s): "
         
         new File(l_path).eachFileMatch(~/.*.(?i)CEF/) { file ->  
-            println "\t\t" + file.getName()  
+            CefLog.diag "\t\t" + file.getName()  
             
             String[] l_args = [
                 "-f",
@@ -74,7 +75,7 @@ public class Helper_Resources
             
             l_argsList << l_args
         }      
-        println ""
+        CefLog.diag ""
         
         l_argsList
     }
@@ -91,13 +92,13 @@ public class Helper_Resources
         
         def l_ruleId = ruleName2RuleId(i_rule_name)
         
-        println "Test Input:"
-        println "\tFolder: "
-        println "\t\t" + l_path
-        println "\tFile(s): "
+        CefLog.diag "Test Input:"
+        CefLog.diag "\tFolder: "
+        CefLog.diag "\t\t" + l_path
+        CefLog.diag "\tFile(s): "
         
         new File(l_path).eachFileMatch(~/.*.(?i)CEF/) { file ->  
-            println "\t\t" + file.getName()  
+            CefLog.diag "\t\t" + file.getName()  
             
             String[] l_args = [
                 "-f",
@@ -116,7 +117,7 @@ public class Helper_Resources
 
             l_ruleTestsArgsList << [i_rule_name, file.getName(), l_args, l_ix++, i_ix++, l_rule_test_name]
         }      
-        println ""
+        CefLog.diag ""
         
         l_ruleTestsArgsList
     }
