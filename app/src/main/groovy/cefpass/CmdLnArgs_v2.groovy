@@ -64,7 +64,7 @@ public class CmdLnArgs_v2
               
         m_cli.r(longOpt: 'rule-id',                    args: 1,                            required: false,                            '(Optional) Test specific Rule Id. Default=All e.g. "1.02"')
         m_cli.s(longOpt: 'stop',                                                           required: false,                            '(Optional) No-Stop on Fail. Default=False')
-        m_cli.o(longOpt: 'output',                     args: 1,                            required: false,                            '(Optional) Output Results Level(0,1,2): 0:Diag 1:Info 2:Result Only')
+        m_cli.o(longOpt: 'output',                     args: 1,                            required: false,                            '(Optional) Output Results Level(0,1,2,3): 0:Debug 1:Info 2:Stages 3:Result Only')
               
         m_cli.g(longOpt: 'config',                     args: 1,                            required: false,                            '(Optional) A groovy dsl config file')
         m_cli.e(longOpt: 'config-env',                 args: 1,                            required: false,                            '(Optional) A config environment tag (e.g. dev, test, default=none)')
@@ -129,7 +129,7 @@ public class CmdLnArgs_v2
                 }
             }
             
-            outputResultsLevel        = Utils.getIntegerInRange(outputResultsLevel, 0, 2, 1)
+            outputResultsLevel        = Utils.getIntegerInRange(outputResultsLevel, 0, 3, 1)
             
             filename              = Utils.getCefFilename(filePath)
             logicalFileId         = Utils.getCefLogicalFileId(filename)

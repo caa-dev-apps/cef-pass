@@ -25,7 +25,6 @@ public class FileLogs
             s_logsFolder = System.getProperty("user.dir") + "../logs"
         }
         
-        
         def l_date_str = new Date().format('yyyy-MM-dd') 
         
         s_logsFolder += "/" 
@@ -40,7 +39,6 @@ public class FileLogs
         
         s_appFileLogsFile = new File(s_logsFolder + "\\" + "app-logs.txt")
         //x s_appFileLogsFile << "Hello, World!"
-        
     }
     
     def static close() {
