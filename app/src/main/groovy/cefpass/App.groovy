@@ -42,12 +42,11 @@ public class App {
     }
     
     def stage_1__cmdln_args = {
-        CefLog.info "\nStage 1: ========================================== "
+        CefLogDev.info "\nStage 1: ========================================== "
         
         def l_result = new CefResult("stage_1__cmdln_args")
         
         try{
-            
             CmdLnArgs_v2.getObject().init(m_args)
             if(CmdLnArgs_v2.getObject().getIsOk() == false) { throw new Exception("Error: CmdLnArgs_v2") } 
             FileLogs.init()
@@ -62,7 +61,7 @@ public class App {
     }
     
     def stage_2__parser = {
-        CefLog.info "\nStage 2: ========================================== "
+        CefLogDev.info "\nStage 2: ========================================== "
         
         def l_result = new CefResult("stage_2__parser")
         
@@ -84,7 +83,7 @@ public class App {
     }
     
     def stage_3__xsd_schema = {
-        CefLog.info "\nStage 3: ========================================== "
+        CefLogDev.info "\nStage 3: ========================================== "
         
         def l_result = new CefResult("stage_3__xsd_schema")
         
@@ -92,7 +91,7 @@ public class App {
             //  String l_xmlPath = FileLogs.getFilePath("nodes.xml")
             //  String l_xsdPath = "C:/work.dev/2014.09.27.github.cef.pass.v2/cef-pass/xsd/a1.xsd"
             //  if(CefHeaderXsd.validateXMLSchema(l_xsdPath, l_xmlPath) == false) return
-            CefLog.stage3_info("validateXMLSchema", "Skipped")
+            CefLogResults.stage3_info("validateXMLSchema", "Skipped")
             
 //x             l_result.setPass()
             l_result.setSkipped()
@@ -105,7 +104,7 @@ public class App {
     }
     
     def stage_4__rules = {
-        CefLog.info "\nStage 4: ========================================== "
+        CefLogDev.info "\nStage 4: ========================================== "
         
         def l_result = new CefResult("stage_4__rules")
         
@@ -123,7 +122,7 @@ public class App {
     }
 
     def stage_5__data = {
-        CefLog.info "\nStage 5: ========================================== "
+        CefLogDev.info "\nStage 5: ========================================== "
         
         def l_result = new CefResult("stage_5__data")
         
@@ -166,8 +165,8 @@ public class App {
     }    
     
     public static void main(String[] i_args) {
-        CefLog.diag "Hello, World!"
-        CefLog.diag "workingDir: "  + System.getProperty("user.dir")
+        CefLogDev.diag "Hello, World!"
+        CefLogDev.diag "workingDir: "  + System.getProperty("user.dir")
         
         App a = new App();
 

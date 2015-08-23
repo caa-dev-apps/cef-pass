@@ -21,48 +21,48 @@ public class Show {
 
     public static void showCefFilePath(i_path) {
         if(s_show_cef_filename == true) {
-            CefLog.stage_info  1, "CEF Filename:"    
-            CefLog.stage_info(1, i_path, Utils.fileExistsS(i_path))
+            CefLogResults.stage_info  1, "CEF Filename:"    
+            CefLogResults.stage_info(1, i_path, Utils.fileExistsS(i_path))
         }
     }
     
     public static void showSearchFolders(i_searchFolders) {
         if(s_show_search_folders == true) {
-            CefLog.stage_info 1,"Search Folders:"    
+            CefLogResults.stage_info 1,"Search Folders:"    
             i_searchFolders.each { 
-                CefLog.stage_info(1, it, Utils.directoryExistsS(it))
+                CefLogResults.stage_info(1, it, Utils.directoryExistsS(it))
             }
         }
     }
 
     public static void showContextFile(String i_text) 
     {
-        if(s_show_cx_files == true) CefLog.info i_text
+        if(s_show_cx_files == true) CefLogDev.info i_text
     }
     
     public static void showNodes(i_root) 
     {
         if(s_show_nodes == true) {
-            CefLog.info "\nNodes:"
+            CefLogDev.info "\nNodes:"
             
             def writer = new StringWriter()
             i_root.print(new PrintWriter(writer))
-            CefLog.info writer.toString()    
+            CefLogDev.info writer.toString()    
         }
     }
     
     public static void showXmlNodes(i_root) 
     {
         if(s_show_xml_nodes == true) {
-            CefLog.info "\nXML Nodes:"
+            CefLogDev.info "\nXML Nodes:"
         
-            CefLog.info new XmlUtil().serialize(i_root)    
+            CefLogDev.info new XmlUtil().serialize(i_root)    
         }
     }
     
     public static void showDataLine(i_line) 
     {
-        if(s_show_data_line == true) CefLog.info "Data: " + i_line
+        if(s_show_data_line == true) CefLogDev.info "Data: " + i_line
     }
     
     public static void showContexts(i_cefContexts) {
@@ -75,14 +75,14 @@ public class Show {
     }
  
     public static void showFileReadLineDetails(i_line_details) {
-        if(s_show_file_read_line_details == true) CefLog.info "H:\t" + i_line_details
+        if(s_show_file_read_line_details == true) CefLogDev.info "H:\t" + i_line_details
     }
     
     public static void showHeaderKV(i_key, i_value) {
-        if(s_show_header_kv == true) CefLog.info "H:\t" + "k:" + i_key + "v:" + i_value
+        if(s_show_header_kv == true) CefLogDev.info "H:\t" + "k:" + i_key + "v:" + i_value
     }
     
     public static void showHeaderComment(i_comment) {
-        if(s_show_header_comment == true) CefLog.info "H:\t" + i_comment
+        if(s_show_header_comment == true) CefLogDev.info "H:\t" + i_comment
     }
  }

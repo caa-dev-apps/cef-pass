@@ -28,11 +28,11 @@ public class CefHeaderXsd
             l_result = true
             
         } catch (IOException | SAXException e) {
-            CefLog.error("Exception: "+e.getMessage());
+            CefLogDev.error("Exception: "+e.getMessage());
         }
         
-        if(l_result == false) CefLog.error "XML Validation Error!"
-        else                  CefLog.error "XML Validation OK!"
+        if(l_result == false) CefLogDev.error "XML Validation Error!"
+        else                  CefLogDev.error "XML Validation OK!"
         
         return l_result
     }

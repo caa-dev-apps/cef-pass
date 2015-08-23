@@ -1,6 +1,7 @@
 import spock.lang.Specification
 
-import cefpass.CefLog
+import cefpass.CefLogDev
+import cefpass.CefLogResults
 
 class U_CefLog_Tests extends Specification{
 
@@ -10,10 +11,10 @@ class U_CefLog_Tests extends Specification{
             def result = false
             try
             {
-                CefLog.error("This is an Error Message") 
-                CefLog.warn("This is a Warning Message") 
-                CefLog.info("This is an Info Message") 
-                CefLog.diag("This is a Diag Message") 
+                CefLogDev.error("This is an Error Message") 
+                CefLogDev.warn("This is a Warning Message") 
+                CefLogDev.info("This is an Info Message") 
+                CefLogDev.diag("This is a Diag Message") 
 
 //x                 CefLog.stage1_info("Stage #1 info")
 //x                 CefLog.stage2_info("Stage #2 info")
@@ -27,17 +28,17 @@ class U_CefLog_Tests extends Specification{
 //x                 CefLog.stage4_info("Stage #4 info", 1234)
 //x                 CefLog.stage5_info("Stage #5 info", "Yo!")
                 
-                CefLog.stage_info(1,"Stage #1 info")
-                CefLog.stage_info(2,"Stage #2 info")
-                CefLog.stage_info(3,"Stage #3 info")
-                CefLog.stage_info(4,"Stage #4 info")
-                CefLog.stage_info(5,"Stage #5 info")
+                CefLogResults.stage_info(1,"Stage #1 info")
+                CefLogResults.stage_info(2,"Stage #2 info")
+                CefLogResults.stage_info(3,"Stage #3 info")
+                CefLogResults.stage_info(4,"Stage #4 info")
+                CefLogResults.stage_info(5,"Stage #5 info")
                                   
-                CefLog.stage_info(1,"Stage #1 info", "TRUE")
-                CefLog.stage_info(2,"Stage #2 info", false)
-                CefLog.stage_info(3,"Stage #3 info")
-                CefLog.stage_info(4,"Stage #4 info", 1234)
-                CefLog.stage_info(5,"Stage #5 info", "Yo!")
+                CefLogResults.stage_info(1,"Stage #1 info", "TRUE")
+                CefLogResults.stage_info(2,"Stage #2 info", false)
+                CefLogResults.stage_info(3,"Stage #3 info")
+                CefLogResults.stage_info(4,"Stage #4 info", 1234)
+                CefLogResults.stage_info(5,"Stage #5 info", "Yo!")
 
                 
                 result = true
@@ -73,22 +74,22 @@ class U_CefLog_Tests extends Specification{
             def result = false
             try
             {
-                CefLog.error("This is an Error Message") 
-                CefLog.warn("This is a Warning Message") 
-                CefLog.info("This is an Info Message") 
-                CefLog.diag("This is a Diag Message") 
+                CefLogDev.error("This is an Error Message") 
+                CefLogDev.warn("This is a Warning Message") 
+                CefLogDev.info("This is an Info Message") 
+                CefLogDev.diag("This is a Diag Message") 
 
-                CefLog.stage_info(1,"Stage #1 info")
-                CefLog.stage_info(2,"Stage #2 info")
-                CefLog.stage_info(3,"Stage #3 info")
-                CefLog.stage_info(4,"Stage #4 info")
-                CefLog.stage_info(5,"Stage #5 info")
+                CefLogResults.stage_info(1,"Stage #1 info")
+                CefLogResults.stage_info(2,"Stage #2 info")
+                CefLogResults.stage_info(3,"Stage #3 info")
+                CefLogResults.stage_info(4,"Stage #4 info")
+                CefLogResults.stage_info(5,"Stage #5 info")
                                   
-                CefLog.stage_info(1,"Stage #1 info", "TRUE")
-                CefLog.stage_info(2,"Stage #2 info", false)
-                CefLog.stage_info(3,"Stage #3 info")
-                CefLog.stage_info(4,"Stage #4 info", 1234)
-                CefLog.stage_info(5,"Stage #5 info", "Yo!")
+                CefLogResults.stage_info(1,"Stage #1 info", "TRUE")
+                CefLogResults.stage_info(2,"Stage #2 info", false)
+                CefLogResults.stage_info(3,"Stage #3 info")
+                CefLogResults.stage_info(4,"Stage #4 info", 1234)
+                CefLogResults.stage_info(5,"Stage #5 info", "Yo!")
 
 //x                 CefLog.top("This is a stage top message")
                 

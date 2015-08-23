@@ -74,75 +74,85 @@ public class CmdLnArgs_v2
         m_cli.width = 120
         //x m_cli.usage()
 
-        def options = m_cli.parse(i_args)
- 
-        if(!options) { CefLog.error "Error";  m_cli.usage() }
-        else if (options.h) m_cli.usage()
-        else {
-            // values are false if missing i.e. user does not set them
-            isCommentsOn              = options.c                         // -c presence = true, abscence = false
-            
-            filePath                  = options.f
-            
-            searchFolders             = options.is ?: []
-            xmlSchemas                = options.xs ?: []
-            logsFolder                = options.l  
-
-            isOutputHeaderXML         = options.u
-            isQuickValidation         = options.q
-            
-            testRuleId                = options.r
-            isNoStopOnFail            = options.s
-            outputResultsLevel        = options.o
-            
-            configFilePath            = options.g
-            configEnv                 = options.e
-
-            isDebugInfo4CmdLnArgs     = options.z                           // used to dump internal state of CmdLnArgs_v2 via show() method below.
-            
-            if(configFilePath)
-            {
-                def l_env = configEnv ?: ""
-                def l_config = new ConfigSlurper(l_env).parse(new File(configFilePath).toURL())                
-                                                                                                // slurper changes [:] into false
-                isCommentsOn          =  isCommentsOn                                   ?: Boolean.valueOf(slurper_val(l_config.settings.isCommentsOn))
-                
-                searchFolders         += (slurper_val(l_config.settings.searchFolders)  ?: [])
-                xmlSchemas            += (slurper_val(l_config.settings.xmlSchemas)     ?: [])
-                logsFolder            = logsFolder                                      ?: slurper_val(l_config.settings.logsFolder)
-                
-                isOutputHeaderXML     = isOutputHeaderXML                               ?: slurper_val(l_config.settings.outputHeaderXML)
-                isQuickValidation     = isQuickValidation                               ?: slurper_val(l_config.settings.quickValidation)
-                
-                if(testRuleId == false) {
-                    if(l_config.settings.testRuleId instanceof java.lang.Number) {
-                        testRuleId = l_config.settings.testRuleId.toString()
-                    }
-                }
-
-                isNoStopOnFail          = isNoStopOnFail                                ?: slurper_val(l_config.settings.noStopOnFail)
-                
-                if(outputResultsLevel == false) {
-                    if(l_config.settings.outputResultsLevel instanceof java.lang.Integer) {
-                        outputResultsLevel = l_config.settings.outputResultsLevel
-                    }
-                }
-            }
-            
-            outputResultsLevel        = Utils.getIntegerInRange(outputResultsLevel, 0, 3, 1)
-            
-            filename              = Utils.getCefFilename(filePath)
-            logicalFileId         = Utils.getCefLogicalFileId(filename)
-            cefFileVersion        = Utils.getCefFileVersion(filename)
-            
-            isOk = true
+        
+        //or ['-h', '--help'].intersect(args?.toList())
+        if('-h' in i_args || '--help' in i_args) {
+            m_cli.usage() 
+            System.exit(-1)
         }
         
-        if(isDebugInfo4CmdLnArgs) {
-            showAll()
-            CefLog.p("-z : Exiting now..")
+        def options = m_cli.parse(i_args)
 
-            System.exit(-1) // used for debug only!
+        // values are false if missing i.e. user does not set them
+        isCommentsOn              = options.c                         // -c presence = true, abscence = false
+        
+        filePath                  = options.f
+        
+        searchFolders             = options.is ?: []
+        xmlSchemas                = options.xs ?: []
+        logsFolder                = options.l  
+
+        isOutputHeaderXML         = options.u
+        isQuickValidation         = options.q
+        
+        testRuleId                = options.r
+        isNoStopOnFail            = options.s
+        outputResultsLevel        = options.o
+        
+        configFilePath            = options.g
+        configEnv                 = options.e
+
+        isDebugInfo4CmdLnArgs     = options.z                           // used to dump internal state of CmdLnArgs_v2 via show() method below.
+        
+        if(configFilePath)
+        {
+            def l_env = configEnv ?: ""
+            def l_config = new ConfigSlurper(l_env).parse(new File(configFilePath).toURL())                
+                                                                                            // slurper changes [:] into false
+            isCommentsOn          =  isCommentsOn                                   ?: Boolean.valueOf(slurper_val(l_config.settings.isCommentsOn))
+            
+            searchFolders         += (slurper_val(l_config.settings.searchFolders)  ?: [])
+            xmlSchemas            += (slurper_val(l_config.settings.xmlSchemas)     ?: [])
+            logsFolder            = logsFolder                                      ?: slurper_val(l_config.settings.logsFolder)
+            
+            isOutputHeaderXML     = isOutputHeaderXML                               ?: slurper_val(l_config.settings.outputHeaderXML)
+            isQuickValidation     = isQuickValidation                               ?: slurper_val(l_config.settings.quickValidation)
+            
+            if(testRuleId == false) {
+                if(l_config.settings.testRuleId instanceof java.lang.Number) {
+                    testRuleId = l_config.settings.testRuleId.toString()
+                }
+            }
+
+            isNoStopOnFail          = isNoStopOnFail                                ?: slurper_val(l_config.settings.noStopOnFail)
+            
+            if(outputResultsLevel == false) {
+                if(l_config.settings.outputResultsLevel instanceof java.lang.Integer) {
+                    outputResultsLevel = l_config.settings.outputResultsLevel
+                }
+            }
+        }
+        
+        outputResultsLevel        = Utils.getIntegerInRange(outputResultsLevel, 0, 3, 1)
+        
+        filename              = Utils.getCefFilename(filePath)
+        logicalFileId         = Utils.getCefLogicalFileId(filename)
+        cefFileVersion        = Utils.getCefFileVersion(filename)
+        
+        isOk = true
+        
+        if(isDebugInfo4CmdLnArgs) {
+            println "-z Debug Info CmdLnArgs"
+            try{
+                showAll()
+                CefLogDev.diag("-z : Exiting now..")
+            }
+            catch(Exception e) {
+                e.printStackTrace()
+            }
+            finally {
+                System.exit(-1) // used for debug only!
+            }
         }
     }
     
@@ -150,7 +160,7 @@ public class CmdLnArgs_v2
     //
     
     def showLine(i_key, i_value) {
-        CefLog.info i_key.padRight(50) + i_value            
+        CefLogDev.info i_key.padRight(50) + i_value            
     }
 
     def show() {
@@ -178,16 +188,16 @@ public class CmdLnArgs_v2
     }
     
     def showAll() {
-        CefLog.p "Command Line Args:"
+        CefLogDev.diag "Command Line Args:"
         m_args.each {
-            CefLog.p "\t" + it
+            CefLogDev.diag "\t" + it
         }
         
-        CefLog.p("\n")
+        CefLogDev.diag("\n")
         
         m_cli.usage()
         
-        CefLog.p("\n")
+        CefLogDev.diag("\n")
         
         show()
     }

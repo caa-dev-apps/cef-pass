@@ -19,7 +19,7 @@ public class FileLogs
     def static init() {
         s_logsFolder = CmdLnArgs_v2.getObject().getLogsFolder()
         
-        CefLog.diag("############ cefpass.FileLogs" + s_logsFolder);
+        CefLogDev.diag("############ cefpass.FileLogs" + s_logsFolder);
         
         if(s_logsFolder == null) {
             s_logsFolder = System.getProperty("user.dir") + "../logs"
@@ -48,13 +48,13 @@ public class FileLogs
     def static writeTextFile(i_filename, 
                              i_contents) 
     {
-        CefLog.diag "** ** ** ** writeTextFile: " + i_filename
+        CefLogDev.diag "** ** ** ** writeTextFile: " + i_filename
     
         if(s_logsFolder != null)
         {
             def l_path = s_logsFolder + "\\" + i_filename
             
-            CefLog.diag "** ++ == ** writeTextFilePath: " +  l_path
+            CefLogDev.diag "** ++ == ** writeTextFilePath: " +  l_path
             
             File file = new File(l_path)
             file << i_contents
@@ -72,7 +72,7 @@ public class FileLogs
     }
     
     def static dump() {
-        CefLog.diag s_logsFolder
+        CefLogDev.diag s_logsFolder
     }
     
     ///////////////////////////////////////////////////////////////////////////////

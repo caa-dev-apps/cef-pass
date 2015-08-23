@@ -30,8 +30,6 @@ class I_RS0_CefParser_Tests_v2 extends Specification{
         when:
             def result = app.stages((String[])test_cmd_args)
         then:
-            //x CefException ex = thrown()
-            //x ex.matches(l_rule_name) == true
             (result.isError == true) && (result.stage_results.STAGE_2.exception.toString() == l_rule_name)
         where :
             [rule_name, test_file, test_cmd_args, test_ix, total_ix, rule_test_name] <<  Helper_Resources.getMultiRuleTestsArgsList_v2([

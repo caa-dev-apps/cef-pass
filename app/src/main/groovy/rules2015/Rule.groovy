@@ -1,6 +1,6 @@
 package rules2015
 
-import cefpass.CefLog
+import cefpass.CefLogDev
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -36,5 +36,5 @@ public class Rule
         str
     }
     
-    def dump()  { CefLog.diag(to_str()) }
+    def dump()  { CefLogDev.diag(to_str()) }
 }

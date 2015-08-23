@@ -1,6 +1,6 @@
 package rules2015
 
-import cefpass.CefLog
+import cefpass.CefLogResults
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -266,7 +266,7 @@ public class RS0_CefParser extends RuleSet
     static showAll() 
     {
         s_rules.each {
-            CefLog.stage2_info(it.value.about(), "OK")
+            CefLogResults.stage2_info(it.value.about(), "OK")
         }
     }
 }

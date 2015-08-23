@@ -1,0 +1,56 @@
+C:\work.dev\2015.03.22 github cef pass v2\v1\cef-pass-dev\tests.sh>t0_ARGS_DUMP.sh
+Welcome to Git (version 1.9.5-preview20141217)
+
+
+Run 'git help git' to display the help index.
+Run 'git help <command>' to display help for specific commands.
+Hello, World!
+workingDir: C:\work.dev\2015.03.22 github cef pass v2\v1\cef-pass-dev\tests.sh
+
+Stage 1: ==========================================
+-z Debug Info CmdLnArgs
+Command Line Args:
+        -f
+        C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz
+        -i
+        C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES,C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS,C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EDI,C:/_CEF_CEH_EXAMPLES_2
+013_VALIDATOR_/HEADERS/EFW,C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE
+        -l
+        ../../_logs
+        -z
+
+
+usage: java -jar cefpass-0.1.0.jar -f <path-to-cef> -i <search include dirs> -x <xml-schema files>
+ -c,--comments-on        (Optional) include comments in the output data(XML). Default=False
+ -e,--config-env <arg>   (Optional) A config environment tag (e.g. dev, test, default=none)
+ -f,--cef <arg>          (Required) path to cef file
+ -g,--config <arg>       (Optional) A groovy dsl config file
+ -h,--help               usage information
+ -i,--include <arg>      (Optional) list of include folders to search for ceh files
+ -l,--logs <arg>         (Optional) path to logs folder
+ -o,--output <arg>       (Optional) Output Results Level(0,1,2,3): 0:Debug 1:Info 2:Stages 3:Result Only
+ -q,--qv                 (Optional) quick validation (only checks 1st data row). Default=False
+ -r,--rule-id <arg>      (Optional) Test specific Rule Id. Default=All e.g. "1.02"
+ -s,--stop               (Optional) No-Stop on Fail. Default=False
+ -u,--xo                 (Optional) output header meta data in xml format. Default=False
+ -x,--xsd <arg>          (Optional) list of xml schema files to validate header data against
+ -z,--debug-info         (Optional) Outputs the cmdline args data and exits immediately. For debug Only!
+
+
+isCommentsOn                                      false
+filePath                                          C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/EDI/C3_CP_EDI_EGD__20111009_V01.cef.gz
+searchFolders                                     [C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/CEF/_TEST_SAMPLES/MULTI_LEVEL_INCLUDES, C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS, C:/_CEF_CEH_EXAMPLES_2013_
+VALIDATOR_/HEADERS/EDI, C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/EFW, C:/_CEF_CEH_EXAMPLES_2013_VALIDATOR_/HEADERS/PEACE]
+xmlSchemas                                        []
+logsFolder                                        ../../_logs
+isOutputHeaderXML                                 false
+isQuickValidation                                 false
+testRuleId                                        false
+isNoStopOnFail                                    false
+outputResultsLevel                                1
+filename                                          C3_CP_EDI_EGD__20111009_V01.cef
+logicalFileId                                     C3_CP_EDI_EGD__20111009_V01
+cefFileVersion                                    01
+isDebugInfo4CmdLnArgs                             true
+isOk                                              true
+-z : Exiting now..

@@ -1,6 +1,6 @@
 package rules2015
 
-import cefpass.CefLog
+import cefpass.CefLogResults
 import cefpass.CefResult
 import cefpass.CmdLnArgs_v2
 
@@ -65,7 +65,7 @@ public class RuleSets
             
             l_errors = l_errors || l_rule_testResult.isError
             
-            CefLog.stage_info(4, it.value.about(), l_rule_testResult.status)     
+            CefLogResults.stage_info(4, it.value.about(), l_rule_testResult.status)     
         }  
 
         if(l_errors == false)
@@ -84,7 +84,7 @@ public class RuleSets
         m_rules.any {
             l_rule_testResult = it.value.Test_Func()
             l_errors = l_errors || l_rule_testResult.isError
-            CefLog.stage_info(4, it.value.about(), l_rule_testResult.status)     
+            CefLogResults.stage_info(4, it.value.about(), l_rule_testResult.status)     
             l_errors
         }
         

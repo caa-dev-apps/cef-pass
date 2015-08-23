@@ -31,9 +31,8 @@ class CefResult
     def setLastError(i_lastError)       { setFail(); lastError = i_lastError; this }
     def setException(i_exception)       { setFail(); exception = i_exception; this }
 
+    def info()                          { CefLogDev.info "TAG: ${tag}  isError: ${isError}  status:${status}  lastError:${lastError}  exception:${exception}" }
 
-    def info()                          { CefLog.info "TAG: ${tag}  isError: ${isError}  status:${status}  lastError:${lastError}  exception:${exception}" }
-
-    def stage_result()                  { CefLog.stage_result "${tag} : ${status} " }
-    def full_result()                   { CefLog.full_result  "${tag} : ${status} " }
+    def stage_result()                  { CefLogResults.stage_result "${tag} : ${status} " }
+    def full_result()                   { CefLogResults.full_result  "${tag} : ${status} " }
 }
