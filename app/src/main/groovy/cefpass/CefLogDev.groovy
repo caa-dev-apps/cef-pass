@@ -21,6 +21,9 @@ public class CefLogDev
     static def p(i_type, i_str)                             { if(isEnabled && i_type >= s_type) pp i_str 
                                                               else                              pp "x: " + i_str 
                                                             }
+//x     static def p(i_type, i_str)                             { if(isEnabled && i_type >= s_type) pp i_str 
+//x //x                                                               else                              pp "x: " + i_str 
+//x                                                             }
                                                                 
     static def diag(i_str)                                  { CefLogDev.p(CefLogDev.Type.diag,         i_str) }
     static def info(i_str)                                  { CefLogDev.p(CefLogDev.Type.info,         i_str) }

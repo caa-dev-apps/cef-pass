@@ -134,6 +134,7 @@ public class CmdLnArgs_v2
         }
         
         outputResultsLevel        = Utils.getIntegerInRange(outputResultsLevel, 0, 3, 1)
+        CefLogResults.setOutputType(outputResultsLevel)
         
         filename              = Utils.getCefFilename(filePath)
         logicalFileId         = Utils.getCefLogicalFileId(filename)

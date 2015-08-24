@@ -3,6 +3,7 @@ package cefpass
 ///////////////////////////////////////////////////////////////////////////////
 // '(Optional) Output Results Level(0,1,2,3): 0:Debug 1:Info 2:Stages 3:Result Only')
 
+
 public class CefLogResults
 {
     enum Type {
@@ -17,7 +18,7 @@ public class CefLogResults
     }
 
     static Type s_type = Type.diag
-    static def setType(int id) { 
+    static def setOutputType(int id) { 
         s_type = Type.byId(id) ?: Type.diag 
 
         // switch dev-debug off when arg/config for output > 0
@@ -28,9 +29,13 @@ public class CefLogResults
     }
     
     static def p =                                          { i_str -> println i_str}
+//x     static def print_ln =                                   { i_type, i_str -> 
+//x                                                                 if(i_type >= s_type) CefLogResults.p i_str  
+//x                                                                 else CefLogResults.p "x: " + i_str  
+//x                                                             }
     static def print_ln =                                   { i_type, i_str -> 
                                                                 if(i_type >= s_type) CefLogResults.p i_str  
-                                                                else CefLogResults.p "x: " + i_str  
+//x                                                                 else CefLogResults.p "x: " + i_str  
                                                             }
     static def diag =                                       { i_str -> CefLogResults.print_ln(Type.diag, i_str) }
 

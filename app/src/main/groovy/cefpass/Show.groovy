@@ -62,14 +62,14 @@ public class Show {
     
     public static void showDataLine(i_line) 
     {
-        if(s_show_data_line == true) CefLogDev.info "Data: " + i_line
+        //x if(s_show_data_line == true) CefLogDev.info "Data: " + i_line
     }
     
     public static void showContexts(i_cefContexts) {
         if(s_show_search_folders == true) {
-            CefLog.info "\nCef Contexts:"    
+            CefLogDev.info "\nCef Contexts:"    
             i_cefContexts.each { 
-                CefLog.info "\t" + it.getString()
+                CefLogDev.info "\t" + it.getString()
             }
         }
     }

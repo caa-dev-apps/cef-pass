@@ -42,7 +42,7 @@ public class App {
     }
     
     def stage_1__cmdln_args = {
-        CefLogDev.info "\nStage 1: ========================================== "
+        CefLogDev.diag "\nStage 1: "
         
         def l_result = new CefResult("stage_1__cmdln_args")
         
@@ -61,7 +61,7 @@ public class App {
     }
     
     def stage_2__parser = {
-        CefLogDev.info "\nStage 2: ========================================== "
+        CefLogDev.diag "\nStage 2: "
         
         def l_result = new CefResult("stage_2__parser")
         
@@ -83,7 +83,7 @@ public class App {
     }
     
     def stage_3__xsd_schema = {
-        CefLogDev.info "\nStage 3: ========================================== "
+        CefLogDev.diag "\nStage 3: "
         
         def l_result = new CefResult("stage_3__xsd_schema")
         
@@ -104,7 +104,7 @@ public class App {
     }
     
     def stage_4__rules = {
-        CefLogDev.info "\nStage 4: ========================================== "
+        CefLogDev.diag "\nStage 4: "
         
         def l_result = new CefResult("stage_4__rules")
         
@@ -122,7 +122,7 @@ public class App {
     }
 
     def stage_5__data = {
-        CefLogDev.info "\nStage 5: ========================================== "
+        CefLogDev.diag "\nStage 5: "
         
         def l_result = new CefResult("stage_5__data")
         
@@ -165,8 +165,8 @@ public class App {
     }    
     
     public static void main(String[] i_args) {
-        CefLogDev.diag "Hello, World!"
-        CefLogDev.diag "workingDir: "  + System.getProperty("user.dir")
+        //x CefLogDev.diag "Hello, World!"
+        //x CefLogDev.diag "workingDir: "  + System.getProperty("user.dir")
         
         App a = new App();
 
