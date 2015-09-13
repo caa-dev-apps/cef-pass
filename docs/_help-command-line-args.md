@@ -18,3 +18,6 @@
      -u,--xo                 (Optional) output header meta data in xml format. Default=False
      -x,--xsd <arg>          (Optional) list of xml schema files to validate header data against
      -z,--debug-info         (Optional) Outputs the cmdline args data and exits immediately. For debug Only!        
+     
+     
+     

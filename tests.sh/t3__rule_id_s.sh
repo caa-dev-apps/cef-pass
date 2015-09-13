@@ -14,10 +14,4 @@ CEF_FILE=$CEF_FOLDER/C3_CP_EDI_EGD__20111009_V01.cef
 # echo $CEF_FILE
 # echo '- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -'
 
-##x echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
-##x echo $1
-##x echo $2
-##x echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
-
-## java -jar $APP_JAR -f $CEF_FILE -i $CEH_FOLDER -l $LOGS_FOLDER -z
 java -jar $APP_JAR -f $CEF_FILE -i $CEH_FOLDER -l $LOGS_FOLDER -r $2    

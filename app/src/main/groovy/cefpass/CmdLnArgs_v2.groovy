@@ -143,6 +143,8 @@ public class CmdLnArgs_v2
         isOk = true
         
         if(isDebugInfo4CmdLnArgs) {
+            CefLogDev.setIsEnabled(true);
+            
             println "-z Debug Info CmdLnArgs"
             try{
                 showAll()

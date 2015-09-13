@@ -42,18 +42,22 @@ public class App {
     }
     
     def stage_1__cmdln_args = {
-        CefLogDev.diag "\nStage 1: "
+        def l_CefLogDev_diag_str = "\nStage 1: "
         
         def l_result = new CefResult("stage_1__cmdln_args")
         
         try{
             CmdLnArgs_v2.getObject().init(m_args)
             if(CmdLnArgs_v2.getObject().getIsOk() == false) { throw new Exception("Error: CmdLnArgs_v2") } 
+            CefLogDev.diag l_CefLogDev_diag_str
+            
             FileLogs.init()
             
             l_result.setPass()
         }
         catch (Exception e) {
+            CefLogDev.diag l_CefLogDev_diag_str
+            
             l_result.setException(e)
         }
             
@@ -93,7 +97,7 @@ public class App {
             //  if(CefHeaderXsd.validateXMLSchema(l_xsdPath, l_xmlPath) == false) return
             CefLogResults.stage3_info("validateXMLSchema", "Skipped")
             
-//x             l_result.setPass()
+//x         l_result.setPass()
             l_result.setSkipped()
         }
         catch (Exception e) {

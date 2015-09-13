@@ -1,6 +1,17 @@
 import os
 import subprocess
 
+##x import datetime
+##x import time
+##x import os
+##x from os import sep, listdir
+##x from os.path import basename, isdir, isfile
+import sys
+##x import zipfile
+##x import re
+
+
+
 # -o,--output <arg>       (Optional) Output Results Level(0,1,2,3): 0:Debug 1:Info 2:Stages 3:Result Only
 def t1_tests(i_output):
     l_cwd = os.getcwd()
@@ -53,3 +64,9 @@ def t1_tests(i_output):
                                      stderr=subprocess.STDOUT)
         print res
 
+
+        
+if __name__ == '__main__':
+    t1_tests(sys.argv[1])        
+    
+            
