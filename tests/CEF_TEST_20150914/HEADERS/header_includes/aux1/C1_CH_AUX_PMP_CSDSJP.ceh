@@ -1,0 +1,174 @@
+INCLUDE = "CL_CH_MISSION.ceh"
+INCLUDE = "C1_CH_OBS.ceh"
+INCLUDE = "CL_CH_AUX_EXP.ceh"
+INCLUDE = "C1_CH_AUX_INST.ceh"
+
+START_META     =   DATASET_ID
+   ENTRY       =   "C1_JP_AUX_PMP"
+END_META       =   DATASET_ID
+
+START_META     =   DATA_TYPE
+   ENTRY       =   "JP>CSDS_JSOC_Parameter"
+END_META       =   DATA_TYPE
+
+START_META     =   DATASET_TITLE
+   ENTRY       =   "JSOC Catalogue Parameter, Predicted Magnetic Position"
+END_META       =   DATASET_TITLE
+
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset contains the JSOC Predicted Magnetic Positions for the C1"
+   ENTRY       =   "Cluster spacecraft."
+   ENTRY       =   "These data have been converted into Cluster Exchange Format from the orignal"
+   ENTRY       =   "Cluster Science Data System Common Data Format (CDF) Prime Parameter files"
+   ENTRY       =   "that were made available through the Cluster Science Data System."
+   ENTRY       =   "The metadata has been updated from the CSDS/CDF standard to the CAA to aid"
+   ENTRY       =   "compatibility with tools developed for the Cluster Active Archive."
+   ENTRY       =   " "
+   ENTRY       =   "Version 01 of this dataset is the initial translation prepared for the "
+   ENTRY       =   "launch of the CAA during the second half of 2005."
+END_META       =   DATASET_DESCRIPTION
+
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "M.A.Hapgood>Non-PI>M.A.Hapgood@rl.ac.uk"
+END_META       =   CONTACT_COORDINATES
+
+START_META     =   TIME_RESOLUTION
+   ENTRY       =   300
+END_META       =   TIME_RESOLUTION
+
+START_META     =   MIN_TIME_RESOLUTION
+   ENTRY       =   300.0
+END_META       =   MIN_TIME_RESOLUTION
+
+START_META     =   MAX_TIME_RESOLUTION
+   ENTRY       =   300.0
+END_META       =   MAX_TIME_RESOLUTION
+
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Auxiliary"
+END_META       =   PROCESSING_LEVEL
+
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the ESA Cluster Active Archive in any publication based upon use of this data."
+END_META       =   ACKNOWLEDGEMENT
+
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "*C1_CQ_PMP"
+END_META       =   DATASET_CAVEATS
+
+START_META     =   DATASET_VERSION
+   ENTRY       =   "01"
+END_META       =   DATASET_VERSION
+
+START_META     =   FILE_TYPE
+   ENTRY       =   "cef"
+END_META       =   FILE_TYPE
+
+START_META     =   METADATA_TYPE
+   ENTRY       =   "CAA"
+END_META       =   METADATA_TYPE
+
+START_META     =   METADATA_VERSION
+   ENTRY       =   "2.0"
+END_META       =   METADATA_VERSION
+
+START_VARIABLE  =  time_tags__C1_JP_AUX_PMP
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Interval centred time tag"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    SIGNIFICANT_DIGITS  = 24
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = half_interval__C1_JP_AUX_PMP
+    DELTA_MINUS         = half_interval__C1_JP_AUX_PMP
+END_VARIABLE    =  time_tags__C1_JP_AUX_PMP
+
+START_VARIABLE  =  half_interval__C1_JP_AUX_PMP
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Half averaging interval length"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1.0e28
+    FIELDNAM            = "Half width of averaging interval"
+    LABLAXIS            = "s"
+END_VARIABLE    =  half_interval__C1_JP_AUX_PMP
+
+START_VARIABLE = Invar_Lat__C1_JP_AUX_PMP
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Magnitude"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "JSOC (CSDS JP) Cluster, Spacecraft Invariant Latitude (Null outside magnetosphere)"
+    UNITS               = "degree"
+    SI_CONVERSION       = "1.0>(degree)"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1.0e31
+    QUALITY             = 2
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Invariant Latitude"
+    LABLAXIS            = "Invar Lat"
+    DEPEND_0            = time_tags__C1_JP_AUX_PMP
+END_VARIABLE   = Invar_Lat__C1_JP_AUX_PMP
+
+START_VARIABLE = Mag_Local_time__C1_JP_AUX_PMP
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Magnitude"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "JSOC (CSDS JP) Cluster, Spacecraft local magnetic time in hours"
+    UNITS               = "hours"
+    SI_CONVERSION       = "3600>s"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1.0e31
+    QUALITY             = 2
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Spacecraft local magnetic time"
+    LABLAXIS            = "Mag Time"
+    DEPEND_0            = time_tags__C1_JP_AUX_PMP
+END_VARIABLE   = Mag_Local_time__C1_JP_AUX_PMP
+
+START_VARIABLE = L_value__C1_JP_AUX_PMP
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Magnitude"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "JSOC (CSDS JP) Cluster, Spacecraft L-value"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1.0>(L val)"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1.0e31
+    QUALITY             = 2
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Spacecraft L-value"
+    LABLAXIS            = "L val"
+    DEPEND_0            = time_tags__C1_JP_AUX_PMP
+END_VARIABLE   = L_value__C1_JP_AUX_PMP
+
+START_VARIABLE = Pred_B_mag__C1_JP_AUX_PMP
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Magnitude"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "JSOC (CSDS JP) Cluster, Predicted magnetic field magnitude"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0e-9>T"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1.0e31
+    QUALITY             = 2
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Predicted Field Magnitude"
+    LABLAXIS            = "Pred B mag"
+    DEPEND_0            = time_tags__C1_JP_AUX_PMP
+END_VARIABLE   = Pred_B_mag__C1_JP_AUX_PMP
+

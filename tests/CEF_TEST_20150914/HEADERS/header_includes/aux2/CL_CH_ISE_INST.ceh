@@ -1,0 +1,42 @@
+!
+
+!  CL_CH_ISE_INST.ceh
+
+!  Global metadata for the JSOC Catalogue Parameter, Identified Scientific Events -
+
+!  INSTRUMENT metadata.
+
+
+
+START_META = INSTRUMENT_NAME
+
+    ENTRY = "ISE"
+
+END_META = INSTRUMENT_NAME
+
+
+
+START_META = INSTRUMENT_DESCRIPTION
+
+    ENTRY = "The JSOC Catalogue Parameter, Identified Scientific Events for the Cluster spacecraft."
+
+END_META = INSTRUMENT_DESCRIPTION
+
+
+
+START_META = INSTRUMENT_TYPE
+
+    ENTRY = "Auxiliary"
+
+END_META = INSTRUMENT_TYPE
+
+
+
+START_META = MEASUREMENT_TYPE
+
+    ENTRY = "Status"
+
+END_META = MEASUREMENT_TYPE
+
+
+

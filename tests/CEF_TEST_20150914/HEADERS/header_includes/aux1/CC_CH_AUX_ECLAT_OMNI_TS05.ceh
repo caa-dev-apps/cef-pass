@@ -1,0 +1,287 @@
+!------------------- CEF ASCII File --------------------
+! This is a test file produced by the CAA meta data 
+! creation tool. The contents are ONLY for testing  
+!-------------------------------------------------------
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "CC_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "CC_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "CC_CP_AUX_ECLAT_OMNI_TS05"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Parameter"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "Input parameters to run TS-05"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset contains input parameters required to run TS-05 magnetic field model,"
+   ENTRY       =   "which is the most recent empirical model based on the largest ever space magnetometer data set."
+   ENTRY       =   "It uses improved representations of principal current systems and simulates a complex response of the magnetosphere"
+   ENTRY       =   "to the external driving (taking into account inertia and memory effects in the magnetospheric current system)."
+   ENTRY       =   "OMNI based database is used as a source of data (Solar Wind parameters, IMF and SYM-H index)."
+   ENTRY       =   "2008 version of the Geopack package (http://geo.phys.spbu.ru/~tsyganenko/TS05_data_and_staff/) has been used in the computations."
+   ENTRY       =   "If data gaps are shorter than 2 hours, parameters are linearly interpolated inside these gaps."
+   ENTRY       =   "In addition, six specific time-history variables are also used as the input to the model."
+   ENTRY       =   "These variables are the time integrals of the solar wind variables (Tsyganenko and Sitnov, Modeling the dynamics of the inner"
+   ENTRY       =   "magnetosphere during strong geomagnetic storms, 2005)."
+   ENTRY       =   " "
+   ENTRY       =   "This dataset was generated as part of European Union ECLAT project. The aim of the European"
+   ENTRY       =   "Cluster Assimilation Technology (ECLAT) is to provide a novel data base, by providing an upgrade"
+   ENTRY       =   "to the CAA. To achieve this , ECLAT programme ingests into the CAA supporting data from other"
+   ENTRY       =   "space- and ground-based observatories, provide data mining routines, refine data products and "
+   ENTRY       =   "software tools for their visualisation, and develop existing European magnetospheric modeling"
+   ENTRY       =   "infrastructure to provide context for the observational data."
+   ENTRY       =   " "
+   ENTRY       =   "The contacts for the ECLAT project are"
+   ENTRY       =   "  Steve Milan, University of Leicester"
+   ENTRY       =   "  Rumi Nakamura, Oesterreichische Akademie der Wissenschaften"
+   ENTRY       =   "  Kirsti Kauristie, Finnish Meterological Institute"
+   ENTRY       =   "  Victor Sergeev, St. Petersburg State University"
+   ENTRY       =   "  Hermann Opgenoorth, Swedish Institute of Space Physics, Uppsala Division"
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Victor Sergeev>victor@geo.phys.spbu.ru"
+   ENTRY       =   "Tatjana Zivkovic>tatjana.zivkovic@irfu.se"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   TIME_RESOLUTION
+!
+START_META     =   MIN_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   MIN_TIME_RESOLUTION
+!
+START_META     =   MAX_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   MAX_TIME_RESOLUTION
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Derived"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "2012/V01 - Initial ECLAT delivery to CAA"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the SuperDARN community, the European Union Framework 7 Programme,"
+   ENTRY       =   "the ECLAT project and the ESA Cluster Archive in any publications based upon the use of these"
+   ENTRY       =   "data."
+END_META       =   ACKNOWLEDGEMENT
+!
+! PARAMETER LEVEL METADATA
+!
+START_VARIABLE  =  time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "time tag"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    SIGNIFICANT_DIGITS  = 24
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+!
+!
+START_VARIABLE  =  Bimf__vec_xyg_gsm__CC_CP_AUX_ECLAT_OMNI_TS05
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Magnetic_Field"
+    PROPERTY            = "Vector"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Interplanetary Magnetic Field Vector in GSM"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetospheric"
+    REPRESENTATION_1    = "x>Cartesian x component", "y>Cartesian y component", "z>Cartesian z component"
+    SIZES               = 3
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 4
+    FILLVAL             = 9999.99
+    FIELDNAM            = "Interplanetary Magnetic Field Vector in GSM"
+    LABLAXIS            = "Mag Field"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+    LABEL_1             = "Bx", "By", "Bz"
+    QUALITY             = "3"
+END_VARIABLE    =  Bimf__vec_xyg_gsm__CC_CP_AUX_ECLAT_OMNI_TS05
+!
+!
+START_VARIABLE  =  Vimf__vec_xyg_gsm__CC_CP_AUX_ECLAT_OMNI_TS05
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Proton"
+    PROPERTY            = "Velocity"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Solar Wind velocity Vector in GSE"
+    UNITS               = "kms^-1"
+    SI_CONVERSION       = "1.0e3>ms^-1"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSE>Geocentric Solar Ecliptic"
+    REPRESENTATION_1    = "x>Cartesian x component", "y>Cartesian y component", "z>Cartesian z component"
+    SIZES               = 3
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = 99999.9
+    FIELDNAM            = "Solar Wind velocity Vector in GSE"
+    LABLAXIS            = "SW velocity"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+    LABEL_1             = "Vx", "Vy", "Vz"
+    QUALITY             = "3"
+END_VARIABLE    =  Vimf__vec_xyg_gsm__CC_CP_AUX_ECLAT_OMNI_TS05
+!
+!
+START_VARIABLE  =  density__CC_CP_AUX_ECLAT_OMNI_TS05
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Proton density"
+    UNITS               = "n/cc"
+    SI_CONVERSION       = "1.0E6>(particles)m^-3"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 3
+    FILLVAL             = 999.990
+    FIELDNAM            = "Proton density"
+    LABLAXIS            = "Proton density"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+    QUALITY             = 3
+END_VARIABLE    =  density__CC_CP_AUX_ECLAT_OMNI_TS05
+!
+!
+START_VARIABLE  =  T__CC_CP_AUX_ECLAT_OMNI_TS05
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Proton temperature"
+    UNITS               = "K"
+    SI_CONVERSION       = "1.0>K"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = 1e7
+    FIELDNAM            = "Proton temperature"
+    LABLAXIS            = "P temp"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+    QUALITY             = 3
+END_VARIABLE    =  T__CC_CP_AUX_ECLAT_OMNI_TS05
+!
+START_VARIABLE  =  SYMH__CC_CP_AUX_ECLAT_OMNI_TS05
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "SYMH index"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1e-9>T"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 3
+    FILLVAL             = -1e30
+    FIELDNAM            = "SYMH index"
+    LABLAXIS            = "SYMH"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+    QUALITY             = 3
+END_VARIABLE    =  SYMH__CC_CP_AUX_ECLAT_OMNI_TS05
+!
+START_VARIABLE  =  Quality__IMF_CC_CP_AUX_ECLAT_OMNI_TS05
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = 9
+    FIELDNAM            = "Quality flag: 1-good data no gaps, 2-interpolated data"
+    LABLAXIS            = "IMF Quality Flag"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+END_VARIABLE  =  Quality__IMF_CC_CP_AUX_ECLAT_OMNI_TS05
+!
+START_VARIABLE  =  Quality__SW_CC_CP_AUX_ECLAT_OMNI_TS05
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = 9
+    FIELDNAM            = "Quality flag: 1-good data no gaps, 2-interpolated data "
+    LABLAXIS            = "Solar Wind Quality flag"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+END_VARIABLE  =  Quality__SW_CC_CP_AUX_ECLAT_OMNI_TS05
+!
+START_VARIABLE  =  dipole_tilt__CC_CP_AUX_ECLAT_OMNI_TS05
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "geodipole tilt angle"
+    UNITS               = "rad"
+    SI_CONVERSION       = "1.0>rad"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 4
+    FILLVAL             = -1e30
+    FIELDNAM            = "Earth's dipole tilt angle"
+    LABLAXIS            = "TILT"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+    QUALITY             = 3
+END_VARIABLE    =  dipole_tilt__CC_CP_AUX_ECLAT_OMNI_TS05
+!
+START_VARIABLE  =  Pdyn__CC_CP_AUX_ECLAT_OMNI_TS05
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Solar Wind ram pressure"
+    UNITS               = "nPA"
+    SI_CONVERSION       = "1E-9>Pa"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = 99.9900
+    FIELDNAM            = "Solar Wind ram pressure"
+    LABLAXIS            = "Pdyn"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+    QUALITY             = 3
+END_VARIABLE    =  Pdyn__CC_CP_AUX_ECLAT_OMNI_TS05
+!
+START_VARIABLE  =  hist__var_CC_CP_AUX_ECLAT_OMNI_TS05
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "6 model driving parameters defined for the TS-05 model"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>unitless"
+    TENSOR_ORDER        = 1
+    SIZES               = 6
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1.0e31
+    FIELDNAM            = "6 model driving parameters defined for the TS-05 model"
+    LABLAXIS            = "time-history variables"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_OMNI_TS05
+    LABEL_1             = "W1","W2","W3","W4","W5","W6"
+    QUALITY             = 3
+END_VARIABLE  =  hist__var_CC_CP_AUX_ECLAT_OMNI_TS05

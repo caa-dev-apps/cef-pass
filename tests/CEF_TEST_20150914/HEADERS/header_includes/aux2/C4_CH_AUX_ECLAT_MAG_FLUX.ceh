@@ -1,0 +1,378 @@
+!------------------- CEF ASCII File --------------------
+! This is a test file produced by the CAA meta data 
+! creation tool. The contents are ONLY for testing  
+!-------------------------------------------------------
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "C4_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "C4_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "C4_CP_AUX_ECLAT_MAG_FLUX"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Parameter"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "Tail magnetic flux"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset contains two computed values F1 and F2 for the magnetotail flux, where the modified procedure from Petrinec and Russel [1996]"
+   ENTRY       =   "and Shukhtina et al. [2009] are used. Input parameters for magnetotail fluxes are from the Cluster magnetic field data and from the OMNI"
+   ENTRY       =   "database. Parameters from the OMNI database (Interplanetary magnetic field, dynamic pressure, static pressure, SYMH index) are propagated by the convection"
+   ENTRY       =   "time to the Cluster 1 X coordinate. Merging electric field is defined as Em=v*Bt*sin(theta/2)^3, where v is the solar wind velocity, "
+   ENTRY       =   "Bt=sqrt(By^2+Bz^2), and theta is the IMF clock angle. Static pressure is equal to Pstat=Bsw^2/(2MU)+Nsw*k*Tsw, where Bsw, Nsw and Tsw are"
+   ENTRY       =   "the IMF amplitude, solar wind density and temperature, respectively. Magnetotail flux is F1=0.5*pi*Rt^2*abs(Bl-Bigrf), where Rt is the computed tail radius,"
+   ENTRY       =   "Bl is the lobe magnetic field and Bigrf is the IGRF field which is computed using the software package Geopack_2005.for."
+   ENTRY       =   "Magnetospheric flux F2=0.5*pi*R2^2*abs(Bl-Bigrf), where R2 is the radius of the surface inside the magnetopause"
+   ENTRY       =   "Time resolution (when satellites are in the magnetotail) is 5 minutes, and Cluster parameters are averaged over 5 minutes intervals."
+   ENTRY       =   "Region quality flag demonstrates in which plasma region the magnetic flux is computed. The flag value 5 is for the tail lobes, 4 is for the boundary"
+   ENTRY       =   "region, 3 for the outer plasma sheet, 0 for the plasma sheet (including the neutral sheet) and for the undefined region.  If the region quality flag is not an integer number,"
+   ENTRY       =   "it means that Cluster passes through different regions. Data with a flag value< 2.8"
+   ENTRY       =   "is rejected. Quality flag for X-coordinate is 1 if Cluster is tailward of -11Re,"
+   ENTRY       =   "while it is 0 if Cluster is Earthward of -11 Re. Quality flag for Y-coordinate"
+   ENTRY       =   "is 1 when X< -10 Re and abs(Y)< 10 Re; it is also 1 when X> -10 Re and abs(Y)< abs(X). It is 0 when X< -10 Re and abs(Y)>10 Re. Also, it is 0, when "
+   ENTRY       =   "X< -10 Re and abs(Y)>abs(X). Quality flag for Z-coordinate is 1 when abs(z) > 10 Re; it is 0 when abs(z) is between 5 Re and 10 Re and it is -1 when"
+   ENTRY       =   "abs(Z)< 5 Re. The disturbance quality flag is 1 if SYMH> -20 nT and is 0 if SYMH<-20 nT"
+   ENTRY       =   "Magnetotail fluxes are computed for the period when Cluster is in the magnetotail, i.e from July to October."
+   ENTRY       =   " "
+   ENTRY       =   "The contacts for the ECLAT project are"
+   ENTRY       =   "  Steve Milan, University of Leicester"
+   ENTRY       =   "  Rumi Nakamura, Oesterreichische Akademie der Wissenschaften"
+   ENTRY       =   "  Kirsti Kauristie, Finnish Meterological Institute"
+   ENTRY       =   "  Victor Sergeev, Petersburg State University"
+   ENTRY       =   "  Hermann Opgenoorth, Swedish Institute of Space Physics"
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Victor Sergeev>victor@geo.phys.spbu.ru"
+   ENTRY       =   "Maria Shukhtina>maria-shukht@yandex.ru"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   TIME_RESOLUTION
+!
+START_META     =   MIN_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   MIN_TIME_RESOLUTION
+!
+START_META     =   MAX_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   MAX_TIME_RESOLUTION
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Derived"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "2013/V01 - Initial ECLAT delivery to CAA"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the SuperDARN community, the European Union Framework 7 Programme,"
+   ENTRY       =   "the ECLAT project and the ESA Cluster Archive in any publications based upon the use of these"
+   ENTRY       =   "data."
+END_META       =   ACKNOWLEDGEMENT
+!
+! PARAMETER LEVEL METADATA
+!
+START_VARIABLE  =  time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "time tag"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    SIGNIFICANT_DIGITS  = 24
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  Pdyn__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Solar Wind dynamic pressure"
+    UNITS               = "nPA"
+    SI_CONVERSION       = "1E-9>Pa"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = 99.9900
+    FIELDNAM            = "Solar Wind dynamic pressure"
+    LABLAXIS            = "Pdyn"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+    QUALITY             = 3
+END_VARIABLE    =  Pdyn__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+!
+!
+START_VARIABLE  =  Pstat__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Solar Wind static pressure"
+    UNITS               = "nPA"
+    SI_CONVERSION       = "1E-9>Pa"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = 99.9900
+    FIELDNAM            = "Solar Wind static pressure"
+    LABLAXIS            = "Pstat"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+    QUALITY             = 3
+END_VARIABLE    =  Pstat__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  Em__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Merging electric field"
+    UNITS               = "mVm^-1"
+    SI_CONVERSION       = "1e-3>Vm^-1"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 4
+    FILLVAL             = 99.00
+    FIELDNAM            = "Merging electric field"
+    LABLAXIS            = "Em"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+    QUALITY             = "3"
+END_VARIABLE    =  Em__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  Bimf_z_gsm__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Interplanetary Magnetic Field-z component in GSM"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetospheric"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 4
+    FILLVAL             = 99.00
+    FIELDNAM            = "Interplanetary Magnetic Field-z component in GSM"
+    LABLAXIS            = "Mag Field-z comp."
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+    QUALITY             = "3"
+END_VARIABLE    =  Bimf_z_gsm__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  sc_r_xyz_gsm__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Vector"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "JSOC (CSDS JP) Cluster, Predicted Position OF REF SC"
+    UNITS               = "Re"
+    SI_CONVERSION       = "6.37e6>m"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetospheric"
+    REPRESENTATION_1    = "x","y","z"
+    SIZES               = 3
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = 99.00
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Predicted Position OF REF SC"
+    LABLAXIS            = "Position"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+    LABEL_1             = "pred x (GSM)", "pred y (GSM)", "pred z (GSM)"
+    QUALITY             = 3
+END_VARIABLE  =  sc_r_xyz_gsm__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  B_vec_xyz_gsm__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Vector"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Magnetic field at Cluster"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1E-9>T"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetospheric"
+    REPRESENTATION_1    = "x","y","z"
+    SIZES               = 3
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = 99.00
+    FIELDNAM            = "Magnetic field at Cluster"
+    LABLAXIS            = "Cluster mag. field"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+    LABEL_1             = "Bx (GSM)", "By (GSM)", "Bz (GSM)"
+    QUALITY             = 3
+END_VARIABLE  =  B_vec_xyz_gsm__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  dipole_tilt__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "dipole tilt angle"
+    UNITS               = "deg"
+    SI_CONVERSION       = "17e-3>rad"
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    SIZES               = 1
+    FILLVAL             = 99.00
+    FIELDNAM            = "dipole tilt angle"
+    LABLAXIS            = "dipole tilt angle"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+    QUALITY             = 3
+END_VARIABLE   =  dipole_tilt__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  SYMH__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "SYMH index"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1e-9>T"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 3
+    FILLVAL             = 99.00
+    FIELDNAM            = "SYMH index"
+    LABLAXIS            = "SYMH"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+    QUALITY             = 3
+END_VARIABLE    =  SYMH__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  mag_flux1__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "computed magnetotail flux"
+    UNITS               = "GWb"
+    SI_CONVERSION       = "1e+9>Wb"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 3
+    FILLVAL             = 99.00
+    FIELDNAM            = "magnetotail flux"
+    LABLAXIS            = "magnetotail flux"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+    QUALITY             = 3
+END_VARIABLE    =  mag_flux1__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+START_VARIABLE  =  mag_flux2__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "computed magnetotail flux"
+    UNITS               = "GWb"
+    SI_CONVERSION       = "1e+9>Wb"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 3
+    FILLVAL             = 99.00
+    FIELDNAM            = "magnetotail flux"
+    LABLAXIS            = "magnetotail flux"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+    QUALITY             = 3
+END_VARIABLE    =  mag_flux2__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+START_VARIABLE  =  Quality_region__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag for the region in the magnetotail"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = 0.0
+    FIELDNAM            = "Quality flag: 5-tail lobes, 4-boundary region, 3-outer plasma sheet"
+    LABLAXIS            = "Quality Flag"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+END_VARIABLE  =  Quality_region__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  Quality_x__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag for the x coordinate in the magnetotail"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = 0
+    FIELDNAM            = "Quality flag: 1-good, 0-bad"
+    LABLAXIS            = "Quality Flag"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+END_VARIABLE  =  Quality_x__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  Quality_y__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag for the y coordinate in the magnetotail"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = 0
+    FIELDNAM            = "Quality flag: 1-good, 0-bad "
+    LABLAXIS            = "Quality Flag"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+END_VARIABLE  =  Quality_y__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  Quality_z__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag for the z coordinate in the magnetotail"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = 0
+    FIELDNAM            = "Quality flag: 1-good, 0-intermediate, -1-bad"
+    LABLAXIS            = "Quality Flag"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+END_VARIABLE   =  Quality_z__C4_CP_AUX_ECLAT_MAG_FLUX
+!
+!
+START_VARIABLE  =  Quality_symh__C4_CP_AUX_ECLAT_MAG_FLUX
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag for the disturbance"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = 0
+    FIELDNAM            = "Quality flag: 1-good, 0-bad"
+    LABLAXIS            = "Quality Flag"
+    DEPEND_0            = time_tags__C4_CP_AUX_ECLAT_MAG_FLUX
+END_VARIABLE  =  Quality_symh__C4_CP_AUX_ECLAT_MAG_FLUX
+
+

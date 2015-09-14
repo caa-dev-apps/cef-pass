@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+  <FILE_NAME>"C1_CP_AUX_MAARBLE_ULF_PC1__20100211_035905_20100211_035925_V00.cef"</FILE_NAME>
+  <FILE_FORMAT_VERSION>"CEF-2.0"</FILE_FORMAT_VERSION>
+  <END_OF_RECORD_MARKER>"$"</END_OF_RECORD_MARKER>
+  <include-start>"C1_CH_AUX_MAARBLE_ULF_PC1.ceh"</include-start>
+  <include-start>"CL_CH_MISSION.ceh"</include-start>
+  <meta name="MISSION">
+    <ENTRY>"Cluster"</ENTRY>
+  </meta>
+  <meta name="MISSION_TIME_SPAN">
+    <VALUE_TYPE>ISO_TIME_RANGE</VALUE_TYPE>
+    <ENTRY>2000-08-16T12:39:00Z/2030-12-31T23:59:59Z</ENTRY>
+  </meta>
+  <meta name="MISSION_AGENCY">
+    <ENTRY>"ESA"</ENTRY>
+  </meta>
+  <meta name="MISSION_DESCRIPTION">
+    <ENTRY>"The aim of the Cluster mission is to study small-scale structures of the magnetosphere "</ENTRY>
+    <ENTRY>"and its environment in three dimensions. To achieve this, Cluster is constituted of four "</ENTRY>
+    <ENTRY>"identical spacecraft that will flight in a tetrahedral configuration. The separation distances "</ENTRY>
+    <ENTRY>"between the spacecraft will be varied between ~40 km and 10 000 km, according to the "</ENTRY>
+    <ENTRY>"key scientific regions."</ENTRY>
+  </meta>
+  <meta name="MISSION_KEY_PERSONNEL">
+    <ENTRY>"Philippe Escoubet&gt;Philippe.Escoubet@esa.int &gt;Cluster Project Scientist"</ENTRY>
+  </meta>
+  <meta name="MISSION_REFERENCES">
+    <ENTRY>"The Cluster and Phoenix Missions&gt;Cluster project and instrument teams&gt;Space Sci. Rev. 79, Nos. 1-2, 1997"</ENTRY>
+  </meta>
+  <meta name="MISSION_REGION">
+    <ENTRY>"Solar_Wind"</ENTRY>
+    <ENTRY>"Bow_Shock"</ENTRY>
+    <ENTRY>"Magnetosheath"</ENTRY>
+    <ENTRY>"Magnetopause"</ENTRY>
+    <ENTRY>"Magnetosphere"</ENTRY>
+    <ENTRY>"Magnetotail"</ENTRY>
+    <ENTRY>"Polar_Cap"</ENTRY>
+    <ENTRY>"Auroral_Region"</ENTRY>
+    <ENTRY>"Cusp"</ENTRY>
+    <ENTRY>"Radiation_Belt"</ENTRY>
+    <ENTRY>"Plasmasphere"</ENTRY>
+  </meta>
+  <meta name="MISSION_CAVEATS">
+    <ENTRY>"*CL"</ENTRY>
+  </meta>
+  <include-end>"CL_CH_MISSION.ceh"</include-end>
+  <include-start>"C1_CH_OBS.ceh"</include-start>
+  <meta name="OBSERVATORY">
+    <ENTRY>"Cluster-1"</ENTRY>
+  </meta>
+  <meta name="OBSERVATORY_CAVEATS">
+    <ENTRY>"*C1_CQ"</ENTRY>
+  </meta>
+  <meta name="OBSERVATORY_DESCRIPTION">
+    <ENTRY>"Cluster-1 (Rumba)"</ENTRY>
+    <ENTRY>"Launched: 09 Aug 2000"</ENTRY>
+    <ENTRY>"ESA Number: 1"</ENTRY>
+    <ENTRY>"COSPAR ID: 2000-045A"</ENTRY>
+    <ENTRY>"USSPACECOM catalogue number 26463"</ENTRY>
+    <ENTRY>"CSDS Code: C1"</ENTRY>
+    <ENTRY>"ESOC FD code: S1"</ENTRY>
+    <ENTRY>"ESA Flight Model Number: FM5"</ENTRY>
+  </meta>
+  <meta name="OBSERVATORY_TIME_SPAN">
+    <VALUE_TYPE>ISO_TIME_RANGE</VALUE_TYPE>
+    <ENTRY>2000-07-16T12:39:00Z/2030-12-31T23:59:59Z</ENTRY>
+  </meta>
+  <meta name="OBSERVATORY_REGION">
+    <ENTRY>"Solar_Wind"</ENTRY>
+    <ENTRY>"Bow_Shock"</ENTRY>
+    <ENTRY>"Magnetosheath"</ENTRY>
+    <ENTRY>"Magnetopause"</ENTRY>
+    <ENTRY>"Magnetosphere"</ENTRY>
+    <ENTRY>"Magnetotail"</ENTRY>
+    <ENTRY>"Polar_Cap"</ENTRY>
+    <ENTRY>"Auroral_Region"</ENTRY>
+    <ENTRY>"Cusp"</ENTRY>
+    <ENTRY>"Radiation_Belt"</ENTRY>
+    <ENTRY>"Plasmasphere"</ENTRY>
+  </meta>
+  <include-end>"C1_CH_OBS.ceh"</include-end>
+  <include-start>"CL_CH_AUX_EXP.ceh"</include-start>
+  <meta name="EXPERIMENT">
+    <ENTRY>"AUX"</ENTRY>
+  </meta>
+  <meta name="EXPERIMENT_DESCRIPTION">
+    <ENTRY>"Auxiliary Data"</ENTRY>
+  </meta>
+  <meta name="INVESTIGATOR_COORDINATES">
+    <ENTRY>"M Tatrallyay&gt;Validator&gt;mariella@rmki.kfki.hu"</ENTRY>
+  </meta>
+  <meta name="EXPERIMENT_REFERENCES">
+    <ENTRY>"*CL_CD_AUX_CAAICD"</ENTRY>
+  </meta>
+  <meta name="EXPERIMENT_KEY_PERSONNEL">
+    <ENTRY>"M Tatrallyay&gt;Validator&gt;mariella@rmki.kfki.hu"</ENTRY>
+  </meta>
+  <meta name="EXPERIMENT_CAVEATS">
+    <ENTRY>"*CL_CQ_AUX"</ENTRY>
+  </meta>
+  <include-end>"CL_CH_AUX_EXP.ceh"</include-end>
+  <include-start>"C1_CH_AUX_INST.ceh"</include-start>
+  <meta name="INSTRUMENT_NAME">
+    <ENTRY>"AUX1"</ENTRY>
+  </meta>
+  <meta name="INSTRUMENT_DESCRIPTION">
+    <ENTRY>"Auxiliary Parameters"</ENTRY>
+  </meta>
+  <meta name="INSTRUMENT_TYPE">
+    <ENTRY>"Auxiliary"</ENTRY>
+  </meta>
+  <meta name="MEASUREMENT_TYPE">
+    <ENTRY>"Status"</ENTRY>
+  </meta>
+  <meta name="INSTRUMENT_CAVEATS">
+    <ENTRY>"Validated data - no caveats"</ENTRY>
+  </meta>
+  <include-end>"C1_CH_AUX_INST.ceh"</include-end>
+  <meta name="DATA_TYPE">
+    <ENTRY>"CP&gt;CAA_Parameter"</ENTRY>
+  </meta>
+  <meta name="DATASET_ID">
+    <ENTRY>"C1_CP_AUX_MAARBLE_ULF_PC1"</ENTRY>
+  </meta>
+  <meta name="DATASET_TITLE">
+    <ENTRY>"Pc1 Wave Spectra, Polarization and Propagation Parameters"</ENTRY>
+  </meta>
+  <meta name="DATASET_DESCRIPTION">
+    <ENTRY>"BB is the spectrum of B produced using FFT in FAC system."</ENTRY>
+    <ENTRY>"Polarization and propagation parameters derived from singular"</ENTRY>
+    <ENTRY>"value decomposition (SVD) method of the cross-spectral"</ENTRY>
+    <ENTRY>"matrix (sm)."</ENTRY>
+    <ENTRY>"The SVD  method is described in Santolik et al (2003)."</ENTRY>
+    <ENTRY>"The parameters calculated from the three magnetic components"</ENTRY>
+    <ENTRY>"are BB, KSVD, ELLSVD, PLANSVD, DOP and POLSVD."</ENTRY>
+    <ENTRY>"KSVD is polar and azimuthal angles of k in FAC system."</ENTRY>
+    <ENTRY>"DOP is the degree of polarization defined in Samson (1973)."</ENTRY>
+    <ENTRY>"PV is the Poynting vector (magnitude, polar and azimuthal"</ENTRY>
+    <ENTRY>"angles) in FAC coordinate system."</ENTRY>
+    <ENTRY>"ESUM is the sum of the two electric auto-power spectra in"</ENTRY>
+    <ENTRY>"the spacecraft spin plain."</ENTRY>
+    <ENTRY>"BMAG is the magnitude of DC magnetic field measured by FGM."</ENTRY>
+    <ENTRY>"The parameters are derived from STAFF_SC and EFW"</ENTRY>
+    <ENTRY>"calibrated waveforms in ISR2 coordinate system. "</ENTRY>
+    <ENTRY>"The change of coordinate system has been done using FGM"</ENTRY>
+    <ENTRY>" data (5Hz)."</ENTRY>
+    <ENTRY>"This dataset was generated as part of the MAARBLE "</ENTRY>
+    <ENTRY>"(Monitoring, Analyzing and Assessing Radiation Belt "</ENTRY>
+    <ENTRY>"Energization and Loss) collaborative research project "</ENTRY>
+    <ENTRY>"which has received funding from the European Community's"</ENTRY>
+    <ENTRY>" Seventh Framework Programme (FP7-SPACE-2011-1)"</ENTRY>
+    <ENTRY>"under grant agreement n. 284520."</ENTRY>
+    <ENTRY>" "</ENTRY>
+    <ENTRY>"The contacts for the MAARBLE project are"</ENTRY>
+    <ENTRY>"  Ioannis A. Daglis, National Observatory of Athens"</ENTRY>
+    <ENTRY>"  Yuri Khotyaintsev, Swedish Institute of Space Physics"</ENTRY>
+    <ENTRY>"  Ondrej Santolik, Institute of Atmospheric Physics of"</ENTRY>
+    <ENTRY>"         the Academy of Sciences of the Czech Republic"</ENTRY>
+    <ENTRY>"  Sebastien Bourdarie, ONERA"</ENTRY>
+    <ENTRY>"  Richard B. Horne, The British Antarctic Survey"</ENTRY>
+    <ENTRY>"  Ian R. Mann, The University of Alberta"</ENTRY>
+    <ENTRY>"  Drew Turner, UCLA"</ENTRY>
+  </meta>
+  <meta name="CONTACT_COORDINATES">
+    <ENTRY>"Benjamin Grison&gt;Cluster ULF data provider&gt;grison@ufa.cas.cz"</ENTRY>
+    <ENTRY>"Yuri Khotyaitsev&gt;MAARBLE Wave Database leader&gt;yuri@irfu.se"</ENTRY>
+  </meta>
+  <meta name="TIME_RESOLUTION">
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <ENTRY>10.24</ENTRY>
+  </meta>
+  <meta name="MIN_TIME_RESOLUTION">
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <ENTRY>10.24</ENTRY>
+  </meta>
+  <meta name="MAX_TIME_RESOLUTION">
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <ENTRY>10.24</ENTRY>
+  </meta>
+  <meta name="PROCESSING_LEVEL">
+    <ENTRY>"Derived"</ENTRY>
+  </meta>
+  <meta name="DATASET_CAVEATS">
+    <ENTRY>""</ENTRY>
+  </meta>
+  <meta name="ACKNOWLEDGEMENT">
+    <ENTRY>"Please acknowledge the European Union Framework 7 Programme,"</ENTRY>
+    <ENTRY>"the MAARBLE project and the ESA Cluster Archive "</ENTRY>
+    <ENTRY>"in any publications based upon the use of these data."</ENTRY>
+  </meta>
+  <var name="Time__C1_CP_AUX_MAARBLE_ULF_PC1">
+    <PARAMETER_TYPE>"Support_Data"</PARAMETER_TYPE>
+    <CATDESC>"time tag"</CATDESC>
+    <UNITS>"s"</UNITS>
+    <SI_CONVERSION>"1.0&gt;s"</SI_CONVERSION>
+    <SIZES>1</SIZES>
+    <VALUE_TYPE>ISO_TIME</VALUE_TYPE>
+    <SIGNIFICANT_DIGITS>24</SIGNIFICANT_DIGITS>
+    <FILLVAL>9999-12-31T23:59:59Z</FILLVAL>
+    <FIELDNAM>"Universal Time"</FIELDNAM>
+    <LABLAXIS>"UT"</LABLAXIS>
+    <DELTA_PLUS>5.12</DELTA_PLUS>
+    <DELTA_MINUS>5.12</DELTA_MINUS>
+  </var>
+  <var name="Frequency__C1_CP_AUX_MAARBLE_ULF_PC1">
+    <PARAMETER_TYPE>"Support_Data"</PARAMETER_TYPE>
+    <CATDESC>"Interval centred frequency tag"</CATDESC>
+    <UNITS>"Hz"</UNITS>
+    <SI_CONVERSION>"1.0&gt;Hz"</SI_CONVERSION>
+    <SIZES>11</SIZES>
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <SIGNIFICANT_DIGITS>4</SIGNIFICANT_DIGITS>
+    <FILLVAL>-999.99</FILLVAL>
+    <FIELDNAM>"Frequency bin centres"</FIELDNAM>
+    <LABLAXIS>"F"</LABLAXIS>
+    <LABEL_1>"F","F","F","F","F","F","F","F","F","F","F"</LABEL_1>
+    <DELTA_PLUS>0.1953</DELTA_PLUS>
+    <DELTA_MINUS>0.1953</DELTA_MINUS>
+    <SCALETYP>"Linear"</SCALETYP>
+    <DATA>1.0742, 1.4649 , 1.8555, 2.2461, 2.6368, 3.0274, 3.4180, 3.8087, 4.1993, 4.5900, 4.9806</DATA>
+  </var>
+  <var name="BB_xxyyzz_fac__C1_CP_AUX_MAARBLE_ULF_PC1">
+    <PARAMETER_TYPE>"Data"</PARAMETER_TYPE>
+    <ENTITY>"Magnetic_Field"</ENTITY>
+    <PROPERTY>"Vector"</PROPERTY>
+    <FLUCTUATIONS>"Fourier_Power-spectrum"</FLUCTUATIONS>
+    <CATDESC>"Power spectrum of the B-field in FAC CS"</CATDESC>
+    <UNITS>"nT^2 Hz^-1"</UNITS>
+    <SI_CONVERSION>"1.0E-18&gt;T^2 Hz^-1"</SI_CONVERSION>
+    <TENSOR_ORDER>2</TENSOR_ORDER>
+    <TENSOR_FRAME>"FAC"</TENSOR_FRAME>
+    <FRAME>"FAC&gt;xyz"</FRAME>
+    <COORDINATE_SYSTEM>"FAC"</COORDINATE_SYSTEM>
+    <SIZES>11,3</SIZES>
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <SIGNIFICANT_DIGITS>3</SIGNIFICANT_DIGITS>
+    <FILLVAL>-1.00E+31</FILLVAL>
+    <FIELDNAM>"Magnetic Power Spectral Density"</FIELDNAM>
+    <LABLAXIS>"B PSD"</LABLAXIS>
+    <REPRESENTATION_2>"xx","yy","zz"</REPRESENTATION_2>
+    <DEPEND_0>Time__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_0>
+    <DEPEND_1>Frequency__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_1>
+    <LABEL_2>"Bx^2","By^2","Bz^2"</LABEL_2>
+    <QUALITY>3</QUALITY>
+  </var>
+  <var name="KSVD_fac__C1_CP_AUX_MAARBLE_ULF_PC1">
+    <PARAMETER_TYPE>"Data"</PARAMETER_TYPE>
+    <ENTITY>"Compound"</ENTITY>
+    <PROPERTY>"Vector"</PROPERTY>
+    <CATDESC>"Direction of propagation in FAC system (SVD)."</CATDESC>
+    <UNITS>"deg","deg"</UNITS>
+    <SI_CONVERSION>"1&gt;degree","1&gt;degree"</SI_CONVERSION>
+    <SIZES>11,2</SIZES>
+    <TENSOR_ORDER>1</TENSOR_ORDER>
+    <REPRESENTATION_2>"t", "p"</REPRESENTATION_2>
+    <LABEL_2>"theta","phi"</LABEL_2>
+    <COORDINATE_SYSTEM>"FAC"</COORDINATE_SYSTEM>
+    <FRAME>"FAC&gt;rtp"</FRAME>
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <SIGNIFICANT_DIGITS>3</SIGNIFICANT_DIGITS>
+    <FILLVAL>-1.00E+31</FILLVAL>
+    <FIELDNAM>"Direction of propagation"</FIELDNAM>
+    <LABLAXIS>"THSVD"</LABLAXIS>
+    <DEPEND_0>Time__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_0>
+    <DEPEND_1>Frequency__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_1>
+    <QUALITY>3</QUALITY>
+  </var>
+  <var name="ELLSVD__C1_CP_AUX_MAARBLE_ULF_PC1">
+    <PARAMETER_TYPE>"Data"</PARAMETER_TYPE>
+    <ENTITY>"Compound"</ENTITY>
+    <PROPERTY>"Magnitude"</PROPERTY>
+    <CATDESC>"Ellipticity of the polarization (SVD)."</CATDESC>
+    <UNITS>"Unitless"</UNITS>
+    <SI_CONVERSION>"1.0&gt;unitless"</SI_CONVERSION>
+    <SIZES>11</SIZES>
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <SIGNIFICANT_DIGITS>3</SIGNIFICANT_DIGITS>
+    <FILLVAL>-1.00E+31</FILLVAL>
+    <FIELDNAM>"Ellipticity of the polarization (SVD)."</FIELDNAM>
+    <LABLAXIS>"ELLSVD"</LABLAXIS>
+    <DEPEND_0>Time__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_0>
+    <DEPEND_1>Frequency__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_1>
+    <QUALITY>3</QUALITY>
+  </var>
+  <var name="PLANSVD__C1_CP_AUX_MAARBLE_ULF_PC1">
+    <PARAMETER_TYPE>"Data"</PARAMETER_TYPE>
+    <ENTITY>"Compound"</ENTITY>
+    <PROPERTY>"Magnitude"</PROPERTY>
+    <CATDESC>"Planarity of the polarization (SVD)."</CATDESC>
+    <UNITS>"Unitless"</UNITS>
+    <SI_CONVERSION>"1.0&gt;unitless"</SI_CONVERSION>
+    <SIZES>11</SIZES>
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <SIGNIFICANT_DIGITS>3</SIGNIFICANT_DIGITS>
+    <FILLVAL>-1.00E+31</FILLVAL>
+    <FIELDNAM>"Planarity of the polarization (SVD)."</FIELDNAM>
+    <LABLAXIS>"PLANSVD"</LABLAXIS>
+    <DEPEND_0>Time__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_0>
+    <DEPEND_1>Frequency__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_1>
+    <QUALITY>3</QUALITY>
+  </var>
+  <var name="POLSVD__C1_CP_AUX_MAARBLE_ULF_PC1">
+    <PARAMETER_TYPE>"Data"</PARAMETER_TYPE>
+    <ENTITY>"Compound"</ENTITY>
+    <PROPERTY>"Magnitude"</PROPERTY>
+    <CATDESC>"Degree of polarization in the polarization plane (SVD)."</CATDESC>
+    <UNITS>"Unitless"</UNITS>
+    <SI_CONVERSION>"1.0&gt;unitless"</SI_CONVERSION>
+    <SIZES>11</SIZES>
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <SIGNIFICANT_DIGITS>3</SIGNIFICANT_DIGITS>
+    <FILLVAL>-1.00E+31</FILLVAL>
+    <FIELDNAM>"Degree of polarization in the polarization plane (SVD)."</FIELDNAM>
+    <LABLAXIS>"POLSVD"</LABLAXIS>
+    <DEPEND_0>Time__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_0>
+    <DEPEND_1>Frequency__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_1>
+    <QUALITY>3</QUALITY>
+  </var>
+  <var name="DOP__C1_CP_AUX_MAARBLE_ULF_PC1">
+    <PARAMETER_TYPE>"Data"</PARAMETER_TYPE>
+    <ENTITY>"Compound"</ENTITY>
+    <PROPERTY>"Magnitude"</PROPERTY>
+    <CATDESC>"3D Degree of polarization."</CATDESC>
+    <UNITS>"Unitless"</UNITS>
+    <SI_CONVERSION>"1.0&gt;unitless"</SI_CONVERSION>
+    <SIZES>11</SIZES>
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <SIGNIFICANT_DIGITS>3</SIGNIFICANT_DIGITS>
+    <FILLVAL>-1.00E+31</FILLVAL>
+    <FIELDNAM>"3D Degree of polarization."</FIELDNAM>
+    <LABLAXIS>"DOP"</LABLAXIS>
+    <DEPEND_0>Time__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_0>
+    <DEPEND_1>Frequency__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_1>
+    <QUALITY>3</QUALITY>
+  </var>
+  <var name="BMAG__C1_CP_AUX_MAARBLE_ULF_PC1">
+    <PARAMETER_TYPE>"Data"</PARAMETER_TYPE>
+    <ENTITY>"Magnetic_Field"</ENTITY>
+    <PROPERTY>"Magnitude"</PROPERTY>
+    <CATDESC>"Magnitude of the DC B-field"</CATDESC>
+    <UNITS>"nT"</UNITS>
+    <SI_CONVERSION>"1.0E-9&gt;T"</SI_CONVERSION>
+    <SIZES>1</SIZES>
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <SIGNIFICANT_DIGITS>3</SIGNIFICANT_DIGITS>
+    <FILLVAL>-1.00E+31</FILLVAL>
+    <FIELDNAM>"DC Magnetic Field Magnutude"</FIELDNAM>
+    <LABLAXIS>"B"</LABLAXIS>
+    <DEPEND_0>Time__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_0>
+    <QUALITY>3</QUALITY>
+  </var>
+  <var name="ESUM__C1_CP_AUX_MAARBLE_ULF_PC1">
+    <PARAMETER_TYPE>"Data"</PARAMETER_TYPE>
+    <ENTITY>"Electric_Field"</ENTITY>
+    <PROPERTY>"Magnitude"</PROPERTY>
+    <CATDESC>"Sum of the two electric auto-power spectra."</CATDESC>
+    <UNITS>"mV^2 m^-2 Hz^-1"</UNITS>
+    <SI_CONVERSION>"1.0E-6&gt;V^2 m^-2 Hz^-1"</SI_CONVERSION>
+    <SIZES>11</SIZES>
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <SIGNIFICANT_DIGITS>3</SIGNIFICANT_DIGITS>
+    <FILLVAL>-1.00E+31</FILLVAL>
+    <FIELDNAM>"Sum of the two electric auto-power spectra."</FIELDNAM>
+    <LABLAXIS>"ESUM"</LABLAXIS>
+    <DEPEND_0>Time__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_0>
+    <DEPEND_1>Frequency__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_1>
+    <QUALITY>3</QUALITY>
+  </var>
+  <var name="PV_fac__C1_CP_AUX_MAARBLE_ULF_PC1">
+    <PARAMETER_TYPE>"Data"</PARAMETER_TYPE>
+    <ENTITY>"Compound"</ENTITY>
+    <PROPERTY>"Component"</PROPERTY>
+    <CATDESC>"Poynting vector in FAC system."</CATDESC>
+    <UNITS>"W m^-2 Hz^-2","deg","deg"</UNITS>
+    <SI_CONVERSION>"1.0&gt;W m^-2 Hz^-2","1&gt;degree","1&gt;degree"</SI_CONVERSION>
+    <SIZES>11,3</SIZES>
+    <COORDINATE_SYSTEM>"FAC"</COORDINATE_SYSTEM>
+    <FRAME>"FAC&gt;xyz"</FRAME>
+    <VALUE_TYPE>FLOAT</VALUE_TYPE>
+    <SIGNIFICANT_DIGITS>3</SIGNIFICANT_DIGITS>
+    <FILLVAL>-1.00E+31</FILLVAL>
+    <FIELDNAM>"Poynting vector"</FIELDNAM>
+    <TENSOR_ORDER>1</TENSOR_ORDER>
+    <REPRESENTATION_2>"r","t","p"</REPRESENTATION_2>
+    <LABEL_2>"PV(amp)", "PV(theta)", "PV(phi)"</LABEL_2>
+    <LABLAXIS>"PFlux"</LABLAXIS>
+    <DEPEND_0>Time__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_0>
+    <DEPEND_1>Frequency__C1_CP_AUX_MAARBLE_ULF_PC1</DEPEND_1>
+    <QUALITY>3</QUALITY>
+  </var>
+  <include-end>"C1_CH_AUX_MAARBLE_ULF_PC1.ceh"</include-end>
+  <meta name="DATASET_VERSION">
+    <ENTRY>"01"</ENTRY>
+  </meta>
+  <meta name="LOGICAL_FILE_ID">
+    <ENTRY>"C1_CP_AUX_MAARBLE_ULF_PC1__20100211_035905_20100211_035925_V00"</ENTRY>
+  </meta>
+  <meta name="FILE_TYPE">
+    <ENTRY>"cef"</ENTRY>
+  </meta>
+  <meta name="VERSION_NUMBER">
+    <ENTRY>"00"</ENTRY>
+  </meta>
+  <meta name="FILE_TIME_SPAN">
+    <VALUE_TYPE>ISO_TIME_RANGE</VALUE_TYPE>
+    <ENTRY>2010-02-11T03:59:05.140Z/2010-02-11T03:59:25.619Z</ENTRY>
+  </meta>
+  <meta name="GENERATION_DATE">
+    <VALUE_TYPE>ISO_TIME</VALUE_TYPE>
+    <ENTRY>2014-02-27T22:53:05.000Z</ENTRY>
+  </meta>
+  <meta name="FILE_CAVEATS">
+    <ENTRY>"Release of Derived Products from"</ENTRY>
+    <ENTRY>"STAFF-SC and EFW Data"</ENTRY>
+    <ENTRY>"TED version 2.4.3 with lib 4.4.3 User Patch 1"</ENTRY>
+    <ENTRY>"Data processed with Prassadco software."</ENTRY>
+  </meta>
+  <DATA_UNTIL>END_OF_DATA</DATA_UNTIL>
+</root>

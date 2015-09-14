@@ -1,0 +1,42 @@
+!
+
+!  CL_CH_PCY_INST.ceh
+
+!  Global metadata for the JSOC Catalogue Parameter, Predicted Solar Cycle Trends -
+
+!  INSTRUMENT metadata.
+
+
+
+START_META = INSTRUMENT_NAME
+
+    ENTRY = "AUX"
+
+END_META = INSTRUMENT_NAME
+
+
+
+START_META = INSTRUMENT_DESCRIPTION
+
+    ENTRY = "The JSOC Catalogue Parameter, Predicted Solar Cycle Trends."
+
+END_META = INSTRUMENT_DESCRIPTION
+
+
+
+START_META = INSTRUMENT_TYPE
+
+    ENTRY = "Auxiliary"
+
+END_META = INSTRUMENT_TYPE
+
+
+
+START_META = MEASUREMENT_TYPE
+
+    ENTRY = "Status"
+
+END_META = MEASUREMENT_TYPE
+
+
+

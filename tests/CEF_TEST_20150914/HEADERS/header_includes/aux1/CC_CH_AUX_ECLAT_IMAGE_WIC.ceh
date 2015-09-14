@@ -1,0 +1,232 @@
+!------------------- CEF ASCII File --------------------
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "CC_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "CC_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "CC_CP_AUX_ECLAT_IMAGE_WIC"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Parameter"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "Imager for Magnetopause-to-Aurora Global Exploration (IMAGE) Far Ultraviolet (FUV) Wideband Imaging Camera (WIC) auroral images"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset contains the Imager for Magnetopause-to-Aurora Global Exploration (IMAGE)"
+   
+   ENTRY       =   "measurements of the auroras from the Far Ultraviolet (FUV) Wideband Imaging Camera (WIC),"
+   
+   ENTRY       =   "measured between wavelengths of 140 and 160 nm.  The principle investigator of IMAGE FUV"
+   
+   ENTRY       =   "is Stephen Mende, University of California at Berkeley."
+
+   ENTRY       =   " "
+
+   ENTRY       =   "These data are provided on a reduced spatial resolution grid, intended to provide global"
+
+   ENTRY       =   "context for Cluster observations.  The grid is rectilinear, 40x40, with 222 km spacing,"
+
+   ENTRY       =   "centred on the geomagnetic pole, with axes aligned with the noon-midnight and dawn-dusk"
+
+   ENTRY       =   "magnetic local time meridians."
+
+   ENTRY       =   " "
+
+   ENTRY       =   "Full resolution data are available from the IMAGE FUV home-page:"
+
+   ENTRY       =   "http://sprg.ssl.berkeley.edu/image/"
+   ENTRY       =   " "
+   ENTRY       =   "This dataset was generated as part of European Union ECLAT project. The aim of the European"
+   ENTRY       =   "Cluster Assimilation Technology (ECLAT) is to provide a novel data base, by providing an upgrade"
+   ENTRY       =   "to the CAA. To achieve this, ECLAT programme ingests into the CAA supporting data from other"
+   ENTRY       =   "space- and ground-based observatories, provide data mining routines, refine data products and"
+   ENTRY       =   "software tools for their visualisation, and develop existing European magnetospheric modeling"
+   ENTRY       =   "infrastructure to provide context for the observational data."
+   ENTRY       =   " "
+   ENTRY       =   "The contacts for the ECLAT project are"
+   ENTRY       =   "  Steve Milan, University of Leicester"
+   ENTRY       =   "  Rumi Nakamura, Oesterreichische Akademie der Wissenschaften"
+   ENTRY       =   "  Kirsti Kauristie, Finnish Meterological Institute"
+   ENTRY       =   "  Victor Sergeev, Petersburg State University"
+   ENTRY       =   "  Hermann Opgenoorth, Swedish Institute of Space Physics"
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Steve Milan>IMAGE FUV data provider>steve.milan@ion.le.ac.uk"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   120.0
+END_META       =   TIME_RESOLUTION
+!
+START_META     =   MIN_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   120.0
+END_META       =   MIN_TIME_RESOLUTION
+!
+START_META     =   MAX_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   124.0
+END_META       =   MAX_TIME_RESOLUTION
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Derived"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "2013/V02 - ECLAT delivery to CAA"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the IMAGE FUV principle investigator (Stephen Mende, University of California"
+
+   ENTRY       =   "at Berkeley), the European Union Framework 7 Programme, the ECLAT project and the ESA Cluster Archive"
+   ENTRY       =   "in any publications based upon the use of these data."
+END_META       =   ACKNOWLEDGEMENT
+!
+! PARAMETER LEVEL METADATA
+!
+START_VARIABLE  =  time_tags__CC_CP_AUX_ECLAT_IMAGE_WIC
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Time tag start of integration period"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    SIGNIFICANT_DIGITS  = 24
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 120
+END_VARIABLE    =  time_tags__CC_CP_AUX_ECLAT_IMAGE_WIC
+!
+!
+START_VARIABLE  =  Hemisphere__CC_CP_AUX_ECLAT_IMAGE_WIC
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Hemisphere of observation: 0 - northern, 1 - southern"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = 9
+    FIELDNAM            = "Hemisphere of observation: 0 - northern, 1 - southern"
+    LABLAXIS            = "Hemisphere (0:N, 1:S)"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_IMAGE_WIC
+END_VARIABLE    =  Hemisphere__CC_CP_AUX_ECLAT_IMAGE_WIC
+!
+!
+START_VARIABLE  =  Quality__CC_CP_AUX_ECLAT_IMAGE_WIC
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag: 1 - good pointing accuracy, 0 - possible pointing inaccuracy"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = 9
+    FIELDNAM            = "Quality flag: 1 - good pointing accuracy, 0 - possible pointing inaccuracy"
+    LABLAXIS            = "Quality"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_IMAGE_WIC
+END_VARIABLE    =  Quality__CC_CP_AUX_ECLAT_IMAGE_WIC
+!
+!
+START_VARIABLE  =  Pixels__CC_CP_AUX_ECLAT_IMAGE_WIC
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Number of pixels in image"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(count)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 4
+    FILLVAL             = 0
+    FIELDNAM            = "Number of pixels in image"
+    LABLAXIS            = "N pixels"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_IMAGE_WIC
+END_VARIABLE    =  Pixels__CC_CP_AUX_ECLAT_IMAGE_WIC
+!
+!
+START_VARIABLE  =  Image__CC_CP_AUX_ECLAT_IMAGE_WIC
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Photon"
+    PROPERTY            = "Photon_Flux"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "WIC photon flux on 40x40 grid"
+    UNITS               = "R"
+    SI_CONVERSION       = "1>R"
+    SIZES               = 40, 40
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 4
+    FILLVAL             = -1E30
+    FIELDNAM            = "WIC photon flux on 40x40 grid"
+    LABLAXIS            = "I"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_IMAGE_WIC
+    DEPEND_1            = dimension_x__CC_CP_AUX_ECLAT_IMAGE_WIC
+    DEPEND_2            = dimension_y__CC_CP_AUX_ECLAT_IMAGE_WIC
+    QUALITY             = "Quality__CC_CP_AUX_ECLAT_IMAGE_WIC"
+END_VARIABLE    =  Image__CC_CP_AUX_ECLAT_IMAGE_WIC
+!
+!
+START_VARIABLE  =  dimension_x__CC_CP_AUX_ECLAT_IMAGE_WIC
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Grid X positions"
+    UNITS               = "km"
+    SI_CONVERSION       = "1.0e3>m"
+    COORDINATE_SYSTEM   = "SM>Solar Magnetic"
+    REPRESENTATION_1    = "x>Cartesian x component"
+    SIZES               = 40
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1e31
+    FIELDNAM            = "Grid X positions"
+    LABLAXIS            = "X"
+    DELTA_PLUS          = 111
+    DELTA_MINUS         = 111
+    DATA                =      -4329.00,      -4107.00,      -3885.00,      -3663.00,  \
+                               -3441.00,      -3219.00,      -2997.00,      -2775.00,  \
+                               -2553.00,      -2331.00,      -2109.00,      -1887.00,  \
+                               -1665.00,      -1443.00,      -1221.00,      -999.000,  \
+                               -777.000,      -555.000,      -333.000,      -111.000,  \
+                                111.000,       333.000,       555.000,       777.000,  \
+                                999.000,       1221.00,       1443.00,       1665.00,  \
+                                1887.00,       2109.00,       2331.00,       2553.00,  \
+                                2775.00,       2997.00,       3219.00,       3441.00,  \
+                                3663.00,       3885.00,       4107.00,       4329.00
+END_VARIABLE    =  dimension_x__CC_CP_AUX_ECLAT_IMAGE_WIC
+!
+!
+START_VARIABLE  =  dimension_y__CC_CP_AUX_ECLAT_IMAGE_WIC
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Grid Y positions"
+    UNITS               = "km"
+    SI_CONVERSION       = "1.0e3>m"
+    COORDINATE_SYSTEM   = "SM>Solar Magnetic"
+    REPRESENTATION_1    = "y>Cartesian y component"
+    SIZES               = 40
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1e31
+    FIELDNAM            = "Grid Y positions"
+    LABLAXIS            = "Y"
+    DELTA_PLUS          = 111
+    DELTA_MINUS         = 111
+    DATA                =      -4329.00,      -4107.00,      -3885.00,      -3663.00,  \
+                               -3441.00,      -3219.00,      -2997.00,      -2775.00,  \
+                               -2553.00,      -2331.00,      -2109.00,      -1887.00,  \
+                               -1665.00,      -1443.00,      -1221.00,      -999.000,  \
+                               -777.000,      -555.000,      -333.000,      -111.000,  \
+                                111.000,       333.000,       555.000,       777.000,  \
+                                999.000,       1221.00,       1443.00,       1665.00,  \
+                                1887.00,       2109.00,       2331.00,       2553.00,  \
+                                2775.00,       2997.00,       3219.00,       3441.00,  \
+                                3663.00,       3885.00,       4107.00,       4329.00
+END_VARIABLE    =  dimension_y__CC_CP_AUX_ECLAT_IMAGE_WIC

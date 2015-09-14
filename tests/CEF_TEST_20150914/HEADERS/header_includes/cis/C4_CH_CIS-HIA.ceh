@@ -1,0 +1,25 @@
+! Instrument level metadata
+!
+START_META = Instrument_name
+  ENTRY    = "CIS-HIA4"
+END_META   = Instrument_name
+
+START_META = Instrument_description
+  ENTRY    = "CIS Hot Ion Analyser on Cluster C4"
+END_META   = Instrument_description
+
+START_META = Instrument_type
+  ENTRY    = "Electrostatic_Analyser"
+  ENTRY    = "Micro-channel_Plate"
+END_META   = Instrument_type
+
+START_META = Measurement_type
+  ENTRY    = "Thermal_Plasma"
+END_META   = Measurement_type
+
+START_META = Instrument_caveats
+  ENTRY    = "http://cluster.irap.omp.eu/index.php?page=caveats"
+END_META   = Instrument_caveats
+
+
+

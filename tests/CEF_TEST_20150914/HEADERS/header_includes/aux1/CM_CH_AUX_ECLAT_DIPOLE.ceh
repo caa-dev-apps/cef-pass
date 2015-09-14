@@ -1,0 +1,406 @@
+!------------------- CEF ASCII File --------------------
+! This is a test file produced by the CAA meta data 
+! creation tool. The contents are ONLY for testing  
+!-------------------------------------------------------
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "CM_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "CM_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "CM_CP_AUX_ECLAT_DIPOLE"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Event_Data"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "CLUSTER IDENTIFIED DIPOLARIZATIONS"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset represents dipolarization front (DF) events identified by the Cluster SC."
+   ENTRY       =   "The four spacecraft tetrahedron configuration of Cluster makes it possible to measure gradients in the magnetic field and in"
+   ENTRY       =   "other parameters of the magnetotail plasma. For this reason not only the time of the DF onset of one spacecraft (the reference spacecraft)"
+   ENTRY       =   "is given but also the time of the DF onset at the other spacecraft, provided that the other spacecraft observe a DF within the event"
+   ENTRY       =   "interval of the reference spacecraft. If the same event is observed by more than one spacecraft the event is only recorded once."
+   ENTRY       =   "Reference spacecrafts are C1 and C3 due to poorer resolution and quality of plasma data on other spacecrafts."
+   ENTRY       =   "All parameters are in GSM coordinates. For more dataset details see the documentation."
+   ENTRY       =   " "
+   ENTRY       =   "This dataset was generated as part of European Union ECLAT project. The aim of the European"
+   ENTRY       =   "Cluster Assimilation Technology (ECLAT) is to provide a novel data base, by providing an upgrade"
+   ENTRY       =   "to the CAA. To achieve this , ECLAT programme ingests into the CAA supporting data from other"
+   ENTRY       =   "space- and ground-based observatories, provide data mining routines, refine data products and "
+   ENTRY       =   "software tools for their visualisation, and develop existing European magnetospheric modeling"
+   ENTRY       =   "infrastructure to provide context for the observational data."
+   ENTRY       =   " "
+   ENTRY       =   "The contacts for the ECLAT project are"
+   ENTRY       =   "  Steve Milan, University of Leicester"
+   ENTRY       =   "  Rumi Nakamura, Oesterreichische Akademie der Wissenschaften"
+   ENTRY       =   "  Kirsti Kauristie, Finnish Meterological Institute"
+   ENTRY       =   "  Victor Sergeev, Petersburg State University"
+   ENTRY       =   "  Hermann Opgenoorth, Swedish Institute of Space Physics"
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Peter Boakes>peter.boakes@oeaw.ac.at"
+   ENTRY       =   "Daniel Schmid>Daniel.Schmid@assoc.oeaw.ac.at"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Derived"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "2013/V01 - Initial ECLAT delivery to CAA"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the European Union Framework 7 Programme,"
+   ENTRY       =   "the ECLAT project and the ESA Cluster Archive in any publications based upon the use of these"
+   ENTRY       =   "data."
+END_META       =   ACKNOWLEDGEMENT
+!
+! PARAMETER LEVEL METADATA
+!
+START_VARIABLE  =  event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Event interval"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME_RANGE
+    FILLVAL             = 9999-12-31T23:59:59Z/9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+END_VARIABLE    =  event_interval__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =  ref_sc__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Reference SC number: 1, 2, 3, 4"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               =  1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = -1
+    FIELDNAM            = "Reference SC"
+    LABLAXIS            = "Reference SC"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+END_VARIABLE  =  ref_sc__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =  median_Bxy__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "median reference SC GSM Bxy(=SQRT((Bx^2)+(By^2)) in interval"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1e30
+    FIELDNAM            = "median Bxy GSM"
+    LABLAXIS            = "Bxy"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    QUALITY             = 3
+END_VARIABLE  =  median_Bxy__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =  median_Bz__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "median GSM Bz in event interval on the reference SC"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1e30
+    FIELDNAM            = "median Bz GSM"
+    LABLAXIS            = "Bz"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    QUALITY             = 3
+END_VARIABLE  =  median_Bz__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =   min_Bz__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "minimum GSM Bz in interval for the reference SC"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1e30
+    FIELDNAM            = "min Bz GSM"
+    LABLAXIS            = "min Bz"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    QUALITY             = 3
+END_VARIABLE  =   min_Bz__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =   max_Bz__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "maximum reference SC GSM Bz in interval"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1e30
+    FIELDNAM            = "max Bz GSM"
+    LABLAXIS            = "max Bz"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    QUALITY             = 3
+END_VARIABLE  =   max_Bz__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =  t_bz_min_C1__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Epoch of dipolarization Bz minimum in SC C1"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Time of Bz minimum"
+    LABLAXIS            = "C1 Bz minimum time"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  t_bz_min_C1__CM_CP_AUX_ECLAT_DIPOLE
+!
+
+START_VARIABLE  =  t_bz_min_C2__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Epoch of dipolarization Bz minimum in SC C2"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Time of Bz minimum"
+    LABLAXIS            = "C2 Bz minimum time"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  t_bz_min_C2__CM_CP_AUX_ECLAT_DIPOLE
+!
+
+START_VARIABLE  =  t_bz_min_C3__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Epoch of dipolarization Bz minimum in SC C3"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Time of Bz minimum"
+    LABLAXIS            = "C3 Bz minimum time"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  t_bz_min_C3__CM_CP_AUX_ECLAT_DIPOLE
+!
+
+START_VARIABLE  =  t_bz_min_C4__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Epoch of dipolarization Bz minimum in SC C4"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Time of Bz minimum"
+    LABLAXIS            = "C4 Bz minimum time"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  t_bz_min_C4__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =  t_bz_max_C1__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Epoch of maximum Bz in event interval for SC C1"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Time of Bz maximum"
+    LABLAXIS            = "C1 Bz max time"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  t_bz_max_C1__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =  t_bz_max_C2__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Epoch of maximum Bz in event interval for SC C2"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Time of Bz maximum"
+    LABLAXIS            = "C2 Bz max time"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  t_bz_max_C2__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =  t_bz_max_C3__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Epoch of maximum Bz in event interval for SC C3"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Time of Bz maximum"
+    LABLAXIS            = "C3 Bz max time"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  t_bz_max_C3__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =  t_bz_max_C4__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Epoch of maximum Bz in event interval for SC C4"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Time of Bz maximum"
+    LABLAXIS            = "C4 Bz max time"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  t_bz_max_C4__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =   medianBz_plus90__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "median reference SC GSM Bz from min Bz epoch to +90 seconds"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1e30
+    FIELDNAM            = "90s median Bz (GSM)"
+    LABLAXIS            = "90s median Bz"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    QUALITY             = 3
+END_VARIABLE  =   medianBz_plus90__CM_CP_AUX_ECLAT_DIPOLE
+!
+
+START_VARIABLE  =   medianBz_minus90__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "median reference SC GSM Bz from -90 seconds to min Bz epoch"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1e30
+    FIELDNAM            = "-90s median Bz (GSM)"
+    LABLAXIS            = "-90s median Bz"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    QUALITY             = 3
+END_VARIABLE  =   medianBz_minus90__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =  median_Vx__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "median reference SC Vx flow in event interval"
+    UNITS               = "kms^-1"
+    SI_CONVERSION       = "1e3>ms^-1"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "median Vx"
+    LABLAXIS            = "Vx"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    QUALITY             = 3
+END_VARIABLE  =  median_Vx__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =   median_plasma_beta__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Median reference SC plasma beta"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>UNITLESS"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1e30
+    FIELDNAM            = "median region beta"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    QUALITY             = 3
+END_VARIABLE  =   median_plasma_beta__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =  flag__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Event flags. 0-no flag, 1-single dipolarization, 2-multi dipolarizations"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = -1
+    FIELDNAM            = "Event flags"
+    LABLAXIS            = "Flag"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+END_VARIABLE  =  flag__CM_CP_AUX_ECLAT_DIPOLE
+!
+START_VARIABLE  =   sc_pos__CM_CP_AUX_ECLAT_DIPOLE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Reference Spacecraft x,y,z location at time of Bz min"
+    UNITS               = "Re"
+    SI_CONVERSION       = "6370e3>m"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 3
+    REPRESENTATION_1	= "x", "y", "z"
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "Ref SC position in Re (GSM)"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_DIPOLE
+    QUALITY             = 3
+    LABEL_1		= "x GSM", "y GSM", "z GSM"
+END_VARIABLE  =   sc_pos__CM_CP_AUX_ECLAT_DIPOLE
+!
+!
+

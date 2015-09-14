@@ -1,0 +1,235 @@
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "C3_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "C3_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "C3_CP_AUX_ECLAT_FLT_T96"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Parameter"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "T96 Magnetic Footprint"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset contains the geographic latitude and longitude of the footprints of the C3 spacecraft,"
+   ENTRY       =   "on the altitude of 120 km above the Earth surface, based on T96 magnetic field model (Tsyganenko 1996)."
+   ENTRY       =   "The input parameters to T96 are based on the relevant solar wind and geomagnetic parameters taken"
+   ENTRY       =   "from the OMNI dataset. Quality flags for"
+   ENTRY       =   "the ionospheric mapping and Solar Wind data are given as well. Also, a distance between the spacecraft C3"
+   ENTRY       =   "and a model magnetopause as well as GSE coordinates of the spacecraft are provided."
+   ENTRY       =   "This dataset also gives magnetic field components in GSE coordinates, predicted from the T96 model."
+   ENTRY       =   " "
+   ENTRY       =   "This dataset was generated as part of European Union ECLAT project. The aim of the European"
+   ENTRY       =   "Cluster Assimilation Technology (ECLAT) is to provide a novel data base, by providing an upgrade"
+   ENTRY       =   "to the CAA. To achieve this , ECLAT programme ingests into the CAA supporting data from other"
+   ENTRY       =   "space- and ground-based observatories, provide data mining routines, refine data products and "
+   ENTRY       =   "software tools for their visualisation, and develop existing European magnetospheric modeling"
+   ENTRY       =   "infrastructure to provide context for the observational data."
+   ENTRY       =   " "
+   ENTRY       =   "The contacts for the ECLAT project are"
+   ENTRY       =   "  Steve Milan, University of Leicester"
+   ENTRY       =   "  Rumi Nakamura, Oesterreichische Akademie der Wissenschaften"
+   ENTRY       =   "  Kirsti Kauristie, Finnish Meterological Institute"
+   ENTRY       =   "  Victor Sergeev, Petersburg State University"
+   ENTRY       =   "  Hermann Opgenoorth, Swedish Institute of Space Physics"
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Victor Sergeev>victor@geo.phys.spbu.ru"
+   ENTRY       =   "Alexander Nikolaev>nikolaev@geo.phys.spbu.ru"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   TIME_RESOLUTION
+!
+START_META     =   MIN_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   MIN_TIME_RESOLUTION
+!
+START_META     =   MAX_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   MAX_TIME_RESOLUTION
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Derived"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "2012/V01 - Initial ECLAT delivery to CAA"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the SuperDARN community, the European Union Framework 7 Programme,"
+   ENTRY       =   "the ECLAT project and the ESA Cluster Archive in any publications based upon the use of these"
+   ENTRY       =   "data."
+END_META       =   ACKNOWLEDGEMENT
+!
+! PARAMETER LEVEL METADATA
+!
+START_VARIABLE  =  time_tags__C3_CP_AUX_ECLAT_FLT_T96
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "time tag"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    SIGNIFICANT_DIGITS  = 24
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  time_tags__C3_CP_AUX_ECLAT_FLT_T96
+!
+!
+START_VARIABLE  =  flt_n__C3_CP_AUX_ECLAT_FLT_T96
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Field Line Trace (northern hemisphere)"
+    UNITS               = "deg"
+    SI_CONVERSION       = "17e-3>rad"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GEOC>Geographic"
+    REPRESENTATION_1    = "l>geographic latitude", "p>geographic longitude"
+    SIZES               = 2
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = 999.99
+    FIELDNAM            = "Field Line Trace (northern hemisphere)"
+    LABLAXIS            = "Footprint (N)"
+    DEPEND_0            = time_tags__C3_CP_AUX_ECLAT_FLT_T96
+    LABEL_1             = "Lat", "Long"
+    QUALITY             = 3
+END_VARIABLE   =  flt_n__C3_CP_AUX_ECLAT_FLT_T96
+!
+!
+START_VARIABLE  =  flt_s__C3_CP_AUX_ECLAT_FLT_T96
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Field Line Trace (southern hemisphere)"
+    UNITS               = "deg"
+    SI_CONVERSION       = "17e-3>rad"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GEOC>Geographic"
+    REPRESENTATION_1    = "l>geographic latitude", "p>geographic longitude"
+    SIZES               = 2
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = 999.99
+    FIELDNAM            = "Field Line Trace (southern hemisphere)"
+    LABLAXIS            = "Footprint (S)"
+    DEPEND_0            = time_tags__C3_CP_AUX_ECLAT_FLT_T96
+    LABEL_1             = "Lat", "Long"
+    QUALITY             = 3
+END_VARIABLE  =  flt_s__C3_CP_AUX_ECLAT_FLT_T96
+!
+!
+START_VARIABLE  =  Quality_map__C3_CP_AUX_ECLAT_FLT_T96
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = 9
+    FIELDNAM            = "Quality flag: 0-footprints in both N and S hemispheres, 2-footprints in N hemisphere, 3-footprint in S hemisphere, 8-Cluster not in the model magnetopause, 9-no footprint data"
+    LABLAXIS            = "Mapping Quality Flag"
+    DEPEND_0            = time_tags__C3_CP_AUX_ECLAT_FLT_T96
+END_VARIABLE  =  Quality_map__C3_CP_AUX_ECLAT_FLT_T96
+!
+!
+START_VARIABLE  =  Quality_SW__C3_CP_AUX_ECLAT_FLT_T96
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = 9
+    FIELDNAM            = "Quality flag: 0-good SW data, 2-SW data have some interpolated gaps "
+    LABLAXIS            = "Solar Wind Quality flag"
+    DEPEND_0            = time_tags__C3_CP_AUX_ECLAT_FLT_T96
+END_VARIABLE  =  Quality_SW__C3_CP_AUX_ECLAT_FLT_T96
+!
+!
+START_VARIABLE  =  DIST_mp__C3_CP_AUX_ECLAT_FLT_T96
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    CATDESC             = "Distance of the spacecraft to the model magnetopause"
+    UNITS               = "Earth radius"
+    SI_CONVERSION       = "6.37e6>m"
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 3
+    FILLVAL             = 99.99
+    FIELDNAM            = "Distance of the spacecraft to the model magnetopause: +(-) if spacecraft is inside (outside) of the modeled magnetosphere. "
+    LABLAXIS            = "Dmp"
+    DEPEND_0            = time_tags__C3_CP_AUX_ECLAT_FLT_T96
+    QUALITY             = 3
+END_VARIABLE  =  DIST_mp__C3_CP_AUX_ECLAT_FLT_T96
+!
+!
+START_VARIABLE  =  sc_r_xyz_gse__C3_CP_AUX_ECLAT_FLT_T96
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Vector"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "JSOC (CSDS JP) Cluster, Predicted Position OF REF SC"
+    UNITS               = "Re"
+    SI_CONVERSION       = "6.37e6>m"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSE>Geocentric Solar Ecliptic"
+    REPRESENTATION_1    = "x","y","z"
+    SIZES               = 3
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1.0e31
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Predicted Position OF REF SC"
+    LABLAXIS            = "Position"
+    DEPEND_0            = time_tags__C3_CP_AUX_ECLAT_FLT_T96
+    LABEL_1             = "pred x (GSE)", "pred y (GSE)", "pred z (GSE)"
+    QUALITY             = 3
+END_VARIABLE  =  sc_r_xyz_gse__C3_CP_AUX_ECLAT_FLT_T96
+!
+!
+START_VARIABLE  =  Tsyganenko_B_vec_xyz_gse__C3_CP_AUX_ECLAT_FLT_T96
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Magnetic_Field"
+    PROPERTY            = "Vector"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Magnetic Field Vector from the T96 in GSE"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSE>Geocentric Solar Ecliptic"
+    REPRESENTATION_1    = "x>Cartesian x component", "y>Cartesian y component", "z>Cartesian z component"
+    SIZES               = 3
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 4
+    FILLVAL             = 99999.99
+    FIELDNAM            = "Tsyganenko Magnetic Field Vector in GSE"
+    LABLAXIS            = "Mag Field"
+    DEPEND_0            = time_tags__C3_CP_AUX_ECLAT_FLT_T96
+    LABEL_1             = "Bx", "By", "Bz"
+    QUALITY             = "3"
+END_VARIABLE    =  Tsyganenko_B_vec_xyz_gse__C3_CP_AUX_ECLAT_FLT_T96
+
+

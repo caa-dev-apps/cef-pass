@@ -1,0 +1,517 @@
+!------------------- CEF ASCII File --------------------
+! This is a test file produced by the CAA meta data 
+! creation tool. The contents are ONLY for testing  
+!-------------------------------------------------------
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "C2_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "C2_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "C2_CP_AUX_ECLAT_REGION"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Event_Data"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "CLUSTER PLASMA REGION IN MAGNETOTAIL"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   ""
+  
+   ENTRY       =   "This dataset represents an epoch ordered list of plasma regions encountered by the Cluster spacecraft 2 in the magnetotail, "
+   ENTRY       =   "entry and exit time as well as characteristic plasma and magnetic field parameters for each region. In addition, a caveat flag which describes"
+   ENTRY       =   "undefined regions, quality flag which describes magnetic field and plasma instrument data quality,"
+   ENTRY       =   "as well as comment flag which comments dataset in general, are given."
+   ENTRY       =   "The UR flag gives the reasons for undefined regions: when 0-not an undefined region record, 1-missing FGM moments ,2-missing plasma moments , 3-missing FGM and plasma instrument moments,"
+   ENTRY       =   "4-spacecaft out of tail region , 5-spacecraft out of tail region and missing FGM moments , 6-spacecraft out of tail region and missing plasma moments ,"
+   ENTRY       =   "7-spacecraft out of tail region and missing FGM and plasma moments , 8-FGM caveat in interval , 9-Plasma instrument caveat in interval,"
+   ENTRY       =   "10-Plasma and/or FGM instrument is in wrong operation mode, 11-magnetosheath entry, 12-high density in flanks (e.g mantle), 13-magnetosheath crossing, 14-C2 MS region, 15-Solar Proton Event interval."    
+   ENTRY       =   "See the dataset documentation for further details."
+   ENTRY       =   "The regions identified are defined as: SS_LOBE=Southern lobe, NN_LOBE=Northern lobe, SS_BR=Southern Boundary Region,"
+   ENTRY       =   "NN_BR=Northern Boundary Region, SS_OPS=Southern Outer Plasma Sheet, NN_OPS=Northern Outer Plasma Sheet, SS_IPS=Southern Inner Plasma Sheet,"
+   ENTRY       =   "NN_IPS=Northern Inner Plasma Sheet, NS_NSR=North to South Neutral Sheet Crossing Region, SN_NSR=South to North Neutral Sheet Crossing Region,"
+   ENTRY       =   "00_NSR=Neutral Sheet data point (Bx=0), UR=Undefined Region"
+   ENTRY       =   "Region comments: 0-not applicable, 1-Plasma region is OPS with high beta (>1 for ions, ratio for electrons) data points,"
+   ENTRY       =   "2-Plasma region is IPS with low beta (<1 for ions, ratio for electrons) data points, 3-IPS region with minimum beta in BR beta range," 
+   ENTRY       =   "4-IPS region with minimum beta in the lobe beta range, 5-Lobe region containing data points with density below the instrument sensitivity (CAA density moments=0),"
+   ENTRY       =   " 6-Lobe region with high density (>0.1), 7-Flank (yz>8) region with high density (>1), 8-UR region due to high density (UR flag 12) was NSR before removal," 
+   ENTRY       =   "9-UR region due to high density (UR flag 12) was IPS before removal, 10-UR region due to high density (UR flag 12) was OPS before removal,"
+   ENTRY       =   "11-UR region due to high density (UR flag 12) was BR before removal, 12-UR region due to high density (UR flag 12) was LOBE before removal,"
+   ENTRY       =   "13-C2 region in the flank (abs(yz)>10), 14-C2 region in the flank and is high density lobe, "
+   ENTRY       =   "66-NSR crossing points IPS only, 67-NSR crossing points IPS+OPS, 68-NSR crossing points IPS+BR," 
+   ENTRY       =   "69-NSR crossing points IPS+LOBE,77-NSR crossing points OPS only, 78-NSR crossing points OPS+BR, 79-NSR crossing points OPS+LOBE," 
+   ENTRY       =   "88-NSR crossing points BR only, 89-NSR crossing points BR+LOBE, 99-NS crossing points LOBE only."
+   ENTRY       =   "Instrument id of plasma instrument is: 0-not applicable, 1-CIS-CODIF_H1, 2-CIS-HIA, 3-PEACE."
+
+   ENTRY       =   "This dataset was generated as part of European Union ECLAT project. The aim of the European"
+   ENTRY       =   "Cluster Assimilation Technology (ECLAT) is to provide a novel data base, by providing an upgrade"
+   ENTRY       =   "to the CAA. To achieve this , ECLAT programme ingests into the CAA supporting data from other"
+   ENTRY       =   "space- and ground-based observatories, provide data mining routines, refine data products and "
+   ENTRY       =   "software tools for their visualisation, and develop existing European magnetospheric modeling"
+   ENTRY       =   "infrastructure to provide context for the observational data."
+   ENTRY       =   " "
+   ENTRY       =   "The contacts for the ECLAT project are"
+   ENTRY       =   "  Steve Milan, University of Leicester"
+   ENTRY       =   "  Rumi Nakamura, Oesterreichische Akademie der Wissenschaften"
+   ENTRY       =   "  Kirsti Kauristie, Finnish Meterological Institute"
+   ENTRY       =   "  Victor Sergeev, Petersburg State University"
+   ENTRY       =   "  Hermann Opgenoorth, Swedish Institute of Space Physics"
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Peter Boakes>peter.boakes@oeaw.ac.at"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Derived"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "2013/V01 - Initial ECLAT delivery to CAA"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the European Union Framework 7 Programme,"
+   ENTRY       =   "the ECLAT project and the ESA Cluster Archive in any publications based upon the use of these"
+   ENTRY       =   "data."
+END_META       =   ACKNOWLEDGEMENT
+!
+! PARAMETER LEVEL METADATA
+!
+START_VARIABLE  =  region_interval__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Region interval"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME_RANGE
+    FILLVAL             = 9999-12-31T23:59:59Z/9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  region_interval__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =  region_name__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Support_Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    CATDESC             = "SS_LOBE, NN_LOBE, SS_BR, NN_BR,SS_OPS, NN_OPS, SS_IPS, NN_IPS, NS_NSR, SN_NSR, 00_NSR, UR"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = CHAR
+    FILLVAL             = UR
+    FIELDNAM            = "SC hemisphere and Plasma region"
+    LABLAXIS            = "magnetotail regions"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE   =  region_name__C2_CP_AUX_ECLAT_REGION
+!
+!
+START_VARIABLE  =  mean_bxy_gsm__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "mean magnitude of FGM Bxy (GSM) component in region"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = -1e30
+    FIELDNAM            = "mean FGM BxBy (GSM)"
+    LABLAXIS            = "nT"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE  =  mean_bxy_gsm__C2_CP_AUX_ECLAT_REGION
+!
+!
+START_VARIABLE  =   sd_bxy_gsm__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "standard deviation FGM MAGN (BxBy in GSM) in region"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = -1e30
+    FIELDNAM            = "std MAGN(Bxy) in GSM"
+    LABLAXIS            = "std(abs(Bxy))"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE  =   sd_bxy_gsm__C2_CP_AUX_ECLAT_REGION
+!
+
+!
+START_VARIABLE  =   mean_Bz_gsm__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "mean value of FGM Bz (GSM) in region"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    TENSOR_ORDER        = "1"
+    REPRESENTATION_1    = "z"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "mean value of FGM Bz (GSM) in region"
+    LABLAXIS            = "nT"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE  =   mean_Bz_gsm__C2_CP_AUX_ECLAT_REGION
+!
+!
+START_VARIABLE  =   min_Bz_gsm__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "minimum value of FGM Bz (GSM) in region"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "min of FGM Bz (GSM) in region"
+    LABLAXIS            = "FGM Bz"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+    LABEL_1		= "min Bz"
+END_VARIABLE  =   min_Bz_gsm__C2_CP_AUX_ECLAT_REGION
+!
+!
+START_VARIABLE  =   max_Bz_gsm__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "maximum value of FGM Bz (GSM) in region"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "max of FGM Bz (GSM) in region"
+    LABLAXIS            = "FGM Bz"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+    LABEL_1		= "max Bz"
+END_VARIABLE  =   max_Bz_gsm__C2_CP_AUX_ECLAT_REGION
+!
+!
+START_VARIABLE  =   mean_density__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Mean plasma density in region"
+    UNITS               = "particles cm^-3"
+    SI_CONVERSION       = "1e6>(particles) m^-3"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "mean plasma density in region"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE  =   mean_density__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =   mean_total_pressure__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Mean value of total pressure"
+    UNITS               = "nPa"
+    SI_CONVERSION       = "1e-9>Pa"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 4
+    FILLVAL             = -1e30
+    FIELDNAM            = "mean value of total pressure in region"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE  =   mean_total_pressure__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =   median_plasma_beta__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Median value of plasma beta in region"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>UNITLESS"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 10
+    FILLVAL             = -1e30
+    FIELDNAM            = "median beta in region"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE  =   median_plasma_beta__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =   percent_high_Vpar__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Percentage of high speed parallel flow (xy component), see documentation for high speed definition"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 3
+    FILLVAL             = -1
+    FIELDNAM            = "% high speed Vpar_xy"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE  =   percent_high_Vpar__C2_CP_AUX_ECLAT_REGION
+!
+!
+START_VARIABLE  =   percent_high_Vperp__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Percentage of high speed perpendicular flow (xy component), see documentation for high speed definition"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 3
+    FILLVAL             = -1
+    FIELDNAM            = "% high speed Vperp_xy"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE  =   percent_high_Vperp__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =   Vx_min__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Minimum value of x component of plasma velocity"
+    UNITS               = "kms^-1"
+    SI_CONVERSION       = "1e3>ms^-1"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = -1e30
+    FIELDNAM            = "minimum of Vx in region"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+    LABEL_1		= "Vx_min"
+END_VARIABLE  =   Vx_min__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =   Vx_max__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Maximum value of x component of plasma velocity"
+    UNITS               = "kms^-1"
+    SI_CONVERSION       = "1e3>ms^-1"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = -1e30
+    FIELDNAM            = "maximum of Vx in region"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+    LABEL_1		= "Vx_max"
+END_VARIABLE  =   Vx_max__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =   sc_pos_gsm__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Spacecraft x,y,z location at region entry in Earth radii (GSM)"
+    UNITS               = "Re"
+    SI_CONVERSION       = "6370e3>m"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 3
+    REPRESENTATION_1	= "x", "y", "z"
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "SC position at region entry in Re (GSM)"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+    LABEL_1		= "x", "y", "z"
+END_VARIABLE  =   sc_pos_gsm__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =   n_NS_crossings__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Number of neutral sheet (Bx=0) crossings from FGM 5Hz dataset"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = -1
+    FIELDNAM            = "number of 5Hz neutral sheet crossings in region"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE  =   n_NS_crossings__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =   n__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Number of data points (matched FGM and plasma instrument moments) in region"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = -1
+    FIELDNAM            = "Number of data points in region"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE  =   n__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =   min_data_res__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform" 
+    CATDESC             = "Minimum resolution of data points in region to the nearest second"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>Seconds"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = -1
+    FIELDNAM            = "min/max resolution in region"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+    LABEL_1		= "min res"
+END_VARIABLE  =   min_data_res__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =   max_data_res__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform" 
+    CATDESC             = "Maximum resolution of data points in region to the nearest second"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>Seconds"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = -1
+    FIELDNAM            = "max resolution in region"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+    LABEL_1		= "max res"
+END_VARIABLE  =   max_data_res__C2_CP_AUX_ECLAT_REGION
+!
+START_VARIABLE  =   n_gaps__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Number of intervals between region data points which are longer than half the allowed data gap"
+    UNITS               = "Unitless"
+    SI_CONVERSION       = "1.0>unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 3
+    FILLVAL             = -1
+    FIELDNAM            = "number of data gaps in region>16s"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+    QUALITY             = 3
+END_VARIABLE  =   n_gaps__C2_CP_AUX_ECLAT_REGION
+!
+
+START_VARIABLE  =  ur_flag__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag (the explanation is in the data description)"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = 0
+    FIELDNAM            = "Caveat flag describes reasons for undefined regions "
+    LABLAXIS            = "UR region code"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+END_VARIABLE  =  ur_flag__C2_CP_AUX_ECLAT_REGION
+!
+!
+
+START_VARIABLE  =  inst_flag__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Support_Data"
+     CATDESC            = "Flag: 0-not applicable, 1-known problems, 3-good for publication, -10-other known issues"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 3
+    FILLVAL             = -1
+    FIELDNAM            = "Quality flag"
+    LABLAXIS            = "Quality Flag"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+END_VARIABLE  =  inst_flag__C2_CP_AUX_ECLAT_REGION
+!
+!
+START_VARIABLE  =  comment_flag__C2_CP_AUX_ECLAT_REGION
+   PARAMETER_TYPE      = "Support_Data"
+    CATDESC            = "Region comments"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = 0
+    FIELDNAM            = "Region comments code"
+    LABLAXIS            = "Comment flag"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+END_VARIABLE  =  comment_flag__C2_CP_AUX_ECLAT_REGION
+!
+!
+
+START_VARIABLE  =  plasma_inst_id__C2_CP_AUX_ECLAT_REGION
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Instrument id of plasma instrument"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = 0
+    FIELDNAM            = "Instrument id"
+    LABLAXIS            = "Instrument id"
+    DEPEND_0            = region_interval__C2_CP_AUX_ECLAT_REGION
+END_VARIABLE  =  plasma_inst_id__C2_CP_AUX_ECLAT_REGION
+
+

@@ -1,0 +1,253 @@
+!------------------- CEF ASCII File --------------------
+! This is a test file produced by the CAA meta data 
+! creation tool. The contents are ONLY for testing  
+!-------------------------------------------------------
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "CM_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "CM_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "CM_CP_AUX_ECLAT_WAVE"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Event_Data"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "CLUSTER IDENTIFIED WAVY CURRENT SHEET"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   ""
+
+   ENTRY       =   "This dataset represents Cluster identified wavy current sheet events."
+   ENTRY       =   "FGM data from C1 is used to search for waves in the Pi2 period range (40-150s/25-66 mHz) in the central plasma sheet."
+   ENTRY       =   "See documentation for more details"
+   ENTRY       =   "This dataset was generated as part of European Union ECLAT project. The aim of the European"
+   ENTRY       =   "Cluster Assimilation Technology (ECLAT) is to provide a novel data base, by providing an upgrade"
+   ENTRY       =   "to the CAA. To achieve this , ECLAT programme ingests into the CAA supporting data from other"
+   ENTRY       =   "space- and ground-based observatories, provide data mining routines, refine data products and "
+   ENTRY       =   "software tools for their visualisation, and develop existing European magnetospheric modeling"
+   ENTRY       =   "infrastructure to provide context for the observational data."
+   ENTRY       =   " "
+   ENTRY       =   "The contacts for the ECLAT project are"
+   ENTRY       =   "  Steve Milan, University of Leicester"
+   ENTRY       =   "  Rumi Nakamura, Oesterreichische Akademie der Wissenschaften"
+   ENTRY       =   "  Kirsti Kauristie, Finnish Meterological Institute"
+   ENTRY       =   "  Victor Sergeev, Petersburg State University"
+   ENTRY       =   "  Hermann Opgenoorth, Swedish Institute of Space Physics"
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Peter Boakes>peter.boakes@oeaw.ac.at"
+   ENTRY       =   "Tielong Zhang>Tielong.Zhang@oeaw.ac.at"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Derived"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "2013/V01 - Initial ECLAT delivery to CAA"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the European Union Framework 7 Programme,"
+   ENTRY       =   "the ECLAT project and the ESA Cluster Archive in any publications based upon the use of these"
+   ENTRY       =   "data."
+END_META       =   ACKNOWLEDGEMENT
+!
+! PARAMETER LEVEL METADATA
+!
+START_VARIABLE  =  event_interval__CM_CP_AUX_ECLAT_WAVE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Event interval"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME_RANGE
+    FILLVAL             = 9999-12-31T23:59:59:999Z/9999-12-31T23:59:59:999Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+END_VARIABLE    =  event_interval__CM_CP_AUX_ECLAT_WAVE
+!
+START_VARIABLE  =  max_amplitude__CM_CP_AUX_ECLAT_WAVE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "maximum amplitude of filtered data in GSM"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = -1e30
+    FIELDNAM            = "max amplitude of filtered data in GSM"
+    LABLAXIS            = "max amplitude"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_WAVE
+    QUALITY             = 3
+END_VARIABLE  =  max_amplitude__CM_CP_AUX_ECLAT_WAVE
+!
+START_VARIABLE  =  max_amp_time__CM_CP_AUX_ECLAT_WAVE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Epoch of maximum amplitude of filtered wave"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    FILLVAL             = 9999-12-31T23:59:59:999Z
+    FIELDNAM            = "Time of maximum amplitude"
+    LABLAXIS            = "Time of maximum amplitude"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_WAVE
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  max_amp_time__CM_CP_AUX_ECLAT_WAVE
+!
+START_VARIABLE  =   peak_frequency__CM_CP_AUX_ECLAT_WAVE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Peak frequency from Fast Fourier transform"
+    UNITS               = "mHz"
+    SI_CONVERSION       = "1.0E-3>Hz"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = -1e30
+    FIELDNAM            = "peak wave frequency"
+    LABLAXIS            = "peak frequency"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_WAVE
+    QUALITY             = 3
+END_VARIABLE  =   peak_frequency__CM_CP_AUX_ECLAT_WAVE
+!
+START_VARIABLE  =   mean_Bx__CM_CP_AUX_ECLAT_WAVE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "mean value of absolute Bx component of magnetic field (GSM)"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = -1e30
+    FIELDNAM            = "mean Bx GSM"
+    LABLAXIS            = "<Bx>"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_WAVE
+    QUALITY             = 3
+END_VARIABLE  =   mean_Bx__CM_CP_AUX_ECLAT_WAVE
+!
+START_VARIABLE  =   mean_Bz__CM_CP_AUX_ECLAT_WAVE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Mean value of Bz component of magnetic field (GSM)"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = -1e30
+    FIELDNAM            = "mean Bz (GSM)"
+    LABLAXIS            = "mean Bz"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_WAVE
+    QUALITY             = 3
+END_VARIABLE  =   mean_Bz__CM_CP_AUX_ECLAT_WAVE
+!
+START_VARIABLE  =  quality_flag__CM_CP_AUX_ECLAT_WAVE
+    PARAMETER_TYPE      = "Support_Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Visual Quality of event: 1-good, 2-very good."
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = -1
+    FIELDNAM            = "quality"
+    LABLAXIS            = "quality"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_WAVE
+    QUALITY             = 3
+END_VARIABLE  =  quality_flag__CM_CP_AUX_ECLAT_WAVE
+!
+START_VARIABLE  =  SC_C2_info__CM_CP_AUX_ECLAT_WAVE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Event at C2. 0-no data, 1-not seen, 2-seen."
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = -1
+    FIELDNAM            = "Wave seen at C2?"
+    LABLAXIS            = "C2 info"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_WAVE
+END_VARIABLE  =  SC_C2_info__CM_CP_AUX_ECLAT_WAVE
+!
+
+START_VARIABLE  =  SC_C3_info__CM_CP_AUX_ECLAT_WAVE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Event at C3. 0-no data, 1-not seen, 2-seen."
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = -1
+    FIELDNAM            = "Wave seen at C3?"
+    LABLAXIS            = "C3 info"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_WAVE
+END_VARIABLE  =  SC_C3_info__CM_CP_AUX_ECLAT_WAVE
+!
+
+START_VARIABLE  =  SC_C4_info__CM_CP_AUX_ECLAT_WAVE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Event at C4. 0-no data, 1-not seen, 2-seen."
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = -1
+    FIELDNAM            = "Wave seen at C4?"
+    LABLAXIS            = "C4 info"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_WAVE
+END_VARIABLE  =  SC_C4_info__CM_CP_AUX_ECLAT_WAVE
+!
+START_VARIABLE  =   sc_pos__CM_CP_AUX_ECLAT_WAVE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "C1 location X,Y,Z in GSM at location of peak amplitude in Re"
+    UNITS               = "Re"
+    SI_CONVERSION       = "6370e3>m"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 3
+    REPRESENTATION_1	= "x", "y", "z"
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1e30
+    FIELDNAM            = "C1 X,Y,Z"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_WAVE
+    QUALITY             = 3
+    LABEL_1		= "x GSM", "y GSM", "z GSM"
+END_VARIABLE  =   sc_pos__CM_CP_AUX_ECLAT_WAVE
+
+

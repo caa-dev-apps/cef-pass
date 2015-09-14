@@ -80,6 +80,7 @@ public class App {
             l_result.setPass()
         }
         catch (Exception e) {
+           println e
            l_result.setException(e)
         }
             

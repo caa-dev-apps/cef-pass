@@ -1,0 +1,141 @@
+!------------------- CEF ASCII File --------------------
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "CC_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "CC_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "CC_CP_AUX_ECLAT_MAG_BASELINE"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Parameter"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "Magnetic field of the baseline"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset contains the baseline for the X and Y components of the magnetic field."
+   ENTRY       =   "Baselines are obtained from 32 magnetometer stations during 2001-2010: Ny AAlesund (NAL),"
+   ENTRY       =   "Longyearbyen (LYR), Hornsund (HOR), Hopen Island (HOP), Bjoernoeya (BJN), Nordkapp (NOR), Soeroeya (SOR),"
+   ENTRY       =   "Kevo (KEV), Tromsoe (TRO), Masi (MAS), Andenes (AND), Kilpisjarvi (KIL), Ivalo (IVA), Abisko (ABK),"
+   ENTRY       =   "Leknes (LEK), Muonio (MUO), Lovozero (LOZ), Kiruna (KIR), Sodankyla (SOD), Pello (PEL), Doenna (DON),"
+   ENTRY       =   "Roervik (RVK), Lycksele (LYC), Oulujarvi (OUJ), Mekrijarvi (MEK), Hankasalmi (HAN), Dombaas (DOB), Solund (SOL),"
+   ENTRY       =   "Nurmijarvi (NUR), Uppsala (UPS), Karmoey (KAR), Tartu (TAR)."
+   ENTRY       =   "Baseline values are given in the order of the above stations. "
+   ENTRY       =   "For the option to expand the number of stations in the future, we have reserved in the data format eight more places for new station names."
+   ENTRY       =   "For these station names we use fill values ADi, where i=1…8."
+   ENTRY       =   "Magnetic baseline for X and Y components is then given for 40 stations and it is equal to baseline fill value for the stations that don't exist at the moment."
+   ENTRY       =   "In order to derive a baseline, quiet days per month have to be selected. A criteria for the quiet days selection"
+   ENTRY       =   "is explained in the dataset for the quiet days. From the fast Fourier transform of the magnetic field during quiet days,"
+   ENTRY       =   "first seven harmonics are selected and their inverse Fourier transform defines a template."
+   ENTRY       =   "To obtain the diurnal baseline, templates are interpolated continuously between midday of the previous"
+   ENTRY       =   "assigned quiet day and midday on the next assigned quiet day. To obtain the full baseline, the diurnal variations"
+   ENTRY       =   "are added to a long-term baseline which is obtained by interpolating between the daily median values."
+   ENTRY       =   "The derivation of daily median values is described in the median dataset."
+   ENTRY       =   " "
+   ENTRY       =   "This dataset was generated as part of European Union ECLAT project. The aim of the European"
+   ENTRY       =   "Cluster Assimilation Technology (ECLAT) is to provide a novel data base, by providing an upgrade"
+   ENTRY       =   "to the CAA. To achieve this, ECLAT programme ingests into the CAA supporting data from other"
+   ENTRY       =   "space- and ground-based observatories, provide data mining routines, refine data products and "
+   ENTRY       =   "software tools for their visualisation, and develop existing European magnetospheric modeling"
+   ENTRY       =   "infrastructure to provide context for the observational data."
+   ENTRY       =   " "
+   ENTRY       =   "The contacts for the ECLAT project are"
+   ENTRY       =   "  Steve Milan, University of Leicester"
+   ENTRY       =   "  Rumi Nakamura, Oesterreichische Akademie der Wissenschaften"
+   ENTRY       =   "  Kirsti Kauristie, Finnish Meterological Institute"
+   ENTRY       =   "  Victor Sergeev, Petersburg State University"
+   ENTRY       =   "  Hermann Opgenoorth, Swedish Institute of Space Physics"
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Kirsti Kauristie>Kirsti.Kauristie@fmi.fi"
+   ENTRY       =   "Max Van De Kamp>Max.Van.De.Kamp@fmi.fi"
+   ENTRY       =   "Minna Palmroth>Minna.Palmroth@fmi.fi"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   10.0
+END_META       =   TIME_RESOLUTION
+!
+START_META     =   MIN_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   10.0
+END_META       =   MIN_TIME_RESOLUTION
+!
+START_META     =   MAX_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   10.0
+END_META       =   MAX_TIME_RESOLUTION
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Derived"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "2014/V02 - Initial ECLAT delivery to CAA"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the IMAGE magnetometer community, the European Union Framework 7 Programme, the ECLAT"
+   ENTRY       =   "project and the ESA Cluster Archive in any publications based upon the use of these data products." 
+   ENTRY       =   "In addition, as a reference for the equivalent current calculation with the method of"
+   ENTRY       =   "Spherical Elementary Currents Systems, use the following article:"
+   ENTRY       =   "Amm, O. and Viljanen, A.: Ionospheric disturbance magnetic field continuation from the ground to ionosphere" 
+   ENTRY       =   "using spherical elementary current systems, Earth Planets Space, 51, 431-440,1999. As a reference for the magnetic field baseline determination, please, use the following article:"
+   ENTRY       =   "M. van de Kamp: Harmonic quiet-day curves as magnetometer baselines for ionospheric current analyses, Geosci. Instrum. Method. Data Syst., 2, 289-304, doi:10.5194/gi-2-289-2013, 2013. "
+END_META       =   ACKNOWLEDGEMENT
+!
+! PARAMETER LEVEL METADATA
+!
+START_VARIABLE  =  time_tags__CC_CP_AUX_ECLAT_MAG_BASELINE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Time tag start of integration period"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    SIGNIFICANT_DIGITS  = 24
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 10
+END_VARIABLE    =  time_tags__CC_CP_AUX_ECLAT_MAG_BASELINE
+!
+!
+START_VARIABLE  =  B_baseline_xy_geo__CC_CP_AUX_ECLAT_MAG_BASELINE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Magnetic_Field"
+    PROPERTY            = "Vector"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Baseline of the magnetic field for 40 stations"
+    UNITS               = "nT"
+    SI_CONVERSION       = "1.0E-9>T"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GEOC>Geographic"
+    REPRESENTATION_2    = "x>Cartesian x component", "y>Cartesian y component"
+    SIZES               = 40,2
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = 99999.99
+    FIELDNAM            = "Baseline of the magnetic field for 40 stations"
+    LABLAXIS            = "Mag Field baseline"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_MAG_BASELINE
+    LABEL_1             = "ABK", "AND", "BJN", "DOB", "DON", "HAN", "HOP", "HOR",  \
+                          "IVA", "KAR", "KEV", "KIL", "KIR", "LEK", "LOZ", "LYC",  \
+                          "LYR", "MAS", "MEK", "MUO", "NAL", "NOR", "NUR", "OUJ", "PEL", "RVK", "SOD",  \
+                          "SOL", "SOR", "TAR", "TRO", "UPS", "AD1", "AD2", "AD3", "AD4", "AD5", "AD6",  \
+                          "AD7", "AD8"
+    LABEL_2             = "Bx", "By"
+    QUALITY             = "3"
+END_VARIABLE    =  B_baseline_xy_geo__CC_CP_AUX_ECLAT_MAG_BASELINE
+
+

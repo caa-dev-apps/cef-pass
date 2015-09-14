@@ -1,0 +1,440 @@
+INCLUDE = "CL_CH_MISSION.ceh"
+
+INCLUDE = "C2_CH_OBS.ceh"
+
+INCLUDE = "CL_CH_PSE_EXP.ceh"
+
+INCLUDE = "CL_CH_PSE_INST.ceh"
+
+
+
+START_META     =   DATASET_ID
+
+   ENTRY       =   "C2_JP_PSE"
+
+END_META       =   DATASET_ID
+
+
+
+START_META     =   DATA_TYPE
+
+   ENTRY       =   "JP>CSDS_JSOC_Parameter"
+
+END_META       =   DATA_TYPE
+
+
+
+START_META     =   DATASET_TITLE
+
+   ENTRY       =   "JSOC Catalogue Parameter, Predicted Scientific Events"
+
+END_META       =   DATASET_TITLE
+
+
+
+START_META     =   DATASET_DESCRIPTION
+
+   ENTRY       =   "This dataset contains the JSOC Predicted Scientific Events for"
+
+   ENTRY       =   "the C2 Cluster spacecraft."
+
+   ENTRY       =   "These data have been converted into Cluster Exchange Format from the orignal"
+
+   ENTRY       =   "Cluster Science Data System Common Data Format (CDF) Prime Parameter files"
+
+   ENTRY       =   "that were made available through the Cluster Science Data System."
+
+   ENTRY       =   "The metadata has been updated from the CSDS/CDF standard to the CAA to aid"
+
+   ENTRY       =   "compatibility with tools developed for the Cluster Active Archive."
+
+   ENTRY       =   " "
+
+   ENTRY       =   "Version 01 of this dataset is the initial translation prepared for the "
+
+   ENTRY       =   "launch of the CAA during the second half of 2005."
+
+END_META       =   DATASET_DESCRIPTION
+
+
+
+START_META     =   CONTACT_COORDINATES
+
+   ENTRY       =   "M.A.Hapgood>Non-PI>M.A.Hapgood@rl.ac.uk"
+
+END_META       =   CONTACT_COORDINATES
+
+
+
+START_META     =   PROCESSING_LEVEL
+
+   ENTRY       =   "Calibrated"
+
+END_META       =   PROCESSING_LEVEL
+
+
+
+START_META     =   ACKNOWLEDGEMENT
+
+   ENTRY       =   "Please acknowledge the ESA Cluster Active Archive in any publication based upon use of this data."
+
+END_META       =   ACKNOWLEDGEMENT
+
+
+
+START_META     =   DATASET_CAVEATS
+
+   ENTRY       =   "*C2_CQ_PSE"
+
+END_META       =   DATASET_CAVEATS
+
+
+
+START_META     =   DATASET_VERSION
+
+   ENTRY       =   "01"
+
+END_META       =   DATASET_VERSION
+
+
+
+START_META     =   FILE_TYPE
+
+   ENTRY       =   "cef"
+
+END_META       =   FILE_TYPE
+
+
+
+START_META     =   METADATA_TYPE
+
+   ENTRY       =   "CAA"
+
+END_META       =   METADATA_TYPE
+
+
+
+START_META     =   METADATA_VERSION
+
+   ENTRY       =   "2.0"
+
+END_META       =   METADATA_VERSION
+
+
+
+START_VARIABLE  =  time_tags__C2_JP_PSE
+
+    PARAMETER_TYPE      = "Support_Data"
+
+    CATDESC             = "Event time tag"
+
+    UNITS               = "s"
+
+    SI_CONVERSION       = "1.0>s"
+
+    SIZES               = 1
+
+    VALUE_TYPE          = ISO_TIME
+
+    SIGNIFICANT_DIGITS  = 24
+
+    FILLVAL             = 9999-12-31T23:59:59Z
+
+    FIELDNAM            = "Universal Time"
+
+    LABLAXIS            = "UT"
+
+    DELTA_PLUS          = half_interval__C2_JP_PSE
+
+    DELTA_MINUS         = half_interval__C2_JP_PSE
+
+END_VARIABLE    =  time_tags__C2_JP_PSE
+
+
+
+START_VARIABLE  =  half_interval__C2_JP_PSE
+
+    PARAMETER_TYPE      = "Support_Data"
+
+    CATDESC             = "Half event interval length"
+
+    UNITS               = "s"
+
+    SI_CONVERSION       = "1.0>s"
+
+    SIZES               = 1
+
+    VALUE_TYPE          = FLOAT
+
+    SIGNIFICANT_DIGITS  = 6
+
+    FILLVAL             = -1.0e28
+
+    FIELDNAM            = "Half width of event interval"
+
+    LABLAXIS            = "s"
+
+END_VARIABLE    =  half_interval__C2_JP_PSE
+
+
+
+START_VARIABLE = event_code__C2_JP_PSE
+
+    PARAMETER_TYPE      = "Data"
+
+    ENTITY              = "Observatory"
+
+    PROPERTY            = "Status"
+
+    FLUCTUATIONS        = "Waveform"
+
+    CATDESC             = "JSOC (CSDS JP) Cluster, Code for predicted event"
+
+    UNITS               = "unitless"
+
+    SI_CONVERSION       = "1.0>(code)"
+
+    SIZES               = 1
+
+    VALUE_TYPE          = CHAR
+
+    SIGNIFICANT_DIGITS  = 3
+
+    FILLVAL             = "---"
+
+    QUALITY             = 2
+
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Code for predicted event"
+
+    LABLAXIS            = "Event Code"
+
+    DEPEND_0            = time_tags__C2_JP_PSE
+
+END_VARIABLE   = event_code__C2_JP_PSE
+
+
+
+START_VARIABLE = orbit_num__C2_JP_PSE
+
+    PARAMETER_TYPE      = "Data"
+
+    ENTITY              = "Observatory"
+
+    PROPERTY            = "Magnitude"
+
+    FLUCTUATIONS        = "Waveform"
+
+    CATDESC             = "JSOC (CSDS JP) Cluster, Orbit Number: Integer part"
+
+    UNITS               = "unitless"
+
+    SI_CONVERSION       = "1.0>(orbit)"
+
+    SIZES               = 1
+
+    VALUE_TYPE          = INT
+
+    SIGNIFICANT_DIGITS  = 6
+
+    FILLVAL             = -32768
+
+    QUALITY             = 2
+
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Orbit Number"
+
+    LABLAXIS            = "Orb num"
+
+    DEPEND_0            = time_tags__C2_JP_PSE
+
+END_VARIABLE   = orbit_num__C2_JP_PSE
+
+
+
+START_VARIABLE = event_sub_code__C2_JP_PSE
+
+    PARAMETER_TYPE      = "Data"
+
+    ENTITY              = "Observatory"
+
+    PROPERTY            = "Status"
+
+    FLUCTUATIONS        = "Waveform"
+
+    CATDESC             = "JSOC (CSDS JP) Cluster, Code for predicted event sub type"
+
+    UNITS               = "unitless"
+
+    SI_CONVERSION       = "1.0>(subcode)"
+
+    SIZES               = 1
+
+    VALUE_TYPE          = CHAR
+
+    SIGNIFICANT_DIGITS  = 2
+
+    FILLVAL             = "--"
+
+    QUALITY             = 2
+
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, event sub type"
+
+    LABLAXIS            = "Sub Event Code"
+
+    DEPEND_0            = time_tags__C2_JP_PSE
+
+END_VARIABLE   = event_sub_code__C2_JP_PSE
+
+
+
+START_VARIABLE = orbit_phase__C2_JP_PSE
+
+    PARAMETER_TYPE      = "Data"
+
+    ENTITY              = "Observatory"
+
+    PROPERTY            = "Magnitude"
+
+    FLUCTUATIONS        = "Waveform"
+
+    CATDESC             = "JSOC (CSDS JP) Cluster, Orbit phase, fractional part of orbit number"
+
+    UNITS               = "unitless"
+
+    SI_CONVERSION       = "1.0>(orbit phase)"
+
+    SIZES               = 1
+
+    VALUE_TYPE          = FLOAT
+
+    SIGNIFICANT_DIGITS  = 6
+
+    FILLVAL             = -1.0e31
+
+    QUALITY             = 2
+
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Orbit phase"
+
+    LABLAXIS            = "Orb phase"
+
+    DEPEND_0            = time_tags__C2_JP_PSE
+
+END_VARIABLE   = orbit_phase__C2_JP_PSE
+
+
+
+START_VARIABLE = sc_lat__C2_JP_PSE
+
+    PARAMETER_TYPE      = "Data"
+
+    ENTITY              = "Observatory"
+
+    PROPERTY            = "Magnitude"
+
+    FLUCTUATIONS        = "Waveform"
+
+    CATDESC             = "JSOC (CSDS JP) Cluster, Predicted gse Latitude of sc, Angle from Ecliptic Plane"
+
+    UNITS               = "deg"
+
+    SI_CONVERSION       = "1.0>degree"
+
+    SIZES               = 1
+
+    VALUE_TYPE          = FLOAT
+
+    SIGNIFICANT_DIGITS  = 6
+
+    FILLVAL             = -1.0e31
+
+    QUALITY             = 2
+
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Predicted gse Latitude of sc"
+
+    LABLAXIS            = "Predicted Lat (GSE)"
+
+    DEPEND_0            = time_tags__C2_JP_PSE
+
+END_VARIABLE   = sc_lat__C2_JP_PSE
+
+
+
+START_VARIABLE = sc_mag_local_time__C2_JP_PSE
+
+    PARAMETER_TYPE      = "Data"
+
+    ENTITY              = "Observatory"
+
+    PROPERTY            = "Magnitude"
+
+    FLUCTUATIONS        = "Waveform"
+
+    CATDESC             = "JSOC (CSDS JP) Cluster, Predicted magnetic local time of satellite"
+
+    UNITS               = "hours"
+
+    SI_CONVERSION       = "3600.0>second"
+
+    SIZES               = 1
+
+    VALUE_TYPE          = FLOAT
+
+    SIGNIFICANT_DIGITS  = 6
+
+    FILLVAL             = -1.0e31
+
+    QUALITY             = 2
+
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Predicted Magnetic Local Time"
+
+    LABLAXIS            = "Predicted Magnetic Local Time"
+
+    DEPEND_0            = time_tags__C2_JP_PSE
+
+END_VARIABLE   = sc_mag_local_time__C2_JP_PSE
+
+
+
+START_VARIABLE = sc_r1_xyz_gse__C2_JP_PSE
+
+    PARAMETER_TYPE      = "Data"
+
+    ENTITY              = "Observatory"
+
+    PROPERTY            = "Vector"
+
+    FLUCTUATIONS        = "Waveform"
+
+    CATDESC             = "JSOC (CSDS JP) Cluster, Spacecraft position at predicted event"
+
+    UNITS               = "km"
+
+    SI_CONVERSION       = "1.0e3>m"
+
+    TENSOR_ORDER        = "1"
+
+    COORDINATE_SYSTEM   = "GSE>Geocentric Solar Ecliptic"
+
+    REPRESENTATION_1    = "x", "y", "z"
+
+    SIZES               = 3
+
+    VALUE_TYPE          = FLOAT
+
+    SIGNIFICANT_DIGITS  = 6
+
+    FILLVAL             = -1.0e31
+
+    QUALITY             = 2
+
+    FIELDNAM            = "JSOC (CSDS JP) Cluster, Position of sc at predicted event"
+
+    LABLAXIS            = "Position of sc"
+
+    DEPEND_0            = time_tags__C2_JP_PSE
+
+    LABEL_1             = "x (GSE) pred", "y (GSE) pred", "z (GSE) pred"
+
+END_VARIABLE   = sc_r1_xyz_gse__C2_JP_PSE
+
+
+

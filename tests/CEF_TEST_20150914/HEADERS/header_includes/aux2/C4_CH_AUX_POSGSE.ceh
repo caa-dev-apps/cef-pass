@@ -1,0 +1,144 @@
+INCLUDE = "CL_CH_MISSION.ceh"
+INCLUDE = "C4_CH_OBS.ceh"
+INCLUDE = "CL_CH_AUX_EXPER.ceh"
+INCLUDE = "C4_CH_AUX_INST.ceh"
+
+START_META     =   DATASET_ID
+   ENTRY       =   "C4_CP_AUX_POSGSE_1M"
+END_META       =   DATASET_ID
+
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Parameter"
+END_META       =   DATA_TYPE
+
+START_META     =   DATASET_TITLE
+   ENTRY       =   "Cluster 4 position and velocity in GSE at 1 minute resolution"
+END_META       =   DATASET_TITLE
+
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset contains the Cluster 4 geometric position and velocity specified"
+   ENTRY       =   "in the GSE coordinate system and provided at 1 minute resolution." 
+   ENTRY       =   "The data has been produced by the CAA team using the final reconstructed orbit"
+   ENTRY       =   "supplied by ESOC Flight Dynamics in the form of Short Term Orbit Files (STOF)."
+   ENTRY       =   " "
+   ENTRY       =   "Version 01 of this dataset is the initial release."
+END_META       =   DATASET_DESCRIPTION
+
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "caateam>Non-PI>caateam@rssd.esa.int"
+END_META       =   CONTACT_COORDINATES
+
+START_META     =   TIME_RESOLUTION
+   ENTRY       =   "60"
+END_META       =   TIME_RESOLUTION
+
+START_META     =   MAX_TIME_RESOLUTION
+   ENTRY       =   "60"
+END_META       =   MAX_TIME_RESOLUTION
+
+START_META     =   MIN_TIME_RESOLUTION
+   ENTRY       =   "60"
+END_META       =   MIN_TIME_RESOLUTION
+
+   
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Auxiliary"
+END_META       =   PROCESSING_LEVEL
+
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the ESA Cluster Active Archive in any publication based upon use of this data."
+END_META       =   ACKNOWLEDGEMENT
+
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "*C4_CQ_AUX_POSGSE_1M"
+END_META       =   DATASET_CAVEATS
+
+START_META     =   FILE_TYPE
+   ENTRY       =   "cef"
+END_META       =   FILE_TYPE
+
+START_META     =   METADATA_TYPE
+   ENTRY       =   "CAA"
+END_META       =   METADATA_TYPE
+
+START_META     =   METADATA_VERSION
+   ENTRY       =   "2.0"
+END_META       =   METADATA_VERSION
+
+START_VARIABLE  =  time_tags__C4_CP_AUX_POSGSE_1M
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Interval centred time tag"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    SIGNIFICANT_DIGITS  = 24
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 0
+END_VARIABLE    =  time_tags__C4_CP_AUX_POSGSE_1M
+
+START_VARIABLE = sc_r_xyz_gse__C4_CP_AUX_POSGSE_1M
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Vector"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "GSE Position of Cluster 4 Spacecraft"
+    UNITS               = "km"
+    SI_CONVERSION       = "1.0e3>m"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSE>Geocentric Solar Ecliptic"
+    REPRESENTATION_1    = "x", "y", "z"
+    SIZES               = 3
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1.0e31
+    QUALITY             = 2
+    FIELDNAM            = "GSE Position of Cluster 4 Spacecraft"
+    LABLAXIS            = "Position"
+    DEPEND_0            = time_tags__C4_CP_AUX_POSGSE_1M
+    LABEL_1             = "x (GSE)", "y (GSE)", "z (GSE)"
+END_VARIABLE   = sc_r_xyz_gse__C4_CP_AUX_POSGSE_1M
+
+START_VARIABLE = sc_v_xyz_gse__C4_CP_AUX_POSGSE_1M
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Velocity"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "GSE Velocity of Cluster 4 Spacecraft"
+    UNITS               = "km s^-1"
+    SI_CONVERSION       = "1.0e3>m s^-1"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSE>Geocentric Solar Ecliptic"
+    REPRESENTATION_1    = "x", "y", "z"
+    SIZES               = 3
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1.0e31
+    QUALITY             = 2
+    FIELDNAM            = "GSE>Geocentric Solar Ecliptic"
+    LABLAXIS            = "Velocity"
+    DEPEND_0            = time_tags__C4_CP_AUX_POSGSE_1M
+    LABEL_1             = "Vx (GSE)", "Vy (GSE)", "Vz (GSE)"
+END_VARIABLE   = sc_v_xyz_gse__C4_CP_AUX_POSGSE_1M
+
+
+START_VARIABLE = sc_orb_num__C4_CP_AUX_POSGSE_1M
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Magnitude"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Orbit number including phase phase of Cluster 4 Spacecraft"
+    UNITS               = "1"
+    SI_CONVERSION       = "1>1"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 9
+    FILLVAL             = -1.0e31
+    QUALITY             = 2
+    FIELDNAM            = "Orbit number including phase phase of Cluster 4 Spacecraft"
+    LABLAXIS            = "Orbnum"
+    DEPEND_0            = time_tags__C4_CP_AUX_POSGSE_1M
+END_VARIABLE = sc_orb_num__C4_CP_AUX_POSGSE_1M

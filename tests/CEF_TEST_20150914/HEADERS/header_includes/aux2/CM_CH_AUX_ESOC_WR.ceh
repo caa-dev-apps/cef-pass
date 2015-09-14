@@ -1,0 +1,88 @@
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "CM_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "CM_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "CM_CD_AUX_ESOC_WR"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CD>CAA_Document"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "ESOC Weekly report"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "The weekly mission operations report is a summary of the spacecraft and ground segment"
+   ENTRY       =   "operations performed in this week. It addresses separately the ground segment, the spacecraft"
+   ENTRY       =   "platform and the payload. It provides information about ground segment operations and events,"
+   ENTRY       =   "configuration changes, platform and instrument anomalies and special/manual operations"
+   ENTRY       =   "performed. All spacecraft and ground segment anomalies that occurred in that week are addressed."
+   ENTRY       =   " "
+   ENTRY       =   "Each report has the following contents:"
+   ENTRY       =   "* Summary of Activities of the week, including"
+   ENTRY       =   "   - Station usage summary"
+   ENTRY       =   "   - Science data return summary"
+   ENTRY       =   "   - Anomaly reports and documents issued in that week"
+   ENTRY       =   "   - Outlook on future activities for the upcoming four weeks"
+   ENTRY       =   ""
+   ENTRY       =   "* Report from the ground segment and observed radio signal disturbance (AGC fluctuations,"
+   ENTRY       =   "if any)"
+   ENTRY       =   ""
+   ENTRY       =   "* Status of spacecraft platform configuration and special platform operations"
+   ENTRY       =   ""
+   ENTRY       =   "* Status of payload configuration and special payload operations, also including duration of"
+   ENTRY       =   "payload power sharing, if any"
+   ENTRY       =   ""
+   ENTRY       =   "* Annexes, covering detailed listing of data gaps, trend of solar array power and platform"
+   ENTRY       =   "temperature, and, if applicable, eclipse and/or manoeuvre summary reports"
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+     ENTRY     =   "caateam>Non-PI>caateam@rssd.esa.int"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Auxiliary"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   ""
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the ESA Cluster Active Archive in any publication based upon use of this data."
+END_META       =   ACKNOWLEDGEMENT
+
+START_META     =   TIME_RESOLUTION
+   ENTRY       =   
+END_META       =   TIME_RESOLUTION
+
+START_META     =   MIN_TIME_RESOLUTION
+   ENTRY       =   
+END_META       =   MIN_TIME_RESOLUTION
+
+START_META     =   MAX_TIME_RESOLUTION
+   ENTRY       =   
+END_META       =   MAX_TIME_RESOLUTION
+
+START_META     =   FILE_TYPE
+   ENTRY       =   "pdf"
+END_META       =   FILE_TYPE
+
+START_META     =   DATASET_VERSION
+   ENTRY       =   "V01"
+END_META       =   DATASET_VERSION
+
+START_META     =   METADATA_VERSION
+   ENTRY       =   "2.0"
+END_META       =   METADATA_VERSION
+
+START_META     =   METADATA_TYPE
+   ENTRY       =   "CAA"
+END_META       =   METADATA_TYPE

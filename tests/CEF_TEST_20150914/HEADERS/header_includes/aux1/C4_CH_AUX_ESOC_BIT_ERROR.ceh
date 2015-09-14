@@ -1,0 +1,228 @@
+INCLUDE = "CL_CH_MISSION.ceh"
+INCLUDE = "CL_CH_AUX_EXP_ESOC.ceh"
+INCLUDE = "C4_CH_OBS.ceh"
+INCLUDE = "C4_CH_AUX_INST.ceh"
+
+START_META     =   FILE_TYPE 
+    ENTRY       =   "cef"
+END_META       =   FILE_TYPE
+
+START_META     =   METADATA_TYPE 
+   ENTRY       =   "CAA" 
+END_META       =   METADATA_TYPE 
+
+START_META     =   METADATA_VERSION 
+   ENTRY       =   "2.0" 
+END_META       =   METADATA_VERSION 
+
+
+START_META = DATASET_ID
+     ENTRY = "C4_CP_AUX_ESOC_BIT_ERROR"
+END_META = DATASET_ID
+
+START_META = DATA_TYPE
+     ENTRY = "CP>CAA_Parameter"
+END_META = DATA_TYPE
+
+START_META = DATASET_TITLE
+     ENTRY = "SSR Bit Errors"
+END_META = DATASET_TITLE
+
+START_META = DATASET_DESCRIPTION
+     ENTRY = "The dataset gives the total SSR bit error counts obtained on-board between the start of two passes. The Solid State Recorder (SSR) performs continuous background memory scrub-bing in which the SSR corrects any 1 symbol (4-bit) Single Event Upsets (SEU) failure and detects any 2 symbol (2 x 4-bit) SEU failure per 64-bit data word. The numbers of these correctable and non-correctable errors are named Bit Error Counts. They are accumulated while the SSRs are operating and are dumped to ground and reset at each ground station pass. 
+
+
+
+
+"
+END_META = DATASET_DESCRIPTION
+
+START_META = CONTACT_COORDINATES
+     ENTRY = "caateam>Non-PI>caateam@rssd.esa.int"
+END_META = CONTACT_COORDINATES
+
+START_META = TIME_RESOLUTION
+     ENTRY = ""
+END_META = TIME_RESOLUTION
+
+START_META = MIN_TIME_RESOLUTION
+     ENTRY = ""
+END_META = MIN_TIME_RESOLUTION
+
+START_META = MAX_TIME_RESOLUTION
+     ENTRY = ""
+END_META = MAX_TIME_RESOLUTION
+
+START_META = PROCESSING_LEVEL
+     ENTRY = "Auxiliary"
+END_META = PROCESSING_LEVEL
+
+START_META = DATASET_CAVEATS
+     ENTRY = ""
+END_META = DATASET_CAVEATS
+
+START_META = ACKNOWLEDGEMENT
+     ENTRY = "Please acknowledge the ESA Cluster Active Archive in any publication based upon use of this data."
+END_META = ACKNOWLEDGEMENT
+
+
+START_VARIABLE = Time_tags__C4_CP_AUX_ESOC_BIT_ERROR
+    PARAMETER_TYPE="Support_Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Universal time"
+    FIELDNAM ="Universal time"
+    LABLAXIS ="UT"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =ISO_TIME
+    SIGNIFICANT_DIGITS =30
+    FILLVAL =9999-12-31T23:59:59Z/9999-12-31T23:59:59Z
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="s"
+    SI_CONVERSION ="1.0>s"
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Time_tags__C4_CP_AUX_ESOC_BIT_ERROR 
+
+START_VARIABLE = SRA__C4_CP_AUX_ESOC_BIT_ERROR
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="SR A TBE count (B_A02)"
+    FIELDNAM ="SR A TBE count (B_A02)"
+    LABLAXIS ="SR A #"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =INT
+    SIGNIFICANT_DIGITS =4
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Time_tags__C4_CP_AUX_ESOC_BIT_ERROR
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= SRA__C4_CP_AUX_ESOC_BIT_ERROR 
+
+START_VARIABLE = Nr_Words__C4_CP_AUX_ESOC_BIT_ERROR
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Number of word groups"
+    FIELDNAM ="Number of word groups"
+    LABLAXIS ="Nr"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =INT
+    SIGNIFICANT_DIGITS =3
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Time_tags__C4_CP_AUX_ESOC_BIT_ERROR
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Nr_Words__C4_CP_AUX_ESOC_BIT_ERROR 
+
+START_VARIABLE = Accumulation__C4_CP_AUX_ESOC_BIT_ERROR
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Accumulation time / day"
+    FIELDNAM ="Accumulation time / day"
+    LABLAXIS ="Accumulation time / day"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =FLOAT
+    SIGNIFICANT_DIGITS =4
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Time_tags__C4_CP_AUX_ESOC_BIT_ERROR
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Accumulation__C4_CP_AUX_ESOC_BIT_ERROR 
+
+START_VARIABLE = ErrorRate__C4_CP_AUX_ESOC_BIT_ERROR
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Errors / day"
+    FIELDNAM ="Errors / day"
+    LABLAXIS ="Errors / day"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =FLOAT
+    SIGNIFICANT_DIGITS =4
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Time_tags__C4_CP_AUX_ESOC_BIT_ERROR
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= ErrorRate__C4_CP_AUX_ESOC_BIT_ERROR 
+
+START_VARIABLE = Error_Word__C4_CP_AUX_ESOC_BIT_ERROR
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Errors / word group"
+    FIELDNAM ="Errors / word group"
+    LABLAXIS ="Errors / word group"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =FLOAT
+    SIGNIFICANT_DIGITS =4
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Time_tags__C4_CP_AUX_ESOC_BIT_ERROR
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Error_Word__C4_CP_AUX_ESOC_BIT_ERROR 
+
+START_VARIABLE = ErrorRate_Word__C4_CP_AUX_ESOC_BIT_ERROR
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Errors / word group / day"
+    FIELDNAM ="Errors / word group / day"
+    LABLAXIS ="Errors / word group / day"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =FLOAT
+    SIGNIFICANT_DIGITS =4
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Time_tags__C4_CP_AUX_ESOC_BIT_ERROR
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= ErrorRate_Word__C4_CP_AUX_ESOC_BIT_ERROR 
+

@@ -1,0 +1,116 @@
+!
+INCLUDE = "CL_CH_MISSION.ceh"
+INCLUDE = "C4_CH_OBS.ceh"
+INCLUDE = "C4_CH_AUX_INST.ceh"
+INCLUDE = "CL_CH_AUX_EXP.ceh"
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "C4_CT_AUX_TIME_CHK"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CT>CAA_EventList"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "Telemetry Packet Timing Events"
+END_META       =   DATASET_TITLE
+
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "Dataset that contains a list of raw telemetry packet timing events"
+   ENTRY       =   "based on an analysis of the raw spacecraft housekeeping data. The "
+   ENTRY       =   "output lists all packets that lie outside the normal 5.152s frame "
+   ENTRY       =   "interval (+/- the expected variation). Time intervals greater than"
+   ENTRY       =   "the standard interval are marked as GAP and may reflect intervals"
+   ENTRY       =   "when no data is collected or occassional missing frames resulting"
+   ENTRY       =   "e.g. from TM mode changes. If the next frame comes earlier than "
+   ENTRY       =   "expected then it is marked as EARLY. The reason for early packets"
+   ENTRY       =   "is not yet fully explained."
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "C.H.Perry>UKCDC>chris.perry@stfc.ac.uk"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   TIME_RESOLUTION
+   ENTRY       =   60.0
+END_META       =   TIME_RESOLUTION
+!
+START_META     =   MIN_TIME_RESOLUTION
+   ENTRY       =   0.5
+END_META       =   MIN_TIME_RESOLUTION
+!
+START_META     =   MAX_TIME_RESOLUTION
+   ENTRY       =   6000
+END_META       =   MAX_TIME_RESOLUTION
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Calibrated"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "======================="
+   ENTRY       =   "V01 - Initial delivery "
+   ENTRY       =   "Using Apr 2011 data processing pipeline"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the UKCDC and ESA Cluster Active Archive in any publication based upon use of this data "
+END_META       =   ACKNOWLEDGEMENT
+!
+!
+!
+START_VARIABLE  =  time_range__C4_CT_AUX_TIME_CHK
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "UT Time Range"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME_RANGE
+    SIGNIFICANT_DIGITS  = 60
+    FILLVAL             = 9999-12-31T23:59:59Z/9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = 0.0
+    DELTA_MINUS         = 0.0
+END_VARIABLE    =  time_range__C4_CT_AUX_TIME_CHK
+!
+!
+START_VARIABLE  =  event_type__C4_CT_AUX_TIME_CHK
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Telemetry timing event type"
+    UNITS               = "n/a"
+    SI_CONVERSION       = "1.0>Unitless"
+    SIZES               = 1
+    VALUE_TYPE          = CHAR
+    SIGNIFICANT_DIGITS  = 10
+    FILLVAL             = "-"
+    FIELDNAM            = "Telemetry timing event type"
+    LABLAXIS            = "TM Event"
+    DEPEND_0            = time_range__C4_CT_AUX_TIME_CHK
+    QUALITY             = 0
+END_VARIABLE    =  event_type__C4_CT_AUX_TIME_CHK
+!
+!
+START_VARIABLE  =  time_interval__C4_CT_AUX_TIME_CHK
+    PARAMETER_TYPE      = "Support_Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Telemetry timing event interval"
+    UNITS               = "n/a"
+    SI_CONVERSION       = "1.0>Unitless"
+    SIZES               = 1
+    VALUE_TYPE          = CHAR
+    SIGNIFICANT_DIGITS  = 30
+    FILLVAL             = "-"
+    FIELDNAM            = "Telemetry timing event interval"
+    LABLAXIS            = "Interval"
+    DEPEND_0            = time_range__C4_CT_AUX_TIME_CHK
+    QUALITY             = 0
+END_VARIABLE    =  time_interval__C4_CT_AUX_TIME_CHK
+

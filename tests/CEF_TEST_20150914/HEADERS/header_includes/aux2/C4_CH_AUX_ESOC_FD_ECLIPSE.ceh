@@ -1,0 +1,274 @@
+INCLUDE = "CL_CH_MISSION.ceh"
+INCLUDE = "CL_CH_AUX_EXP_ESOC.ceh"
+INCLUDE = "C4_CH_OBS.ceh"
+INCLUDE = "C4_CH_AUX_INST.ceh"
+
+START_META     =   FILE_TYPE 
+    ENTRY       =   "cef"
+END_META       =   FILE_TYPE
+
+START_META     =   METADATA_TYPE 
+   ENTRY       =   "CAA" 
+END_META       =   METADATA_TYPE 
+
+START_META     =   METADATA_VERSION 
+   ENTRY       =   "2.0" 
+END_META       =   METADATA_VERSION 
+
+
+START_META = DATASET_ID
+     ENTRY = "C4_CP_AUX_ESOC_FD_ECLIPSE"
+END_META = DATASET_ID
+
+START_META = DATA_TYPE
+     ENTRY = "CP>CAA_Parameter"
+END_META = DATA_TYPE
+
+START_META = DATASET_TITLE
+     ENTRY = "Eclipse Intervals"
+END_META = DATASET_TITLE
+
+START_META = DATASET_DESCRIPTION
+     ENTRY = "
+
+
+
+
+"
+END_META = DATASET_DESCRIPTION
+
+START_META = CONTACT_COORDINATES
+     ENTRY = "caateam>Non-PI>caateam@rssd.esa.int"
+END_META = CONTACT_COORDINATES
+
+START_META = TIME_RESOLUTION
+     ENTRY = ""
+END_META = TIME_RESOLUTION
+
+START_META = MIN_TIME_RESOLUTION
+     ENTRY = ""
+END_META = MIN_TIME_RESOLUTION
+
+START_META = MAX_TIME_RESOLUTION
+     ENTRY = ""
+END_META = MAX_TIME_RESOLUTION
+
+START_META = PROCESSING_LEVEL
+     ENTRY = "Auxiliary"
+END_META = PROCESSING_LEVEL
+
+START_META = DATASET_CAVEATS
+     ENTRY = ""
+END_META = DATASET_CAVEATS
+
+START_META = ACKNOWLEDGEMENT
+     ENTRY = "Please acknowledge the ESA Cluster Active Archive in any publication based upon use of this data."
+END_META = ACKNOWLEDGEMENT
+
+
+START_VARIABLE = Penumbra_entry__C4_CP_AUX_ESOC_FD_ECLIPSE
+    PARAMETER_TYPE="Support_Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Penumbra entry (UT)"
+    FIELDNAM ="Penumbra entry (UT)"
+    LABLAXIS ="UT"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =ISO_TIME
+    SIGNIFICANT_DIGITS =20
+    FILLVAL =9999-12-31T23:59:59Z
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="s"
+    SI_CONVERSION ="1.0>s"
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Penumbra_entry__C4_CP_AUX_ESOC_FD_ECLIPSE 
+
+START_VARIABLE = Umbra_Entry__C4_CP_AUX_ESOC_FD_ECLIPSE
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Penumbra entry (UT)"
+    FIELDNAM ="Penumbra entry (UT)"
+    LABLAXIS ="UT"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =ISO_TIME
+    SIGNIFICANT_DIGITS =20
+    FILLVAL =9999-12-31T23:59:59Z
+    ERROR_PLUS =""
+    ERROR_MINUS ="CP_AUX_ESOC_FD_ECLIPSE"
+    UNITS ="s"
+    SI_CONVERSION ="1.0>s"
+    DEPEND_0 =Penumbra_entry__C4_CP_AUX_ESOC_FD_ECLIPSE
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Umbra_Entry__C4_CP_AUX_ESOC_FD_ECLIPSE 
+
+START_VARIABLE = Umbra_Exit__C4_CP_AUX_ESOC_FD_ECLIPSE
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Penumbra entry (UT)"
+    FIELDNAM ="Penumbra entry (UT)"
+    LABLAXIS ="UT"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =ISO_TIME
+    SIGNIFICANT_DIGITS =20
+    FILLVAL =9999-12-31T23:59:59Z
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="s"
+    SI_CONVERSION ="1.0>s"
+    DEPEND_0 =Penumbra_entry__C4_CP_AUX_ESOC_FD_ECLIPSE
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Umbra_Exit__C4_CP_AUX_ESOC_FD_ECLIPSE 
+
+START_VARIABLE = Penumbra_exit__C4_CP_AUX_ESOC_FD_ECLIPSE
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Penumbra entry (UT)"
+    FIELDNAM ="Penumbra entry (UT)"
+    LABLAXIS ="UT"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =ISO_TIME
+    SIGNIFICANT_DIGITS =20
+    FILLVAL =9999-12-31T23:59:59Z
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="s"
+    SI_CONVERSION ="1.0>s"
+    DEPEND_0 =Penumbra_entry__C4_CP_AUX_ESOC_FD_ECLIPSE
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Penumbra_exit__C4_CP_AUX_ESOC_FD_ECLIPSE 
+
+START_VARIABLE = Duration_eclipse__C4_CP_AUX_ESOC_FD_ECLIPSE
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Duration of eclipse"
+    FIELDNAM ="Duration of eclipse"
+    LABLAXIS ="Duration of eclipse"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =FLOAT
+    SIGNIFICANT_DIGITS =6
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="s"
+    SI_CONVERSION ="1.0>s"
+    DEPEND_0 =Penumbra_entry__C4_CP_AUX_ESOC_FD_ECLIPSE
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Duration_eclipse__C4_CP_AUX_ESOC_FD_ECLIPSE 
+
+START_VARIABLE = Duration_umbra__C4_CP_AUX_ESOC_FD_ECLIPSE
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Duration of umbra"
+    FIELDNAM ="Duration of umbra"
+    LABLAXIS ="Duration of umbra"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =FLOAT
+    SIGNIFICANT_DIGITS =6
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="s"
+    SI_CONVERSION ="1.0>s"
+    DEPEND_0 =Penumbra_entry__C4_CP_AUX_ESOC_FD_ECLIPSE
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Duration_umbra__C4_CP_AUX_ESOC_FD_ECLIPSE 
+
+START_VARIABLE = Moon__C4_CP_AUX_ESOC_FD_ECLIPSE
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Lunar eclipse"
+    FIELDNAM ="Lunar eclipse"
+    LABLAXIS ="Lunar eclipse"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =CHAR
+    SIGNIFICANT_DIGITS =""
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Penumbra_entry__C4_CP_AUX_ESOC_FD_ECLIPSE
+    QUALITY=3
+    PARAMETER_CAVEATS="indicates the body (0=Earth, 1=Moon)"
+END_VARIABLE= Moon__C4_CP_AUX_ESOC_FD_ECLIPSE 
+
+START_VARIABLE = Umbra__C4_CP_AUX_ESOC_FD_ECLIPSE
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Umbra crossing"
+    FIELDNAM ="Umbra crossing"
+    LABLAXIS ="Umbra crossing"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =CHAR
+    SIGNIFICANT_DIGITS =""
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Penumbra_entry__C4_CP_AUX_ESOC_FD_ECLIPSE
+    QUALITY=3
+    PARAMETER_CAVEATS="0=penumbra only, 1= penumbra and umbra"
+END_VARIABLE= Umbra__C4_CP_AUX_ESOC_FD_ECLIPSE 
+
+START_VARIABLE = MinAngle__C4_CP_AUX_ESOC_FD_ECLIPSE
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="ASPOC ON/OFF"
+    FIELDNAM ="ASPOC ON/OFF"
+    LABLAXIS ="ASPOC ON/OFF"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =CHAR
+    SIGNIFICANT_DIGITS =""
+    FILLVAL =""
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Penumbra_entry__C4_CP_AUX_ESOC_FD_ECLIPSE
+    QUALITY=3
+    PARAMETER_CAVEATS="this is the minimum value of the angle body-satellite-sun (body= earth or moon)"
+END_VARIABLE= MinAngle__C4_CP_AUX_ESOC_FD_ECLIPSE 
+

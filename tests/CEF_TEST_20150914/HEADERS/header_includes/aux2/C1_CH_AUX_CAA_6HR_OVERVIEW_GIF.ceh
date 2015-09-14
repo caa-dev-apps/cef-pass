@@ -1,0 +1,99 @@
+
+! Include mission header
+! This header is provided by the CAA
+!-----------------------------------
+INCLUDE = "CL_CH_MISSION.ceh"
+
+! Include observatory header
+! This header is provided by the CAA
+!-----------------------------------
+INCLUDE = "C1_CH_OBS.ceh"
+
+! Include experiment header
+!--------------------------
+INCLUDE = "CL_CH_AUX_EXP.ceh"
+
+! Include instrument header
+!--------------------------
+INCLUDE = "CL_CH_AUX_INST.ceh"
+
+!=================================
+! Dataset Level Metadata
+!=================================
+
+! Mandatory metadata
+!-------------------
+START_META     =   DATASET_ID
+   ENTRY       =   "C1_CG_AUX_CAA_6HR_OVERVIEW_GIF"
+END_META       =   DATASET_ID
+
+START_META     =   DATA_TYPE
+   ENTRY       =   "CG>CAA_Graphic"
+END_META       =   DATA_TYPE
+
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Harri Laakso, ESTEC/SRE-OS>Non-PI>caateam@rssd.esa.int"
+END_META       =   CONTACT_COORDINATES
+
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the ESA Cluster Active Archive in any "
+   ENTRY       =   "publication based upon use of this data"
+END_META       =   ACKNOWLEDGEMENT
+
+START_META     =   DATASET_TITLE
+   ENTRY       =   "6-hr CAA Summary Plot (Overview) - GIF"
+END_META       =   DATASET_TITLE
+
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This plot, available for each spacecraft, is based on the calibrated CAA data and has a similar layout "
+   ENTRY       =   "as the corresponding CSDSweb plot (that is based on default calibration values). "
+   ENTRY       =   "The panels from top to bottom are:"
+   ENTRY       =   "Total magnetic field (FGM)"
+   ENTRY       =   "Spacecraft potential (EFW)"
+   ENTRY       =   "Total ion velocity (CIS)"
+   ENTRY       =   "Ion energy spectra (CIS)"
+   ENTRY       =   "Electron energy spectra (PEACE) "
+   ENTRY       =   "Magnetic field wave spectra at 10 Hz - 4 kHz (STAFF) "
+   ENTRY       =   "Electric field wave spectra at 2-80 kHz (WHISPER) "
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Calibrated"
+END_META       =   PROCESSING_LEVEL
+
+! Mandatory except for CAVEATS datasets
+!--------------------------------------
+START_META     =   TIME_RESOLUTION
+   ENTRY       =   21600
+END_META       =   TIME_RESOLUTION
+
+START_META     =   MIN_TIME_RESOLUTION
+   ENTRY       =   21600
+END_META       =   MIN_TIME_RESOLUTION
+
+START_META     =   MAX_TIME_RESOLUTION
+   ENTRY       =   21600
+END_META       =   MAX_TIME_RESOLUTION
+
+START_META     =   FILE_TYPE
+   ENTRY       =   "gif"
+END_META       =   FILE_TYPE
+
+START_META     =   DATASET_VERSION
+   ENTRY       =   "V01"
+END_META       =   DATASET_VERSION
+
+START_META     =   METADATA_VERSION
+   ENTRY       =   "2.0"
+END_META       =   METADATA_VERSION
+
+START_META     =   METADATA_TYPE
+   ENTRY       =   "CAA"
+END_META       =   METADATA_TYPE
+
+! Optional metadata
+!------------------
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "See User Guide for caveats"
+END_META       =   DATASET_CAVEATS
+

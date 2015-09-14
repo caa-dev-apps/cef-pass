@@ -1,0 +1,93 @@
+!------------------- CEF ASCII File --------------------
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "CC_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "CC_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "CC_CG_AUX_ECLAT_GUMICS_ION_South_QL"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CG>CAA_GRAPHIC"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "GUMICS-4 Ionospheric FACs, conductivites and Precipitation, Southern Hemisphere, 5 minute quicklook plots"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset contains quicklook plots of Ionospheric conductivies, Field Aligned Currents (FACs) and particle precipitation from "
+   ENTRY       =   "GUMICS-4(Janhunen et al., 1996, 2012) global MHD code's ionosphere in the Southern Hemisphere. A global snapshot of the Southern "
+   ENTRY       =   "hemisphere is presented at 5 minute intervals."
+   ENTRY       =   ""
+   ENTRY       =   "The data are provided in a magnetic local time/magnetic latitude coordinate system with noon at the top and dusk to the left, at 1 hour "
+   ENTRY       =   "cadence. The colour scale for each subplot is provided on its right side."
+   ENTRY       =   ""
+   ENTRY       =   "Top left panel shows the height integrated Pedersen conductivity and the top right panel shows the height integrated Hall conductivity."
+   ENTRY       =   "Bottom left panel presents FACs in the ionosphere and the bottom right panel presents particle precipitation into the ionosphere from the "
+   ENTRY       =   "magnetosphere."
+   ENTRY       =   ""
+   ENTRY       =   "The Cyan coloured contours are ionospheric equi-potential contours from GUMICS-4 Ionosphere and the dotted circle is the open-closed "
+   ENTRY       =   "field line boundary in GUMICS-4."
+   ENTRY       =   ""
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Minna Palmroth>GUMICS-4 Simulation contact>minna.palmroth@fmi.fi"
+   ENTRY       =   "Gabor Facsko>facsko.gabor@csfk.mta.hu"
+   ENTRY       =   "Chandrasekhar Reddy Anekallu>chandrasekhar.anekallu@fmi.fi"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   TIME_RESOLUTION
+!
+START_META     =   MIN_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   MIN_TIME_RESOLUTION
+!
+START_META     =   MAX_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   300.0
+END_META       =   MAX_TIME_RESOLUTION
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Derived"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   FILE_TYPE
+   ENTRY       =   "png"
+END_META       =   FILE_TYPE
+!
+START_META     =   DATASET_VERSION
+   ENTRY       =   "2012/V01 - Initial ECLAT delivery to CAA"
+END_META       =   DATASET_VERSION
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the GUMICS-4 global MHD code team, the European Union Framework 7 Programme,"
+   ENTRY       =   "the ECLAT project and the ESA Cluster Archive in any publications based upon the use of these"
+   ENTRY       =   "data."
+   ENTRY       =   " "
+   ENTRY       =   "This dataset was generated as part of European Union ECLAT project. The aim of the European"
+   ENTRY       =   "Cluster Assimilation Technology (ECLAT) is to provide a novel data base, by providing an upgrade"
+   ENTRY       =   "to the CAA. To achieve this, ECLAT programme ingests into the CAA supporting data from other"
+   ENTRY       =   "space- and ground-based observatories, provide data mining routines, refine data products and"
+   ENTRY       =   "software tools for their visualisation, and develop existing European magnetospheric modeling"
+   ENTRY       =   "infrastructure to provide context for the observational data."
+   ENTRY       =   " "
+   ENTRY       =   "SuperDARN is an international collaboration which operates a network of high frequency"
+   ENTRY       =   "coherent scatter radars to characterise the polar ionospheric convection pattern in the"
+   ENTRY       =   "northern and southern hemispheres."
+   ENTRY       =   " "
+   ENTRY       =   "The contacts for the ECLAT project are"
+   ENTRY       =   "  Steve Milan, University of Leicester"
+   ENTRY       =   "  Rumi Nakamura, Oesterreichische Akademie der Wissenschaften"
+   ENTRY       =   "  Kirsti Kauristie, Minna Palmroth, Finnish Meterological Institute"
+   ENTRY       =   "  Victor Sergeev, Petersburg State University"
+   ENTRY       =   "  Hermann Opgenoorth, Swedish Institute of Space Physics"
+END_META       =   ACKNOWLEDGEMENT

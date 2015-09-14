@@ -1,0 +1,160 @@
+!
+INCLUDE = "CL_CH_MISSION.ceh"
+INCLUDE = "C3_CH_OBS.ceh"
+INCLUDE = "C3_CH_AUX_INST.ceh"
+INCLUDE = "CL_CH_AUX_EXP.ceh"
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "C3_CP_AUX_SPIN_TIME"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Parameter"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "Spin timing"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset provides information on the time of each spin."
+   ENTRY       =   "The spin timing calculation is based on the extraction of "
+   ENTRY       =   "sun reference pulse information from the spacecraft HK data"
+   ENTRY       =   "and application of the standard spin calculation algorithm"
+   ENTRY       =   "described in document DS-QMW-TN-0007."
+   ENTRY       =   "The nominal offset for the start of the spin relative to the"
+   ENTRY       =   "sun reference pulse is 26.367 degrees."
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "C.H.Perry>UKCDC>chris.perry@stfc.ac.uk"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   TIME_RESOLUTION
+   ENTRY       =   4.0
+END_META       =   TIME_RESOLUTION
+!
+START_META     =   MIN_TIME_RESOLUTION
+   ENTRY       =   4.0
+END_META       =   MIN_TIME_RESOLUTION
+!
+START_META     =   MAX_TIME_RESOLUTION
+   ENTRY       =   4.0
+END_META       =   MAX_TIME_RESOLUTION
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Calibrated"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "======================="
+   ENTRY       =   "V01 - Initial delivery "
+   ENTRY       =   "Using Apr 2010 data processing pipeline"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the UKCDC and ESA Cluster Active Archive in any publication based upon use of this data "
+END_META       =   ACKNOWLEDGEMENT
+!
+!
+!
+START_VARIABLE  =  time_tags__C3_CP_AUX_SPIN_TIME
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "UT Time, time of centre of the spine"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    SIGNIFICANT_DIGITS  = 29
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = 0.0
+    DELTA_MINUS         = 0.0
+END_VARIABLE    =  time_tags__C3_CP_AUX_SPIN_TIME
+!
+!
+START_VARIABLE  =  spin_interval__C3_CP_AUX_SPIN_TIME
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Spin time range"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME_RANGE
+    SIGNIFICANT_DIGITS  = 30
+    FILLVAL             = 9999-12-31T23:59:59Z/9999-12-31T23:59:59Z
+    FIELDNAM            = "Spin time range"
+    LABLAXIS            = "Spin Time"
+    DEPEND_0            = time_tags__C3_CP_AUX_SPIN_TIME
+    QUALITY             = "0"
+END_VARIABLE    =  spin_interval__C3_CP_AUX_SPIN_TIME
+!
+!
+START_VARIABLE  =  spin_period__C3_CP_AUX_SPIN_TIME
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Spin period"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = -999.9
+    FIELDNAM            = "Spin period"
+    LABLAXIS            = "Spin period"
+    DEPEND_0            = time_tags__C3_CP_AUX_SPIN_TIME
+    QUALITY             = "0"
+END_VARIABLE    =  spin_period__C3_CP_AUX_SPIN_TIME
+
+!
+!
+START_VARIABLE  =  algorithm__C3_CP_AUX_SPIN_TIME
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Spin determination data source/algorithm"
+    UNITS               = " "
+    SI_CONVERSION       = "1.0>(code)"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = -1
+    FIELDNAM            = "Spin algorithm"
+    SCALEMIN            = 0
+    SCALEMAX            = 2
+    SCALETYP            = "Linear"
+    LABLAXIS            = "Spin Algorithm"
+    DEPEND_0            = time_tags__C3_CP_AUX_SPIN_TIME
+    PARAMETER_CAVEATS   = "1=Using sun ref pulse from S/C HK"
+    QUALITY             = "0"
+END_VARIABLE    =  algorithm__C3_CP_AUX_SPIN_TIME
+!
+START_VARIABLE  =  flag__C3_CP_AUX_SPIN_TIME
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Spin determination flag"
+    UNITS               = " "
+    SI_CONVERSION       = "1.0>(code)"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = -1
+    FIELDNAM            = "Spin algorithm"
+    SCALEMIN            = 0
+    SCALEMAX            = 3
+    SCALETYP            = "Linear"
+    LABLAXIS            = "Spin Flag"
+    DEPEND_0            = time_tags__C3_CP_AUX_SPIN_TIME
+    PARAMETER_CAVEATS   = "0=both start/stop, 1=no start, 2=no stop, 3=no start/stop sun ref pulse"
+    QUALITY             = "0"
+END_VARIABLE    =  flag__C3_CP_AUX_SPIN_TIME
+!

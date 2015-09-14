@@ -85,7 +85,8 @@ public class CefReader
             else {
                 def matcher = it =~ regexStr
                 
-                if(it.size() == 0) {
+//x                 if(it.size() == 0) {
+                if(it.trim().size() == 0) {
                     // ignore
                 }
                 else if ((it =~ regexCommentStr).matches()) {

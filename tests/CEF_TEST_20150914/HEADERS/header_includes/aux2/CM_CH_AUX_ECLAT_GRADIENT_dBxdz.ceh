@@ -1,0 +1,334 @@
+!------------------- CEF ASCII File --------------------
+! This is a test file produced by the CAA meta data 
+! creation tool. The contents are ONLY for testing  
+!-------------------------------------------------------
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "CM_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "CM_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "CM_CP_AUX_ECLAT_GRADIENT_dBxdz"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Event_Data"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "CLUSTER IDENTIFIED LARGE GRADIENT EVENTS"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+
+   ENTRY       =   "This dataset represents large dBx/dz gradient events identified by the Cluster SC in the tail region box x<-8 Re, abs(y)<15 Re GSM "
+   ENTRY       =   "for tail seasons (July-October)."
+   ENTRY       =   "Large gradient (Cluster FGM measurements of magnetic field x component gradient in the z direction, dBx/dz) events "
+   ENTRY       =   "are searched for where a statistical threshold has been exceeded. The events are then sorted by dBx and the "
+   ENTRY       =   "top 30 events given in this list for each year. The plasma sheet must be encountered during the events."
+   ENTRY       =   "The region flag describes which plasma regions are encountered in the event interval. It contains five digits, each represent "
+   ENTRY       =   "different plasma regions, with the value represented whether the region is seen. All parameters are in GSM coodinates."
+   ENTRY       =   "In years 2001-2004 the top 30 events from any spacecraft pair is given. Due to large spacecraft seperation after 2004, "
+   ENTRY       =   "only the spacecraft pair with smallest separation in the tail for each year is used thereafter."
+   ENTRY       =   " "
+   ENTRY       =   "This dataset was generated as part of European Union ECLAT project. The aim of the European"
+   ENTRY       =   "Cluster Assimilation Technology (ECLAT) is to provide a novel data base, by providing an upgrade"
+   ENTRY       =   "to the CAA. To achieve this , ECLAT programme ingests into the CAA supporting data from other"
+   ENTRY       =   "space- and ground-based observatories, provide data mining routines, refine data products and "
+   ENTRY       =   "software tools for their visualisation, and develop existing European magnetospheric modeling"
+   ENTRY       =   "infrastructure to provide context for the observational data."
+   ENTRY       =   " "
+   ENTRY       =   "The contacts for the ECLAT project are"
+   ENTRY       =   "  Steve Milan, University of Leicester"
+   ENTRY       =   "  Rumi Nakamura, Oesterreichische Akademie der Wissenschaften"
+   ENTRY       =   "  Kirsti Kauristie, Finnish Meterological Institute"
+   ENTRY       =   "  Victor Sergeev, Petersburg State University"
+   ENTRY       =   "  Hermann Opgenoorth, Swedish Institute of Space Physics"
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Peter Boakes>peter.boakes@oeaw.ac.at"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Derived"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "2013/V01 - Initial ECLAT delivery to CAA"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the European Union Framework 7 Programme,"
+   ENTRY       =   "the ECLAT project and the ESA Cluster Archive in any publications based upon the use of these"
+   ENTRY       =   "data."
+END_META       =   ACKNOWLEDGEMENT
+!
+! PARAMETER LEVEL METADATA
+!
+START_VARIABLE  =  event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Event interval"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME_RANGE
+    FILLVAL             = 9999-12-31T23:59:59:9999Z/9999-12-31T23:59:59:999Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+END_VARIABLE    =  event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+START_VARIABLE  =  ref_sc__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Reference SC pair used for gradient"
+    SIZES               = 1
+    VALUE_TYPE          = CHAR
+    FILLVAL             = -1
+    FIELDNAM            = "Reference SC pair used for gradient"
+    LABLAXIS            = "Spacecraft pair"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+END_VARIABLE  =  ref_sc__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+
+START_VARIABLE  =  mean_dbxdz__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "mean value of GSM dBx/dz"
+    UNITS               = "nT/m/m"
+    SI_CONVERSION       = "6.37E-3>T/m"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "mean dBx/dz (GSM)"
+    LABLAXIS            = "mean dBx/dz"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    QUALITY             = 3
+END_VARIABLE  =  mean_dbxdz__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+START_VARIABLE  =  mean_dbydz__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "mean value of GSM dBy/dz"
+    UNITS               = "nT/m/m"
+    SI_CONVERSION       = "6.37E-3>T/m"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "mean dBy/dz (GSM)"
+    LABLAXIS            = "mean dBy/dz"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    QUALITY             = 3
+END_VARIABLE  =  mean_dbydz__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+START_VARIABLE  =   max_dbxdz__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "maximum value GSM dBx/dz"
+    UNITS               = "nT/Re"
+    SI_CONVERSION       = "6.37E-3>T/m"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "max value dBx/dz (GSM)"
+    LABLAXIS            = "max dBx/dz"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    QUALITY             = 3
+END_VARIABLE  =   max_dbxdz__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+START_VARIABLE  =   max_dbydz__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "maximum value GSM dBy/dz"
+    UNITS               = "nT/Re"
+    SI_CONVERSION       = "6.37E-3>T/m"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "max value dBy/dz (GSM)"
+    LABLAXIS            = "max dBy/dz"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    QUALITY             = 3
+END_VARIABLE  =   max_dbydz__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+START_VARIABLE  =  mean_dz__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "mean spacecraft seperation in Z GSM"
+    UNITS               = "Re"
+    SI_CONVERSION       = "6370E+3>m"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = -1e30
+    FIELDNAM            = "mean spacecraft separation in Z GSM"
+    LABLAXIS            = "mean dz"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    QUALITY             = 3
+END_VARIABLE  =  mean_dz__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+START_VARIABLE  =  mean_dbx__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "mean value of the difference in magnetic field dBx GSM in event interval"
+    UNITS               = "nT/Re"
+    SI_CONVERSION       = "6370E3>m"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "mean dBx in GSM"
+    LABLAXIS            = "<dBx>"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    QUALITY             = 3
+END_VARIABLE  =  mean_dbx__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+START_VARIABLE  =  mean_dby__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "mean value of the difference in magnetic field dBy GSM in event interval"
+    UNITS               = "nT/Re"
+    SI_CONVERSION       = "6370E3>m"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "mean dBy"
+    LABLAXIS            = "mean dBy"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    QUALITY             = 3
+END_VARIABLE  =  mean_dby__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+
+START_VARIABLE  =   max_dbx__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "maximum value dBx GSM"
+    UNITS               = "Re"
+    SI_CONVERSION       = "6370E3>m"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "max dBx in GSM"
+    LABLAXIS            = "max dBx"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    QUALITY             = 3
+END_VARIABLE  =   max_dbx__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+
+START_VARIABLE  =   max_dby__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "maximum value dBy GSM"
+    UNITS               = "Re"
+    SI_CONVERSION       = "6370E3>m"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "max dBy in GSM"
+    LABLAXIS            = "max dBy"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    QUALITY             = 3
+END_VARIABLE  =   max_dby__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+START_VARIABLE  =   sc_pos__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "xyz position of most southern sc in GSM"
+    UNITS               = "Re"
+    SI_CONVERSION       = "6370e3>m"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GSM>Geocentric Solar Magnetic"
+    SIZES               = 3
+    REPRESENTATION_1	= "x", "y", "z"
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = -1e30
+    FIELDNAM            = "SC position in Re (GSM)"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    QUALITY             = 3
+    LABEL_1		= "x GSM", "y GSM", "z GSM"
+END_VARIABLE  =   sc_pos__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+START_VARIABLE  =  multiflag__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Flag describing how many multiple events in interval"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = 0
+    FIELDNAM            = "Number of multiple events"
+    LABLAXIS            = "Multiple events"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+END_VARIABLE  =  multiflag__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+START_VARIABLE  =  region_flag__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+   PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Column 0:lobe, 1:BR, 2:OPS, 3:IPS, 4: NSR, value: 0-not seen, 1-seen by 1 SC, 2-seen both SC."
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 5
+    FILLVAL             = 0
+    FIELDNAM            = "Plasma region flag"
+    LABLAXIS            = "Plasma Region"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+END_VARIABLE  =  region_flag__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+START_VARIABLE  =  ranking__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Ranking of event in order of dbx/dby GSM"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 2
+    FILLVAL             = 0
+    FIELDNAM            = "Ranking"
+    LABLAXIS            = "Rank"
+    DEPEND_0            = event_interval__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+END_VARIABLE  =  ranking__CM_CP_AUX_ECLAT_GRADIENT_dBxdz
+!
+!
+
+

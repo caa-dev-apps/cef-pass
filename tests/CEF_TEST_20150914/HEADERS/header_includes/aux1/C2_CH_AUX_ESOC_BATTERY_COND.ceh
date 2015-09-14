@@ -1,0 +1,230 @@
+INCLUDE = "CL_CH_MISSION.ceh"
+INCLUDE = "CL_CH_AUX_EXP_ESOC.ceh"
+INCLUDE = "C2_CH_OBS.ceh"
+INCLUDE = "C2_CH_AUX_INST.ceh"
+
+START_META     =   FILE_TYPE 
+    ENTRY       =   "cef"
+END_META       =   FILE_TYPE
+
+START_META     =   METADATA_TYPE 
+   ENTRY       =   "CAA" 
+END_META       =   METADATA_TYPE 
+
+START_META     =   METADATA_VERSION 
+   ENTRY       =   "2.0" 
+END_META       =   METADATA_VERSION 
+
+
+START_META = DATASET_ID
+     ENTRY = "C2_CP_AUX_ESOC_BATTERY_COND"
+END_META = DATASET_ID
+
+START_META = DATA_TYPE
+     ENTRY = "CP>CAA_Parameter"
+END_META = DATA_TYPE
+
+START_META = DATASET_TITLE
+     ENTRY = "Battery Conditioning History"
+END_META = DATASET_TITLE
+
+
+
+START_META = DATASET_DESCRIPTION
+     ENTRY = "During the mission operation phase the five batteries on each single spacecraft undergo a conditioning cycle with 4 states:"
+     ENTRY = " empty storage, charging, full storage and discharging. The conditioning strategy applied has changed during " 
+     ENTRY = " the mission considerably, as the mission was extended and the batteries started to degrade."
+     ENTRY = " This dataset shows the Battery capacity evolution at the end of each conditioning season, These data are most likely not "
+     ENTRY = " of relevance for science data analysis. However, as it turned out that some batteries cracked during charging or "
+     ENTRY = " discharging process and released gas, some unexplained signal can be seen in the scientific data of some experiments."
+END_META = DATASET_DESCRIPTION
+
+START_META = CONTACT_COORDINATES
+     ENTRY = "caateam>Non-PI>caateam@rssd.esa.int"
+END_META = CONTACT_COORDINATES
+
+START_META = TIME_RESOLUTION
+     ENTRY = ""
+END_META = TIME_RESOLUTION
+
+START_META = MIN_TIME_RESOLUTION
+     ENTRY = ""
+END_META = MIN_TIME_RESOLUTION
+
+START_META = MAX_TIME_RESOLUTION
+     ENTRY = ""
+END_META = MAX_TIME_RESOLUTION
+
+START_META = PROCESSING_LEVEL
+     ENTRY = "Auxiliary"
+END_META = PROCESSING_LEVEL
+
+START_META = DATASET_CAVEATS
+     ENTRY = ""
+END_META = DATASET_CAVEATS
+
+START_META = ACKNOWLEDGEMENT
+     ENTRY = "Please acknowledge the ESA Cluster Active Archive in any publication based upon use of this data."
+END_META = ACKNOWLEDGEMENT
+
+
+START_VARIABLE = Time_tags__C2_CP_AUX_ESOC_BATTERY_COND
+    PARAMETER_TYPE="Support_Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Universal time range"
+    FIELDNAM ="Universal time range"
+    LABLAXIS ="UT"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =ISO_TIME_RANGE
+    SIGNIFICANT_DIGITS =30
+    FILLVAL =9999-12-31T23:59:59Z/9999-12-31T23:59:59Z
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="s"
+    SI_CONVERSION ="1.0>s"
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Time_tags__C2_CP_AUX_ESOC_BATTERY_COND 
+
+START_VARIABLE = Battery_ID__C2_CP_AUX_ESOC_BATTERY_COND
+    PARAMETER_TYPE="Support_Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Battery ID"
+    FIELDNAM ="Battery ID"
+    LABLAXIS ="Battery ID"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =INT
+    SIGNIFICANT_DIGITS =1
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Time_tags__C2_CP_AUX_ESOC_BATTERY_COND
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Battery_ID__C2_CP_AUX_ESOC_BATTERY_COND 
+
+START_VARIABLE = Cycle__C2_CP_AUX_ESOC_BATTERY_COND
+    PARAMETER_TYPE="Support_Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Cycle (C - charging, D - discharging)"
+    FIELDNAM ="Cycle"
+    LABLAXIS ="Cycle"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =CHAR
+    SIGNIFICANT_DIGITS =""
+    FILLVAL =""
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Time_tags__C2_CP_AUX_ESOC_BATTERY_COND
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Cycle__C2_CP_AUX_ESOC_BATTERY_COND 
+
+START_VARIABLE = Capacity__C2_CP_AUX_ESOC_BATTERY_COND
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="battery capacity"
+    FIELDNAM ="battery capacity"
+    LABLAXIS ="capacity"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =FLOAT
+    SIGNIFICANT_DIGITS =6
+    FILLVAL =-1e+30
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="F"
+    SI_CONVERSION ="1.0>F"
+    DEPEND_0 =Time_tags__C2_CP_AUX_ESOC_BATTERY_COND
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Capacity__C2_CP_AUX_ESOC_BATTERY_COND 
+
+START_VARIABLE = Temp__C2_CP_AUX_ESOC_BATTERY_COND
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="battery temperature in the end of cycle"
+    FIELDNAM ="battery temperature"
+    LABLAXIS ="temp"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =FLOAT
+    SIGNIFICANT_DIGITS =6
+    FILLVAL =-1e+30
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="degC"
+    SI_CONVERSION ="1.0>degC"
+    DEPEND_0 =Time_tags__C2_CP_AUX_ESOC_BATTERY_COND
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Temp__C2_CP_AUX_ESOC_BATTERY_COND 
+
+START_VARIABLE = Ch_Dis_ratio__C2_CP_AUX_ESOC_BATTERY_COND
+    PARAMETER_TYPE="Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Battery Charging/Discarging ratio"
+    FIELDNAM ="Battery Charging/Discarging ratio"
+    LABLAXIS ="Ch/Dis ratio"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =FLOAT
+    SIGNIFICANT_DIGITS =4
+    FILLVAL =-1
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS ="unitless"
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Time_tags__C2_CP_AUX_ESOC_BATTERY_COND
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Ch_Dis_ratio__C2_CP_AUX_ESOC_BATTERY_COND 
+
+START_VARIABLE = Comment__C2_CP_AUX_ESOC_BATTERY_COND
+    PARAMETER_TYPE="Support_Data"
+    DELTA_PLUS =""
+    DELTA_MINUS =""
+    CATDESC="Comment on battery conditioning"
+    FIELDNAM ="Comment on battery conditioning"
+    LABLAXIS ="Comment"
+    ENTITY ="Observatory"
+    PROPERTY ="Status"
+    FLUCTUATIONS ="Waveform"
+    SIZES =1
+    VALUE_TYPE =CHAR
+    SIGNIFICANT_DIGITS =""
+    FILLVAL =""
+    ERROR_PLUS =""
+    ERROR_MINUS =""
+    UNITS =""
+    SI_CONVERSION ="1.0>unitless"
+    DEPEND_0 =Time_tags__C2_CP_AUX_ESOC_BATTERY_COND
+    QUALITY=3
+    PARAMETER_CAVEATS=""
+END_VARIABLE= Comment__C2_CP_AUX_ESOC_BATTERY_COND 
+

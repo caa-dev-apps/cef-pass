@@ -1,0 +1,69 @@
+FILE_FORMAT_VERSION = "CEF-2.0"
+
+INCLUDE = "CL_CH_MISSION.ceh"
+
+INCLUDE = "C4_CH_OBS.ceh"
+
+INCLUDE = "CL_CH_CIS.ceh"
+
+
+INCLUDE = "C4_CH_CIS-CODIF.ceh"
+
+
+START_META = DATASET_ID
+  ENTRY    = "C4_CG_CIS_SPECTRO"
+END_META   = DATASET_ID
+
+START_META = DATASET_VERSION
+  ENTRY    = "V2.0 - 2009/07/28"
+END_META   = DATASET_VERSION
+
+START_META = DATASET_TITLE
+  ENTRY    = "CIS pre-generated energy-time ion spectrograms and density plots"
+END_META   = DATASET_TITLE
+
+START_META = DATA_TYPE
+  ENTRY    = "CG>Pre-plotted graphics"
+END_META   = DATA_TYPE
+
+START_META = PROCESSING_LEVEL
+  ENTRY    = Calibrated
+END_META   = PROCESSING_LEVEL
+
+START_META = DATASET_DESCRIPTION 
+  ENTRY    = "CIS experiment energy-time spectrograms ; 6 hours per plot"
+  ENTRY    = "All spectrogram units are in corrected-for-detection-efficiency counts per sec. (c/s)."
+  ENTRY    = "All density plot units are in ions/cm^3."
+  ENTRY    = "Each plot contains (from top to bottom):"
+  ENTRY    = " * CIS-HIA mode (in black) and spacecraft telemetry mode (in red)"
+  ENTRY    = " * HIA spectrogram for data from the 'low g' (low-sensitivity) side: "
+  ENTRY    = "   ions in  the 45° x 45° sector centred in the solar wind direction (solar wind modes only)."
+  ENTRY    = " * HIA spectrograms (4) for data from the 'high G' (high-sensitivity) side: "
+  ENTRY    = "   ions arriving in the 90° x 180° sector with a field-of-view pointing in the sun, "
+  ENTRY    = "   dusk, tail, and dawn direction respectively (all modes)."
+  ENTRY    = " * CIS-CODIF mode (in black) and spacecraft telemetry mode (in red)."
+  ENTRY    = " * CODIF sensitivity side ('high G' or 'low g') selected for data acquisition (in black) "
+  ENTRY    = "   and CODIF post-acceleration high-voltage value (in magenta)."
+  ENTRY    = " * Omnidirectional CODIF spectrograms (3) for H+, He+ and O+ ions respectively."
+  ENTRY    = " * Ion velocity (GSE system), in km/s, mesured by HIA."
+  ENTRY    = " * Ion density measured by HIA (in blue, all modes), "
+  ENTRY    = "   and He++ density measured by HIA (in red, solar wind modes only)."
+  ENTRY    = " * Ion density measured by CODIF, separately for H+, He++ , He+ and O+."
+  ENTRY    = " * Spacecraft coordinates (GSE system) and geocentric distance, in RE."
+END_META   = DATASET_DESCRIPTION
+
+START_META = CONTACT_COORDINATES
+  ENTRY      = "Iannis Dandouras>PI>Iannis.Dandouras@irap.omp.eu"
+  ENTRY      = "Henri Reme>Deputy-PI>Henri.Reme@irap.omp.eu"
+END_META   = CONTACT_COORDINATES
+
+START_META = ACKNOWLEDGEMENT
+  ENTRY    = "Please acknoledge the CIS experiment team and"
+  ENTRY    = "ESA Cluster Active Archive when using this data."
+END_META   = ACKNOWLEDGEMENT
+
+START_META = FILE_TYPE
+        ENTRY = "png"
+END_META = FILE_TYPE
+
+

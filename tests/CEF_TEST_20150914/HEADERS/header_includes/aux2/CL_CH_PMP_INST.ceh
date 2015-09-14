@@ -1,0 +1,42 @@
+!
+
+!  CL_CH_PMP_INST.ceh
+
+!  Global metadata for the JSOC Predicted Magnetic Positions -
+
+!  INSTRUMENT metadata.
+
+
+
+START_META = INSTRUMENT_NAME
+
+    ENTRY = "PMP"
+
+END_META = INSTRUMENT_NAME
+
+
+
+START_META = INSTRUMENT_DESCRIPTION
+
+    ENTRY = "The JSOC Predicted Magnetic Positions for the Cluster spacecraft."
+
+END_META = INSTRUMENT_DESCRIPTION
+
+
+
+START_META = INSTRUMENT_TYPE
+
+    ENTRY = "Auxiliary"
+
+END_META = INSTRUMENT_TYPE
+
+
+
+START_META = MEASUREMENT_TYPE
+
+    ENTRY = "Status"
+
+END_META = MEASUREMENT_TYPE
+
+
+

@@ -1,0 +1,97 @@
+INCLUDE = "CL_CH_MISSION.ceh"
+INCLUDE = "C4_CH_OBS.ceh"
+INCLUDE = "C4_CH_AUX_INST.ceh"
+INCLUDE = "CL_CH_AUX_EXP.ceh"
+
+START_META     =   DATASET_ID
+   ENTRY       =   "C4_CT_AUX_TMMODE"
+END_META       =   DATASET_ID
+
+START_META     =   DATA_TYPE
+   ENTRY       =   "CT>CAA_Event_Data"
+END_META       =   DATA_TYPE
+
+START_META     =   DATASET_TITLE
+   ENTRY       =   "Telemetry mode information for the C4 Cluster spacecraft"
+END_META       =   DATASET_TITLE
+
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset contains the spacecraft telemetry mode for"
+   ENTRY       =   "the C4 Cluster spacecraft."
+   ENTRY       =   "These data have been extracted from the Cluster Science Data System"
+   ENTRY       =   "Auxilary summary parameter data product produced by the Hungarian"
+   ENTRY       =   "national data centre. The telemetry mode information is given as"
+   ENTRY       =   "time intervals (start/end) for which the specific telemetry mode"
+   ENTRY       =   "is active. The telemetry modes are designated as NM (Normal Mode)"
+   ENTRY       =   "or BM (Burst Mode) plus a 1 digit value in the range 1 to 4 giving"
+   ENTRY       =   "the NM or BM telemtry mode table."
+   ENTRY       =   " "
+   ENTRY       =   "Since this information has been generated from the CSDS AUX dataset"
+   ENTRY       =   "the mode change information is only accurate to one minute resolution."
+   ENTRY       =   " "
+   ENTRY       =   "Version 01 of this dataset is the initial translation"
+END_META       =   DATASET_DESCRIPTION
+
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "C.H.Perry>Non-PI>C.H.Perry@rl.ac.uk"
+END_META       =   CONTACT_COORDINATES
+
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Calibrated"
+END_META       =   PROCESSING_LEVEL
+
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the ESA Cluster Active Archive in any publication based upon use of this data."
+END_META       =   ACKNOWLEDGEMENT
+
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "This dataset is based on the CSDS SP Auxilary dataset"
+   ENTRY       =   "information originally supplied to the CSDS"
+END_META       =   DATASET_CAVEATS
+
+START_META     =   DATASET_VERSION
+   ENTRY       =   "01"
+END_META       =   DATASET_VERSION
+
+START_META     =   FILE_TYPE
+   ENTRY       =   "cef"
+END_META       =   FILE_TYPE
+
+START_META     =   METADATA_TYPE
+   ENTRY       =   "CAA"
+END_META       =   METADATA_TYPE
+
+START_META     =   METADATA_VERSION
+   ENTRY       =   "2.0"
+END_META       =   METADATA_VERSION
+
+START_VARIABLE  =  time_tags__C4_CT_AUX_TMMODE
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Interval time tag"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME_RANGE
+    SIGNIFICANT_DIGITS  = 24
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+END_VARIABLE    =  time_tags__C4_CT_AUX_TMMODE
+
+START_VARIABLE = event_code__C4_CT_AUX_TMMODE
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "Cluster C4 telemetry mode"
+    UNITS               = " "
+    SI_CONVERSION       = "1.0>(code)"
+    SIZES               = 1
+    VALUE_TYPE          = CHAR
+    SIGNIFICANT_DIGITS  = 3
+    FILLVAL             = "   "
+    QUALITY             = 2
+    FIELDNAM            = "Cluster C4 telemetry mode"
+    LABLAXIS            = "Telem Mode"
+    DEPEND_0            = time_tags__C4_CT_AUX_TMMODE
+END_VARIABLE   = event_code__C4_CT_AUX_TMMODE

@@ -1,0 +1,124 @@
+INCLUDE = "CL_CH_MISSION.ceh"
+INCLUDE = "C3_CH_OBS.ceh"
+INCLUDE = "CL_CH_AUX_EXP.ceh"
+INCLUDE = "C3_CH_AUX_INST.ceh"
+
+
+START_META     =   DATASET_ID
+   ENTRY       =   "C3_CP_AUX_SPIN_AXIS"
+END_META       =   DATASET_ID
+
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Parameter"
+END_META       =   DATA_TYPE
+
+START_META     =   DATASET_TITLE
+   ENTRY       =   "Auxiliary Data"
+END_META       =   DATASET_TITLE
+
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset contains the orientation of the spacecraft spin axis in GSE."
+   ENTRY       =   "The information has been extracted from the CL_SP_AUX file which contained"
+   ENTRY       =   "the information for all four spacecraft in a single file and was therefore"
+   ENTRY       =   "not always easy to locate within all the datasets."
+   ENTRY       =   "The file only contains three parameters which are the record time,"
+   ENTRY       =   "GSE Latitude of spacecraft and GSE Longitude of spacecraft."
+   ENTRY       =   " "
+   ENTRY       =   "Version 01 of this dataset is the initial extraction of the parameters"
+   ENTRY       =   "from the CL_SP_AUX product which in turn was from the original CSDS SP AUX product"
+END_META       =   DATASET_DESCRIPTION
+
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Chris Perry>CAA>chris.perry@stfc.ac.uk"
+END_META       =   CONTACT_COORDINATES
+
+START_META     =   TIME_RESOLUTION
+   ENTRY       =   60
+END_META       =   TIME_RESOLUTION
+
+START_META     =   MIN_TIME_RESOLUTION
+   ENTRY       =   60.0
+END_META       =   MIN_TIME_RESOLUTION
+
+START_META     =   MAX_TIME_RESOLUTION
+   ENTRY       =   60.0
+END_META       =   MAX_TIME_RESOLUTION
+
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Calibrated"
+END_META       =   PROCESSING_LEVEL
+
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the ESA Cluster Active Archive in any publication based upon use of this data."
+END_META       =   ACKNOWLEDGEMENT
+
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "*CL_CQ_AUX_CAVF"
+END_META       =   DATASET_CAVEATS
+
+START_META     =   DATASET_VERSION
+   ENTRY       =   "01"
+END_META       =   DATASET_VERSION
+
+START_META     =   FILE_TYPE
+   ENTRY       =   "cef"
+END_META       =   FILE_TYPE
+
+START_META     =   METADATA_TYPE
+   ENTRY       =   "CAA"
+END_META       =   METADATA_TYPE
+
+START_META     =   METADATA_VERSION
+   ENTRY       =   "2.0"
+END_META       =   METADATA_VERSION
+
+START_VARIABLE  =  time_tags__C3_CP_AUX_SPIN_AXIS
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Interval centred time tag"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    SIGNIFICANT_DIGITS  = 24
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = 30
+    DELTA_MINUS         = 30
+END_VARIABLE    =  time_tags__C3_CP_AUX_SPIN_AXIS
+
+START_VARIABLE = sc_lat__C3_CP_AUX_SPIN_AXIS
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Magnitude"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "GSE Latitude of spacecraft 3 axis, angle from Ecliptic Plane"
+    UNITS               = "deg"
+    SI_CONVERSION       = "1.0>degree"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1.0e31
+    QUALITY             = 2
+    FIELDNAM            = "GSE Latitude of spacecraft 3 axis"
+    LABLAXIS            = "C3 Lat (GSE)"
+    DEPEND_0            = time_tags__C3_CP_AUX_SPIN_AXIS
+END_VARIABLE   = sc_lat__C3_CP_AUX_SPIN_AXIS
+
+START_VARIABLE = sc_long__C3_CP_AUX_SPIN_AXIS
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Magnitude"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "GSE Longitude of spacecraft 3 axis, angle from Ecliptic Plane"
+    UNITS               = "deg"
+    SI_CONVERSION       = "1.0>degree"
+    SIZES               = 1
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = -1.0e31
+    QUALITY             = 2
+    FIELDNAM            = "GSE Longitude of spacecraft 1 axis"
+    LABLAXIS            = "C3 Long (GSE)"
+    DEPEND_0            = time_tags__C3_CP_AUX_SPIN_AXIS
+END_VARIABLE   = sc_long__C3_CP_AUX_SPIN_AXIS

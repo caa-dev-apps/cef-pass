@@ -1,0 +1,48 @@
+!  CL_CH_PMP_EXP.ceh
+
+!  Global metadata for the JSOC Predicted Magnetic Positions -
+
+!  EXPERIMENT metadata.
+
+
+
+START_META = EXPERIMENT
+
+    ENTRY = "AUX"
+
+END_META = EXPERIMENT
+
+
+
+START_META = EXPERIMENT_DESCRIPTION
+
+    ENTRY = "The JSOC Predicted Magnetic Positions for the Cluster spacecraft."
+
+END_META = EXPERIMENT_DESCRIPTION
+
+
+
+START_META = INVESTIGATOR_COORDINATES
+
+    ENTRY = "M.A.Hapgood>Non-PI>M.A.Hapgood@rl.ac.uk"
+
+END_META = INVESTIGATOR_COORDINATES
+
+
+
+START_META = EXPERIMENT_REFERENCES
+
+    ENTRY = "CSDS User's Guide, DS-MPA-TN-0015"
+
+END_META = EXPERIMENT_REFERENCES
+
+
+
+START_META = EXPERIMENT_KEY_PERSONNEL
+
+    ENTRY = "M.A.Hapgood>Non-PI>M.A.Hapgood@rl.ac.uk"
+
+END_META = EXPERIMENT_KEY_PERSONNEL
+
+
+

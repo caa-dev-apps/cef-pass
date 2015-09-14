@@ -1,0 +1,26 @@
+!
+!  C1_CH_CIS_INST.ceh
+!  Global metadata for the CIS instrument on Cluster C1
+
+START_META     =   INSTRUMENT_NAME
+   ENTRY       =   "CIS1"
+END_META       =   INSTRUMENT_NAME
+
+START_META     =   INSTRUMENT_DESCRIPTION
+   ENTRY       =   "CIS Experiment on Cluster C1"
+END_META       =   INSTRUMENT_DESCRIPTION
+
+START_META     =   INSTRUMENT_TYPE
+   ENTRY       =   "Electrostatic_Analyser"
+   ENTRY       =   "Micro-channel_Plate"
+   ENTRY       =   "Mass_Spectrometer"
+END_META       =   INSTRUMENT_TYPE
+
+START_META     =   MEASUREMENT_TYPE
+   ENTRY       =   "Ion_Composition"
+   ENTRY       =   "Thermal_Plasma"
+END_META       =   MEASUREMENT_TYPE
+
+START_META     =   INSTRUMENT_CAVEATS
+   ENTRY       =   "*C1_CQ_CIS_CAVF"
+END_META       =   INSTRUMENT_CAVEATS

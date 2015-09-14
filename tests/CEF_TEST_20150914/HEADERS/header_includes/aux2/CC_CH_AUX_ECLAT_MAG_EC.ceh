@@ -1,0 +1,269 @@
+!------------------- CEF ASCII File --------------------
+INCLUDE        =   "CL_CH_MISSION.ceh"
+INCLUDE        =   "CC_CH_OBS.ceh"
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+INCLUDE        =   "CC_CH_AUX_INST.ceh"
+!
+! DATASET LEVEL METADATA
+!
+START_META     =   DATASET_ID
+   ENTRY       =   "CC_CP_AUX_ECLAT_MAG_EC"
+END_META       =   DATASET_ID
+!
+START_META     =   DATA_TYPE
+   ENTRY       =   "CP>CAA_Parameter"
+END_META       =   DATA_TYPE
+!
+START_META     =   DATASET_TITLE
+   ENTRY       =   "equivalent current density"
+END_META       =   DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =   "This dataset contains northward and eastward components of the equivalent currents,"
+   ENTRY       =   "together with a quality flag of the data, and information about which ground station"  
+   ENTRY       =   "data have been used in the calculations at any given time."
+   ENTRY       =   "The longitudes, latitudes and names of the stations are included."
+   ENTRY       =   "The calculations assume that Earth's radius is 6370 km and that the currents flow at 100 km altitude."
+   ENTRY       =   "The grid for the elementary current poles is located at latitudes ranging from 53.9190 degrees to 83.9190,"
+   ENTRY       =   "in regular steps of 0.6000 degrees, and longitudes ranging from 2.4607 degrees to 43.0607 degrees,"
+   ENTRY       =   "in regular steps of 1.4000 degrees."
+   ENTRY       =   " "
+   ENTRY       =   "This dataset was generated as part of European Union ECLAT project. The aim of the European"
+   ENTRY       =   "Cluster Assimilation Technology (ECLAT) is to provide a novel data base, by providing an upgrade"
+   ENTRY       =   "to the CAA. To achieve this, ECLAT programme ingests into the CAA supporting data from other"
+   ENTRY       =   "space- and ground-based observatories, provide data mining routines, refine data products and "
+   ENTRY       =   "software tools for their visualization, and develop existing European magnetospheric modeling"
+   ENTRY       =   "infrastructure to provide context for the observational data."
+   ENTRY       =   " "
+   ENTRY       =   "The contacts for the ECLAT project are"
+   ENTRY       =   "  Steve Milan, University of Leicester"
+   ENTRY       =   "  Rumi Nakamura, Oesterreichische Akademie der Wissenschaften"
+   ENTRY       =   "  Minna Palmroth, Finnish Meteorological Institute"
+   ENTRY       =   "  Kirsti Kauristie, Finnish Meteorological Institute"
+   ENTRY       =   "  Victor Sergeev, Petersburg State University"
+   ENTRY       =   "  Hermann Opgenoorth, Swedish Institute of Space Physics"
+END_META       =   DATASET_DESCRIPTION
+!
+START_META     =   CONTACT_COORDINATES
+   ENTRY       =   "Kirsti Kauristie>Kirsti.Kauristie@fmi.fi"
+   ENTRY       =   "Max Van De Kamp>Max.Van.De.Kamp@fmi.fi"
+END_META       =   CONTACT_COORDINATES
+!
+START_META     =   TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   10.0
+END_META       =   TIME_RESOLUTION
+!
+START_META     =   MIN_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   10.0
+END_META       =   MIN_TIME_RESOLUTION
+!
+START_META     =   MAX_TIME_RESOLUTION
+   VALUE_TYPE  =   FLOAT
+   ENTRY       =   10.0
+END_META       =   MAX_TIME_RESOLUTION
+!
+START_META     =   PROCESSING_LEVEL
+   ENTRY       =   "Derived"
+END_META       =   PROCESSING_LEVEL
+!
+START_META     =   DATASET_CAVEATS
+   ENTRY       =   "DATASET VERSION HISTORY"
+   ENTRY       =   "2012/V01 - Initial ECLAT delivery to CAA"
+   ENTRY       =   "2012/V02 - Update of information about the groundbased stations used for calculations"
+END_META       =   DATASET_CAVEATS
+!
+START_META     =   ACKNOWLEDGEMENT
+   ENTRY       =   "Please acknowledge the IMAGE magnetometer community, the European Union Framework 7 Programme, the ECLAT"
+   ENTRY       =   "project and the ESA Cluster Archive in any publications based upon the use of these data products." 
+   ENTRY       =   "In addition, as a reference for the equivalent current calculation with the method of"
+   ENTRY       =   "Spherical Elementary Currents Systems, use the following article:"
+   ENTRY       =   "Amm, O. and Viljanen, A.: Ionospheric disturbance magnetic field continuation from the ground to ionosphere" 
+   ENTRY       =   "using spherical elementary current systems, Earth Planets Space, 51, 431-440,1999."
+END_META       =   ACKNOWLEDGEMENT
+!
+! PARAMETER LEVEL METADATA
+!
+START_VARIABLE  =  time_tags__CC_CP_AUX_ECLAT_MAG_EC
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Time tag start of integration period"
+    UNITS               = "s"
+    SI_CONVERSION       = "1.0>s"
+    SIZES               = 1
+    VALUE_TYPE          = ISO_TIME
+    SIGNIFICANT_DIGITS  = 24
+    FILLVAL             = 9999-12-31T23:59:59Z
+    FIELDNAM            = "Universal Time"
+    LABLAXIS            = "UT"
+    DELTA_PLUS          = 0
+    DELTA_MINUS         = 10
+END_VARIABLE    =  time_tags__CC_CP_AUX_ECLAT_MAG_EC
+
+START_VARIABLE  =  Quality__map_CC_CP_AUX_ECLAT_MAG_EC
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "Quality flag"
+    UNITS               = "unitless"
+    SI_CONVERSION       = "1>(flag)unitless"
+    SIZES               = 1
+    VALUE_TYPE          = INT
+    SIGNIFICANT_DIGITS  = 1
+    FILLVAL             = -1
+    FIELDNAM            = "Quality flag: 1-all currents smaller than 50mA/km, 2-not enough magnetometer station; result unreliable, 3-baseline derivation uncertain, 4-good quality data"
+    LABLAXIS            = "Mapping Quality Flag"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_MAG_EC
+END_VARIABLE  =  Quality__map_CC_CP_AUX_ECLAT_MAG_EC
+!
+START_VARIABLE  =  latitude__CC_CP_AUX_ECLAT_MAG_EC
+    PARAMETER_TYPE      = "Support_Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "latitude of the grid for equivalent current calculation"
+    UNITS               = "deg"
+    SI_CONVERSION       = "17.5e-3>rad"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GEOC>Geographic"
+    SIZES               = 35
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = 999
+    FIELDNAM            = "current latitude"
+    LABLAXIS            = "lat"
+    LABEL_1             = "deg"
+    DATA = 59.0190,59.6190,60.2190,60.8190,61.4190,62.0190,62.6190,63.2190,63.8190,64.4190,65.0190,65.6190,66.2190,66.8190,67.4190,68.0190,68.6190,69.2190,69.8190,70.4190,71.0190,71.6190,72.2190,72.8190,73.4190,74.0190,74.6190,75.2190,75.8190,76.4190,77.0190,77.6190,78.2190,78.8190,79.4190
+END_VARIABLE   =  latitude__CC_CP_AUX_ECLAT_MAG_EC
+
+START_VARIABLE  =  longitude__CC_CP_AUX_ECLAT_MAG_EC
+    PARAMETER_TYPE      = "Support_Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "longitude of the grid for equivalent current calculation"
+    UNITS               = "deg"
+    SI_CONVERSION       = "17.5e-3>rad"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GEOC>Geographic"
+    SIZES               = 29
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 6
+    FILLVAL             = 999
+    FIELDNAM            = "current longitude"
+    LABLAXIS            = "lon"
+    LABEL_1             = "deg"
+    DATA = 3.1610,4.5610,5.9610,7.3610,8.7610,10.1610,11.5610,12.9610,14.3610,15.7610,17.1610,18.5610,19.9610,21.3610,22.7610,24.1610,25.5610,26.9610,28.3610,29.7610,31.1610,32.5610,33.9610,35.3610,36.7610,38.1610,39.5610,40.9610,42.3610
+END_VARIABLE   =  longitude__CC_CP_AUX_ECLAT_MAG_EC
+
+START_VARIABLE  =  north_current__CC_CP_AUX_ECLAT_MAG_EC
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "northward current density"
+    UNITS               = "Akm^-1"
+    SI_CONVERSION       = "1e-3>Am^-1"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GEOC>Geographic"
+    SIZES               = 29,35
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = 99999.99
+    FIELDNAM            = "current density"
+    LABLAXIS            = "equivalent current"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_MAG_EC
+    DEPEND_1            = longitude__CC_CP_AUX_ECLAT_MAG_EC
+    DEPEND_2            = latitude__CC_CP_AUX_ECLAT_MAG_EC
+    QUALITY		= 3
+END_VARIABLE   =  north_current__CC_CP_AUX_ECLAT_MAG_EC
+
+START_VARIABLE  =  east_current__CC_CP_AUX_ECLAT_MAG_EC
+    PARAMETER_TYPE      = "Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "eastward current density"
+    UNITS               = "Akm^-1"
+    SI_CONVERSION       = "1e-3>Am^-1"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GEOC>Geographic"
+    SIZES               = 29,35
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 7
+    FILLVAL             = 99999.99
+    FIELDNAM            = "current density"
+    LABLAXIS            = "equivalent current"
+    DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_MAG_EC
+    DEPEND_1            = longitude__CC_CP_AUX_ECLAT_MAG_EC
+    DEPEND_2            = latitude__CC_CP_AUX_ECLAT_MAG_EC
+    QUALITY		= 3
+END_VARIABLE   =  east_current__CC_CP_AUX_ECLAT_MAG_EC
+
+START_VARIABLE  =  stations_lat__CC_CP_AUX_ECLAT_MAG_EC
+    PARAMETER_TYPE      = "Support_Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "latitude of the available groundbased stations"
+    UNITS               = "deg"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GEOC>Geographic"
+    SIZES               = 40
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 4
+    FILLVAL             = 999
+    FIELDNAM            = "station latitude"
+    LABLAXIS            = "station lat"
+    LABEL_1             = "deg"
+    DATA = 68.35,69.30,74.50,62.07,66.11,62.25,76.51,77.00,68.56,59.21,69.76,69.06,67.84,68.13,67.97,64.61,78.20,69.46,62.77,68.02,78.92,71.09,60.50,64.52,66.90,64.94,67.37,61.08,70.54,58.26,69.66,59.90,999,999,999,999,999,999,999,999
+END_VARIABLE   =  stations_lat__CC_CP_AUX_ECLAT_MAG_EC
+
+START_VARIABLE  =  stations_lon__CC_CP_AUX_ECLAT_MAG_EC
+    PARAMETER_TYPE      = "Support_Data"
+    ENTITY              = "Observatory"
+    PROPERTY            = "Status"
+    FLUCTUATIONS        = "Waveform"
+    CATDESC             = "longitude of the available groundbased stations"
+    UNITS               = "deg"
+    TENSOR_ORDER        = "1"
+    COORDINATE_SYSTEM   = "GEOC>Geographic"
+    SIZES               = 40
+    VALUE_TYPE          = FLOAT
+    SIGNIFICANT_DIGITS  = 4
+    FILLVAL             = 999
+    FIELDNAM            = "station longitude"
+    LABLAXIS            = "station lon"
+    LABEL_1             = "deg"
+    DATA = 18.82,16.03,19.20,9.11,12.50,26.60,25.01,15.60,27.29,5.24,27.01,20.77,20.42,13.54,35.08,18.75,15.82,23.70,30.97,23.53,11.95,25.79,24.65,27.23,24.08,10.98,26.63,4.84,22.22,26.46,18.94,17.35,999,999,999,999,999,999,999,999
+END_VARIABLE   =  stations_lon__CC_CP_AUX_ECLAT_MAG_EC
+
+START_VARIABLE  =  stations_name__CC_CP_AUX_ECLAT_MAG_EC
+    PARAMETER_TYPE      = "Support_Data"
+    CATDESC             = "name of the available groundbased stations"
+    UNITS               = "unitless"
+    SIZES               = 40
+    FIELDNAM            = "station name"
+    LABLAXIS            = "station name"
+    LABEL_1             = "unitless"
+    VALUE_TYPE		= CHAR
+    FILLVAL		= " "
+    DATA = "ABK","AND","BJN","DOB","DON","HAN","HOP","HOR","IVA","KAR","KEV","KIL","KIR","LEK","LOZ","LYC","LYR","MAS","MEK","MUO","NAL","NOR","NUR","OUJ","PEL","RVK","SOD","SOL","SOR","TAR","TRO","UPS","AD1","AD2","AD3","AD4","AD5","AD6","AD7","AD8"
+END_VARIABLE   =  stations_name__CC_CP_AUX_ECLAT_MAG_EC
+
+START_VARIABLE  =  stations_avail__CC_CP_AUX_ECLAT_MAG_EC
+   PARAMETER_TYPE      = "Support_Data"
+   CATDESC             = "stations available"
+   UNITS               = "unitless"
+   SI_CONVERSION       = "1>(flag)unitless"
+   SIZES               = 40
+   VALUE_TYPE          = INT
+   SIGNIFICANT_DIGITS  = 1
+   FILLVAL             = 9
+   FIELDNAM            = "1 - the station is operational, 0 - the station is not operational"
+   LABLAXIS            = "Stations available"
+   DEPEND_0            = time_tags__CC_CP_AUX_ECLAT_MAG_EC
+END_VARIABLE  =  stations_avail__CC_CP_AUX_ECLAT_MAG_EC
+
+
+
+
+

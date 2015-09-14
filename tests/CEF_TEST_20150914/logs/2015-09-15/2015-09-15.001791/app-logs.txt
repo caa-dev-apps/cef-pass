@@ -1,0 +1,201 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!                                                            File Metadata     !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+FILE_NAME = "C1_CP_AUX_MAARBLE_ULF_PC1__20100211_035905_20100211_035925_V00.cef"
+FILE_FORMAT_VERSION = "CEF-2.0"
+END_OF_RECORD_MARKER = "$"
+!
+!
+INCLUDE= "C1_CH_AUX_MAARBLE_ULF_PC1.ceh"
+!------------------- CEF ASCII File --------------------
+! Header file for Cluster ULF
+!-------------------------------------------------------
+!
+INCLUDE        =   "CL_CH_MISSION.ceh"
+!
+!  CL_CH_MISSION.ceh
+!  Global mission metadata provided by the CAA.
+!
+!  Save to your own hard drive so this file can be
+!  included as CL_CH_MISSION.ceh in other cef files. 
+! 
+
+START_META = MISSION 
+    ENTRY  = "Cluster" 
+END_META   = MISSION 
+
+START_META     = MISSION_TIME_SPAN 
+    VALUE_TYPE = ISO_TIME_RANGE 
+    ENTRY      = 2000-08-16T12:39:00Z/2030-12-31T23:59:59Z
+END_META       = MISSION_TIME_SPAN 
+
+START_META = MISSION_AGENCY 
+    ENTRY  = "ESA" 
+END_META   = MISSION_AGENCY 
+
+START_META = MISSION_DESCRIPTION 
+    ENTRY  = "The aim of the Cluster mission is to study small-scale structures of the magnetosphere " 
+    ENTRY  = "and its environment in three dimensions. To achieve this, Cluster is constituted of four " 
+    ENTRY  = "identical spacecraft that will flight in a tetrahedral configuration. The separation distances " 
+    ENTRY  = "between the spacecraft will be varied between ~40 km and 10 000 km, according to the " 
+    ENTRY  = "key scientific regions." 
+END_META   = MISSION_DESCRIPTION 
+
+START_META = MISSION_KEY_PERSONNEL 
+    ENTRY  = "Philippe Escoubet>Philippe.Escoubet@esa.int >Cluster Project Scientist" 
+END_META   = MISSION_KEY_PERSONNEL 
+
+START_META = MISSION_REFERENCES 
+    ENTRY  = "The Cluster and Phoenix Missions>Cluster project and instrument teams>Space Sci. Rev. 79, Nos. 1-2, 1997"
+END_META   =  MISSION_REFERENCES 
+
+START_META = MISSION_REGION 
+    ENTRY  = "Solar_Wind" 
+    ENTRY  = "Bow_Shock" 
+    ENTRY  = "Magnetosheath" 
+    ENTRY  = "Magnetopause" 
+    ENTRY  = "Magnetosphere" 
+    ENTRY  = "Magnetotail" 
+    ENTRY  = "Polar_Cap"
+    ENTRY  = "Auroral_Region" 
+    ENTRY  = "Cusp" 
+    ENTRY  = "Radiation_Belt" 
+    ENTRY  = "Plasmasphere" 
+END_META   = MISSION_REGION 
+
+START_META = MISSION_CAVEATS 
+ ENTRY = "*CL" 
+END_META = MISSION_CAVEATS
+
+INCLUDE        =   "C1_CH_OBS.ceh"
+!
+!  C1_CH_OBS.ceh
+!  Global Cluster1 metadata provided by the CAA.
+!
+! Save to your own hard drive so this file can be
+! included as C1_CH_OBS.ceh in other cef files. 
+! 
+
+START_META     =   OBSERVATORY
+    ENTRY      =   "Cluster-1"
+END_META       =   OBSERVATORY
+
+START_META     =   OBSERVATORY_CAVEATS
+    ENTRY      =   "*C1_CQ"
+END_META       =   OBSERVATORY_CAVEATS
+
+START_META     = OBSERVATORY_DESCRIPTION  
+    ENTRY      = "Cluster-1 (Rumba)"
+    ENTRY      = "Launched: 09 Aug 2000"
+    ENTRY      = "ESA Number: 1"
+    ENTRY      = "COSPAR ID: 2000-045A"
+    ENTRY      = "USSPACECOM catalogue number 26463"
+    ENTRY      = "CSDS Code: C1"
+    ENTRY      = "ESOC FD code: S1"
+    ENTRY      = "ESA Flight Model Number: FM5"
+END_META       = OBSERVATORY_DESCRIPTION 
+
+START_META     = OBSERVATORY_TIME_SPAN
+    VALUE_TYPE = ISO_TIME_RANGE
+    ENTRY      = 2000-07-16T12:39:00Z/2030-12-31T23:59:59Z 
+END_META       = OBSERVATORY_TIME_SPAN
+
+START_META = OBSERVATORY_REGION 
+    ENTRY  = "Solar_Wind" 
+    ENTRY  = "Bow_Shock" 
+    ENTRY  = "Magnetosheath" 
+    ENTRY  = "Magnetopause" 
+    ENTRY  = "Magnetosphere" 
+    ENTRY  = "Magnetotail" 
+    ENTRY  = "Polar_Cap" 
+    ENTRY  = "Auroral_Region" 
+    ENTRY  = "Cusp" 
+    ENTRY  = "Radiation_Belt" 
+    ENTRY  = "Plasmasphere" 
+END_META   = OBSERVATORY_REGION
+
+INCLUDE        =   "CL_CH_AUX_EXP.ceh"
+!  CL_CH_AUX_EXP.ceh
+!  Global auxiliary metadata.
+
+START_META = EXPERIMENT
+    ENTRY = "AUX"
+END_META = EXPERIMENT
+
+START_META = EXPERIMENT_DESCRIPTION
+    ENTRY = "Auxiliary Data"
+END_META = EXPERIMENT_DESCRIPTION
+
+START_META = INVESTIGATOR_COORDINATES
+    ENTRY = "M Tatrallyay>Validator>mariella@rmki.kfki.hu"
+END_META = INVESTIGATOR_COORDINATES
+
+START_META = EXPERIMENT_REFERENCES
+    ENTRY = "*CL_CD_AUX_CAAICD"
+END_META = EXPERIMENT_REFERENCES
+
+START_META = EXPERIMENT_KEY_PERSONNEL
+    ENTRY = "M Tatrallyay>Validator>mariella@rmki.kfki.hu"
+END_META = EXPERIMENT_KEY_PERSONNEL
+
+START_META = EXPERIMENT_CAVEATS
+    ENTRY = "*CL_CQ_AUX"
+END_META = EXPERIMENT_CAVEATS
+INCLUDE        =   "C1_CH_AUX_INST.ceh"
+!
+!  CL_CH_AUX_INST.ceh
+!  Global metadata for the Auxiliary Parameters.
+
+START_META = INSTRUMENT_NAME
+    ENTRY = "AUX1"
+END_META = INSTRUMENT_NAME
+
+START_META = INSTRUMENT_DESCRIPTION
+    ENTRY = "Auxiliary Parameters"
+END_META = INSTRUMENT_DESCRIPTION
+
+START_META = INSTRUMENT_TYPE
+    ENTRY = "Auxiliary"
+END_META = INSTRUMENT_TYPE
+
+START_META = MEASUREMENT_TYPE
+    ENTRY = "Status"
+END_META = MEASUREMENT_TYPE
+
+START_META = INSTRUMENT_CAVEATS
+    ENTRY = "Validated data - no caveats"
+END_META = INSTRUMENT_CAVEATS
+
+!
+!               DATASET LEVEL METADATA
+!
+START_META = DATA_TYPE
+   ENTRY = "CP>CAA_Parameter"
+END_META = DATA_TYPE
+!
+START_META = DATASET_ID
+   ENTRY = "C1_CP_AUX_MAARBLE_ULF_PC1"
+END_META = DATASET_ID
+!
+START_META = DATASET_TITLE
+   ENTRY = "Pc1 Wave Spectra, Polarization and Propagation Parameters"
+END_META = DATASET_TITLE
+!
+START_META     =   DATASET_DESCRIPTION
+   ENTRY       =  "BB is the spectrum of B produced using FFT in FAC system."
+   ENTRY       =  "Polarization and propagation parameters derived from singular"
+   ENTRY       =  "value decomposition (SVD) method of the cross-spectral"
+   ENTRY       =  "matrix (sm)."
+   ENTRY       =  "The SVD  method is described in Santolik et al (2003)."
+   ENTRY       =  "The parameters calculated from the three magnetic components"
+   ENTRY       =  "are BB, KSVD, ELLSVD, PLANSVD, DOP and POLSVD."
+   ENTRY       =  "KSVD is polar and azimuthal angles of k in FAC system."
+   ENTRY       =  "DOP is the degree of polarization defined in Samson (1973)."
+   ENTRY       =  "PV is the Poynting vector (magnitude, polar and azimuthal"
+   ENTRY       =  "angles) in FAC coordinate system."
+   ENTRY       =  "ESUM is the sum of the two electric auto-power spectra in"
+   ENTRY       =  "the spacecraft spin plain."
+   ENTRY       =  "BMAG is the magnitude of DC magnetic field measured by FGM."
+   ENTRY       =  "The parameters are derived from STAFF_SC and EFW"
+   

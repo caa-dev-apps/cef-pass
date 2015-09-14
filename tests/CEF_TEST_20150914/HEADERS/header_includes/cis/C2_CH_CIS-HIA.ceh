@@ -1,0 +1,26 @@
+! File : C2_CH_CIS-HIA.ceh
+!
+! Instrument level metadata
+!
+START_META = INSTRUMENT_NAME
+  ENTRY    = "CIS-HIA2"
+END_META   = INSTRUMENT_NAME
+
+START_META = Instrument_description
+  ENTRY    = "CIS Hot Ion Analyser on Cluster C2"
+END_META   = Instrument_description
+
+START_META = INSTRUMENT_TYPE
+  ENTRY    = "Electrostatic_Analyser"
+  ENTRY    = "Micro-channel_Plate"
+END_META   = INSTRUMENT_TYPE
+
+START_META = MEASUREMENT_TYPE
+  ENTRY    = "Thermal_Plasma"
+END_META   = MEASUREMENT_TYPE
+
+START_META = Instrument_caveats
+  ENTRY    = "http://cluster.cesr.fr:8000/"
+END_META   = Instrument_caveats
+
+
