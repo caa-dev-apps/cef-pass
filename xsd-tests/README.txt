@@ -1,5 +1,6 @@
 
 Contents:
+
     cef-test-schema.xsd              a W3C XML Schema for checking an intermediate XML string 
                                      generated when parsing the header data in a cef file.
                                      more rules need to be added for further checks to be made.
@@ -14,15 +15,16 @@ Contents:
     
     
 Method:
+
         install java                java 8 is recommended though 7 should be fine
-        install groovy              following instructions for 
-                                        SDKMAN here -> http://www.groovy-lang.org/download.html
-        
+        install groovy              follow instructions for SDKMAN 
+                                        http://www.groovy-lang.org/download.html
      
         edit xml and xsd files as required
      
         
 Test:        
+
         groovy test_xsd.groovy      to run test script. 
                                     Failures are quite terse... need to look at getting more details
     
