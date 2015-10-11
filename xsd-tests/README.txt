@@ -1,30 +1,34 @@
 
-Contents:
 
-    cef-test-schema.xsd              a W3C XML Schema for checking an intermediate XML string 
-                                     generated when parsing the header data in a cef file.
-                                     more rules need to be added for further checks to be made.
-                                     
-    cef-meta-nodes.xml               a generated XML file to be used as the basis for XSD related tests.
-    
-    app-logs.txt                     a text output of the header data part of a cef file 
-                                     (matches above xml) - including mixed in ceh data see 
-                                     - include-start and include-end tags for hints.
-                                     
-    test_xsd.groovy                  a groovy script to test the above xsd against the xml
-    
-    
-Method:
+tests:
 
-        install java                java 8 is recommended though 7 should be fine
-        install groovy              follow instructions for SDKMAN 
-                                        http://www.groovy-lang.org/download.html
-     
-        edit xml and xsd files as required
-     
+    00-Getting Started
+        Template for tests
         
-Test:        
 
-        groovy test_xsd.groovy      to run test script. 
-                                    Failures are quite terse... need to look at getting more details
+    01-MEASUREMENT_TYPE
+
+        MEASUREMENT_TYPE (Instrument level metadata)
+
+        Instances:
+            1..N
+
+        Enumerated values:
+            Activity_Index 
+            Electric_Field 
+            Electron_Drift  
+            Emitted_Current
+            Energetic_Particles 
+            Instrument_Status 
+            Ion_Composition
+            Magnetic_Field 
+            Neutral_Atom_Images 
+            Neutral_Gas 
+            Particle_Correlator 
+            Radio_and_Plasma_Waves
+            Radio_Soundings
+            Spacecraft_Potential_Control 
+            Spacecraft_Status 
+            Thermal_Plasma
+    
     
